@@ -1,0 +1,9 @@
+<div class="confirm_dialog">
+  <img src={{data.image}} alt="" style="margin-top: -40px;width: 35px;">
+
+    <h3>{{data.message}}</h3>
+    <div style="padding-top: 50px;">
+        <button mat-raised-button color="warn" (click)="confirmtask()" class="confirm_btn">{{data.confirmButtonText}}</button>
+        <button mat-raised-button  (click)="onDismiss()" class="cancel">{{data.cancelButtonText}}</button>
+    </div>
+</div>

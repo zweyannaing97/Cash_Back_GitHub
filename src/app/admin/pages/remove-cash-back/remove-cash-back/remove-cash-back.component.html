@@ -1,0 +1,22 @@
+<div >
+    <div class="d-flex justify-content-between align-items-center ">
+      <h5 class="title">Remove Cash Back Listing</h5>
+      <div class="table_filter">
+        <img src="assets/images/filter_img.png" alt="" (click)="filterTable()">
+        <a download="UploadExcelFormat.xlsx" matTooltip="Export To Excel"
+           aria-label="Button that displays a tooltip when focused or hovered over"
+           class="icon-tooltip" target="_blank" href="assets/UploadExcelFormat.xlsx" class="download_sample_btn"><img src="assets/images/excel-download.svg"  alt="Export To Excel Icon"></a>
+      </div>
+    </div>
+    <div>
+        <app-data-table
+        [data]="data"
+        [header]="header"
+        [actions]="actions"
+        [totalDataCount]="25"
+        (actionEvent)="actionEvent($event)"
+        (fetchDataEvent)="fetchDataEvent($event)"
+        (itemCustomClickEvent)="itemCustomCLickHandler($event)">
+        </app-data-table>
+    </div>
+</div>

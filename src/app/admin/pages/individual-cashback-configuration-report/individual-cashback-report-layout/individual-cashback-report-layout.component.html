@@ -1,0 +1,26 @@
+<div >
+    <div class="d-flex justify-content-between align-items-center">
+      <h5 class="titlee">Individual Report</h5>
+      <div class="table_filter">
+        <div class="search-container">
+          <form method="get">
+            <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
+            <label class="button searchbutton" for="searchright">
+              <img class="simg " src="assets/images/search.png" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Search" >
+            </label>
+          </form>
+        </div>
+        <img src="assets/images/filter_img.png" alt="" class="mr-3" (click)="filterTable()">
+        <a download="UploadExcelFormat.xlsx" target="_blank" href="assets/UploadExcelFormat.xlsx" ><img src="assets/images/excel-download.svg" alt=""></a>
+      </div>
+    </div>
+    <div >
+        <app-data-table
+        [data]="data"
+        [header]="header"
+        [totalDataCount]="25"
+        (fetchDataEvent)="fetchDataEvent($event)">
+        </app-data-table>
+    </div>
+
+</div>

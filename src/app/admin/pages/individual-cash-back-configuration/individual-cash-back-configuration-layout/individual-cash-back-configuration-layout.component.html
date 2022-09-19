@@ -1,0 +1,153 @@
+<div *ngIf="!individual_listing" class="main-content"><!--*ngIf="!individual_listing"-->
+  <h5 class="title">Individual Detail</h5>
+
+  <div>
+    <label for="">Select Company Name <span>*</span></label>
+  </div>
+  <div>
+    <mat-select value=0 class="select" >
+      <mat-option value=0 hidden>Select</mat-option>
+      <mat-option value=1 >CGM</mat-option>
+      <mat-option value=2 >OK $</mat-option>
+      <mat-option value=3 >GAT</mat-option>
+      <mat-option value=4 >One Stop Supermarket</mat-option>
+      <mat-option value=5 >OK $ Taxi</mat-option>
+    </mat-select>
+
+  </div>
+  <br>
+
+  <div>
+    <label for="">OK$ Account Number <span>*</span></label>
+  </div>
+  <div>
+    <input type="text" class="input" placeholder="Enter OK$ Account Number" [(ngModel)]="account_number">
+    <div style="display: inline;margin-left: 30px;" *ngIf="account_number != ''">
+      <img src="assets/images/close.svg" alt="" style="width: 20px;margin-right: 10px;">
+      <span style="color: #ada1a1;font-size: 14px;">OK$ Account Not Found</span>
+    </div>
+  </div>
+  <br>
+  <div *ngIf="account_number != ''">
+    <div>
+      <label for="">Cash Back Credit OK$ Account</label>
+    </div>
+    <div>
+      <mat-select class="select d-inline" value=1>
+        <mat-option value=1>+95 746573894788</mat-option>
+        <mat-option value=2>+95 746573894788</mat-option>
+        <mat-option value=3>+95 746573894788</mat-option>
+        <mat-option value=4>+95 746573894788</mat-option>
+        <mat-option value=5>+95 746573894788</mat-option>
+      </mat-select>
+      <div style="display: inline;margin-left: 30px;">
+        <img src="assets/images/tic.png" alt="" style="width: 20px;margin-right: 10px;">
+        <span style="color: #ada1a1;font-size: 14px;">MPT (Merchant)</span>
+      </div>
+    </div>
+
+    <table mat-table [dataSource]="dataSource" class="mt-5 data_table">
+      <ng-container matColumnDef="division">
+        <th mat-header-cell *matHeaderCellDef style="width: 14%;"> Division </th>
+        <td mat-cell *matCellDef="let element"> {{element.division}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="township">
+        <th mat-header-cell *matHeaderCellDef style="width: 33%;"> Township </th>
+        <td mat-cell *matCellDef="let element"> {{element.township}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="city">
+        <th mat-header-cell *matHeaderCellDef style="width: 33%;"> City/Town </th>
+        <td mat-cell *matCellDef="let element"> {{element.city}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="branch">
+        <th mat-header-cell *matHeaderCellDef> Branch </th>
+        <td mat-cell *matCellDef="let element"> {{element.branch}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+
+    <div *ngIf="selectedCategory === 'All'" class="mt-5 mb-5">
+      <app-service-category-all (newItemEvent)="formValidation($event)" ></app-service-category-all>
+    </div>
+
+    <div *ngIf="selectedCategory == 'Top Up'" class="mt-5 mb-5">
+        <app-service-category-topup (newItemEvent)="formValidation($event)"></app-service-category-topup>
+    </div>
+
+    <div *ngIf="selectedCategory === 'Gift Cards'" class="mt-5 mb-5">
+      <app-service-category-gift-cards (newItemEvent)="formValidation($event)"></app-service-category-gift-cards>
+    </div>
+
+    <div *ngIf="selectedCategory === 'DTH'" class="mt-5 mb-5">
+        <app-service-category-dth (newItemEvent)="formValidation($event)"></app-service-category-dth>
+    </div>
+
+    <div *ngIf="selectedCategory === 'Electricity'" class="mt-5 mb-5">
+      <app-service-category-electricity (newItemEvent)="formValidation($event)"></app-service-category-electricity>
+    </div>
+
+    <div *ngIf="selectedCategory === 'Post Paid'" class="mt-5 mb-5">
+      <app-service-category-post-paid (newItemEvent)="formValidation($event)"></app-service-category-post-paid>
+    </div>
+
+    <div *ngIf="selectedCategory === 'Over Seas Top Up'" class="mt-5 mb-5">
+      <app-service-category-over-seas-top-up (newItemEvent)="formValidation($event)"></app-service-category-over-seas-top-up>
+    </div>
+
+    <div class="button_group mt-0 pb-5" *ngIf="showButtons">
+      <button matRipple> CANCEL</button>
+      <button matRipple (click)="individual_listing = true"> SAVE</button>
+    </div>
+
+    <!-- category menu -->
+      <div class="serviceCategoryType">
+        <div class="collapse" id="collapseExample">
+          <div class="">
+            <table class="w-100" *ngFor="let item of categoryItems">
+              <tr (click)="categoryMenuClick(item.name)" class="servicecategory"
+                [attr.data-toggle]="item.name === 'Close' && 'collapse'"
+                [attr.data-target]="item.name === 'Close' && '#collapseExample'"
+                [ngClass]="{'active_category': (selectedCategory && selectedCategory === item.name),
+                'inactive_category' : (selectedCategory && selectedCategory !== item.name) }">
+                <td>{{item.name}}</td>
+                <td><img src="{{item.icon}}" alt="close" style="width: 35px;"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+
+        <div style="display: inline;margin-right: 57px;font-weight: 500;">Service Category Type</div>
+        <button type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
+          aria-controls="collapseExample" class="p-0">
+          <img src="assets/images/category.svg" alt="service category" style="width: 35px;">
+        </button>
+      </div>
+    <!-- category menu -->
+  </div>
+</div>
+
+
+<div *ngIf="individual_listing">
+  <h2 class="title">Individual Listing</h2>
+  <div class="table_filter">
+    <img src="assets/images/filter_img.png" alt="" (click)="filterTable()">
+    <a download="UploadExcelFormat.xlsx" target="_blank" href="assets/UploadExcelFormat.xlsx" class="download_sample_btn"><img src="assets/images/excel_download.png" alt="" style="margin-right: 16px;"></a>
+    <button (click)="individual_listing = false"><img src="assets/images/add_img.png" alt="add"  matRipple> ADD </button>
+  </div>
+
+  <div>
+    <app-data-table
+    [data]="data"
+    [header]="header"
+    [totalDataCount]="25"
+    (fetchDataEvent)="fetchDataEvent($event)">
+    </app-data-table>
+  </div>
+</div>

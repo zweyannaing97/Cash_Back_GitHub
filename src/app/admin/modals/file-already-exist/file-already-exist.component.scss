@@ -1,0 +1,27 @@
+@import "../../../../variable.scss";
+
+.dialog{
+    padding: 90px 60px 90px 60px;
+    overflow: auto;
+    text-align: center;
+    background-color: $quaternary-color;
+    position: relative;
+    div{
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        border: 3px solid #333333;
+        border-radius: 100%;
+        width: 35px;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        cursor: pointer;
+    }
+}
+
+::ng-deep .mat-dialog-container{
+    padding: 0 !important;
+}

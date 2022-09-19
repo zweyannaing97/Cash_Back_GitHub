@@ -1,0 +1,33 @@
+
+
+<div class="profile_outer">
+  <div class="profile">
+    <img src="assets/images/profile.svg">
+  </div>
+</div>
+
+<div>
+  <div>
+    <div class="profile_name">
+      <p>Cash Back Admin</p>
+      <p>Last Login</p>
+    </div>
+    <div class="date_time">
+      <div style="width: 50%;">
+        <p style="text-align: left;margin-bottom: 0;">
+          <img src="assets/images/calendar.svg" alt="">Wed,04-Aug--2021
+        </p>
+      </div>
+      <div  style="width: 50%;">
+        <p style="text-align: end;margin-bottom: 0;" >
+          <img src="assets/images/clock.svg" alt="" >04:50
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<hr />
+
+<mat-nav-list>
+  <app-menu-list-item *ngFor="let item of menuItems" [item]="item"></app-menu-list-item>
+</mat-nav-list>

@@ -1,0 +1,12 @@
+@import "../../../../../variable.scss";
+
+.mat-dialog-container{
+    padding: 0 !important;
+}
+.title{
+    margin: 0 0 20px -10px;
+}
+.dataTable{
+  height: calc(85vh - 120px);
+  overflow: auto;
+}

@@ -1,0 +1,53 @@
+<div >
+    <h2 class="title">Bulk Upload</h2>
+
+    <div>
+        <label for="">Select Company Name <span>*</span></label>
+    </div>
+    <div>
+        <mat-select value=0 class="select" (selectionChange)="companySelected = true" >
+            <mat-option value=0 hidden>Select</mat-option>
+            <mat-option value=1 >CGM</mat-option>
+            <mat-option value=2 >OK $</mat-option>
+            <mat-option value=3 >GAT</mat-option>
+            <mat-option value=4 >One Stop Supermarket</mat-option>
+            <mat-option value=5 >OK $ Taxi</mat-option>
+        </mat-select>
+    </div>
+
+    <div class="bulk_upload" *ngIf="companySelected">
+      <input type="file" id="LogoFile" class="UploadFile_hash" (change)="fileUpload($event)" #inputFile name="fileUpload" accept=".xls,.xlsx">
+      <label for="LogoFile" class="UploadFilelabel_hash mb-0"><img src="assets/images/Bulk Upload.png" alt=""></label>
+
+      <button><a download="UploadExcelFormat.xlsx" target="_blank" href="assets/UploadExcelFormat.xlsx" class="download_sample_btn"><img src="assets/images/Upload Format.png" alt=""></a></button>
+    </div>
+
+    <div *ngIf="showTable">
+      <div class="mt-5">
+        <app-data-table
+        [data]="data"
+        [header]="header"
+        [actions]="actions"
+        [noPaginator]="data.length === 1"
+        [totalDataCount]="table_length"
+        (actionEvent)="actionEvent($event)"
+        (fetchDataEvent)="fetchDataEvent($event)">
+        </app-data-table>
+      </div>
+
+
+      <div class="mt-5" *ngIf="showFileTable">
+        <app-file-data-table
+        [file_data]="file_data"
+        [file_header]="file_header"
+        [file_totalDataCount]="25"
+        (file_fetchDataEvent)="fileFetchDataEvent($event)">
+        </app-file-data-table>
+      </div>
+    </div>
+
+    <div class="button_group" *ngIf="showButtons">
+      <button matRipple (click)="showTable = false;showButtons = false">CANCEL</button>
+      <button matRipple >SAVE</button>
+    </div>
+</div>

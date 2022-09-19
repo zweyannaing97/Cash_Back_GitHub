@@ -1,0 +1,448 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./variable.scss";
+// @import "../node_modules/bootstrap/scss/bootstrap";
+
+body{
+    margin: 0;
+    font-family: Inter-regular;
+    overflow: hidden;
+}
+button{
+    border: none;
+    outline: none;
+}
+*:focus{
+    outline: none;
+    box-shadow: none;
+}
+html, body { height: 100%; }
+body { margin: 0;  }
+
+
+@font-face {
+    font-family: Inter-regular;
+    src: url('../src/assets/fonts/Inter-Regular.ttf');
+  }
+@font-face {
+    font-family: Inter-medium;
+    src: url('../src/assets/fonts/Inter-Medium.ttf');
+}
+@font-face {
+    font-family: Inter-bold;
+    src: url('../src/assets/fonts/Inter-Bold.ttf');
+}
+@font-face {
+    font-family: Inter-semiBold;
+    src: url('../src/assets/fonts/Inter-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url('../src/assets/fonts/Montserrat-Regular.ttf');
+}
+@font-face {
+    font-family: Montserrat-SemiBold;
+    src: url('../src/assets/fonts/Montserrat-SemiBold.ttf');
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+
+button:focus{
+    outline: none !important;
+}
+
+.mat-pseudo-checkbox-checked{
+    background: $primary-color;
+}
+.mat-radio-button.mat-accent .mat-radio-inner-circle{
+    background-color: $primary-color;
+}
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle{
+    border-color: $primary-color;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+  // custom theming end
+
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+  }
+
+  *:focus-visible {
+    outline: none !important;
+  }
+
+  .cursor-pointer {
+    cursor: pointer;
+  }
+
+
+  // forms style
+  ::ng-deep .select .mat-select-trigger{
+    height: 50px;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 25%;
+    padding: 15px 15px;
+    box-shadow: $secondary-color 3px 3px 3px 0px;
+    background-color: white;
+    font-weight: 500;
+}
+.mat-select-placeholder{
+    color: rgba(80, 75, 75, 0.87) !important;
+}
+.mat-select-panel{
+  margin-top: 55px;
+}
+// ::ng-deep .cdk-overlay-pane{
+//     transform: unset !important;
+//     margin-top: 50px;
+// }
+// ::ng-deep .mat-select-panel{
+//     min-width: calc(90% + 32px) !important;
+// }
+// ::ng-deep mat-option{
+//     border: 1px solid $secondary-color !important;
+// }
+input.input{
+    height: 48px;
+    border: none;
+    box-shadow:$secondary-color 3px 3px 3px 0px;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 25%;
+    padding: 13px 15px;
+    font-weight: 500;
+}
+input.inputt{
+    height: 48px;
+    border: none;
+    outline: none;
+    box-shadow: $secondary-color 3px 3px 3px 0px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 13px 15px;
+    font-weight: 500;
+}
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background{
+    background-color: $primary-color;
+}
+
+
+.button_group{
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    button:first-child{
+        color: white;
+        background: red;
+        width: 130px;
+        margin-right: 40px;
+        height: 45px;
+        border-radius: 4px;
+        font-weight: 500;
+        font-size: 20px;
+    }
+    button:last-child{
+        color: white;
+        background: $button-group-second-button-color;
+        width: 130px;
+        height: 45px;
+        border-radius: 4px;
+        font-weight: 500;
+        font-size: 20px;
+    }
+    img{
+        margin-right: 5px;
+        width: 20px;
+    }
+}
+label{
+    font-size: 14px;
+    font-weight: 500;
+    span{
+        color: red !important;
+    }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px grey;
+    border-radius: 2px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $secondary-color;
+    border-radius: 2px;
+    box-shadow: inset 0 0 10px grey;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $secondary-color;
+}
+.mat-checkbox-label{
+    color: #212529 !important;
+}
+
+::ng-deep .mat-dialog-container{
+    padding: 0;
+    max-height: 90vh !important;
+}
+::ng-deep .mat-paginator-container {
+  justify-content: space-between !important;
+}
+.table_filter{
+    text-align: right;
+    margin-bottom: 10px;
+    img{
+        width: 25px;
+        cursor: pointer;
+    }
+    img:first-child {
+        margin-right: 16px;
+    }
+    a {
+        img {
+            margin-right: 0px;
+        }
+    }
+    button{
+        background-color:$secondary-color;
+        color: $primary-color;
+        font-weight: 600;
+        font-size: 16px;
+        vertical-align: bottom;
+        padding: 5px 10px;
+        img{
+            width: 20px;
+            margin-right: 5px;
+            vertical-align: text-bottom;
+        }
+    }
+}
+
+::ng-deep .mat-dialog-content {
+  margin: unset !important;
+}
+.mat-tooltip
+{
+  margin-top: 0 !important;
+  font-size: 15px;
+}
+.mat-form-field-flex
+{
+  background-color: white !important;
+
+}
+.input .userRolePermissionFormField
+{
+  background: #fff !important;
+}
+
+.filter_select_header {
+  background: #eae3f3;
+  display: flex;
+
+  .check_uncheck_btn {
+      font-size: 12px;
+      padding  : 0 6px;
+
+      .mat-icon {
+          color      : #0b0b0b !important;
+          font-size  : 18px;
+          font-weight: 900 !important;
+      }
+  }
+
+  .mat-form-field-underline {
+      display: none !important;
+  }
+
+  .mat-form-field-infix {
+      background    : #fff;
+
+      border-radius : 51pc;
+      padding-left  : 12px;
+      border-top    : 0;
+      padding-bottom: 8px;
+      padding-top   : 4px;
+  }
+
+  .filter_text {
+      padding: 0 7px;
+  }
+
+  .mat-form-field-wrapper {
+      padding-bottom: 0 !important;
+  }
+
+  .mat-form-field-flex {
+      padding-top: 0 !important;
+      border-radius : 51pc;
+      margin        : 7px 8px;
+  }
+
+  .mat-input-element {
+      font-size: 12px
+  }
+
+  .label {
+      font-size: 12px;
+  }
+
+  .secondary-text {
+      color    : #0b0b0b !important;
+      font-size: 18px;
+  }
+}
+.cdk-overlay-pane
+{
+  justify-content: center;
+}
+
+input#file
+{
+  cursor: pointer;
+}
+//customize css start
+.bs-datepicker {
+  left: 80px;
+}
+.theme-green .bs-datepicker-head {
+  background-color: #592f95 !important;
+}
+.theme-green .bs-datepicker-body table td span.selected, .theme-green .bs-datepicker-body table td.selected span, .theme-green .bs-datepicker-body table td span[class*=select-]:after, .theme-green .bs-datepicker-body table td[class*=select-] span:after {
+  background-color: #592f95 !important;
+}
+.button_group button:last-child {
+  border-radius: 20px;
+}
+.button_group button:first-child {
+  border-radius: 20px;
+}
+.title_outer {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.mmFlag{
+  position: absolute;
+  left: 21px;
+  width: 53px;
+  top: 52px;
+}
+::ng-deep.mobileNo{
+  background-image: none !important;
+}
+.search-container {
+  position: relative;
+  display: inline-block;
+  margin-right: 51px;
+  vertical-align: bottom;
+  margin-bottom: 25px;
+}
+
+.searchbutton {
+  position: absolute;
+  font-size: 22px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.search:focus + .searchbutton {
+  transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  background-color: white;
+  color: black;
+}
+
+.search {
+  position: absolute;
+  left: 49px; /* Button width-1px (Not 50px/100% because that will sometimes show a 1px line between the search box and button) */
+  background-color: white;
+  outline: none;
+  border: none;
+  padding: 0;
+  width: 0;
+  z-index: 10;
+  transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+}
+
+.search:focus {
+  width: 150px !important; /*Bar width+1px */
+  padding: 0 16px 0 0;
+  border-radius: 20px;
+}
+
+.expandright {
+  left: auto;
+  right: 10px; /* Button width-1px */
+  /*background: #eff7f0; */
+  box-shadow: 0 0 6px #6217d0  !important;
+}
+
+.search-box {
+  border: 1px solid #d6c7ec !important;
+  border-radius: 20px;
+  margin-right: 5px;
+  transition: .5s;
+}
+
+#search-lens {
+  transition: .5s;
+}
+
+.expandright:focus {
+  padding: 0 0 0 16px;
+}
+
+.simg {
+  margin-bottom: 17px;
+  margin-left: 5px;
+  width: 25px;
+  transition: .5s;
+}
+.main-content{
+  height: calc(90vh - 120px);
+}
+.smallCalendar{
+  position: absolute;
+  right: -24px;
+  top: 50px;
+}
+.btnFooter {
+  position: sticky;
+  bottom: 20px;
+  background: white;
+}
+//customize css end
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "~ngx-bootstrap/datepicker/bs-datepicker";

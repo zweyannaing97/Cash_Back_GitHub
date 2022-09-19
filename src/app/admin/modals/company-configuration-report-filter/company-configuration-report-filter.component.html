@@ -1,0 +1,98 @@
+<div>
+    <div class="title_outer">
+        <h3>Filter
+            <i class="fa fa-close close" aria-hidden="true" (click)="onDismiss()"></i>
+            <img src="assets.images/close_white.png" alt="">
+        </h3>
+    </div>
+    <div class="content_outer">
+        <div class="row">
+            <div class="col-md-6">
+                <div >
+                  <input readonly type="text" placeholder="From Date - To Date" class="form-control datepicker" bsDaterangepicker
+                         [bsConfig]="{ isAnimated: true, rangeInputFormat : 'ddd,DD-MMM-YYYY', dateInputFormat: 'ddd,DD-MMM-YYYY',showPreviousMonth: true ,showWeekNumbers: false}"
+                         [maxDate]="maxDate">
+                  <mat-icon class="smallCalendar" style="margin-top:-45px;margin-right:56px;">date_range</mat-icon>
+                </div>
+            </div>
+
+        </div>
+        <div class="row mt-4">
+            <mat-radio-group aria-label="Select an option">
+              </mat-radio-group>
+            <div class="col-md-4">
+                <mat-radio-button value="1" style="color: black;">All</mat-radio-button>
+            </div>
+            <div class="col-md-4">
+                <mat-radio-button value="2">Active</mat-radio-button>
+            </div>
+            <div class="col-md-4">
+                <mat-radio-button value="3">Is Active</mat-radio-button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div>
+                    <label for="">Company Name</label>
+                </div>
+                <div>
+                    <mat-select class="selectt" multiple placeholder="Select">
+                        <mat-option value=1>All</mat-option>
+                        <mat-option value=2>CGM</mat-option>
+                        <mat-option value=3>OK$</mat-option>
+                        <mat-option value=4>GAT</mat-option>
+                        <mat-option value=5>One Stop Supermarket</mat-option>
+                    </mat-select>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div>
+                    <label for="">OK$ Account Type</label>
+                </div>
+                <div>
+                <mat-select class="selectt" multiple placeholder="Select">
+                    <mat-option value=1>All</mat-option>
+                    <mat-option value=2>Personal</mat-option>
+                    <mat-option value=3>Merchant</mat-option>
+                    <mat-option value=4>Advance Merchant</mat-option>
+                    </mat-select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div>
+                    <label for="">Cash Back Credit OK$ Account</label>
+                </div>
+                <div>
+                <mat-select class="selectt" multiple placeholder="Select">
+                    <mat-option value=1>All</mat-option>
+                    <mat-option value=2>+95 65435788</mat-option>
+                    <mat-option value=3>+95 65435788</mat-option>
+                    <mat-option value=4>+95 65435788</mat-option>
+                    <mat-option value=5>+95 65435788</mat-option>
+                    </mat-select>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div>
+                    <label for="">Operator Name</label>
+                </div>
+                <div>
+                <mat-select class="selectt" multiple placeholder="Select">
+                    <mat-option value=1>All</mat-option>
+                    <mat-option value=2>MPT</mat-option>
+                    <mat-option value=3>Telenor</mat-option>
+                    <mat-option value=4>Ooredoo</mat-option>
+                    </mat-select>
+                </div>
+            </div>
+        </div>
+        <div class="button_group">
+            <button>CLEAR</button>
+            <button> APPLY</button>
+        </div>
+    </div>
+</div>
+

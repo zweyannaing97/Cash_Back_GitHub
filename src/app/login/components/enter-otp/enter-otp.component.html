@@ -1,0 +1,29 @@
+<div>
+    <p class="otp_expire mb-0">OTP Expire in</p>
+    <!-- <div class="timer"> -->
+    <div class="item">
+        <!-- <h2>{{coutDownSecounds}}</h2> -->
+        <svg width="160" height="160" xmlns="http://www.w3.org/2000/svg">
+            <circle id="circle" class="circle_animation" r="69.85699" cy="81" cx="81" stroke-width="8" stroke="yellow" fill="white"/>
+            <text x="50%" y="-50%" text-anchor="middle" stroke="#000000" stroke-width="2px" dy=".3em">{{coutDownSecounds}}</text>
+        </svg>
+    </div>
+    <!-- </div> -->
+
+    <div style="text-align: center;position: relative;">
+        <input type="text" placeholder="Enter OTP" autocomplete="off" cdkAutofill="off"><br>
+        <div class="input_image_box">
+            <img src="assets/images/change-password.png" alt="" style="width: 20px;">
+        </div>
+    </div>
+
+    <p class="enter_otp">Enter OTP received via SMS on your registered mobile number</p>
+
+    <div style="text-align: center;margin-top: 10px;" >
+        <button type="submit" class="submit" (click)="otpSubmit()">SUBMIT</button>
+    </div>
+    <div style="text-align: center;" >
+        <button type="submit" class="cancel"  (click)="otpCancel()">CANCEL</button>
+    </div>
+
+</div>

@@ -1,0 +1,32 @@
+<form action="" [formGroup]="operatorWise_overSeasTopUp_form">
+    <br>
+    <div>
+      <label for="">Country</label>
+    </div>
+    <div>
+      <mat-select class="select selectt" placeholder="Select" formControlName="country">
+        <mat-option value=1>Thailand</mat-option>
+        <mat-option value=2>Thailand</mat-option>
+        <mat-option value=3>Thailand</mat-option>
+        <mat-option value=4>Thailand</mat-option>
+        <mat-option value=5>Thailand</mat-option>
+        <mat-option value=5>Thailand</mat-option>
+      </mat-select>
+    </div>
+
+    <br>
+    <div>
+      <label for="">Cash Back Credit Over Seas Top Up Number</label>
+    </div>
+    <div>
+      <input type="text" class="input" placeholder="Enter OK$ Account Number" formControlName="overSeasTopUp_number" (keyup)="formValidation()">
+    </div>
+
+    <br>
+    <div>
+      <label for="">Remarks</label>
+    </div>
+    <div>
+      <input type="text" class="inputt" placeholder="Enter OK$ Account Number" formControlName="Remarks">
+    </div>
+  </form>

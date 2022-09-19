@@ -1,0 +1,37 @@
+<div class="outer_div">
+    <h3>Temporary Suspense Date</h3>
+    <div class="row">
+        <div class="col-md-6 p-4">
+            <div>
+                <label for="">Suspense Start Date</label>
+            </div>
+            <div>
+                <mat-select class=" selectt" value=0>
+                    <mat-option value=0 hidden >Select</mat-option>
+                    <mat-option value=1 >Select</mat-option>
+                    <mat-option value=2 >Select</mat-option>
+                    <mat-option value=3 >Select</mat-option>
+
+                </mat-select>
+            </div>
+        </div>
+        <div class="col-md-6 p-4">
+            <div>
+                <label for="">Suspense End Date</label>
+            </div>
+            <div>
+                <mat-select class=" selectt" value=0>
+                    <mat-option value=0 hidden >Select</mat-option>
+                    <mat-option value=1 >Select</mat-option>
+                    <mat-option value=2 >Select</mat-option>
+                    <mat-option value=3 >Select</mat-option>
+                </mat-select>
+            </div>
+        </div>
+    </div>
+
+    <div class="button_group">
+        <button (click)="onDismiss()"> CANCEL</button>
+        <button> SAVE</button>
+    </div>
+</div>

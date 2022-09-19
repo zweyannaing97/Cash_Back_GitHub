@@ -1,0 +1,77 @@
+@import "../../../../styles.scss";
+@import "../../../../variable.scss";
+
+.title_outer{
+    background-color: $primary-color;
+    color: white;
+    height: 50px;
+    padding: 10px 30px;
+    h3{
+        .close{
+            color: white;
+            opacity: 1;
+            font-weight: 400;
+            text-shadow: none;
+        }
+    }
+}
+::ng-deep .mat-dialog-container{
+    padding: 0;
+    // height: 80vh;
+}
+.selectt{
+    height: 50px;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 15px 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 3px 3px 3px 0px;
+    background-color: white;
+}
+.mat-radio-label-content{
+    color: black !important;
+}
+.content_outer{
+    padding: 15px 40px 30px;
+}
+label{
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.button_group{
+    text-align: center;
+    margin-top: 35px;
+    button:first-child{
+        color: white;
+        background: red;
+        font-weight: 500;
+        padding: 5px 20px;
+        border-radius: 20px;
+        width: 120px;
+        margin-right: 40px;
+        height: 40px;
+    }
+    button:last-child{
+        color: white;
+        background: rgb(50, 50, 226);
+        font-weight: 500;
+        padding: 5px 20px;
+        border-radius: 20px;
+        width: 120px;
+        height: 40px;
+    }
+}
+::placeholder{
+    color: rgba(80, 75, 75, 0.87);
+    font-size: 14px;
+}
+::-moz-placeholder{
+    color: rgba(80, 75, 75, 0.87);
+    font-size: 14px;
+}
+::-webkit-input-placeholder{
+    color: rgba(80, 75, 75, 0.87);
+    font-size: 14px;
+}

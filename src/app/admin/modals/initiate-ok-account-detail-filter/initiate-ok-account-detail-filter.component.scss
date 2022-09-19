@@ -1,0 +1,50 @@
+@import "../../../../variable.scss";
+@import "../../../../styles.scss";
+
+.title_outer{
+    background-color: $primary-color;
+    color: white;
+    height: 50px;
+    padding: 10px 30px;
+    h3{
+        .close{
+            color: white;
+            opacity: 1;
+            font-weight: 400;
+            text-shadow: none;
+        }
+    }
+}
+::ng-deep .mat-dialog-container{
+    padding: 0;
+}
+.selectt {
+    height: 50px;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 15px 15px;
+    box-shadow: $secondary-color 3px 3px 3px 0px;
+    background-color: white;
+}
+.content_outer{
+    padding: 15px 40px 40px;
+}
+label{
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+::placeholder{
+    color: rgba(80, 75, 75, 0.87);
+    font-size: 14px;
+}
+::-moz-placeholder{
+    color: rgba(80, 75, 75, 0.87);
+    font-size: 14px;
+}
+::-webkit-input-placeholder{
+    color: rgba(80, 75, 75, 0.87);
+    font-size: 14px;
+}

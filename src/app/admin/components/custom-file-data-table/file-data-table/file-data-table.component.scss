@@ -1,0 +1,52 @@
+@import "../../../../../variable.scss";
+
+table{
+    font-family: Inter-medium;
+}
+.mat-paginetor{
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+th.mat-header-cell:last-of-type{
+    width: 20%;
+}
+td.mat-cell:first-of-type{
+    text-align: left !important;
+}
+.file_data_table{
+    border: 2px solid gray;
+}
+.file_data_table th.mat-header-cell{
+    border-right: unset !important;
+    word-wrap: initial;
+    display: table-cell;
+    padding: 0px 25px;
+    line-break: unset;
+    width: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+    font-size: 16px;
+    font-style: italic;
+    color: black;
+    font-weight: 500;
+    font-family: Inter-medium !important;
+
+}
+.file_data_table tr.mat-header-row{
+    background: $secondary-color;
+}
+.file_data_table tr{
+    border: unset !important;
+}
+.file_data_table td.mat-cell{
+    border-right: unset !important;
+    text-align: center;
+}
+.file_data_table td.mat-cell{
+    border-bottom: none;
+}
+.file_data_table th{
+    width: 22%;
+    text-align: center;
+}

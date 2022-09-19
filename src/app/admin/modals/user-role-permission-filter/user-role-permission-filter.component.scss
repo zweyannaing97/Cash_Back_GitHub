@@ -1,0 +1,131 @@
+@import "../../../../variable.scss";
+@import "../../../../styles.scss";
+
+
+
+.mat-dialog-container
+{
+  width:850px !important;
+  background-color: #f6f6f6 !important;
+}
+.smallCalendar{
+  position: absolute;
+  top: 53px;
+  right: -25px;
+}
+.btnFooter {
+  position: sticky;
+  bottom: 20px;
+  background: white;
+}
+
+.title_outer{
+    background-color: $primary-color;
+    color: white;
+    height: 50px;
+    padding: 10px 30px;
+    h3{
+        .close{
+            color: white;
+            opacity: 1;
+            font-weight: 400;
+            text-shadow: none;
+        }
+    }
+}
+
+
+::ng-deep .mat-select-panel
+{
+  min-width: calc(100% + 94px) !important;
+}
+
+::ng-deep .mat-dialog-container{
+    padding: 0;
+}
+.selectt{
+    height: 50px;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 15px 15px;
+    box-shadow: $secondary-color 3px 3px 3px 0px;
+    background-color: white;
+}
+.content_outer{
+    padding: 15px 40px 40px;
+}
+label{
+    margin-top: 15px;
+    font-weight: 500;
+}
+::placeholder{
+    color: rgba(80, 75, 75, 0.87);
+    font-size: 14px;
+}
+::-moz-placeholder{
+    color: rgba(80, 75, 75, 0.87);
+    font-size: 14px;
+}
+::-webkit-input-placeholder{
+    color: rgba(80, 75, 75, 0.87);
+    font-size: 14px;
+}
+// .filter_select_header
+// {
+//   background: #eae3f3;
+// }
+
+
+.select_search_box {
+  width: 133px;
+}
+.datePicker
+{
+    height: 50px;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 15px 15px;
+    box-shadow: #d6c7ec 3px 3px 3px 0px;
+    background-color: white;
+}
+.datePicker mat-icon
+{
+  vertical-align: top !important;
+}
+
+.mat-datepicker-content
+{
+  margin-top: 17px;
+  position: relative;
+  left: calc(15% - 100px);
+}
+.mat-select-panel{
+  max-width: 320px;
+  max-height: 188px;
+}
+.table_filter button img
+{
+  width: 35px !important;
+}
+.mat-dialog-container
+{
+  padding: 0;
+}
+.v-line
+{
+  border-left: solid 2px #000;
+  height: 50%;
+  border-radius: unset;
+  margin: auto;
+}
+//color: white;
+//background: #0059b9;
+//width: 130px;
+//height: 45px;
+//border-radius: 4px;
+//font-weight: 500;
+//font-size: 20px;

@@ -1,0 +1,102 @@
+@import "../../../../variable.scss";
+
+
+.input_image_box{
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 48px;
+    height: 46px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+input[type=text],input[type=password]{
+    height: 50px;
+    padding-left: 58px;
+    width: 100%;
+    border: 2px solid $primary-color;
+    background-image: linear-gradient(to top, #5b25aa, #612bb1, #6731b8, #6e36bf, #743cc6);
+    color: white;
+    font-weight: 500;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px $primary-color inset !important;
+    background-image: linear-gradient(to top, #5b25aa, #612bb1, #6731b8, #6e36bf, #743cc6) !important;
+}
+input:-webkit-autofill{
+    -webkit-text-fill-color: white !important;
+    background-image: linear-gradient(to top, #5b25aa, #612bb1, #6731b8, #6e36bf, #743cc6);
+    background-color: linear-gradient(to top, #5b25aa, #612bb1, #6731b8, #6e36bf, #743cc6);;
+}
+
+::placeholder{
+    color: white;
+}
+
+.submit{
+    background-color: green;
+    border: 2px solid $primary-color;
+    color: white;
+    font-size: 16px;
+    height: 50px;
+    width: 190px;
+    border-radius: 200px;
+    cursor: pointer;
+    font-weight: 500;
+}
+.cancel{
+    background-color: #bd0a0a;
+    border: 2px solid $primary-color;
+    color: white;
+    font-size: 16px;
+    height: 50px;
+    margin-top: 10px;
+    width: 190px;
+    border-radius: 200px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.otp_expire{
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+// timer
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+svg {
+    transform: rotate(-90deg);
+
+    text {
+        transform: rotate(90deg);
+    }
+}
+
+.circle_animation {
+  stroke-dasharray: 440; /* this value is the pixel circumference of the circle */
+  stroke-dashoffset: 440;
+  transition: all 1s linear;
+}
+
+.enter_otp{
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    width: 320px;
+    margin-top: 10px;
+}

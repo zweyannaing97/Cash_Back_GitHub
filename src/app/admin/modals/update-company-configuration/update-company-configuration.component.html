@@ -1,0 +1,57 @@
+<div class="outer">
+    <h2 class="title">Update Company Configuration
+        <button class="close"><img src="assets/images/close.png" alt="close"  (click)="onDismiss()"></button>
+    </h2>
+
+      <div>
+          <label for="">Company Name <span>*</span></label>
+      </div>
+      <div>
+          <mat-select class="select" disableOptionCentering formControlName="company_name" placeholder="Select">
+              <mat-option value=1 >CGM</mat-option>
+              <mat-option value=2 >OK$</mat-option>
+              <mat-option value=3 >GAT</mat-option>
+              <mat-option value=4 >One Stop Supermarket</mat-option>
+              <mat-option value=5 >OK $ Taxi</mat-option>
+          </mat-select>
+      </div>
+
+      <div class="add_button_div">
+          <button (click)="addMobile()"><img src="assets/images/add_img.png" alt="add" >ADD</button>
+          <p>*(Maximum Allow Add 5 Mobile Numbers)</p>
+      </div>
+      <div class="input_outer" *ngFor="let item of mobileNumberFields">
+          <br>
+          <div>
+              <label for="">Cash back Credit OK$ Account <span>*</span></label>
+          </div>
+          <div class="mobile_field">
+              <span>+95</span>
+              <input type="text" class="input" placeholder="Enter OK$ Account Number" [(ngModel)]="item.mobileNumberValue" >
+          </div>
+
+          <div style="display: none">
+              <img src="assets/images/Close.png" alt="" style="width: 30px;">
+              <span>OK$ Account Not Found</span>
+          </div>
+
+          <div style="display: inline;" *ngIf="item.mobileNumberValue !== ''">
+              <img src="assets/images/delete icon.png" alt="" (click)="deleteMobile(item)"><img src="assets/images/tic.png" alt="" style="width: 20px;">
+              <span>MPT (Merchant)</span>
+          </div>
+      </div>
+
+      <br>
+      <div>
+          <label for="">Remarks</label>
+      </div>
+      <div>
+          <input type="text" class="inputt">
+      </div>
+    <div class="button_group btnFooter d-flex justify-content-center align-items-center">
+        <button mat-button mat-dialog-close> CANCEL</button>
+        <button> UPDATE</button>
+    </div>
+
+
+</div>

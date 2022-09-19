@@ -1,0 +1,19 @@
+<header style="display: flex; " >
+  <div class="side_nav_header col-12 col-lg-2 header d-flex justify-content-between align-items-center">
+    <h4 class="text-white">Cash Back</h4>
+    <button class="btn text-white" (click)="drawer.toggle()"><i class="fa fa-bars" aria-hidden="true" style="font-size: 18px;"></i></button>
+  </div>
+</header>
+<div class="h-100">
+
+    <mat-drawer-container class="drawer-container" autosize>
+      <mat-drawer #drawer class="example-sidenav" mode="side" opened>
+        <app-side-nav (sideNavCloseEvent)="drawer.toggle()"></app-side-nav>
+      </mat-drawer>
+      <div style="margin-top:20px;">
+        <div class="px-3">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </mat-drawer-container>
+  </div>

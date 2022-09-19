@@ -1,0 +1,35 @@
+@import "../../../variable.scss";
+
+body{
+  // font-family: Inter-regular;
+}
+::ng-deep .mat-drawer {
+    border: none;
+    overflow-y: hidden !important;
+  }
+
+  .drawer-container {
+    position: relative;
+  }
+
+  .drawer-container {
+    width: 100%;
+    height: 100vh;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+.sidenav-menu{
+    background-color: $secondary-color;
+    width: 380px;
+}
+::ng-deep mat-drawer-content{
+  background: #f6f6f6;
+}
+::ng-deep mat-drawer{
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 250px;
+  background-color: #f9f5ff !important;
+}
+header{
+  background-color: $primary-color;
+  height: 55px;
+}

@@ -1,0 +1,17 @@
+<form action="" [formGroup]="operatorWise_DTH_form">
+    <br>
+    <div>
+      <label for="">Cash Back Credit DTH Number</label>
+    </div>
+    <div>
+      <input type="text" class="input" placeholder="Enter OK$ Account Number" formControlName="dth_number" (keyup)="formValidation()">
+    </div>
+  
+    <br>
+    <div>
+      <label for="">Remarks</label>
+    </div>
+    <div>
+      <input type="text" class="inputt" placeholder="Enter OK$ Account Number" formControlName="Remarks">
+    </div>
+  </form>

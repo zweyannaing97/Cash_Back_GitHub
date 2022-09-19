@@ -1,0 +1,8 @@
+@import "../../../../../variable.scss";
+
+.mat-dialog-container{
+    padding: 0 !important;
+}
+::ng-deep.dataTable{
+   height: calc(90vh - 100px);
+ }

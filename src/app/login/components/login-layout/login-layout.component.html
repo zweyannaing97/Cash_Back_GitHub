@@ -1,0 +1,41 @@
+<div class="login_bg">
+    <div class="d-flex h_100">
+        <div class="login_first_bg h_100"></div>
+        <div class="login_content" >
+            <form action="" [formGroup]="login_form" (ngSubmit)="login()">
+                <div>
+                    <h1 class="title_h1"><span class="title_color">Cash</span> Back</h1>
+                    <h3 class="title_sub">Management</h3>
+                    <div class="d-flex position-relative">
+                        <input type="text" placeholder="User Name" autocomplete="off" cdkAutofill="off" formControlName="user_name">
+                        <div class="input_image_box">
+                            <img src="assets/images/Operator Wise.png" alt="" style="width: 20px;">
+                        </div>
+                    </div>
+                    <div class="position-relative text-center" style="margin-top: 30px;">
+                        <div class="input_image_box">
+                            <img src="assets/images/password.svg" alt="" style="width: 20px;">
+                        </div>
+                        <show-hide-password size="sm" [btnOutline]="false" class="show-hide-password">
+                            <input type="password" placeholder="Password" autocomplete="off" formControlName="password"/>
+                        </show-hide-password>
+                    </div>
+
+                    <!-- <div class="incorrect_password">
+                        <p>Your Entering Incorrect Password</p>
+                    </div> -->
+                    <div class="forgot_password">
+                        <a routerLink="/login/forgotPassword">Forgot Password ?</a>
+                    </div>
+
+                    <div class="check_box">
+                        <mat-checkbox class="remember_me">Remember Me</mat-checkbox>
+                    </div>
+                    <div style="text-align: center;margin-top: 20px;">
+                        <button type="submit" class="login_btn" >LOGIN</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

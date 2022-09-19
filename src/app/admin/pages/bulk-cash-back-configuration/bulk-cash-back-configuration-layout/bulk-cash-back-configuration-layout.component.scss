@@ -1,0 +1,45 @@
+.title{
+    margin: 0 0 20px -10px;
+}
+
+
+.bulk_upload{
+    text-align: end;margin-top: -21px;
+    img{
+        height: 45px;
+    }
+}
+
+::ng-deep .select .mat-select-trigger{
+    height: 50px;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 25%;
+    padding: 15px 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 3px 3px 3px 0px;
+    background-color: white;
+}
+input.input{
+    height: 48px;
+    border: none;
+    box-shadow:rgba(99, 99, 99, 0.2) 3px 3px 3px 0px;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 25%;
+    padding: 13px 15px;
+}
+.UploadFilelabel_hash{
+    img{
+        margin-right: 8px;
+        cursor: pointer;
+    }
+}
+.UploadFile_hash{
+    display: none;
+}
+
+label{
+    font-weight: 500;
+}

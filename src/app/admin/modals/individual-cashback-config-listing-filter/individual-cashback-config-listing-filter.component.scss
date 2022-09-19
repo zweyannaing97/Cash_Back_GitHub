@@ -1,0 +1,86 @@
+@import "../../../../styles.scss";
+@import "../../../../variable.scss";
+
+.title_outer{
+    background-color: $primary-color;
+    color: white;
+    height: 50px;
+    padding: 10px 30px;
+    h3{
+        .close{
+            color: white;
+            opacity: 1;
+            font-weight: 400;
+            text-shadow: none;
+        }
+    }
+}
+::ng-deep .mat-dialog-container{
+    padding: 0;
+    max-height: 90vh;
+}
+::ng-deep .selectt .mat-select-trigger{
+    height: 50px;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 15px 15px;
+    box-shadow: $secondary-color 3px 3px 3px 0px;
+    background-color: white;
+}
+.content_outer{
+    padding: 15px 40px;
+}
+label{
+    margin-top: 15px;
+    font-weight: 500;
+}
+::placeholder{
+    color: rgba(80, 75, 75, 0.87);
+    font-size: 14px;
+}
+::-moz-placeholder{
+    color: rgba(80, 75, 75, 0.87);
+    font-size: 14px;
+}
+::-webkit-input-placeholder{
+    color: rgba(80, 75, 75, 0.87);
+    font-size: 14px;
+}
+
+::ng-deep .multiselect-dropdown {
+    background: white;
+    height: 48px;
+    box-shadow: #d6c7ec 3px 3px 3px 0px;
+    padding: 7px 0px;
+    border-radius: 5px;
+}
+
+::ng-deep .multiselect-dropdown .dropdown-btn .dropdown-multiselect__caret:before {
+    border-width: 5px 5px 0;
+    color: #565252;
+    border-color: #897878 transparent;
+}
+::ng-deep .multiselect-dropdown .dropdown-btn {
+    border: none !important;
+}
+
+::ng-deep .multiselect-item-checkbox input[type=checkbox] + div:before {
+    border: 2px solid $primary-color !important;
+}
+::ng-deep .multiselect-item-checkbox input[type=checkbox]:checked + div:before {
+    background: $primary-color !important;
+}
+::ng-deep .multiselect-dropdown .dropdown-btn .selected-item {
+    background: $primary-color !important;
+}
+::ng-deep .multiselect-dropdown .dropdown-btn .dropdown-multiselect__caret:before {
+    color: #484141 !important;
+    top: 80% !important;
+    border-color: #7a6464 transparent !important;
+    border-width: 5px 5px 0 !important;
+}
+::ng-deep .multiselect-dropdown .dropdown-btn .dropdown-multiselect--active .dropdown-multiselect__caret {
+  transform: rotateZ(0deg) !important;
+}

@@ -1,0 +1,17 @@
+<form action="" [formGroup]="operatorWise_electricity_form">
+    <br>
+    <div>
+      <label for="">Cash Back Credit Electricity Number</label>
+    </div>
+    <div>
+      <input type="text" class="input" placeholder="Enter OK$ Account Number" formControlName="electricity_number" (keyup)="formValidation()">
+    </div>
+
+    <br>
+    <div>
+      <label for="">Remarks</label>
+    </div>
+    <div>
+      <input type="text" class="inputt" placeholder="Enter OK$ Account Number" formControlName="Remarks">
+    </div>
+  </form>

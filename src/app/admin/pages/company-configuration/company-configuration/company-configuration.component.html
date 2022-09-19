@@ -1,0 +1,108 @@
+<div *ngIf="!configuration_listingg" class="main-content">
+    <h5 class="title">Company Configuration</h5>
+        <div>
+            <label for="">Company Name <span>*</span></label>
+        </div>
+        <div>
+            <mat-select class="select" disableOptionCentering [(ngModel)]="company_name" (selectionChange)="formValidation()" placeholder="Select">
+                <mat-option value=1 >CGM</mat-option>
+                <mat-option value=2 >OK$</mat-option>
+                <mat-option value=3 >GAT</mat-option>
+                <mat-option value=4 >One Stop Supermarket</mat-option>
+                <mat-option value=5 >OK $ Taxi</mat-option>
+            </mat-select>
+        </div>
+
+        <div class="add_button_div">
+            <button (click)="addMobile()"><img src="assets/images/add-pattern.svg" alt="add" >ADD</button>
+            <p>*(Maximum Allow Add 5 Mobile Numbers)</p>
+        </div>
+        <div class="input_outer" *ngFor="let item of mobileNumberFields">
+            <br>
+            <div>
+                <label for="">Cash back Credit OK$ Account <span>*</span></label>
+            </div>
+            <div class="mobile_field">
+                <span>+95</span>
+                <input type="text" class="input" placeholder="Enter OK$ Account Number" [(ngModel)]="item.mobileNumberValue" (keyup)="formValidation()">
+            </div>
+
+            <div style="display: none">
+                <img src="assets/images/Close.png" alt="" style="width: 30px;">
+                <span>OK$ Account Not Found</span>
+            </div>
+
+            <div style="display: inline;" *ngIf="item.mobileNumberValue !== ''">
+                <img src="assets/images/delete-pattern.svg" alt="" (click)="deleteMobile(item)"><img src="assets/images/tic.png" alt="" style="width: 20px;">
+                <span>MPT (Merchant)</span>
+            </div>
+        </div>
+   <br>
+
+    <div>
+        <label for="">Remarks</label>
+    </div>
+    <div>
+        <input type="text" class="inputt">
+    </div>
+
+
+</div>
+<mat-toolbar class="justify-content-center " *ngIf="!configuration_listingg">
+  <div class="button_group modal-footer " *ngIf="show_buttons">
+    <button> CANCEL</button>
+    <button (click)="configuration_listing()">SAVE</button>
+  </div>
+</mat-toolbar>
+
+<div *ngIf="configuration_listingg">
+    <div class="d-flex justify-content-between align-items-center">
+      <h5 class="title">Company Configuration Listing</h5>
+
+      <div class="table_filter d-flex justify-content-between align-items-center">
+        <div class="search-container">
+          <form method="get">
+            <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
+            <label class="button searchbutton" for="searchright">
+              <img class="simg " src="assets/images/search.png" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Search" >
+            </label>
+          </form>
+        </div>
+        <!-- <img src="assets/images/filter_img.png" alt="">
+        <a download="UploadExcelFormat.xlsx" target="_blank" href="assets/UploadExcelFormat.xlsx" ><img src="assets/images/excel_download.png" alt=""></a>
+        <button (click)="configuration_listingg = false"><img src="assets/images/add-pattern.svg" alt="add">ADD</button> -->
+
+        <button
+          matTooltip="Export To Excel"
+          aria-label="Button that displays a tooltip when focused or hovered over"
+          mat-button class="icon-tooltip">
+            <span matPrefix class="icons material-icons custom-icon">
+              <a download="UploadExcelFormat.xlsx" target="_blank" href="assets/UploadExcelFormat.xlsx" >
+                <img src="assets/images/excel-download.svg"  alt="Export To Excel Icon">
+              </a>
+            </span>
+        </button>
+        <button (click)="configuration_listingg = false"
+                matTooltip="Create New"
+                aria-label="Button that displays a tooltip when focused or hovered over"
+                mat-button class="">
+          <!-- [routerLink]="'./'" -->
+          <span class="material-icons icons custom-icon">
+                <img src="assets/images/add-pattern.svg"  alt="Create New Icon">
+            </span>
+        </button>
+
+      </div>
+    </div>
+    <div>
+        <app-data-table
+        [data]="data"
+        [header]="header"
+        [actions]="actions"
+        [totalDataCount]="25"
+        (actionEvent)="actionEvent($event)"
+        (fetchDataEvent)="fetchDataEvent($event)"
+        (itemCustomClickEvent)="itemCustomCLickHandler($event)">
+        </app-data-table>
+    </div>
+</div>

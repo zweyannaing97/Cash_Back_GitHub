@@ -1,0 +1,108 @@
+@import "../../../../variable.scss";
+@import "../../../../styles.scss";
+.outer{
+    padding: 20px 30px;
+    border: 3px solid $secondary-color;
+    position: relative;
+    overflow: hidden;
+}
+.close{
+    background: white;
+    outline: none;
+    border: none;
+    float: right;
+    margin-top: -2px;
+    img{
+        width: 85%;
+    }
+}
+.title{
+    font-size: 24px;
+    margin: 0 0 20px -10px;
+}
+
+.input_outer{
+    img{
+        margin-left: 30px;
+        margin-right: 10px;
+    }
+    img:first-child{
+        width: 65px;
+        cursor: pointer;
+    }
+    img:nth-child(2){
+        margin-left: 15px;
+        width: 19px;
+    }
+    span{
+        color: #ada1a1;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .mobile_field{
+        position: relative;
+        display: inline;
+        span{
+            position: absolute;
+            top: -2px;
+            left: 12px;
+            color: black;
+            font-weight: 400;
+        }
+        input{
+            padding: 13px 15px 13px 49px;
+        }
+    }
+}
+.add_button_div{
+    text-align: end;
+    position: absolute;
+    right: 30px;
+    margin-top: 46px;
+    button{
+        background-color: $secondary-color;
+        color: $primary-color;
+        font-weight: 600;
+        font-size: 18px;
+        width: 95px;
+        height: 38px;
+    }
+    img{
+        width: 20px;
+        margin-right: 10px;
+        margin-left: 0;
+        vertical-align: middle;
+    }
+    p{
+        color: red;
+        font-weight: 500;
+        font-size: 12px;
+        text-align: end;
+        margin-top: 10px;
+    }
+}
+
+label{
+    font-size: 14px;
+    font-weight: 500;
+    span{
+        color: red;
+    }
+}
+::placeholder{
+    font-size: 14px;
+}
+::ng-deep .mat-dialog-container{
+    padding: 0 !important;
+}
+input.input {
+    width: 30% !important;
+}
+::ng-deep .select .mat-select-trigger{
+    width: 30%;
+}
+.btnFooter {
+  position: sticky;
+  bottom: 20px;
+  background: white;
+}

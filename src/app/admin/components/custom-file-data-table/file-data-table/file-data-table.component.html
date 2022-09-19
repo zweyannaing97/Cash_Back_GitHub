@@ -1,0 +1,40 @@
+<div *ngIf="file_data && file_data?.length > 0">
+    <div style="width: 100%;overflow: auto;max-height: 57vh;">
+        <table class="w-100 file_data_table" mat-table [dataSource]="dataSource" matSort>
+        <ng-container [matColumnDef]="'def' + i.toString()" *ngFor="let column of [].constructor(totalColumns);index as i;">
+            <th class="text-center" mat-header-cell *matHeaderCellDef justify="end">
+            <span *ngIf="!(tableHeaders[i].key === actionString || tableHeaders[i].key === customColumnsString)">{{ tableHeaders[i].title || '' }}</span>
+            <span *ngIf="(tableHeaders[i].key === actionString || tableHeaders[i].key === customColumnsString)">Action</span>
+            </th>
+            
+            <td class="text-center" mat-cell *matCellDef="let element" [ngClass]="{'text-end actionWidth': (tableHeaders[i].key === actionString || tableHeaders[i].key === customColumnsString)}" >
+            <span *ngIf="!(tableHeaders[i].key === actionString)">{{ element[tableHeaders[i].key] || '' }}</span>
+            <span class="d-flex justify-content-center" *ngIf="(tableHeaders[i].key === actionString) && !element.hideActions">
+                <button mat-menu-item *ngFor="let act of file_actions;" (click)="actionClick(element, act.type)">
+                    <!-- <mat-icon>{{act.icon}}</mat-icon> -->
+                    <img src="{{act.icon}}" alt="" class="action_icons">
+                </button>
+            </span>
+            <span class="d-flex justify-content-center" *ngIf="tableHeaders[i].key === customColumnsString" (click)="customColumnClick(element, file_customColumns[totalColumns - i - 1].type)" >
+                <!-- <mat-icon *ngIf="customColumns[totalColumns - i - 1].type === iconOnly">{{customColumns[totalColumns - i - 1].icon}}</mat-icon> -->
+                <img src="{{file_customColumns[totalColumns - i - 1].icon}}" *ngIf="file_customColumns[totalColumns - i - 1].type === iconOnly && element?.status !== 'Cancel' && element?.status !== 'Pending' && element?.qrcode !== ''" />
+
+                <span *ngIf="file_customColumns[totalColumns - i - 1].type === textOnly">{{file_customColumns[totalColumns - i - 1].title}}</span>
+                <span *ngIf="file_customColumns[totalColumns - i - 1].type === iconAndText">
+                <mat-icon>{{file_customColumns[totalColumns - i - 1].icon}}</mat-icon>
+                <span>{{file_customColumns[totalColumns - i - 1].title}}</span>
+                </span>
+            </span>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+ 
+  </div>
+  <div *ngIf="!file_data || !(file_data?.length > 0)">
+    <h2 class="pt-3 text-secondary text-center">No data available</h2>
+  </div>
+  

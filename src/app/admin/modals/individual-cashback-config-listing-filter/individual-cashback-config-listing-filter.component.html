@@ -1,0 +1,301 @@
+<div>
+    <div class="title_outer">
+        <h3>Filter
+            <i class="fa fa-close close" aria-hidden="true" (click)="onDismiss()"></i>
+        </h3>
+    </div>
+    <mat-dialog-content class="mat-typography">
+
+        <div class="content_outer">
+          <div class="row">
+              <div class="col-md-6">
+                  <div style="display: flex;border-bottom: 1px solid;width: 52%;margin: auto;">
+                      <mat-datepicker-toggle matSuffix [for]="pickerr">
+                          <mat-icon matDatepickerToggleIcon><img src="assets/images/calendar.png" alt="calender" style="width: 18px;vertical-align: baseline;"></mat-icon>
+                      </mat-datepicker-toggle>
+                      <input matInput [matDatepicker]="pickerr" placeholder="From date" readonly>
+                      <mat-datepicker #pickerr></mat-datepicker>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div style="display: flex;border-bottom: 1px solid;width: 52%;margin: auto;">
+                      <mat-datepicker-toggle matSuffix [for]="picker">
+                          <mat-icon matDatepickerToggleIcon><img src="assets/images/calendar.png" alt="calender" style="width: 18px;vertical-align: baseline;"></mat-icon>
+                      </mat-datepicker-toggle>
+                      <input matInput [matDatepicker]="picker" placeholder="To date" readonly>
+                      <mat-datepicker #picker></mat-datepicker>
+                  </div>
+              </div>
+          </div>
+          <div class="row mt-3">
+              <div class="col-md-4">
+                  <div>
+                      <label for="">Company Name</label>
+                  </div>
+                  <div>
+                  <mat-select class="selectt" multiple placeholder="Select">
+                      <mat-option value=1>All</mat-option>
+                      <mat-option value=2>CGM</mat-option>
+                      <mat-option value=3>OK$</mat-option>
+                      <mat-option value=4>GAT</mat-option>
+                      <mat-option value=5>One Stop Supermarket</mat-option>
+                      </mat-select>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div>
+                      <label for="">Division/State</label>
+                  </div>
+                  <div>
+                  <mat-select class="selectt" multiple placeholder="Select">
+                      <mat-option value=1>All</mat-option>
+                      <mat-option value=2>Yangon</mat-option>
+                      <mat-option value=3>Ayeyawaddy</mat-option>
+                      <mat-option value=4>Mon</mat-option>
+                      <mat-option value=5>Bago</mat-option>
+                      </mat-select>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div>
+                      <label for="">City/Town</label>
+                  </div>
+                  <div>
+                  <mat-select class="selectt" multiple  placeholder="Select">
+                      <mat-option value=1>All</mat-option>
+                      <mat-option value=2>Yangon</mat-option>
+                      <mat-option value=3>Pathein</mat-option>
+                      <mat-option value=4>Mawlamyaing</mat-option>
+                      <mat-option value=5>Thaton</mat-option>
+                      </mat-select>
+                  </div>
+              </div>
+
+              <div class="col-md-4">
+                  <div>
+                      <label for="">OK$ Account Type</label>
+                  </div>
+                  <div>
+                      <mat-select class="selectt" multiple placeholder="Select">
+                          <mat-option value=1>All</mat-option>
+                          <mat-option value=2>Personal</mat-option>
+                          <mat-option value=3>Merchant</mat-option>
+                          <mat-option value=4>Advance Merchant</mat-option>
+                          <mat-option value=5>+95 746573894788</mat-option>
+                      </mat-select>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div>
+                      <label for="">OK$ Account Number</label>
+                  </div>
+                  <div>
+                  <mat-select class="selectt" multiple placeholder="Select">
+                      <mat-option value=1>All</mat-option>
+                      <mat-option value=2>+95 746573894788</mat-option>
+                      <mat-option value=3>+95 746573894788</mat-option>
+                      <mat-option value=4>+95 746573894788</mat-option>
+                      <mat-option value=5>+95 746573894788</mat-option>
+                      </mat-select>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div>
+                      <label for="">Cash back Credit OK$ Account</label>
+                  </div>
+                  <div>
+                      <mat-select class="selectt" multiple placeholder="Select">
+                          <mat-option value=1>All</mat-option>
+                          <mat-option value=2>+95 746573894788</mat-option>
+                          <mat-option value=3>+95 746573894788</mat-option>
+                          <mat-option value=4>+95 746573894788</mat-option>
+                          <mat-option value=5>+95 746573894788</mat-option>
+                      </mat-select>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div>
+                      <label for="">Service Category Type</label>
+                  </div>
+                  <div>
+                      <mat-select class="selectt" multiple (selectionChange)="serviceCategorySelected($event.value)" placeholder="Select">
+                      <mat-option value=1>All</mat-option>
+                      <mat-option value=2>Top Up</mat-option>
+                      <mat-option value=3>Gift Cards</mat-option>
+                      <mat-option value=4>DTH</mat-option>
+                      <mat-option value=5>Electricity</mat-option>
+                      <mat-option value=6>Post Paid</mat-option>
+                      <mat-option value=7>Over Seas Top Up</mat-option>
+
+                      </mat-select>
+                  </div>
+              </div>
+              <div class="col-md-4" *ngIf="selectedCategory.includes('1') || selectedCategory.includes('2')">
+                  <div>
+                      <label for="">Cash Back Credit MPT Number</label>
+                  </div>
+                  <div>
+                    <ng-multiselect-dropdown
+                    [placeholder]="'Select'"
+                    [settings]="dropdownSettings_mpt"
+                    [data]="dropdownList_mpt"
+                    [(ngModel)]="selectedItems_mpt"
+                    (onSelect)="onMptSelect($event)"
+                    (onSelectAll)="onSelectAllMpt($event)"
+                    >
+                  </ng-multiselect-dropdown>
+                  </div>
+              </div>
+              <div class="col-md-4" *ngIf="selectedCategory.includes('1') || selectedCategory.includes('2')">
+                  <div>
+                      <label for="">Cash Back Credit Telenor Number</label>
+                  </div>
+                  <div>
+                    <ng-multiselect-dropdown
+                        [placeholder]="'Select'"
+                        [settings]="dropdownSettings_telenor"
+                        [data]="dropdownList_telenor"
+                        [(ngModel)]="selectedItems_telenor"
+                        (onSelect)="onTelenorSelect($event)"
+                        (onSelectAll)="onSelectAllTelenor($event)"
+                        >
+                    </ng-multiselect-dropdown>
+                  </div>
+              </div>
+              <div class="col-md-4" *ngIf="selectedCategory.includes('1') || selectedCategory.includes('2')">
+                  <div>
+                      <label for="">Cash Back Credit Ooredoo Number</label>
+                  </div>
+                  <div>
+                    <ng-multiselect-dropdown
+                        [placeholder]="'Select'"
+                        [settings]="dropdownSettings_ooredoo"
+                        [data]="dropdownList_ooredoo"
+                        [(ngModel)]="selectedItems_ooredoo"
+                        (onSelect)="onOoredooSelect($event)"
+                        (onSelectAll)="onSelectAllOoredoo($event)"
+                        >
+                    </ng-multiselect-dropdown>
+                  </div>
+              </div>
+              <div class="col-md-4" *ngIf="selectedCategory.includes('1') || selectedCategory.includes('2')">
+                  <div>
+                      <label for="">Cash Back Credit Mytel Number</label>
+                  </div>
+                  <div>
+                    <ng-multiselect-dropdown
+                        [placeholder]="'Select'"
+                        [settings]="dropdownSettings_mytel"
+                        [data]="dropdownList_mytel"
+                        [(ngModel)]="selectedItems_mytel"
+                        (onSelect)="onMytelSelect($event)"
+                        (onSelectAll)="onSelectAllMytel($event)"
+                        >
+                    </ng-multiselect-dropdown>
+                  </div>
+              </div>
+              <div class="col-md-4" *ngIf="selectedCategory.includes('1') || selectedCategory.includes('2')">
+                  <div>
+                      <label for="">Cash Back Credit MecTel Number</label>
+                  </div>
+                  <div>
+                    <ng-multiselect-dropdown
+                        [placeholder]="'Select'"
+                        [settings]="dropdownSettings_mectel"
+                        [data]="dropdownList_mectel"
+                        [(ngModel)]="selectedItems_mectel"
+                        (onSelect)="onMectelSelect($event)"
+                        (onSelectAll)="onSelectAllMectel($event)"
+                        >
+                    </ng-multiselect-dropdown>
+                  </div>
+              </div>
+              <div class="col-md-4" *ngIf="selectedCategory.includes('1') || selectedCategory.includes('3')">
+                  <div>
+                      <label for="">Cash Back Credit Gift Cards Number</label>
+                  </div>
+                  <div>
+                    <ng-multiselect-dropdown
+                        [placeholder]="'Select'"
+                        [settings]="dropdownSettings_giftcard"
+                        [data]="dropdownList_giftCards"
+                        [(ngModel)]="selectedItems_giftcard"
+                        (onSelect)="onGiftCardSelect($event)"
+                        (onSelectAll)="onSelectAllGiftCard($event)"
+                        >
+                    </ng-multiselect-dropdown>
+                  </div>
+              </div>
+              <div class="col-md-4" *ngIf="selectedCategory.includes('1') || selectedCategory.includes('4')">
+                  <div>
+                      <label for="">Cash Back Credit DTH Number</label>
+                  </div>
+                  <div>
+                    <ng-multiselect-dropdown
+                        [placeholder]="'Select'"
+                        [settings]="dropdownSettings_dth"
+                        [data]="dropdownList_dth"
+                        [(ngModel)]="selectedItems_dth"
+                        (onSelect)="onDthSelect($event)"
+                        (onSelectAll)="onSelectAllDth($event)"
+                        >
+                    </ng-multiselect-dropdown>
+                  </div>
+              </div>
+              <div class="col-md-4" *ngIf="selectedCategory.includes('1') || selectedCategory.includes('5')">
+                  <div>
+                      <label for="">Cash Back Credit Electricity Number</label>
+                  </div>
+                  <div>
+                    <ng-multiselect-dropdown
+                        [placeholder]="'Select'"
+                        [settings]="dropdownSettings_electricity"
+                        [data]="dropdownList_electricity"
+                        [(ngModel)]="selectedItems_electricity"
+                        (onSelect)="onElectricitySelect($event)"
+                        (onSelectAll)="onSelectAllElectricity($event)"
+                        >
+                    </ng-multiselect-dropdown>
+                  </div>
+              </div>
+              <div class="col-md-4" *ngIf="selectedCategory.includes('1') || selectedCategory.includes('6')">
+                  <div>
+                      <label for="">Cash Back Credit Post Paid Number</label>
+                  </div>
+                  <div>
+                    <ng-multiselect-dropdown
+                        [placeholder]="'Select'"
+                        [settings]="dropdownSettings_postpaid"
+                        [data]="dropdownList_postPaid"
+                        [(ngModel)]="selectedItems_postpaid"
+                        (onSelect)="onPostPaidSelect($event)"
+                        (onSelectAll)="onSelectAllPostPaid($event)"
+                        >
+                    </ng-multiselect-dropdown>
+                  </div>
+              </div>
+              <div class="col-md-4" *ngIf="selectedCategory.includes('1') || selectedCategory.includes('7')">
+                  <div>
+                      <label for="">Cash Back Credit Over Seas Top Up Number</label>
+                  </div>
+                  <div>
+                    <ng-multiselect-dropdown
+                        [placeholder]="'Select'"
+                        [settings]="dropdownSettings_overSeas"
+                        [data]="dropdownList_overSeas"
+                        [(ngModel)]="selectedItems_overSeas"
+                        (onSelect)="onOverSeasSelect($event)"
+                        (onSelectAll)="onSelectAllOverSeas($event)"
+                        >
+                    </ng-multiselect-dropdown>
+                  </div>
+              </div>
+          </div>
+          <div class="button_group">
+              <button>CLEAR</button>
+              <button> APPLY</button>
+          </div>
+        </div>
+    </mat-dialog-content>
+
+</div>

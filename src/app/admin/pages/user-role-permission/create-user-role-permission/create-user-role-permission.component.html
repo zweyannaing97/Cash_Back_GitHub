@@ -1,0 +1,162 @@
+<div>
+  <h5 class="title">Create User Role Permission</h5>
+
+    <div class="input_outer">
+      <div class="row">
+          <div class="col-md-4">
+            <br>
+            <div>
+                <label for="">User Name <span>*</span></label>
+            </div>
+            <div class="mobile_field">
+
+                <input type="text" class="input userRolePermissionFormField" placeholder="username001">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <br>
+            <div>
+                <label for="">Password <span>*</span></label>
+            </div>
+            <div class="mobile_field">
+                <input type="text" class="input userRolePermissionFormField" placeholder="username001">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <br>
+            <div>
+                <label for="">Department Name <span>*</span></label>
+            </div>
+            <div>
+              <mat-select class="selectt" multiple placeholder="Select">
+                <mat-option value=0 hidden>Select</mat-option>
+                <mat-option value=1>Admin Department</mat-option>
+                <mat-option value=2>Account Department</mat-option>
+                <mat-option value=3>Sales Department</mat-option>
+              </mat-select>
+            </div>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <br>
+          <div>
+              <label for="">Designation <span>*</span></label>
+          </div>
+          <div>
+            <mat-select class="selectt" multiple placeholder="Select">
+              <mat-option value=0 hidden>Select</mat-option>
+              <mat-option value=1>All</mat-option>
+              <mat-option value=2>Admin</mat-option>
+              <mat-option value=3>Accountant</mat-option>
+              <mat-option value=4>Branch Manager</mat-option>
+              <mat-option value=5>Sales Person</mat-option>
+            </mat-select>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <br>
+          <div>
+              <label for="">Mobile Number <span>*</span></label>
+          </div>
+          <div class="mobile_field mobileNo">
+            <img src="assets/images/flag.svg" class="mmFlag" alt="">
+
+            <input type="tel" class="input userRolePermissionFormField" placeholder="09xxxxxxxxx" value="">
+
+          </div>
+        </div>
+        <div class="col-md-4">
+          <br>
+          <div>
+              <label for="">Select User Type <span>*</span></label>
+          </div>
+          <div>
+            <mat-select class="selectt" placeholder="Select">
+              <mat-option hidden>Select</mat-option>
+              <mat-option value=1>Admin</mat-option>
+              <mat-option value=2>User</mat-option>
+            </mat-select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <br>
+          <div>
+              <label for="">Select Transaction <span>*</span></label>
+          </div>
+          <div>
+            <mat-select class="selectt" multiple placeholder="Select">
+              <mat-option value=0 hidden>Select</mat-option>
+              <mat-option value=1>All</mat-option>
+              <mat-option value=2>Dashboard</mat-option>
+              <mat-option value=3>User Role Permission</mat-option>
+              <mat-option value=4>Company Configuration</mat-option>
+              <mat-option value=5>Cash Back Configuration</mat-option>
+              <mat-option value=5>Remove Cash Back</mat-option>
+              <mat-option value=5>Report</mat-option>
+              <mat-option value=5>Change Password</mat-option>
+            </mat-select>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <br>
+          <div>
+              <label for="">Select Role Permission <span>*</span></label>
+          </div>
+          <div >
+            <mat-select class="selectt" multiple placeholder="Select">
+              <mat-option value=0 hidden>Select</mat-option>
+              <mat-option value=1>All</mat-option>
+              <mat-option value=2>View</mat-option>
+              <mat-option value=3>View & Download</mat-option>
+              <mat-option value=4>Create & Upload</mat-option>
+              <mat-option value=5>Updated</mat-option>
+            </mat-select>
+
+          </div>
+        </div>
+        <div class="col-md-4">
+          <br>
+          <div>
+              <label for="">Description </label>
+          </div>
+          <div class="mobile_field">
+            <input type="text" class="input userRolePermissionFormField" placeholder="Enter Description">
+          </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <br>
+          <div>
+              <label for="">Upload Profile Image </label>
+          </div>
+          <div>
+
+
+              <input (change)="onSelectFile($event)" id="file" accept=".jpg" class="input userRolePermissionFormField" type="file" placeholder="Upload Profile Image">
+
+              <mat-icon matSuffix class="upload">folder_open</mat-icon>
+              <mat-hint>File Uploads Jpg Format Maximum Size 5 MB.</mat-hint>
+
+
+          </div>
+        </div>
+        <div class="col-md-4 profileImage">
+          <img [src]="url" alt="Profile Picture">
+        </div>
+      </div>
+      <div class="button_group my-0">
+        <button><a routerLink="../" class="text-white text-decoration-none">
+          CANCEL
+        </a></button>
+        <button> <a routerLink="../" class="text-white text-decoration-none">
+          SAVE
+        </a></button>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,82 @@
+import { EventEmitter, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { DateFormatter } from './date-formatter';
+import * as ɵngcc0 from '@angular/core';
+declare type CompareDatesFn = (date1: Date, date2: Date) => number;
+export declare class DatePickerInnerComponent implements OnInit, OnChanges {
+    locale?: string;
+    datepickerMode?: string;
+    startingDay?: number;
+    yearRange?: number;
+    minDate?: Date;
+    maxDate?: Date;
+    minMode?: string;
+    maxMode?: string;
+    showWeeks?: boolean;
+    formatDay?: string;
+    formatMonth?: string;
+    formatYear?: string;
+    formatDayHeader?: string;
+    formatDayTitle?: string;
+    formatMonthTitle?: string;
+    onlyCurrentMonth?: boolean;
+    shortcutPropagation?: boolean;
+    customClass?: {
+        date: Date;
+        mode: string;
+        clazz: string;
+    }[];
+    monthColLimit: number;
+    yearColLimit: number;
+    dateDisabled?: {
+        date: Date;
+        mode: string;
+    }[];
+    dayDisabled?: number[];
+    initDate?: Date;
+    selectionDone: EventEmitter<Date>;
+    update: EventEmitter<Date>;
+    activeDateChange: EventEmitter<Date>;
+    stepDay: {};
+    stepMonth: {};
+    stepYear: {};
+    uniqueId?: string;
+    protected modes: string[];
+    protected dateFormatter: DateFormatter;
+    protected selectedDate?: Date;
+    protected activeDateId?: string;
+    protected refreshViewHandlerDay?: () => void;
+    protected compareHandlerDay?: CompareDatesFn;
+    protected refreshViewHandlerMonth?: () => void;
+    protected compareHandlerMonth?: CompareDatesFn;
+    protected refreshViewHandlerYear?: () => void;
+    protected compareHandlerYear?: CompareDatesFn;
+    protected _activeDate?: Date;
+    get activeDate(): Date | undefined;
+    set activeDate(value: Date | undefined);
+    ngOnInit(): void;
+    ngOnChanges(changes: SimpleChanges): void;
+    checkIfActiveDateGotUpdated(activeDate: any): void;
+    setCompareHandler(handler: CompareDatesFn, type: string): void;
+    compare(date1?: Date, date2?: Date): number | undefined;
+    setRefreshViewHandler(handler: () => void, type: string): void;
+    refreshView(): void;
+    dateFilter(date: Date, format: string): string;
+    isActive(dateObject: any): boolean;
+    createDateObject(date: Date, format: string): any;
+    split(arr: any[], size: number): any[];
+    fixTimeZone(date: Date): Date;
+    select(date: Date, isManual?: boolean): void;
+    move(direction: number): void;
+    toggleMode(_direction: number): void;
+    protected getCustomClassForDate(date: Date): string;
+    protected compareDateDisabled(date1Disabled: {
+        date: Date;
+        mode: string;
+    }, date2: Date): number | undefined;
+    protected isDisabled(date: Date): boolean;
+    static ɵfac: ɵngcc0.ɵɵFactoryDef<DatePickerInnerComponent, never>;
+    static ɵcmp: ɵngcc0.ɵɵComponentDefWithMeta<DatePickerInnerComponent, "datepicker-inner", never, { "monthColLimit": "monthColLimit"; "yearColLimit": "yearColLimit"; "activeDate": "activeDate"; "datepickerMode": "datepickerMode"; "locale": "locale"; "startingDay": "startingDay"; "yearRange": "yearRange"; "minDate": "minDate"; "maxDate": "maxDate"; "minMode": "minMode"; "maxMode": "maxMode"; "showWeeks": "showWeeks"; "formatDay": "formatDay"; "formatMonth": "formatMonth"; "formatYear": "formatYear"; "formatDayHeader": "formatDayHeader"; "formatDayTitle": "formatDayTitle"; "formatMonthTitle": "formatMonthTitle"; "onlyCurrentMonth": "onlyCurrentMonth"; "shortcutPropagation": "shortcutPropagation"; "customClass": "customClass"; "dateDisabled": "dateDisabled"; "dayDisabled": "dayDisabled"; "initDate": "initDate"; }, { "selectionDone": "selectionDone"; "update": "update"; "activeDateChange": "activeDateChange"; }, never, ["*"]>;
+}
+export {};
+
+//# sourceMappingURL=datepicker-inner.component.d.ts.map

@@ -1,0 +1,128 @@
+@import "../../../../../variable.scss";
+
+.title{
+    margin: 0 0 20px -10px;
+}
+::ng-deep .select .mat-select-trigger{
+    height: 50px;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 25%;
+    padding: 15px 15px;
+    box-shadow: $secondary-color 3px 3px 3px 0px;
+    background-color: white;
+}
+.input_outer{
+    img{
+        margin-left: 30px;
+        margin-right: 10px;
+    }
+    img:first-child{
+        width: 35px;
+        cursor: pointer;
+    }
+    img:nth-child(2){
+        margin-left: 15px;
+        width: 19px;
+    }
+    span{
+        color: #ada1a1;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .mobile_field{
+        position: relative;
+        display: inline;
+        span{
+            position: absolute;
+            top: 1px;
+            left: 12px;
+            color: black;
+            font-weight: 400;
+        }
+        input{
+            padding: 13px 15px 13px 49px;
+        }
+    }
+}
+.add_button_div{
+   text-align: end;
+   position: absolute;
+    right: 55px;
+    margin-top: 46px;
+    button{
+        background-color: $secondary-color;
+        color: $primary-color;
+        font-weight: 600;
+        font-size: 22px;
+        width: 120px;
+        height: 45px;
+    }
+    img{
+        width: 28px;
+        margin-right: 13px;
+        margin-left: 0;
+        vertical-align: middle;
+    }
+    p{
+        color: red;
+        font-weight: 500;
+        font-size: 14px;
+        text-align: end;
+        margin-top: 10px;
+    }
+}
+
+label{
+    font-size: 14px;
+    font-weight: 500;
+    span{
+        color: red;
+    }
+}
+::placeholder{
+    font-size: 14px;
+}
+
+.table_filter{
+    margin-top: -20px;
+}
+
+::placeholder{
+    color: rgba(80, 75, 75, 0.87);
+    font-size: 14px;
+}
+::-moz-placeholder{
+    color: rgba(80, 75, 75, 0.87);
+    font-size: 14px;
+}
+::-webkit-input-placeholder{
+    color: rgba(80, 75, 75, 0.87);
+    font-size: 14px;
+}
+.table_filter button
+{
+  background: none !important;
+
+}
+.table_filter img
+{
+  width: 35px;
+}
+
+.table_filter button img
+{
+  width: 35px !important;
+
+}
+::ng-deep .dataTable{
+  height: 62vh;
+}
+.table_filter img:first-child {
+  margin-right: 0px !important;
+}
+.simg{
+  margin-bottom: 0 !important;
+  margin-top: -7px;
+}

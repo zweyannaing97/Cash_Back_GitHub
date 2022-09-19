@@ -1,0 +1,201 @@
+<div>
+  <label for="">Cash Back Operator Wise</label>
+</div>
+<div>
+  <mat-select
+    class="select selectt"
+    multiple
+    placeholder="Select"
+    (selectionChange)="OperatorWiseSelected($event.value)"
+  >
+    <mat-option value="1">All</mat-option>
+    <mat-option value="2">MPT</mat-option>
+    <mat-option value="3">Telenor</mat-option>
+    <mat-option value="4">Ooredoo</mat-option>
+    <mat-option value="5">Mytel</mat-option>
+    <mat-option value="6">Mec Tel</mat-option>
+  </mat-select>
+</div>
+<div *ngIf="cashBackOperatorWise.includes('1')">
+  <form action="" [formGroup]="operatorWiseAllForm">
+    <br />
+    <div>
+      <label for="">Cash Back Credit MPT Number</label>
+    </div>
+    <div>
+      <input
+        type="text"
+        class="input"
+        placeholder="Enter OK$ Account Number"
+        formControlName="mpt_number"
+        (keyup)="formValidation()"
+      />
+    </div>
+
+    <br />
+    <div>
+      <label for="">Cash Back Credit Telenor Number</label>
+    </div>
+    <div>
+      <input
+        type="text"
+        class="input"
+        placeholder="Enter OK$ Account Number"
+        formControlName="telenor_number"
+        (keyup)="formValidation()"
+      />
+    </div>
+
+    <br />
+    <div>
+      <label for="">Cash Back Credit Ooredoo Number</label>
+    </div>
+    <div>
+      <input
+        type="text"
+        class="input"
+        placeholder="Enter OK$ Account Number"
+        formControlName="ooredoo_numnber"
+        (keyup)="formValidation()"
+      />
+    </div>
+
+    <br />
+    <div>
+      <label for="">Cash Back Credit Mytel Number</label>
+    </div>
+    <div>
+      <input
+        type="text"
+        class="input"
+        placeholder="Enter OK$ Account Number"
+        formControlName="mytel_number"
+        (keyup)="formValidation()"
+      />
+    </div>
+
+    <br />
+    <div>
+      <label for="">Cash Back Credit MecTel Number</label>
+    </div>
+    <div>
+      <input
+        type="text"
+        class="input"
+        placeholder="Enter OK$ Account Number"
+        formControlName="mectel_number"
+        (keyup)="formValidation()"
+      />
+    </div>
+    <br />
+    <div>
+      <label for="">Remarks</label>
+    </div>
+    <div>
+      <input
+        type="text"
+        class="inputt"
+        placeholder="Enter OK$ Account Number"
+        formControlName="Remarks"
+      />
+    </div>
+  </form>
+</div>
+
+<div *ngIf="cashBackOperatorWise.includes('2')">
+  <br />
+  <form action="" [formGroup]="operatorWiseMPTForm">
+    <div>
+      <label for="">Cash Back Credit MPT Number</label>
+    </div>
+    <div>
+      <input
+        type="text"
+        class="input"
+        placeholder="Enter OK$ Account Number"
+        formControlName="mpt_number"
+        (keyup)="formValidation()"
+      />
+    </div>
+    <br />
+    <div>
+      <label for="">Remarks</label>
+    </div>
+    <div>
+      <input
+        type="text"
+        class="inputt"
+        placeholder="Enter OK$ Account Number"
+        formControlName="Remarks"
+      />
+    </div>
+  </form>
+</div>
+
+<div *ngIf="cashBackOperatorWise.includes('3') && cashBackOperatorWise.includes('4')">
+  <form action="" [formGroup]="operatorWise_telenor_ooredoo_form">
+    <br />
+    <div>
+      <label for="">Cash Back Credit Telenor Number</label>
+    </div>
+    <div>
+      <input
+        type="text"
+        class="input"
+        placeholder="Enter OK$ Account Number"
+        formControlName="telenor_number"
+        (keyup)="formValidation()"
+      />
+    </div>
+    <br />
+    <div>
+      <label for="">Cash Back Credit Ooredoo Number</label>
+    </div>
+    <div>
+      <input
+        type="text"
+        class="input"
+        placeholder="Enter OK$ Account Number"
+        formControlName="ooredoo_numnber"
+        (keyup)="formValidation()"
+      />
+    </div>
+    <br />
+    <div>
+      <label for="">Remarks</label>
+    </div>
+    <div>
+      <input
+        type="text"
+        class="inputt"
+        placeholder="Enter OK$ Account Number"
+        formControlName="Remarks"
+      />
+    </div>
+  </form>
+</div>
+
+<div *ngIf="cashBackOperatorWise.includes('5')">
+  <form action="" [formGroup]="operatorWise_telenor_mytel_form">
+    <br>
+    <div>
+      <label for="">Cash Back Credit Mytel Number</label>
+    </div>
+    <div>
+      <input type="text" class="input" placeholder="Enter OK$ Account Number" formControlName="mytel_number" (keyup)="formValidation()">
+    </div>
+    
+  </form>
+</div>
+
+<div *ngIf="cashBackOperatorWise == '6'">
+  <form action="" [formGroup]="operatorWise_telenor_mectel_form">
+    <br>
+    <div>
+      <label for="">Cash Back Credit MecTel Number</label>
+    </div>
+    <div>
+      <input type="text" class="input" placeholder="Enter OK$ Account Number" formControlName="mectel_number" (keyup)="formValidation()">
+    </div>
+  </form>
+</div>
