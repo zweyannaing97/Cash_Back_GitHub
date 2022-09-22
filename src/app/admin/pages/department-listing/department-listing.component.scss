@@ -1,4 +1,4 @@
- @import "../../../../../variable.scss";
+@import "../../../../variable.scss";
 
 .table-pagination table th {
   background: #d6c7ec;
@@ -30,9 +30,9 @@ table {
 }
 
 .table-pagination td{
-background: #eae3f3;
-padding-right: 15px !important;
-border-top: solid 10px #f6f6f6;
+  background: #eae3f3;
+  padding-right: 15px !important;
+  border-top: solid 10px #f6f6f6;
 }
 
 .profileImageList
@@ -68,5 +68,5 @@ border-top: solid 10px #f6f6f6;
 }
 ::ng-deep .mat-paginator-container {
   display: flex !important;
-   justify-content: space-between !important;
- }
+  justify-content: space-between !important;
+}

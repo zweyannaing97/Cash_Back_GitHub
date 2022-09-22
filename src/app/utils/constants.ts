@@ -5,6 +5,33 @@ export const menuItems = [
       iconName: 'assets/images/Dashboard.svg',
       children: []
     },
+  {
+    displayName: 'User Role Master',
+    route: '',
+    iconName: '../../../../assets/images/B Master.svg',
+    children: [
+      {
+        displayName: 'Company',
+        route: 'admin/CompanyListing',
+        iconName: '../../../../assets/images/B Company.svg',
+        children: [
+
+        ]
+      },
+      {
+        displayName: 'Department',
+        route: 'admin/DepartmentListing',
+        iconName: '../../../../assets/images/B Department.svg',
+        children: []
+      },
+      {
+        displayName: 'Designation',
+        route: 'admin/DesignationListing',
+        iconName: '../../../../assets/images/B Designation.svg',
+        children: []
+      },
+    ]
+  },
     {
       displayName: 'User Role Permission',
       route: 'admin/UserRolePermission',

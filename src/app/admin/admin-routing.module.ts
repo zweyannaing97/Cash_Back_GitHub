@@ -19,6 +19,69 @@ const routes: Routes = [
           ),
       },
       {
+        path: 'CompanyListing',
+        loadChildren: () =>
+          import('./pages/company-listing/company-listing.module').then(
+            (m) => m.CompanyListingModule
+          ),
+      },
+      {
+        path: 'CompanyCreate',
+        loadChildren: () =>
+          import('./pages/company-create/company-create.module').then(
+            (m) => m.CompanyCreateModule
+          ),
+      },
+      {
+        path: 'CompanyEdit',
+        loadChildren: () =>
+          import('./pages/company-edit/company-edit.module').then(
+            (m) => m.CompanyEditModule
+          ),
+      },
+      {
+        path: 'DepartmentListing',
+        loadChildren: () =>
+          import('./pages/department-listing/department-listing.module').then(
+            (m) => m.DepartmentListingModule
+          ),
+      },
+      {
+        path: 'DepartmentCreate',
+        loadChildren: () =>
+          import('./pages/departments-create/departments-create-routing.module').then(
+            (m) => m.DepartmentsCreateRoutingModule
+          ),
+      },
+      {
+        path: 'DepartmentEdit',
+        loadChildren: () =>
+          import('./pages/department-edit/department-edit.module').then(
+            (m) => m.DepartmentEditModule
+          ),
+      },
+      {
+        path: 'DesignationListing',
+        loadChildren: () =>
+          import('./pages/designation/designation.module').then(
+            (m) => m.DesignationModule
+          ),
+      },
+      {
+        path: 'DesignationCreate',
+        loadChildren: () =>
+          import('./pages/designation-create/designation-create.module').then(
+            (m) => m.DesignationCreateModule
+          ),
+      },
+      {
+        path: 'DesignationEdit',
+        loadChildren: () =>
+          import('./pages/designation-edit/designation-edit.module').then(
+            (m) => m.DesignationEditModule
+          ),
+      },
+      {
         path: 'UserRolePermission',
         loadChildren: () =>
           import('./pages/user-role-permission/user-role-permission.module').then(
