@@ -135,11 +135,21 @@
 
 
 <div *ngIf="individual_listing">
-  <h2 class="title">Individual Listing</h2>
-  <div class="table_filter">
-    <img src="assets/images/filter_img.png" alt="" (click)="filterTable()">
-    <a download="UploadExcelFormat.xlsx" target="_blank" href="assets/UploadExcelFormat.xlsx" class="download_sample_btn"><img src="assets/images/excel_download.png" alt="" style="margin-right: 16px;"></a>
-    <button (click)="individual_listing = false"><img src="assets/images/add_img.png" alt="add"  matRipple> ADD </button>
+  <div class="d-flex justify-content-between align-items-center">
+    <h5 class="title">Individual Listing</h5>
+    <div class="table_filter">
+      <div class="search-container">
+        <form method="get">
+          <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
+          <label class="button searchbutton" for="searchright">
+            <img class="simg " src="assets/images/search.png" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Search" >
+          </label>
+        </form>
+      </div>
+      <img src="assets/images/filter_img.png" class="mr-3" alt="" (click)="filterTable()">
+      <a download="UploadExcelFormat.xlsx" target="_blank" href="assets/UploadExcelFormat.xlsx" class="download_sample_btn"><img src="assets/images/excel-download.svg" alt="" style="margin-right: 16px;"></a>
+      <img (click)="individual_listing = false" src="assets/images/add-pattern.svg" alt="add"  matRipple>
+    </div>
   </div>
 
   <div>

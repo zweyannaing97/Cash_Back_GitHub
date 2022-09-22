@@ -12,12 +12,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { EnterOtpComponent } from './components/enter-otp/enter-otp.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ChangePswrdComponent } from './components/change-pswrd/change-pswrd.component';
 
 @NgModule({
   declarations: [
     LoginLayoutComponent,
     ForgotPasswordLayoutComponent,
-    EnterOtpComponent
+    EnterOtpComponent,
+    ChangePswrdComponent
   ],
   imports: [
     CommonModule,

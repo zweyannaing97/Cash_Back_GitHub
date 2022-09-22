@@ -1,0 +1,176 @@
+@import "../../../../styles.scss";
+
+.login_bg{
+  background-image: url("../../../../assets/images/Background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  // height: 100vh;
+  background-size: cover;
+}
+.login_first_bg {
+  width: 56%;
+}
+::ng-deep input[type=text],input[type=password]{
+  height: 50px !important;
+  padding-left: 58px;
+  width: 100%;
+  border: 2px solid $primary-color;
+  background-image: linear-gradient(to top, #5b25aa, #612bb1, #6731b8, #6e36bf, #743cc6);
+  color: white !important;
+  font-weight: 500;
+  font-size: 14px;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+  -webkit-box-shadow: 0 0 0 30px $primary-color inset !important;
+  background-image: linear-gradient(to top, #5b25aa, #612bb1, #6731b8, #6e36bf, #743cc6) !important;
+}
+input:-webkit-autofill{
+  -webkit-text-fill-color: white !important;
+  background-image: linear-gradient(to top, #5b25aa, #612bb1, #6731b8, #6e36bf, #743cc6);
+  background-color: linear-gradient(to top, #5b25aa, #612bb1, #6731b8, #6e36bf, #743cc6);;
+}
+
+::placeholder{
+  color: white !important;
+}
+::-moz-placeholder{
+  color: white !important;
+}
+.input_image_box{
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 48px;
+  height: 46px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.cancel{
+  background-color: #bd0a0a;
+  border: 2px solid #bb4242;
+  color: white;
+  font-size: 16px;
+  height: 50px;
+  margin-top: 10px;
+  width: 190px;
+  border-radius: 200px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.title_color{
+  color: $primary-color;
+}
+.title_sub{
+  color: $primary-color;
+  text-align: center;
+  font-size: 35px;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+.login_content{
+  width: 44%;
+  height: 100vh;display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.forgot_password{
+  text-align: center;
+  margin-top: 15px;
+  color: $primary-color;
+  font-weight: 500;
+  a{
+    color: $primary-color;
+  }
+}
+.login_btn{
+  background-image: linear-gradient(to top, #5b25aa, #612bb1, #6731b8, #6e36bf, #743cc6);;
+  color: white;
+  font-size: 16px;
+  height: 50px;
+  margin: auto;
+  width: 190px;
+  border-radius: 200px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  border: 2px solid #fff;
+}
+.incorrect_password{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
+  background-color: gray;
+  margin-top: 30px;
+  color: white;
+  border: 2px solid $primary-color;
+}
+
+::ng-deep .btn-secondary{
+  position: absolute !important;
+  right: 9px;
+  top: 12px;
+  background: transparent;
+  color: white;
+  border: none;
+}
+.btn-secondary:focus, .btn-secondary.focus, .btn-secondary:hover{
+  background-color: none !important;
+  box-shadow: none !important;
+  border-color: unset !important;
+  z-index: 4;
+}
+::ng-deep .btn-secondary:focus, .btn-secondary.focus,.btn:focus, .btn.focus ,.btn-secondary:not(:disabled):not(.disabled):active ,.btn-secondary:hover {
+  background-color: transparent !important;
+  border-color: unset !important;
+  box-shadow: unset !important;
+  z-index: 4;
+}
+.input-group > .form-control:focus{
+  z-index: unset !important;
+}
+::ng-deep input:-internal-autofill-selected {
+  background-image: linear-gradient(to top, #5b25aa, #612bb1, #6731b8, #6e36bf, #743cc6) !important;
+  color: white;
+  background-color: unset !important;
+}
+
+::ng-deep .remember_me .mat-checkbox-background{
+  border: 1px solid $primary-color;
+}
+
+::ng-deep .remember_me .mat-checkbox-label{
+  color: $primary-color !important;
+}
+.h_100 {
+  height: 100vh;
+}
+
+.title_h1 {
+  font-size: 60px;
+  text-align: center;
+  margin: 0;letter-spacing: 3px;
+}
+.check_box{
+  color: #592f95;text-align: center;margin-top: 15px;
+}
+@media (max-width: 940px) {
+  .login_content {
+    width: 100%;
+  }
+  .login_first_bg {
+    display: none;
+  }
+  .login_bg {
+    background-image: none;
+  }
+}

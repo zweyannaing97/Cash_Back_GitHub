@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
+import {BsDatepickerDirective} from 'ngx-bootstrap/datepicker';
 
 @Component({
   selector: 'app-individual-cashback-config-listing-filter',
@@ -9,6 +10,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 export class IndividualCashbackConfigListingFilterComponent implements OnInit {
   selectedCategory: any = [];
   constructor( public dialogRef: MatDialogRef<IndividualCashbackConfigListingFilterComponent>) { }
+  @ViewChild(BsDatepickerDirective, { static: false }) datepicker: BsDatepickerDirective | undefined; maxDate = new Date();
 
   dropdownList_mpt:any = [];
   dropdownList_telenor:any = [];

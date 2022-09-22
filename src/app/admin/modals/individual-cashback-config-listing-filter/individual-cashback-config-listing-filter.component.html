@@ -9,22 +9,12 @@
         <div class="content_outer">
           <div class="row">
               <div class="col-md-6">
-                  <div style="display: flex;border-bottom: 1px solid;width: 52%;margin: auto;">
-                      <mat-datepicker-toggle matSuffix [for]="pickerr">
-                          <mat-icon matDatepickerToggleIcon><img src="assets/images/calendar.png" alt="calender" style="width: 18px;vertical-align: baseline;"></mat-icon>
-                      </mat-datepicker-toggle>
-                      <input matInput [matDatepicker]="pickerr" placeholder="From date" readonly>
-                      <mat-datepicker #pickerr></mat-datepicker>
-                  </div>
-              </div>
-              <div class="col-md-6">
-                  <div style="display: flex;border-bottom: 1px solid;width: 52%;margin: auto;">
-                      <mat-datepicker-toggle matSuffix [for]="picker">
-                          <mat-icon matDatepickerToggleIcon><img src="assets/images/calendar.png" alt="calender" style="width: 18px;vertical-align: baseline;"></mat-icon>
-                      </mat-datepicker-toggle>
-                      <input matInput [matDatepicker]="picker" placeholder="To date" readonly>
-                      <mat-datepicker #picker></mat-datepicker>
-                  </div>
+                <div>
+                  <input readonly type="text" placeholder="From Date - To Date" class="form-control datepicker" bsDaterangepicker
+                         [bsConfig]="{ isAnimated: true, rangeInputFormat : 'ddd,DD-MMM-YYYY', dateInputFormat: 'ddd,DD-MMM-YYYY',showPreviousMonth: true ,showWeekNumbers: false}"
+                         [maxDate]="maxDate">
+                  <mat-icon class="smallCalendar" style="margin-top:-45px;margin-right:56px;">date_range</mat-icon>
+                </div>
               </div>
           </div>
           <div class="row mt-3">

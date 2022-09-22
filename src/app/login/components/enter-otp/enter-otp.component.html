@@ -19,9 +19,12 @@
 
     <p class="enter_otp">Enter OTP received via SMS on your registered mobile number</p>
 
-    <div style="text-align: center;margin-top: 10px;" >
-        <button type="submit" class="submit" (click)="otpSubmit()">SUBMIT</button>
+    <div *ngIf="!isTimeUp" style="text-align: center;margin-top: 10px;" >
+        <button type="submit" class="submit" routerLink="/login/changepswrd" >SUBMIT</button>
     </div>
+  <div *ngIf="isTimeUp" style="text-align: center;margin-top: 20px;" >
+    <button type="submit" class="submit" (click)="resentOtp()">RESEND OTP</button>
+  </div>
     <div style="text-align: center;" >
         <button type="submit" class="cancel"  (click)="otpCancel()">CANCEL</button>
     </div>
