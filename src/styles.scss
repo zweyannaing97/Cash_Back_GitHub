@@ -440,6 +440,16 @@ input#file
   bottom: 20px;
   background: white;
 }
+.mat-list-base .mat-list-item .mat-list-item-content{
+  justify-content: space-between;
+}
+.mat-paginator-container .mat-select-value{
+  font-weight: bolder;
+}
+.mat-paginator-container {
+  font-weight: bolder;
+  color: #592f95;
+}
 //customize css end
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
