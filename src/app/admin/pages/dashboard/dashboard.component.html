@@ -1,1 +1,64 @@
-<h2 class="title">Dashboard</h2>
+<div class="px-3">
+    <h5 class="title">Cash Back Amount & Percentage</h5>
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <div class="card shadow dashCard">
+          <div class="d-flex justify-content-between pt-3">
+            <div class="px-3">
+              <p class="sHeader">Bulk Cash Back</p>
+              <h3 class="amountText">2,200,000</h3>
+            </div>
+            <div class="px-3">
+              <p>30 days</p>
+            </div>
+          </div>
+          <canvas id="bulkCashback" width="500" height="80" #bulkCashback class="chartStyle"></canvas>
+        </div>
+      </div>
+  
+      <div class="col-12 col-md-6">
+        <div class="card shadow dashCard">
+          <div class="d-flex justify-content-between pt-3">
+            <div class="px-3">
+              <p class="sHeader">Individual Cash Back</p>
+              <h3 class="amountText">180,000</h3>
+            </div>
+            <div class="px-3">
+              <p>30 days</p>
+            </div>
+          </div>
+          <canvas id="individualCashback" width="500" height="80" #individualCashback class="chartStyle"></canvas>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row py-4">
+      <div class="col-12">
+        <div class="card shadow dashCard">
+          <div class="d-flex justify-content-between pt-3">
+            <div class="px-3">
+              <p class="sHeader">Bulk Cash Back</p>
+              <h3 class="amountText">2,200,000</h3>
+            </div>
+            <div class="px-3">
+              <p>30 days</p>
+            </div>
+          </div>
+          <canvas id="bulkInidvidualRatio" width="500" height="100" #bulkInidvidualRatio class="chartStyle"></canvas>
+        </div>
+      </div>
+    </div>
+    
+    <h1>Angular Owl Carousel Integration Tutorial - ItSolutionStuff.com</h1>
+  
+<owl-carousel-o [options]="customOptions">
+  
+<ng-container *ngFor="let slide of slides">
+  <ng-template carouselSlide [id]="slide.id">
+    <img [src]="slide.img" >
+  </ng-template>
+</ng-container>
+  
+</owl-carousel-o>
+</div>
+  
