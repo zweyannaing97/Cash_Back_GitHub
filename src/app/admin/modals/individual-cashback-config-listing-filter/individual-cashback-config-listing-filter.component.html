@@ -18,7 +18,7 @@
               </div>
           </div>
           <div class="row mt-3">
-              <div class="col-md-4">
+              <div class="col-md-6">
                   <div>
                       <label for="">Company Name</label>
                   </div>
@@ -32,7 +32,7 @@
                       </mat-select>
                   </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-6">
                   <div>
                       <label for="">Division/State</label>
                   </div>
@@ -46,22 +46,23 @@
                       </mat-select>
                   </div>
               </div>
-              <div class="col-md-4">
-                  <div>
-                      <label for="">City/Town</label>
-                  </div>
-                  <div>
-                  <mat-select class="selectt" multiple  placeholder="Select">
-                      <mat-option value=1>All</mat-option>
-                      <mat-option value=2>Yangon</mat-option>
-                      <mat-option value=3>Pathein</mat-option>
-                      <mat-option value=4>Mawlamyaing</mat-option>
-                      <mat-option value=5>Thaton</mat-option>
-                      </mat-select>
-                  </div>
+          </div>
+          <div class="row mt-3">
+              <div class="col-md-6">
+              <div>
+                <label for="">City/Town</label>
               </div>
-
-              <div class="col-md-4">
+              <div>
+                <mat-select class="selectt" multiple  placeholder="Select">
+                  <mat-option value=1>All</mat-option>
+                  <mat-option value=2>Yangon</mat-option>
+                  <mat-option value=3>Pathein</mat-option>
+                  <mat-option value=4>Mawlamyaing</mat-option>
+                  <mat-option value=5>Thaton</mat-option>
+                </mat-select>
+              </div>
+          </div>
+              <div class="col-md-6">
                   <div>
                       <label for="">OK$ Account Type</label>
                   </div>
@@ -75,35 +76,39 @@
                       </mat-select>
                   </div>
               </div>
-              <div class="col-md-4">
-                  <div>
-                      <label for="">OK$ Account Number</label>
-                  </div>
-                  <div>
-                  <mat-select class="selectt" multiple placeholder="Select">
-                      <mat-option value=1>All</mat-option>
-                      <mat-option value=2>+95 746573894788</mat-option>
-                      <mat-option value=3>+95 746573894788</mat-option>
-                      <mat-option value=4>+95 746573894788</mat-option>
-                      <mat-option value=5>+95 746573894788</mat-option>
-                      </mat-select>
-                  </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div>
+                <label for="">OK$ Account Number</label>
               </div>
-              <div class="col-md-4">
-                  <div>
-                      <label for="">Cash back Credit OK$ Account</label>
-                  </div>
-                  <div>
-                      <mat-select class="selectt" multiple placeholder="Select">
-                          <mat-option value=1>All</mat-option>
-                          <mat-option value=2>+95 746573894788</mat-option>
-                          <mat-option value=3>+95 746573894788</mat-option>
-                          <mat-option value=4>+95 746573894788</mat-option>
-                          <mat-option value=5>+95 746573894788</mat-option>
-                      </mat-select>
-                  </div>
+              <div>
+                <mat-select class="selectt" multiple placeholder="Select">
+                  <mat-option value=1>All</mat-option>
+                  <mat-option value=2>+95 746573894788</mat-option>
+                  <mat-option value=3>+95 746573894788</mat-option>
+                  <mat-option value=4>+95 746573894788</mat-option>
+                  <mat-option value=5>+95 746573894788</mat-option>
+                </mat-select>
               </div>
-              <div class="col-md-4">
+            </div>
+            <div class="col-md-6">
+              <div>
+                <label for="">Cash back Credit OK$ Account</label>
+              </div>
+              <div>
+                <mat-select class="selectt" multiple placeholder="Select">
+                  <mat-option value=1>All</mat-option>
+                  <mat-option value=2>+95 746573894788</mat-option>
+                  <mat-option value=3>+95 746573894788</mat-option>
+                  <mat-option value=4>+95 746573894788</mat-option>
+                  <mat-option value=5>+95 746573894788</mat-option>
+                </mat-select>
+              </div>
+            </div>
+          </div>
+
+              <div class="col-md-6">
                   <div>
                       <label for="">Service Category Type</label>
                   </div>
@@ -120,7 +125,7 @@
                       </mat-select>
                   </div>
               </div>
-              <div class="col-md-4" *ngIf="selectedCategory.includes('1') || selectedCategory.includes('2')">
+              <div class="col-md-6" *ngIf="selectedCategory.includes('1') || selectedCategory.includes('2')">
                   <div>
                       <label for="">Cash Back Credit MPT Number</label>
                   </div>
@@ -136,7 +141,7 @@
                   </ng-multiselect-dropdown>
                   </div>
               </div>
-              <div class="col-md-4" *ngIf="selectedCategory.includes('1') || selectedCategory.includes('2')">
+              <div class="col-md-6" *ngIf="selectedCategory.includes('1') || selectedCategory.includes('2')">
                   <div>
                       <label for="">Cash Back Credit Telenor Number</label>
                   </div>
@@ -152,7 +157,7 @@
                     </ng-multiselect-dropdown>
                   </div>
               </div>
-              <div class="col-md-4" *ngIf="selectedCategory.includes('1') || selectedCategory.includes('2')">
+              <div class="col-md-6" *ngIf="selectedCategory.includes('1') || selectedCategory.includes('2')">
                   <div>
                       <label for="">Cash Back Credit Ooredoo Number</label>
                   </div>
@@ -168,7 +173,7 @@
                     </ng-multiselect-dropdown>
                   </div>
               </div>
-              <div class="col-md-4" *ngIf="selectedCategory.includes('1') || selectedCategory.includes('2')">
+              <div class="col-md-6" *ngIf="selectedCategory.includes('1') || selectedCategory.includes('2')">
                   <div>
                       <label for="">Cash Back Credit Mytel Number</label>
                   </div>
@@ -184,7 +189,7 @@
                     </ng-multiselect-dropdown>
                   </div>
               </div>
-              <div class="col-md-4" *ngIf="selectedCategory.includes('1') || selectedCategory.includes('2')">
+              <div class="col-md-6" *ngIf="selectedCategory.includes('1') || selectedCategory.includes('2')">
                   <div>
                       <label for="">Cash Back Credit MecTel Number</label>
                   </div>
@@ -200,7 +205,7 @@
                     </ng-multiselect-dropdown>
                   </div>
               </div>
-              <div class="col-md-4" *ngIf="selectedCategory.includes('1') || selectedCategory.includes('3')">
+              <div class="col-md-6" *ngIf="selectedCategory.includes('1') || selectedCategory.includes('3')">
                   <div>
                       <label for="">Cash Back Credit Gift Cards Number</label>
                   </div>
@@ -216,7 +221,7 @@
                     </ng-multiselect-dropdown>
                   </div>
               </div>
-              <div class="col-md-4" *ngIf="selectedCategory.includes('1') || selectedCategory.includes('4')">
+              <div class="col-md-6" *ngIf="selectedCategory.includes('1') || selectedCategory.includes('4')">
                   <div>
                       <label for="">Cash Back Credit DTH Number</label>
                   </div>
@@ -232,7 +237,7 @@
                     </ng-multiselect-dropdown>
                   </div>
               </div>
-              <div class="col-md-4" *ngIf="selectedCategory.includes('1') || selectedCategory.includes('5')">
+              <div class="col-md-6" *ngIf="selectedCategory.includes('1') || selectedCategory.includes('5')">
                   <div>
                       <label for="">Cash Back Credit Electricity Number</label>
                   </div>
@@ -248,7 +253,7 @@
                     </ng-multiselect-dropdown>
                   </div>
               </div>
-              <div class="col-md-4" *ngIf="selectedCategory.includes('1') || selectedCategory.includes('6')">
+              <div class="col-md-6" *ngIf="selectedCategory.includes('1') || selectedCategory.includes('6')">
                   <div>
                       <label for="">Cash Back Credit Post Paid Number</label>
                   </div>
@@ -264,7 +269,7 @@
                     </ng-multiselect-dropdown>
                   </div>
               </div>
-              <div class="col-md-4" *ngIf="selectedCategory.includes('1') || selectedCategory.includes('7')">
+              <div class="col-md-6" *ngIf="selectedCategory.includes('1') || selectedCategory.includes('7')">
                   <div>
                       <label for="">Cash Back Credit Over Seas Top Up Number</label>
                   </div>
@@ -281,11 +286,9 @@
                   </div>
               </div>
           </div>
-          <div class="button_group">
+          <div class="button_group btnFooter">
               <button>CLEAR</button>
               <button> APPLY</button>
           </div>
-        </div>
     </mat-dialog-content>
-
 </div>

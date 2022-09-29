@@ -100,6 +100,14 @@
       <app-service-category-over-seas-top-up (newItemEvent)="formValidation($event)"></app-service-category-over-seas-top-up>
     </div>
 
+    <div class="float-right">
+      <div style="display: inline;margin-right: 57px;font-weight: 500;">Service Category Type</div>
+      <button type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
+              aria-controls="collapseExample" class="p-0">
+        <img src="assets/images/category.svg" alt="service category" style="width: 35px;">
+      </button>
+    </div>
+
     <div class="button_group mt-0 pb-5" *ngIf="showButtons">
       <button matRipple> CANCEL</button>
       <button matRipple (click)="individual_listing = true"> SAVE</button>
@@ -121,13 +129,6 @@
             </table>
           </div>
         </div>
-
-
-        <div style="display: inline;margin-right: 57px;font-weight: 500;">Service Category Type</div>
-        <button type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
-          aria-controls="collapseExample" class="p-0">
-          <img src="assets/images/category.svg" alt="service category" style="width: 35px;">
-        </button>
       </div>
     <!-- category menu -->
   </div>
@@ -146,7 +147,7 @@
           </label>
         </form>
       </div>
-      <img src="assets/images/filter_img.png" class="mr-3" alt="" (click)="filterTable()">
+      <img src="assets/images/filter.svg" class="mr-3" alt="" (click)="filterTable()">
       <a download="UploadExcelFormat.xlsx" target="_blank" href="assets/UploadExcelFormat.xlsx" class="download_sample_btn"><img src="assets/images/excel-download.svg" alt="" style="margin-right: 16px;"></a>
       <img (click)="individual_listing = false" src="assets/images/add-pattern.svg" alt="add"  matRipple>
     </div>

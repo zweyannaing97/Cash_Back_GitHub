@@ -264,7 +264,7 @@ export class IndividualCashBackConfigurationLayoutComponent implements OnInit {
 
   filterTable(){
     const dialogRef = this.dialog.open(IndividualCashbackConfigListingFilterComponent, {
-      width: '75vw',
+      width: '850px',
       data: {}
       });
 

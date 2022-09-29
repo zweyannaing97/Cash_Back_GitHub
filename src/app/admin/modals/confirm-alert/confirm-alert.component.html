@@ -4,6 +4,6 @@
     <h3>{{data.message}}</h3>
     <div style="padding-top: 50px;">
         <button mat-raised-button color="warn" (click)="confirmtask()" class="confirm_btn">{{data.confirmButtonText}}</button>
-        <button mat-raised-button  (click)="onDismiss()" class="cancel">{{data.cancelButtonText}}</button>
+        <button mat-raised-button  (click)="backClicked()" class="cancel">{{data.cancelButtonText}}</button>
     </div>
 </div>

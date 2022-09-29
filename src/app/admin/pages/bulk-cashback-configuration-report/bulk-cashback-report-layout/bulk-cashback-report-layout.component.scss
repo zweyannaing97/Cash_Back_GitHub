@@ -3,4 +3,6 @@
 .mat-dialog-container{
     padding: 0 !important;
 }
-
+::ng-deep .dataTable{
+  height: 100%;
+}

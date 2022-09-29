@@ -16,6 +16,7 @@ export class LogoutLayoutComponent implements OnInit {
     this.logout();
   }
 
+
   logout(){
     const dialogRef = this.dialog.open(ConfirmAlertComponent, {
       width: '550px',

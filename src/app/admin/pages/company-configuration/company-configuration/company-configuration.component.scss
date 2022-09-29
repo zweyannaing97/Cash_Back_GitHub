@@ -124,3 +124,6 @@ label{
   margin-bottom: 0 !important;
   margin-top: -7px;
 }
+::ng-deep .dataTable{
+  height: calc( 90vh - 100px);
+}
