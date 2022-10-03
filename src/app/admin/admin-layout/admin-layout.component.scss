@@ -23,6 +23,7 @@ body{
 }
 ::ng-deep mat-drawer-content{
   background: #f6f6f6;
+  height: calc(106vh - 120px) !important;
 }
 ::ng-deep mat-drawer{
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
