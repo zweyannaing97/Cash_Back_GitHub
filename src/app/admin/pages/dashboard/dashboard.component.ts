@@ -2,11 +2,71 @@
 import { Component, OnInit,ViewChild,AfterViewInit } from '@angular/core';
 import { Chart } from 'chart.js';
 import { SwiperComponent } from "swiper/angular";
+import {
+  ChartComponent,
+  ApexAxisChartSeries,
+  ApexChart,
+  ApexXAxis,
+  ApexDataLabels,
+  ApexTooltip,
+  ApexStroke,
+  ApexNonAxisChartSeries,
+  ApexResponsive,
+  ApexYAxis,
+  ApexTitleSubtitle,
+  ApexLegend,
+  ApexGrid,
+  ApexFill,
+  ApexPlotOptions,
+  ApexMarkers
+} from "ng-apexcharts";
 
-// import Swiper core and required modules
-import SwiperCore, { Pagination, Navigation, SwiperOptions } from "swiper";
-// install Swiper modules
-SwiperCore.use([Pagination, Navigation]);
+export type BulkcashbackChartOptions = {
+  series: ApexAxisChartSeries;
+  chart: ApexChart;
+  xaxis: ApexXAxis;
+  dataLabels: ApexDataLabels;
+  yaxis: ApexYAxis;
+  labels: string[];
+  grid: ApexGrid;
+  colors: string[];
+};
+
+export type IndividualcashbackChartOptions = {
+  series: ApexAxisChartSeries;
+  chart: ApexChart;
+  xaxis: ApexXAxis;
+  dataLabels: ApexDataLabels;
+  yaxis: ApexYAxis;
+  labels: string[];
+  grid: ApexGrid;
+  fill: ApexFill;
+  colors: string[];
+};
+
+export type ChartOptions2 = {
+  series: ApexNonAxisChartSeries;
+  chart: ApexChart;
+  responsive: ApexResponsive[];
+  labels: any;
+  dataLabels: ApexDataLabels;
+  legend: ApexLegend;
+  colors: string[];
+  plotOptions: ApexPlotOptions;
+};
+
+export type CashbackTotalAmount = {
+  series: ApexAxisChartSeries;
+  chart: ApexChart;
+  xaxis: ApexXAxis;
+  yaxis: ApexYAxis | ApexYAxis[];
+  labels: string[];
+  stroke: any; 
+  colors: any[];
+  tooltip: ApexTooltip;
+  markers: ApexMarkers;
+};
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -14,686 +74,1425 @@ SwiperCore.use([Pagination, Navigation]);
 })
 
 
-export class DashboardComponent implements OnInit,AfterViewInit {
- 
-  config: SwiperOptions = {
-    slidesPerView:3,
-    spaceBetween:30,
-    slidesPerGroup:1,
-    loop:true,
-    navigation: true,
-    noSwiping: true,
-    allowTouchMove: false,
+export class DashboardComponent implements OnInit {
+  @ViewChild("individualcashbackChart") individualcashbackChart: ChartComponent | undefined;
+  @ViewChild("mptchart") mptchart: ChartComponent | undefined;
+  @ViewChild("telenorChart") telenorChart: ChartComponent | undefined;
+  @ViewChild("OoredooChart") OoredooChart: ChartComponent | undefined;
+  @ViewChild("MytelChart") MytelChart: ChartComponent | undefined;
+  @ViewChild("TopupChart") TopupChart: ChartComponent | undefined;
+  @ViewChild("GiftCardChart") GiftCardChart: ChartComponent | undefined;
+  @ViewChild("blukcashbackChart") blukcashbackChart: ChartComponent | undefined;
+
+// Bulk Cashback / Individual Cashback charts start here
+  public chartOptions:BulkcashbackChartOptions = {
+    colors: ["#36d69a"],
+    series: [
+      {
+        name: "Bulk Cash Back",
+        data: [5000, 5000, 6000,	7500, 6000,8000,7400,6800,8000,7300,6500,7400]
+      },
+    ],
+    chart: {
+      type: "area",
+      height: 200,
+      zoom: {
+        enabled: false
+      },
+      toolbar: {
+        show: false
+      },
+      sparkline: {
+        enabled: true
+      }
+      
+    },
+    dataLabels: {
+      enabled: false
+    },
+    labels: [
+      "1 Nov",
+      "2 Nov",
+      "3 Nov",
+      "4 Nov",
+      "5 Nov",
+      "6 Nov",
+      "7 Nov",
+      "8 Nov",
+      "9 Nov",
+      "10 Nov",
+      "11 Nov",
+      "12 Nov",
+      "13 Nov",
+      "14 Nov",
+      "15 Nov",
+      "16 Nov",
+      "17 Nov",
+      "20 Nov",
+      "21 Nov",
+      "22 Nov",
+      "23 Nov",
+      "24 Nov",
+      "27 Nov",
+      "28 Nov",
+      "29 Nov",
+      "30 Nov",],
+    xaxis: {
+      labels: {
+        show: false,
+      }
+    },
+    yaxis: {
+      labels: {
+        show: false,
+      },
+      min: 0,
+      max:  10000,
+    },
+    grid: {
+      show: false, 
+    },
   };
+
+  public individualchart: IndividualcashbackChartOptions= {
+    colors: ["#fa6b7f"],
+    series: [
+      {
+        name: "Individual Cash Back",
+        data: [3000, 4000, 5000,	4500, 3500,4000,4400,4800,3000,3300,2500,5400]
+      },
+    ],
+    chart: {
+      type: "area",
+      height: 200,
+      zoom: {
+        enabled: false
+      },
+      toolbar: {
+        show: false
+      },
+      sparkline: {
+        enabled: true
+      }
+      
+    },
+    dataLabels: {
+      enabled: false
+    },
+    labels: ["01 Nov",
+    "04 Nov",
+    "05 Nov",
+    "06 Nov",
+    "07 Nov",
+    "08 Nov",
+    "09 Nov",
+    "10 Nov",
+    "11 Nov",
+    "12 Nov",
+    "13 Nov",
+    "14 Nov",
+    "15 Nov",
+    "16 Nov",
+    "17 Nov",
+    "20 Nov",
+    "21 Nov",
+    "22 Nov",
+    "23 Nov",
+    "24 Nov",
+    "27 Nov",
+    "28 Nov",
+    "29 Nov",
+    "30 Nov",
+    ],
+    xaxis: {
+      labels: {
+        show: false,
+      }
+    },
+    yaxis: {
+      labels: {
+        show: false,
+      },
+      min: 0,
+      max:  10000,
+    },
+    grid: {
+      show: false, 
+    },
+    fill: {
+      type: 'gradient' ,
+      colors: ['#d9f7ed', '#d9f7ed']
+    }
+  };
+
+// Cashback Ratio charts start here
+public CashbackRatioChartOpt:BulkcashbackChartOptions = {
+  colors: ["#65758c","#91a1b8"],
+  series: [
+    {
+      name: "series 1",
+      data: [5000, 5000, 6000,	7500, 6000,8000,7400,6800,8000,7300,6500,7400]
+    },
+    {
+      name: "series 2",
+      data: [3000, 4000, 5000,	4500, 3500,4000,4400,4800,3000,3300,2500,5400]
+    }
+  ],
+  chart: {
+    type: "area",
+    height: 350,
+    zoom: {
+      enabled: false
+    },
+    toolbar: {
+      show: false
+    },
+    sparkline: {
+      enabled: true
+    }
     
-  @ViewChild('bulkCashback') bulkCashback;
-  @ViewChild('individualCashback') individualCashback;
-  @ViewChild('bulkInidvidualRatio') bulkInidvidualRatio;
-  @ViewChild('mptChart') mptChart;
-  @ViewChild('telenorChart') telenorChart;
-  @ViewChild('ooredooChart') ooredooChart;
-  @ViewChild('mytelChart') mytelChart;
-  @ViewChild('serviceCategoryType') serviceCategoryType;
-  @ViewChild('topupChart') topupChart;
-  @ViewChild('giftcardChart') giftcardChart;
-  @ViewChild('dthChart') dthChart;
-  @ViewChild('electricityChart') electricityChart;
-  @ViewChild('postPaidChart') postPaidChart;
-  @ViewChild('overseasTopupChart') overseasTopupChart;
+  },
+  dataLabels: {
+    enabled: false
+  },
+  labels: ["01 Nov",
+  "04 Nov",
+  "05 Nov",
+  "06 Nov",
+  "07 Nov",
+  "08 Nov",
+  "09 Nov",
+  "10 Nov",
+  "11 Nov",
+  "12 Nov",
+  "13 Nov",
+  "14 Nov",
+  "15 Nov",
+  "16 Nov",
+  "17 Nov",
+  "20 Nov",
+  "21 Nov",
+  "22 Nov",
+  "23 Nov",
+  "24 Nov",
+  "27 Nov",
+  "28 Nov",
+  "29 Nov",
+  "30 Nov",],
+  xaxis: {
+    labels: {
+      show: false,
+    }
+  },
+  yaxis: {
+    labels: {
+      show: false,
+    },
+    min: 0,
+    max:  10000,
+  },
+  grid: {
+    show: false, 
+  },
+};
   
-
-  
-  canvas: any;
-  ctx: any;
-  canvas2: any;
-  ctx2: any;
-  canvas3: any;
-  ctx3: any;
-  mptCanvas: any;
-  mptCtx: any;
-  telenorCanvas: any;
-  telenorCtx: any;
-  ooredooCanvas: any;
-  ooredooCtx: any;
-  mytelCanvas: any;
-  mytelCtx: any;
-  serviceCategoryTypeCanvas: any;
-  serviceCategoryTypeCtx: any;
-  topupCanvas: any;
-  topupCtx: any;
-  giftcardCanvas: any;
-  giftcardCtx: any;
-  dthChartCanvas: any;
-  dthChartCtx: any;
-  electricityCanvas: any;
-  electricityCtx: any;
-  postPaidCanvas: any;
-  postPaidCtx: any;
-  overseasTopupCanvas: any;
-  overseasTopupCtx: any;
-
-
-  ngOnInit(): void {
-  
-  }
-
-  ngAfterViewInit() {
-
-    const options = {
-      layout: {
-        padding: {
-          left: -10,
-          bottom: -10
-        },
+// operator charts start here
+  public mptchartOptions:ChartOptions2 = { 
+    colors: [ '#f9ba0d','#fce096'],
+    series: [600000, 60000],
+      chart: {
+        type: "donut",
+        height: 200 
       },
-      legend: {
-        display: false
-      },
-      tooltips: {
-        callbacks: {
-           label: function(tooltipItem) {
-                  return tooltipItem.yLabel;
-           }
+      labels: ["Bulk", "Individual",],
+      responsive: [
+        {
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200,
+            },
+            legend: {
+              position: "bottom"
+            },
+          }
         }
-      },
-      plugins: {
-        datalabels: {
-            display: false,
-        },
-      },
-      responsive: true,
-      scales: {
-        xAxes: [{
-          gridLines: {
-              display: false
-          },
-          ticks: {
-              autoSkip: false,
-              display: false,
-          }
-        }],
-
-        yAxes: [{
-          gridLines: {
-              display: false
-          },
-          ticks: {
-            display: false,
-            beginAtZero: true,
-            max: 10000
-          }
-        }], 
-      },
-      elements: {
-        point:{
-            radius: 0
-        },
-        line: {
-          tension: 0.3
+      ],
+      dataLabels: {
+        enabled: false
+     },
+     legend: {
+      show: false
+    },
+    plotOptions: {
+      pie: {
+        donut: {
+          size: '85%'
         }
       }
-    };
-    
-    const operatorOptions = {
-      cutoutPercentage: 85,
-        legend: {
-          display: false
-        },
     }
-
-    const ServicecategoryOptions = {
-      cutoutPercentage: 52,
-        legend: {
-          display: false
-        },
-    }
-
-    // Start of Bulk Cashback Chart Code
-    this.canvas = this.bulkCashback.nativeElement; 
-    this.ctx = this.canvas.getContext('2d');
-    
-    const myChart = new Chart(this.ctx, {
-      type: 'line',
-      data: {
-          labels: ["Tokyo",	"Mumbai",	"Mexico City",	"Shanghai",	"Sao Paulo",	"New York",	"Karachi","Buenos Aires",	"Delhi","Moscow","test","test1",],
-          datasets: [{
-              label: 'Series 1', 
-              data: [5000, 5000, 6000,	7500, 6000,8000,7400,6800,8000,7300,6500,7400], 
-              fill: true,
-              backgroundColor: "#d9f7ed",
-              borderColor: "#36d69a",
-              borderWidth: 4
-          }]},
-      options: options
-    });
-    // End of Bulk Cashback Chart Code
-//------------------------------------------------------------------------------------------------------------------------------------
-
-    // Start of Individual Cashback Chart Code
-    this.canvas2 = this.individualCashback.nativeElement; 
-    this.ctx2 = this.canvas2.getContext('2d');
-
-    const myChart2 = new Chart(this.ctx2, {
-      type: 'line',
-      data: {
-          labels: ["Tokyo",	"Mumbai",	"Mexico City",	"Shanghai",	"Sao Paulo",	"New York",	"Karachi","Buenos Aires",	"Delhi","Moscow","test","test1"],
-          datasets: [{
-              label: 'Series 1', 
-              data: [3000, 4000, 5000,	4500, 3500,4000,4400,4800,3000,3300,2500,5400], 
-              fill: true,
-              backgroundColor: "#fccdd5",
-              borderColor: "#fa6b7f",
-              borderWidth: 4
-          }]},
-      options: options
-    });
-    // End of Individual Cashback Chart Code
-//------------------------------------------------------------------------------------------------------------------------------------
-    
-    // Start of Individual Cashback Chart Code
-    this.canvas3 = this.bulkInidvidualRatio.nativeElement; 
-    this.ctx3 = this.canvas3.getContext('2d');
-
-    const myChart3 = new Chart(this.ctx3, {
-      type: 'line',
-      data: {
-          labels: ["Tokyo",	"Mumbai",	"Mexico City",	"Shanghai",	"Sao Paulo",	"New York",	"Karachi","Buenos Aires",	"Delhi","Moscow","test","test1"],
-          datasets: [{
-              label: 'Series 1', 
-              data: [3000, 4000, 5000,	4500, 3500,4000,4400,4800,3000,3300,2500,5400], 
-              fill: true,
-              backgroundColor: "#dce1e7",
-              borderColor: "#91a1b8",
-              borderWidth: 4
-          },
-          {
-            label: 'Series 2', 
-            data: [5000, 5000, 6000,	7500, 6000,8000,7400,6800,8000,7300,6500,7400], 
-            fill: true,
-            backgroundColor: "#c7ced6",
-            borderColor: "#65758c",
-            borderWidth: 4
-          }]},
-          options: {
-            animation: {
-              duration: 1,
-              onComplete: function() {
-                var controller = chart.controller;
-                var chart = controller.chart;
-                var xAxis = controller.scales['x-axis-0'];
-               
-                 var	numTicks = xAxis.ticks.length;        
-                var xOffsetStart = xAxis.width / numTicks;
-                var halfBarWidth = (xAxis.width / (numTicks * 2));
-        
-                xAxis.ticks.forEach(function(value, index) {
-                  var xOffset = (xOffsetStart * index) + halfBarWidth;
-                  var yOffset = chart.height - 20;          
-                  // ctx.fillText(value, xOffset, yOffset);
-                });
-        
-              }
-            },
-            layout: {
-              padding: {
-                left: -10,
-                bottom: -10,
-              },
-            },
-            legend: {
-              display: false
-            },
-            tooltips: {
-              callbacks: {
-                label: function(tooltipItem) {
-                        return tooltipItem.yLabel;
-                }
-              }
-            },
-            plugins: {
-              datalabels: {
-                  display: false,
-              },
-            },
-            responsive: true,
-            scales: {
-              xAxes: [{
-                categoryPercentage: 1.0,
-                barPercentage: 1.0,
-                gridLines: {
-                    display: false,
-                    labelOffset:-50
-                },
-                ticks: {
-                    autoSkip: false,
-                    // display: false,
-                    maxRotation: 90,
-                    minRotation: 90,
-                    padding: -2,
-
-                }
-              }],
-              yAxes: [{
-                display: false,
-                gridLines: {
-                    display: false
-                },
-                ticks: {
-                  beginAtZero: true,
-                  max: 10000,
-                  display: false
-                }
-              }], 
-            },
-            elements: {
-              point:{
-                  radius: 0
-              },
-              line: {
-                tension: 0.3
-              }
-            }
-          }
-    });
-    // End of Individual Cashback Chart Code
-//------------------------------------------------------------------------------------------------------------------------------------
-
-    // Start of MPT operator chart code
-    this.mptCanvas = this.mptChart.nativeElement; 
-    this.mptCtx = this.mptCanvas.getContext('2d');
-
-    const mptChart = new Chart(this.mptCtx, {
-      type: 'doughnut',
-      data: {
-        labels: [
-          'Bulk',
-          'Individual'
-        ],
-        datasets: [{
-          label: 'My First Dataset',
-          data: [900, 100],
-          backgroundColor: [
-            '#f9ba0d',
-            '#fce096'
-          ],
-          hoverOffset: 4
-        }],
-      },
-      options: operatorOptions
-    });
-    // End of MPT operator chart code
-//------------------------------------------------------------------------------------------------------------------------------------
-
-    // Start of Telenor operator chart code
-    this.telenorCanvas = this.telenorChart.nativeElement; 
-    this.telenorCtx = this.telenorCanvas.getContext('2d');
-
-    const telenorChart = new Chart(this.telenorCtx, {
-      type: 'doughnut',
-      data: {
-        labels: [
-          'Bulk',
-          'Individual'
-        ],
-        datasets: [{
-          label: 'My First Dataset',
-          data: [400000, 80000],
-          backgroundColor: [
-            '#07b7e6',
-            '#93dced'
-          ],
-          hoverOffset: 4
-        }],
-      },
-      options: operatorOptions
-    });
-    // End of telenor operator chart code
-//------------------------------------------------------------------------------------------------------------------------------------
-
-    // Start of Ooredoo operator chart code
-    this.ooredooCanvas = this.ooredooChart.nativeElement; 
-    this.ooredooCtx = this.ooredooCanvas.getContext('2d');
-
-    const ooredooChart = new Chart(this.ooredooCtx, {
-      type: 'doughnut',
-      data: {
-        labels: [
-          'Bulk',
-          'Individual'
-        ],
-        datasets: [{
-          label: 'My First Dataset',
-          data: [600000, 20000],
-          backgroundColor: [
-            '#ec1a23',
-            '#f69da1'
-          ],
-          hoverOffset: 4
-        }],
-      },
-      options: operatorOptions
-    });
-    // End of Ooredoo operator chart code
-//------------------------------------------------------------------------------------------------------------------------------------
-
-    // Start of mytel operator chart code
-    this.mytelCanvas = this.mytelChart.nativeElement; 
-    this.mytelCtx = this.mytelCanvas.getContext('2d');
-
-    const mytelChart = new Chart(this.mytelCtx, {
-      type: 'doughnut',
-      data: {
-        labels: [
-          'Bulk',
-          'Individual'
-        ],
-        datasets: [{
-          label: 'My First Dataset',
-          data: [600000, 20000],
-          backgroundColor: [
-            '#ee6c20',
-            '#f1a273'
-          ],
-          hoverOffset: 4
-        }],
-      },
-      options: operatorOptions
-    });
-    // End of mytel operator chart code
-//------------------------------------------------------------------------------------------------------------------------------------
-    
-    // Start of Individual Cashback Chart Code
-    this.serviceCategoryTypeCanvas = this.serviceCategoryType.nativeElement; 
-    this.serviceCategoryTypeCtx = this.serviceCategoryTypeCanvas.getContext('2d');
-
-    const serviceCategoryTypeChart = new Chart(this.serviceCategoryTypeCtx, {
-      type: 'line',
-      data: {
-          labels: ["Top Up",	"Gift Cards",	"DTH",	"Electricity",	"Post Paid",	"Overseas Top Up"],
-          datasets: [{
-              label: 'Series 1', 
-              data: [3000, 4000, 5000,	4500, 3500,4000], 
-              fill: true,
-              backgroundColor: "#d9f7ed",
-              borderColor: "#36d69a",
-              borderWidth: 4
-          }
-        ]},
-          options: {
-            animation: {
-              duration: 1,
-              onComplete: function() {
-                var controller = chart.controller;
-                var chart = controller.chart;
-                var xAxis = controller.scales['x-axis-0'];
-               
-                 var	numTicks = xAxis.ticks.length;        
-                var xOffsetStart = xAxis.width / numTicks;
-                var halfBarWidth = (xAxis.width / (numTicks * 2));
-        
-                xAxis.ticks.forEach(function(value, index) {
-                  var xOffset = (xOffsetStart * index) + halfBarWidth;
-                  var yOffset = chart.height - 20;          
-                  // ctx.fillText(value, xOffset, yOffset);
-                });
-        
-              }
-            },
-            layout: {
-              padding: {
-                left: -10,
-                bottom: -10,
-              },
-            },
-            legend: {
-              display: false
-            },
-            tooltips: {
-              callbacks: {
-                label: function(tooltipItem) {
-                        return tooltipItem.yLabel;
-                }
-              }
-            },
-            plugins: {
-              datalabels: {
-                  display: false,
-              },
-            },
-            responsive: true,
-            scales: {
-              xAxes: [{
-                categoryPercentage: 1.0,
-                barPercentage: 1.0,
-                gridLines: {
-                    display: false,
-                    labelOffset:-50
-                },
-                ticks: {
-                    autoSkip: false,
-                    // display: false,
-                    maxRotation: 90,
-                    minRotation: 90,
-                    padding: -2,
-
-                }
-              }],
-              yAxes: [{
-                display: false,
-                gridLines: {
-                    display: false
-                },
-                ticks: {
-                  beginAtZero: true,
-                  max: 10000,
-                  display: false
-                }
-              }], 
-            },
-            elements: {
-              point:{
-                  radius: 0
-              },
-              line: {
-                tension: 0.3
-              }
-            }
-          }
-    });
-    // End of Individual Cashback Chart Code
-//------------------------------------------------------------------------------------------------------------------------------------
-
-    // Start of TopUp chart code
-    this.topupCanvas = this.topupChart.nativeElement; 
-    this.topupCtx = this.topupCanvas.getContext('2d');
-
-    const topupChart = new Chart(this.topupCtx, {
-      type: 'doughnut',
-      data: {
-        labels: [
-          'Ooredoo',
-          'MPT',
-          'Telenor',
-          'Mytel',
-          'MEC',
-        ],
-        datasets: [{
-          label: 'My First Dataset',
-          data: [15600, 15600,10400,10400,5200],
-          backgroundColor: [
-            '#ed1b24',
-            '#f9bb0e',
-            '#05b8e3',
-            '#ee6c20',
-            '#3a7eed',
-          ],
-          hoverOffset: 4
-        }],
-      },
-      options: ServicecategoryOptions
-    });
-    // End of topup operator chart code
-//------------------------------------------------------------------------------------------------------------------------------------
-
- // Start of Gift Card chart code
- this.giftcardCanvas = this.giftcardChart.nativeElement; 
- this.giftcardCtx = this.giftcardCanvas.getContext('2d');
-
- const giftcardChart = new Chart(this.giftcardCtx, {
-   type: 'doughnut',
-   data: {
-     labels: [
-       'Ooredoo',
-       'MPT',
-       'Telenor',
-       'Mytel',
-       'MEC',
-     ],
-     datasets: [{
-       label: 'My First Dataset',
-       data: [15600, 15600,10400,10400,5200],
-       backgroundColor: [
-         '#ed1b24',
-         '#f9bb0e',
-         '#05b8e3',
-         '#ee6c20',
-         '#3a7eed',
-       ],
-       hoverOffset: 4
-     }],
-   },
-   options: ServicecategoryOptions
- });
- // End of Gift Card chart code
-//------------------------------------------------------------------------------------------------------------------------------------
-
-// Start of DTH chart code
-this.dthChartCanvas = this.dthChart.nativeElement; 
-this.dthChartCtx = this.dthChartCanvas.getContext('2d');
-
-const dthChartChart = new Chart(this.dthChartCtx, {
-  type: 'doughnut',
-  data: {
-    labels: [
-      'Ooredoo',
-      'MPT',
-      'Telenor',
-      'Mytel',
-      'MEC',
-    ],
-    datasets: [{
-      label: 'My First Dataset',
-      data: [15600, 15600,10400,10400,5200],
-      backgroundColor: [
-        '#ed1b24',
-        '#f9bb0e',
-        '#05b8e3',
-        '#ee6c20',
-        '#3a7eed',
-      ],
-      hoverOffset: 4
-    }],
-  },
-  options: ServicecategoryOptions
-});
-// End of DTH operator chart code
-//------------------------------------------------------------------------------------------------------------------------------------
-
-// Start of electricity chart code
-this.electricityCanvas = this.electricityChart.nativeElement; 
-this.electricityCtx = this.electricityCanvas.getContext('2d');
-
-const electricityChart = new Chart(this.electricityCtx, {
-  type: 'doughnut',
-  data: {
-    labels: [
-      'Ooredoo',
-      'MPT',
-      'Telenor',
-      'Mytel',
-      'MEC',
-    ],
-    datasets: [{
-      label: 'My First Dataset',
-      data: [15600, 15600,10400,10400,5200],
-      backgroundColor: [
-        '#ed1b24',
-        '#f9bb0e',
-        '#05b8e3',
-        '#ee6c20',
-        '#3a7eed',
-      ],
-      hoverOffset: 4
-    }],
-  },
-  options: ServicecategoryOptions
-});
-// End of electricity operator chart code
-//------------------------------------------------------------------------------------------------------------------------------------
+  };
   
-// Start of postPaid chart code
-this.postPaidCanvas = this.postPaidChart.nativeElement; 
-this.postPaidCtx = this.postPaidCanvas.getContext('2d');
-
-const postPaidChart = new Chart(this.postPaidCtx, {
-  type: 'doughnut',
-  data: {
-    labels: [
-      'Ooredoo',
-      'MPT',
-      'Telenor',
-      'Mytel',
-      'MEC',
-    ],
-    datasets: [{
-      label: 'My First Dataset',
-      data: [15600, 15600,10400,10400,5200],
-      backgroundColor: [
-        '#ed1b24',
-        '#f9bb0e',
-        '#05b8e3',
-        '#ee6c20',
-        '#3a7eed',
+  public TelenorChartOpt:ChartOptions2 = { 
+    colors: ['#07b7e6','#93dced'],
+    series: [400000, 80000],
+      chart: {
+        type: "donut",
+        height: 200 
+      },
+      labels: ["Bulk", "Individual",],
+      responsive: [
+        {
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200,
+            },
+            legend: {
+              position: "bottom"
+            },
+          }
+        }
       ],
-      hoverOffset: 4
-    }],
-  },
-  options: ServicecategoryOptions
-});
-// End of postPaid operator chart code
-//------------------------------------------------------------------------------------------------------------------------------------
+      dataLabels: {
+        enabled: false
+     },
+     legend: {
+      show: false
+    },
+    plotOptions: {
+      pie: {
+        donut: {
+          size: '85%'
+        }
+      }
+    }
+  };
 
-// Start of overseasTopup chart code
-this.overseasTopupCanvas = this.overseasTopupChart.nativeElement; 
-this.overseasTopupCtx = this.overseasTopupCanvas.getContext('2d');
-
-const overseasTopupChart = new Chart(this.overseasTopupCtx, {
-  type: 'doughnut',
-  data: {
-    labels: [
-      'Ooredoo',
-      'MPT',
-      'Telenor',
-      'Mytel',
-      'MEC',
-    ],
-    datasets: [{
-      label: 'My First Dataset',
-      data: [15600, 15600,10400,10400,5200],
-      backgroundColor: [
-        '#ed1b24',
-        '#f9bb0e',
-        '#05b8e3',
-        '#ee6c20',
-        '#3a7eed',
+  public OoredooChartOpt:ChartOptions2 = { 
+    colors: [ '#ec1a23',
+    '#f69da1'],
+    series: [600000, 20000],
+      chart: {
+        type: "donut",
+        height: 200 
+      },
+      labels: ["Bulk", "Individual",],
+      responsive: [
+        {
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200,
+            },
+            legend: {
+              position: "bottom"
+            },
+          }
+        }
       ],
-      hoverOffset: 4
-    }],
+      dataLabels: {
+        enabled: false
+     },
+     legend: {
+      show: false
+    },
+    plotOptions: {
+      pie: {
+        donut: {
+          size: '85%'
+        }
+      }
+    }
+  };
+
+  public MytelChartOpt:ChartOptions2 = { 
+    colors: [ '#ee6c20',
+    '#f1a273'],
+    series: [600000, 20000],
+      chart: {
+        type: "donut",
+        height: 200 
+      },
+      labels: ["Bulk", "Individual",],
+      responsive: [
+        {
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200,
+            },
+            legend: {
+              position: "bottom"
+            },
+          }
+        }
+      ],
+      dataLabels: {
+        enabled: false
+     },
+     legend: {
+      show: false
+    },
+    plotOptions: {
+      pie: {
+        donut: {
+          size: '85%'
+        }
+      }
+    }
+  };
+
+// Service Category Type Monthly charts start here
+public ServiceChartOpt:BulkcashbackChartOptions = {
+  colors: ["#36d69a"],
+  series: [
+    {
+      name: "",
+      data: [3000, 4000, 5000,	4500, 3500,4000]
+    },
+  ],
+  chart: {
+    type: "area",
+    height: 350,
+    zoom: {
+      enabled: false
+    },
+    toolbar: {
+      show: false
+    },
+    sparkline: {
+      enabled: true
+    }
+    
   },
-  options: ServicecategoryOptions
-});
-// End of overseasTopup operator chart code
-//------------------------------------------------------------------------------------------------------------------------------------
-}
+  dataLabels: {
+    enabled: false
+  },
+  labels: ["Top Up",	"Gift Cards",	"DTH",	"Electricity",	"Post Paid",	"Overseas Top Up"],
+  xaxis: {
+    labels: {
+      show: false,
+    }
+  },
+  yaxis: {
+    labels: {
+      show: false,
+    },
+    min: 0,
+    max:  10000,
+  },
+  grid: {
+    show: false, 
+  },
+};
+
+// service type category (topup, gift cards,.....) charts start here
+public TopupChartOpt:ChartOptions2 = { 
+  colors: [ '#ed1b24',
+  '#f9bb0e',
+  '#05b8e3',
+  '#ee6c20',
+  '#3a7eed',],
+  series: [15600, 15600,10400,10400,5200],
+    chart: {
+      type: "donut",
+      height: 200 
+    },
+    labels: ['Ooredoo',
+    'MPT',
+    'Telenor',
+    'Mytel',
+    'MEC',],
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom"
+          },
+        }
+      }
+    ],
+    dataLabels: {
+      enabled: false
+   },
+   legend: {
+    show: false
+  },
+  plotOptions: {
+    pie: {
+      donut: {
+        size: '50%'
+      }
+    }
+  }
+};
+
+public GiftCardChartOpt:ChartOptions2 = { 
+  colors: [ '#ed1b24',
+  '#f9bb0e',
+  '#05b8e3',
+  '#ee6c20',
+  '#3a7eed',],
+  series: [15600, 15600,10400,10400,5200],
+    chart: {
+      type: "donut",
+      height: 200 
+    },
+    labels: ['Ooredoo',
+    'MPT',
+    'Telenor',
+    'Mytel',
+    'MEC',],
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom"
+          },
+        }
+      }
+    ],
+    dataLabels: {
+      enabled: false
+   },
+   legend: {
+    show: false
+  },
+  plotOptions: {
+    pie: {
+      donut: {
+        size: '50%'
+      }
+    }
+  }
+};
+
+public DTHChartOpt:ChartOptions2 = { 
+  colors: [ '#ed1b24',
+  '#f9bb0e',
+  '#05b8e3',
+  '#ee6c20',
+  '#3a7eed',],
+  series: [15600, 15600,10400,10400,5200],
+    chart: {
+      type: "donut",
+      height: 200 
+    },
+    labels: ['Ooredoo',
+    'MPT',
+    'Telenor',
+    'Mytel',
+    'MEC',],
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom"
+          },
+        }
+      }
+    ],
+    dataLabels: {
+      enabled: false
+   },
+   legend: {
+    show: false
+  },
+  plotOptions: {
+    pie: {
+      donut: {
+        size: '50%'
+      }
+    }
+  }
+};
+
+public ElecChartOpt:ChartOptions2 = { 
+  colors: [ '#ed1b24',
+  '#f9bb0e',
+  '#05b8e3',
+  '#ee6c20',
+  '#3a7eed',],
+  series: [15600, 15600,10400,10400,5200],
+    chart: {
+      type: "donut",
+      height: 200 
+    },
+    labels: ['Ooredoo',
+    'MPT',
+    'Telenor',
+    'Mytel',
+    'MEC',],
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom"
+          },
+        }
+      }
+    ],
+    dataLabels: {
+      enabled: false
+   },
+   legend: {
+    show: false
+  },
+  plotOptions: {
+    pie: {
+      donut: {
+        size: '50%'
+      }
+    }
+  }
+};
+
+public PostpaidChartOpt:ChartOptions2 = { 
+  colors: [ '#ed1b24',
+  '#f9bb0e',
+  '#05b8e3',
+  '#ee6c20',
+  '#3a7eed',],
+  series: [15600, 15600,10400,10400,5200],
+    chart: {
+      type: "donut",
+      height: 200 
+    },
+    labels: ['Ooredoo',
+    'MPT',
+    'Telenor',
+    'Mytel',
+    'MEC',],
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom"
+          },
+        }
+      }
+    ],
+    dataLabels: {
+      enabled: false
+   },
+   legend: {
+    show: false
+  },
+  plotOptions: {
+    pie: {
+      donut: {
+        size: '50%'
+      }
+    }
+  }
+};
+
+public OvTopupChartOpt:ChartOptions2 = { 
+  colors: [ '#ed1b24',
+  '#f9bb0e',
+  '#05b8e3',
+  '#ee6c20',
+  '#3a7eed',],
+  series: [15600, 15600,10400,10400,5200],
+    chart: {
+      type: "donut",
+      height: 200 
+    },
+    labels: ['Ooredoo',
+    'MPT',
+    'Telenor',
+    'Mytel',
+    'MEC',],
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom"
+          },
+        }
+      }
+    ],
+    dataLabels: {
+      enabled: false
+   },
+   legend: {
+    show: false
+  },
+  plotOptions: {
+    pie: {
+      donut: {
+        size: '50%'
+      }
+    }
+  }
+};
+
+// cashback Total Amount State / Division wise chart start here ...............
+public CashbackTotalAmountOpt:CashbackTotalAmount = {
+  colors: [function({ value, seriesIndex,dataPointIndex, w }) {
+    
+    let labels = w.globals.categoryLabels[dataPointIndex];
+    if ( labels === "Ayeyarwaddy") {
+        return '#67b7dc'
+    } else if  (labels === "Bago"){
+        return '#6894dd'
+    }else if (labels === "Chin"){
+      return '#6671db'
+    }else if (labels === "Kayah"){
+      return '#8067dc'
+    }else if (labels === "Kachin"){
+      return '#8067dc'
+    }else if (labels === "Kayin"){
+      return '#a366db'
+    }else if (labels === "Magway"){
+      return '#c867db'
+    }else if (labels === "Mandalay"){
+      return '#dc67cf'
+    }else if (labels === "Mon"){
+      return '#dc67ab'
+    }else if (labels === "Rakhine"){
+      return '#dd6789'
+    }else if (labels === "Shan"){
+      return '#dc6868'
+    }else if (labels === "Sagaing"){
+      return '#df8b66'
+    }else if (labels === "Taninthayi"){
+      return '#e0b163'
+    }else if (labels === "Yangon"){
+      return '#e0c763'
+    }else if (labels === "Naypyidaw"){
+      return '#d4d88b'
+    }else {
+      return '#000000'
+    }
+    
+  }],
+  series: [
+    {
+      type: "column",
+      data: [70000, 45000,60000,30000,40000,63000,60000,50000,43000,62000,66000,24000,55000,61000,35000]
+    },
+  ],
+  chart: {
+    height: 400,
+    type: "line",
+    zoom: {
+      enabled: false
+    },
+    toolbar: {
+      show: false
+    },
+  },
+  stroke: {
+    width: [0, 4],
+    curve: "straight"
+  },
+  labels: [
+    'Ayeyarwaddy', 'Bago', 'Chin', 'Kachin','Kayah','Kayin','Magway','Mandalay','Mon','Rakhine','Shan','Sagaing','Taninthayi','Yangon','Naypyidaw'
+  ],
+  xaxis: {
+  },
+  yaxis: [
+  ],
+  tooltip: {
+    
+  },
+  markers: {
+    size: 6,
+    hover: {
+      size: 10
+    }
+  },
+  
+};
+
+// Each Divison and Stae chart start here ...............
+public AyeyarwaddyChartOpt:ChartOptions2 = { 
+  colors: [ '#ed1b24',
+  '#f9bb0e',
+  '#05b8e3',
+  '#ee6c20',
+  '#3a7eed',],
+  series: [15600, 15600,10400,10400,5200],
+    chart: {
+      type: "donut",
+      height: 200 
+    },
+    labels: ['Ooredoo',
+    'MPT',
+    'Telenor',
+    'Mytel',
+    'MEC',],
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom"
+          },
+        }
+      }
+    ],
+    dataLabels: {
+      enabled: false
+   },
+   legend: {
+    show: false
+  },
+  plotOptions: {
+    pie: {
+      donut: {
+        size: '50%'
+      }
+    }
+  }
+};
+
+public BagoChartOpt:ChartOptions2 = { 
+  colors: [ '#ed1b24',
+  '#f9bb0e',
+  '#05b8e3',
+  '#ee6c20',
+  '#3a7eed',],
+  series: [15600, 15600,10400,10400,5200],
+    chart: {
+      type: "donut",
+      height: 200 
+    },
+    labels: ['Ooredoo',
+    'MPT',
+    'Telenor',
+    'Mytel',
+    'MEC',],
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom"
+          },
+        }
+      }
+    ],
+    dataLabels: {
+      enabled: false
+   },
+   legend: {
+    show: false
+  },
+  plotOptions: {
+    pie: {
+      donut: {
+        size: '50%'
+      }
+    }
+  }
+};
+
+public ChinChartOpt:ChartOptions2 = { 
+  colors: [ '#ed1b24',
+  '#f9bb0e',
+  '#05b8e3',
+  '#ee6c20',
+  '#3a7eed',],
+  series: [15600, 15600,10400,10400,5200],
+    chart: {
+      type: "donut",
+      height: 200 
+    },
+    labels: ['Ooredoo',
+    'MPT',
+    'Telenor',
+    'Mytel',
+    'MEC',],
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom"
+          },
+        }
+      }
+    ],
+    dataLabels: {
+      enabled: false
+   },
+   legend: {
+    show: false
+  },
+  plotOptions: {
+    pie: {
+      donut: {
+        size: '50%'
+      }
+    }
+  }
+};
+
+public KachinOpt:ChartOptions2 = { 
+  colors: [ '#ed1b24',
+  '#f9bb0e',
+  '#05b8e3',
+  '#ee6c20',
+  '#3a7eed',],
+  series: [15600, 15600,10400,10400,5200],
+    chart: {
+      type: "donut",
+      height: 200 
+    },
+    labels: ['Ooredoo',
+    'MPT',
+    'Telenor',
+    'Mytel',
+    'MEC',],
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom"
+          },
+        }
+      }
+    ],
+    dataLabels: {
+      enabled: false
+   },
+   legend: {
+    show: false
+  },
+  plotOptions: {
+    pie: {
+      donut: {
+        size: '50%'
+      }
+    }
+  }
+};
+
+public KayahChartOpt:ChartOptions2 = { 
+  colors: [ '#ed1b24',
+  '#f9bb0e',
+  '#05b8e3',
+  '#ee6c20',
+  '#3a7eed',],
+  series: [15600, 15600,10400,10400,5200],
+    chart: {
+      type: "donut",
+      height: 200 
+    },
+    labels: ['Ooredoo',
+    'MPT',
+    'Telenor',
+    'Mytel',
+    'MEC',],
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom"
+          },
+        }
+      }
+    ],
+    dataLabels: {
+      enabled: false
+   },
+   legend: {
+    show: false
+  },
+  plotOptions: {
+    pie: {
+      donut: {
+        size: '50%'
+      }
+    }
+  }
+};
+
+public KayinChartOpt:ChartOptions2 = { 
+  colors: [ '#ed1b24',
+  '#f9bb0e',
+  '#05b8e3',
+  '#ee6c20',
+  '#3a7eed',],
+  series: [15600, 15600,10400,10400,5200],
+    chart: {
+      type: "donut",
+      height: 200 
+    },
+    labels: ['Ooredoo',
+    'MPT',
+    'Telenor',
+    'Mytel',
+    'MEC',],
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom"
+          },
+        }
+      }
+    ],
+    dataLabels: {
+      enabled: false
+   },
+   legend: {
+    show: false
+  },
+  plotOptions: {
+    pie: {
+      donut: {
+        size: '50%'
+      }
+    }
+  }
+};
+
+public MagwayChartOpt:ChartOptions2 = { 
+  colors: [ '#ed1b24',
+  '#f9bb0e',
+  '#05b8e3',
+  '#ee6c20',
+  '#3a7eed',],
+  series: [15600, 15600,10400,10400,5200],
+    chart: {
+      type: "donut",
+      height: 200 
+    },
+    labels: ['Ooredoo',
+    'MPT',
+    'Telenor',
+    'Mytel',
+    'MEC',],
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom"
+          },
+        }
+      }
+    ],
+    dataLabels: {
+      enabled: false
+   },
+   legend: {
+    show: false
+  },
+  plotOptions: {
+    pie: {
+      donut: {
+        size: '50%'
+      }
+    }
+  }
+};
+
+public MandalayChartOpt:ChartOptions2 = { 
+  colors: [ '#ed1b24',
+  '#f9bb0e',
+  '#05b8e3',
+  '#ee6c20',
+  '#3a7eed',],
+  series: [15600, 15600,10400,10400,5200],
+    chart: {
+      type: "donut",
+      height: 200 
+    },
+    labels: ['Ooredoo',
+    'MPT',
+    'Telenor',
+    'Mytel',
+    'MEC',],
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom"
+          },
+        }
+      }
+    ],
+    dataLabels: {
+      enabled: false
+   },
+   legend: {
+    show: false
+  },
+  plotOptions: {
+    pie: {
+      donut: {
+        size: '50%'
+      }
+    }
+  }
+};
+
+public MonChartOpt:ChartOptions2 = { 
+  colors: [ '#ed1b24',
+  '#f9bb0e',
+  '#05b8e3',
+  '#ee6c20',
+  '#3a7eed',],
+  series: [15600, 15600,10400,10400,5200],
+    chart: {
+      type: "donut",
+      height: 200 
+    },
+    labels: ['Ooredoo',
+    'MPT',
+    'Telenor',
+    'Mytel',
+    'MEC',],
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom"
+          },
+        }
+      }
+    ],
+    dataLabels: {
+      enabled: false
+   },
+   legend: {
+    show: false
+  },
+  plotOptions: {
+    pie: {
+      donut: {
+        size: '50%'
+      }
+    }
+  }
+};
+
+public RakhineChartOpt:ChartOptions2 = { 
+  colors: [ '#ed1b24',
+  '#f9bb0e',
+  '#05b8e3',
+  '#ee6c20',
+  '#3a7eed',],
+  series: [15600, 15600,10400,10400,5200],
+    chart: {
+      type: "donut",
+      height: 200 
+    },
+    labels: ['Ooredoo',
+    'MPT',
+    'Telenor',
+    'Mytel',
+    'MEC',],
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom"
+          },
+        }
+      }
+    ],
+    dataLabels: {
+      enabled: false
+   },
+   legend: {
+    show: false
+  },
+  plotOptions: {
+    pie: {
+      donut: {
+        size: '50%'
+      }
+    }
+  }
+};
+
+public ShanChartOpt:ChartOptions2 = { 
+  colors: [ '#ed1b24',
+  '#f9bb0e',
+  '#05b8e3',
+  '#ee6c20',
+  '#3a7eed',],
+  series: [15600, 15600,10400,10400,5200],
+    chart: {
+      type: "donut",
+      height: 200 
+    },
+    labels: ['Ooredoo',
+    'MPT',
+    'Telenor',
+    'Mytel',
+    'MEC',],
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom"
+          },
+        }
+      }
+    ],
+    dataLabels: {
+      enabled: false
+   },
+   legend: {
+    show: false
+  },
+  plotOptions: {
+    pie: {
+      donut: {
+        size: '50%'
+      }
+    }
+  }
+};
+
+public SagaingChartOpt:ChartOptions2 = { 
+  colors: [ '#ed1b24',
+  '#f9bb0e',
+  '#05b8e3',
+  '#ee6c20',
+  '#3a7eed',],
+  series: [15600, 15600,10400,10400,5200],
+    chart: {
+      type: "donut",
+      height: 200 
+    },
+    labels: ['Ooredoo',
+    'MPT',
+    'Telenor',
+    'Mytel',
+    'MEC',],
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom"
+          },
+        }
+      }
+    ],
+    dataLabels: {
+      enabled: false
+   },
+   legend: {
+    show: false
+  },
+  plotOptions: {
+    pie: {
+      donut: {
+        size: '50%'
+      }
+    }
+  }
+};
+
+public TaninthayiChartOpt:ChartOptions2 = { 
+  colors: [ '#ed1b24',
+  '#f9bb0e',
+  '#05b8e3',
+  '#ee6c20',
+  '#3a7eed',],
+  series: [15600, 15600,10400,10400,5200],
+    chart: {
+      type: "donut",
+      height: 200 
+    },
+    labels: ['Ooredoo',
+    'MPT',
+    'Telenor',
+    'Mytel',
+    'MEC',],
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom"
+          },
+        }
+      }
+    ],
+    dataLabels: {
+      enabled: false
+   },
+   legend: {
+    show: false
+  },
+  plotOptions: {
+    pie: {
+      donut: {
+        size: '50%'
+      }
+    }
+  }
+};
+
+public YangonChartOpt:ChartOptions2 = { 
+  colors: [ '#ed1b24',
+  '#f9bb0e',
+  '#05b8e3',
+  '#ee6c20',
+  '#3a7eed',],
+  series: [15600, 15600,10400,10400,5200],
+    chart: {
+      type: "donut",
+      height: 200 
+    },
+    labels: ['Ooredoo',
+    'MPT',
+    'Telenor',
+    'Mytel',
+    'MEC',],
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom"
+          },
+        }
+      }
+    ],
+    dataLabels: {
+      enabled: false
+   },
+   legend: {
+    show: false
+  },
+  plotOptions: {
+    pie: {
+      donut: {
+        size: '50%'
+      }
+    }
+  }
+};
+
+public NaypyidawChartOpt:ChartOptions2 = { 
+  colors: [ '#ed1b24',
+  '#f9bb0e',
+  '#05b8e3',
+  '#ee6c20',
+  '#3a7eed',],
+  series: [15600, 15600,10400,10400,5200],
+    chart: {
+      type: "donut",
+      height: 200 
+    },
+    labels: ['Ooredoo',
+    'MPT',
+    'Telenor',
+    'Mytel',
+    'MEC',],
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom"
+          },
+        }
+      }
+    ],
+    dataLabels: {
+      enabled: false
+   },
+   legend: {
+    show: false
+  },
+  plotOptions: {
+    pie: {
+      donut: {
+        size: '50%'
+      }
+    }
+  }
+};
+
+  ngOnInit(): void {
+  }
 
 }
