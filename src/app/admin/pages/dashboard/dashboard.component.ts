@@ -1,5 +1,5 @@
 
-import { Component, OnInit,ViewChild,AfterViewInit } from '@angular/core';
+import { Component, OnInit,ViewChild,AfterViewInit, ElementRef } from '@angular/core';
 import { Chart } from 'chart.js';
 import { SwiperComponent } from "swiper/angular";
 import {
@@ -30,6 +30,8 @@ export type BulkcashbackChartOptions = {
   labels: string[];
   grid: ApexGrid;
   colors: string[];
+  tooltip: ApexTooltip;
+  stroke: ApexStroke;
 };
 
 export type IndividualcashbackChartOptions = {
@@ -53,6 +55,7 @@ export type ChartOptions2 = {
   legend: ApexLegend;
   colors: string[];
   plotOptions: ApexPlotOptions;
+  tooltip: ApexTooltip;
 };
 
 export type CashbackTotalAmount = {
@@ -83,7 +86,7 @@ export class DashboardComponent implements OnInit {
   @ViewChild("TopupChart") TopupChart: ChartComponent | undefined;
   @ViewChild("GiftCardChart") GiftCardChart: ChartComponent | undefined;
   @ViewChild("blukcashbackChart") blukcashbackChart: ChartComponent | undefined;
-
+  
 // Bulk Cashback / Individual Cashback charts start here
   public chartOptions:BulkcashbackChartOptions = {
     colors: ["#36d69a"],
@@ -145,6 +148,9 @@ export class DashboardComponent implements OnInit {
     yaxis: {
       labels: {
         show: false,
+        formatter: function (value) {
+          return value.toLocaleString();
+        }
       },
       min: 0,
       max:  10000,
@@ -152,6 +158,11 @@ export class DashboardComponent implements OnInit {
     grid: {
       show: false, 
     },
+    stroke: {
+      show: false,
+    },
+    tooltip: {
+    }
   };
 
   public individualchart: IndividualcashbackChartOptions= {
@@ -212,6 +223,9 @@ export class DashboardComponent implements OnInit {
     yaxis: {
       labels: {
         show: false,
+        formatter: function (value) {
+          return value.toLocaleString();
+        }
       },
       min: 0,
       max:  10000,
@@ -287,6 +301,9 @@ public CashbackRatioChartOpt:BulkcashbackChartOptions = {
   yaxis: {
     labels: {
       show: false,
+      formatter: function (value) {
+        return value.toLocaleString();
+      }
     },
     min: 0,
     max:  10000,
@@ -294,6 +311,11 @@ public CashbackRatioChartOpt:BulkcashbackChartOptions = {
   grid: {
     show: false, 
   },
+  stroke: {
+    show: false,
+  },
+  tooltip: {
+  }
 };
   
 // operator charts start here
@@ -330,6 +352,13 @@ public CashbackRatioChartOpt:BulkcashbackChartOptions = {
           size: '85%'
         }
       }
+    },
+    tooltip: {
+      y: {
+        formatter: function(value) {
+          return value.toLocaleString();
+        }
+      }
     }
   };
   
@@ -364,6 +393,13 @@ public CashbackRatioChartOpt:BulkcashbackChartOptions = {
       pie: {
         donut: {
           size: '85%'
+        }
+      }
+    },
+    tooltip: {
+      y: {
+        formatter: function(value) {
+          return value.toLocaleString();
         }
       }
     }
@@ -403,6 +439,13 @@ public CashbackRatioChartOpt:BulkcashbackChartOptions = {
           size: '85%'
         }
       }
+    },
+    tooltip: {
+      y: {
+        formatter: function(value) {
+          return value.toLocaleString();
+        }
+      }
     }
   };
 
@@ -438,6 +481,13 @@ public CashbackRatioChartOpt:BulkcashbackChartOptions = {
       pie: {
         donut: {
           size: '85%'
+        }
+      }
+    },
+    tooltip: {
+      y: {
+        formatter: function(value) {
+          return value.toLocaleString();
         }
       }
     }
@@ -478,6 +528,9 @@ public ServiceChartOpt:BulkcashbackChartOptions = {
   yaxis: {
     labels: {
       show: false,
+      formatter: function (value) {
+        return value.toLocaleString();
+      }
     },
     min: 0,
     max:  10000,
@@ -485,6 +538,11 @@ public ServiceChartOpt:BulkcashbackChartOptions = {
   grid: {
     show: false, 
   },
+  stroke: {
+    show: false,
+  },
+  tooltip: {
+  }
 };
 
 // service type category (topup, gift cards,.....) charts start here
@@ -527,6 +585,13 @@ public TopupChartOpt:ChartOptions2 = {
     pie: {
       donut: {
         size: '50%'
+      }
+    }
+  },
+  tooltip: {
+    y: {
+      formatter: function(value) {
+        return value.toLocaleString();
       }
     }
   }
@@ -573,6 +638,13 @@ public GiftCardChartOpt:ChartOptions2 = {
         size: '50%'
       }
     }
+  },
+  tooltip: {
+    y: {
+      formatter: function(value) {
+        return value.toLocaleString();
+      }
+    }
   }
 };
 
@@ -615,6 +687,13 @@ public DTHChartOpt:ChartOptions2 = {
     pie: {
       donut: {
         size: '50%'
+      }
+    }
+  },
+  tooltip: {
+    y: {
+      formatter: function(value) {
+        return value.toLocaleString();
       }
     }
   }
@@ -661,6 +740,13 @@ public ElecChartOpt:ChartOptions2 = {
         size: '50%'
       }
     }
+  },
+  tooltip: {
+    y: {
+      formatter: function(value) {
+        return value.toLocaleString();
+      }
+    }
   }
 };
 
@@ -705,6 +791,13 @@ public PostpaidChartOpt:ChartOptions2 = {
         size: '50%'
       }
     }
+  },
+  tooltip: {
+    y: {
+      formatter: function(value) {
+        return value.toLocaleString();
+      }
+    }
   }
 };
 
@@ -747,6 +840,13 @@ public OvTopupChartOpt:ChartOptions2 = {
     pie: {
       donut: {
         size: '50%'
+      }
+    }
+  },
+  tooltip: {
+    y: {
+      formatter: function(value) {
+        return value.toLocaleString();
       }
     }
   }
@@ -816,9 +916,17 @@ public CashbackTotalAmountOpt:CashbackTotalAmount = {
     'Ayeyarwaddy', 'Bago', 'Chin', 'Kachin','Kayah','Kayin','Magway','Mandalay','Mon','Rakhine','Shan','Sagaing','Taninthayi','Yangon','Naypyidaw'
   ],
   xaxis: {
+    tooltip: {
+      enabled: false     
+    },
   },
-  yaxis: [
-  ],
+  yaxis: {
+    labels: {
+      formatter: function (value) {
+        return value.toLocaleString();
+      }
+    },
+  },
   tooltip: {
     
   },
@@ -873,6 +981,13 @@ public AyeyarwaddyChartOpt:ChartOptions2 = {
         size: '50%'
       }
     }
+  },
+  tooltip: {
+    y: {
+      formatter: function(value) {
+        return value.toLocaleString();
+      }
+    }
   }
 };
 
@@ -915,6 +1030,13 @@ public BagoChartOpt:ChartOptions2 = {
     pie: {
       donut: {
         size: '50%'
+      }
+    }
+  },
+  tooltip: {
+    y: {
+      formatter: function(value) {
+        return value.toLocaleString();
       }
     }
   }
@@ -961,6 +1083,13 @@ public ChinChartOpt:ChartOptions2 = {
         size: '50%'
       }
     }
+  },
+  tooltip: {
+    y: {
+      formatter: function(value) {
+        return value.toLocaleString();
+      }
+    }
   }
 };
 
@@ -1003,6 +1132,13 @@ public KachinOpt:ChartOptions2 = {
     pie: {
       donut: {
         size: '50%'
+      }
+    }
+  },
+  tooltip: {
+    y: {
+      formatter: function(value) {
+        return value.toLocaleString();
       }
     }
   }
@@ -1049,6 +1185,13 @@ public KayahChartOpt:ChartOptions2 = {
         size: '50%'
       }
     }
+  },
+  tooltip: {
+    y: {
+      formatter: function(value) {
+        return value.toLocaleString();
+      }
+    }
   }
 };
 
@@ -1091,6 +1234,13 @@ public KayinChartOpt:ChartOptions2 = {
     pie: {
       donut: {
         size: '50%'
+      }
+    }
+  },
+  tooltip: {
+    y: {
+      formatter: function(value) {
+        return value.toLocaleString();
       }
     }
   }
@@ -1137,6 +1287,13 @@ public MagwayChartOpt:ChartOptions2 = {
         size: '50%'
       }
     }
+  },
+  tooltip: {
+    y: {
+      formatter: function(value) {
+        return value.toLocaleString();
+      }
+    }
   }
 };
 
@@ -1179,6 +1336,13 @@ public MandalayChartOpt:ChartOptions2 = {
     pie: {
       donut: {
         size: '50%'
+      }
+    }
+  },
+  tooltip: {
+    y: {
+      formatter: function(value) {
+        return value.toLocaleString();
       }
     }
   }
@@ -1225,6 +1389,13 @@ public MonChartOpt:ChartOptions2 = {
         size: '50%'
       }
     }
+  },
+  tooltip: {
+    y: {
+      formatter: function(value) {
+        return value.toLocaleString();
+      }
+    }
   }
 };
 
@@ -1267,6 +1438,13 @@ public RakhineChartOpt:ChartOptions2 = {
     pie: {
       donut: {
         size: '50%'
+      }
+    }
+  },
+  tooltip: {
+    y: {
+      formatter: function(value) {
+        return value.toLocaleString();
       }
     }
   }
@@ -1313,6 +1491,13 @@ public ShanChartOpt:ChartOptions2 = {
         size: '50%'
       }
     }
+  },
+  tooltip: {
+    y: {
+      formatter: function(value) {
+        return value.toLocaleString();
+      }
+    }
   }
 };
 
@@ -1355,6 +1540,13 @@ public SagaingChartOpt:ChartOptions2 = {
     pie: {
       donut: {
         size: '50%'
+      }
+    }
+  },
+  tooltip: {
+    y: {
+      formatter: function(value) {
+        return value.toLocaleString();
       }
     }
   }
@@ -1401,6 +1593,13 @@ public TaninthayiChartOpt:ChartOptions2 = {
         size: '50%'
       }
     }
+  },
+  tooltip: {
+    y: {
+      formatter: function(value) {
+        return value.toLocaleString();
+      }
+    }
   }
 };
 
@@ -1443,6 +1642,13 @@ public YangonChartOpt:ChartOptions2 = {
     pie: {
       donut: {
         size: '50%'
+      }
+    }
+  },
+  tooltip: {
+    y: {
+      formatter: function(value) {
+        return value.toLocaleString();
       }
     }
   }
@@ -1489,8 +1695,966 @@ public NaypyidawChartOpt:ChartOptions2 = {
         size: '50%'
       }
     }
+  },
+  tooltip: {
+    y: {
+      formatter: function(value) {
+        return value.toLocaleString();
+      }
+    }
   }
 };
+
+// Bulk Cashback / Individual Cashback charts start here
+public topUplineChartOpt:BulkcashbackChartOptions = {
+  colors: ["#36d69a"],
+  series: [
+    {
+      name: "Bulk Cash Back",
+      data: [5000, 5000, 6000,	7500, 6000,8000,7400,6800,8000,7300,6500,7400]
+    },
+  ],
+  chart: {
+    type: "line",
+    height: 65,
+    zoom: {
+      enabled: false
+    },
+    toolbar: {
+      show: false
+    },
+    sparkline: {
+      enabled: true
+    }
+    
+  },
+  dataLabels: {
+    enabled: false
+  },
+  labels: [
+    "1 Nov",
+    "2 Nov",
+    "3 Nov",
+    "4 Nov",
+    "5 Nov",
+    "6 Nov",
+    "7 Nov",
+    "8 Nov",
+    "9 Nov",
+    "10 Nov",
+    "11 Nov",
+    "12 Nov",
+    "13 Nov",
+    "14 Nov",
+    "15 Nov",
+    "16 Nov",
+    "17 Nov",
+    "20 Nov",
+    "21 Nov",
+    "22 Nov",
+    "23 Nov",
+    "24 Nov",
+    "27 Nov",
+    "28 Nov",
+    "29 Nov",
+    "30 Nov",],
+  xaxis: {
+    labels: {
+      show: false,
+    }
+  },
+  yaxis: {
+    labels: {
+      show: false,
+    },
+    min: 0,
+    max:  10000,
+  },
+  grid: {
+    show: false, 
+  },
+  stroke: {
+    show: true,
+    curve: 'smooth',
+    width: 1,
+  },
+  tooltip: {
+    enabled: false,
+    x: {
+        show: false
+    }
+  }
+};
+
+public giftCardlineChartOpt:BulkcashbackChartOptions = {
+  colors: ["#36d69a"],
+  series: [
+    {
+      name: "Bulk Cash Back",
+      data: [6000, 3000, 5000,	7500, 8300,4500,7400,5800,8000,3200]
+    },
+  ],
+  chart: {
+    type: "line",
+    height: 65,
+    zoom: {
+      enabled: false
+    },
+    toolbar: {
+      show: false
+    },
+    sparkline: {
+      enabled: true
+    }
+    
+  },
+  dataLabels: {
+    enabled: false
+  },
+  labels: [
+    "1 Nov",
+    "2 Nov",
+    "3 Nov",
+    "4 Nov",
+    "5 Nov",
+    "6 Nov",
+    "7 Nov",
+    "8 Nov",
+    "9 Nov",
+    "10 Nov",
+    "11 Nov",
+    "12 Nov",
+    "13 Nov",
+    "14 Nov",
+    "15 Nov",
+    "16 Nov",
+    "17 Nov",
+    "20 Nov",
+    "21 Nov",
+    "22 Nov",
+    "23 Nov",
+    "24 Nov",
+    "27 Nov",
+    "28 Nov",
+    "29 Nov",
+    "30 Nov",],
+  xaxis: {
+    labels: {
+      show: false,
+    }
+  },
+  yaxis: {
+    labels: {
+      show: false,
+    },
+    min: 0,
+    max:  10000,
+  },
+  grid: {
+    show: false, 
+  },
+  stroke: {
+    show: true,
+    curve: 'smooth',
+    width: 1,
+  },
+  tooltip: {
+    enabled: false,
+    x: {
+        show: false
+    }
+  }
+};
+
+public dthlineChartOpt:BulkcashbackChartOptions = {
+  colors: ["#fa6b7f"],
+  series: [
+    {
+      name: "Bulk Cash Back",
+      data: [2000, 8000, 5000,	3500, 4300,4500,8400,3800,7000,3200]
+    },
+  ],
+  chart: {
+    type: "line",
+    height: 65,
+    zoom: {
+      enabled: false
+    },
+    toolbar: {
+      show: false
+    },
+    sparkline: {
+      enabled: true
+    }
+    
+  },
+  dataLabels: {
+    enabled: false
+  },
+  labels: [
+    "1 Nov",
+    "2 Nov",
+    "3 Nov",
+    "4 Nov",
+    "5 Nov",
+    "6 Nov",
+    "7 Nov",
+    "8 Nov",
+    "9 Nov",
+    "10 Nov",
+    "11 Nov",
+    "12 Nov",
+    "13 Nov",
+    "14 Nov",
+    "15 Nov",
+    "16 Nov",
+    "17 Nov",
+    "20 Nov",
+    "21 Nov",
+    "22 Nov",
+    "23 Nov",
+    "24 Nov",
+    "27 Nov",
+    "28 Nov",
+    "29 Nov",
+    "30 Nov",],
+  xaxis: {
+    labels: {
+      show: false,
+    }
+  },
+  yaxis: {
+    labels: {
+      show: false,
+    },
+    min: 0,
+    max:  10000,
+  },
+  grid: {
+    show: false, 
+  },
+  stroke: {
+    show: true,
+    curve: 'smooth',
+    width: 1,
+  },
+  tooltip: {
+    enabled: false,
+    x: {
+        show: false
+    }
+  }
+}; 
+
+public eleclineChartOpt:BulkcashbackChartOptions = {
+  colors: ["#36d69a"],
+  series: [
+    {
+      name: "Bulk Cash Back",
+      data: [5400, 7000, 5000,	2500, 4300,4500,8400,3800,4500,5400]
+    },
+  ],
+  chart: {
+    type: "line",
+    height: 65,
+    zoom: {
+      enabled: false
+    },
+    toolbar: {
+      show: false
+    },
+    sparkline: {
+      enabled: true
+    }
+    
+  },
+  dataLabels: {
+    enabled: false
+  },
+  labels: [
+    "1 Nov",
+    "2 Nov",
+    "3 Nov",
+    "4 Nov",
+    "5 Nov",
+    "6 Nov",
+    "7 Nov",
+    "8 Nov",
+    "9 Nov",
+    "10 Nov",
+    "11 Nov",
+    "12 Nov",
+    "13 Nov",
+    "14 Nov",
+    "15 Nov",
+    "16 Nov",
+    "17 Nov",
+    "20 Nov",
+    "21 Nov",
+    "22 Nov",
+    "23 Nov",
+    "24 Nov",
+    "27 Nov",
+    "28 Nov",
+    "29 Nov",
+    "30 Nov",],
+  xaxis: {
+    labels: {
+      show: false,
+    }
+  },
+  yaxis: {
+    labels: {
+      show: false,
+    },
+    min: 0,
+    max:  10000,
+  },
+  grid: {
+    show: false, 
+  },
+  stroke: {
+    show: true,
+    curve: 'smooth',
+    width: 1,
+  },
+  tooltip: {
+    enabled: false,
+    x: {
+        show: false
+    }
+  }
+};
+
+public postpaidlineChartOpt:BulkcashbackChartOptions = {
+  colors: ["#fa6b7f"],
+  series: [
+    {
+      name: "Bulk Cash Back",
+      data: [2000, 5000, 6000,	4500, 4300,4100,3000,3200,5500,2400]
+    },
+  ],
+  chart: {
+    type: "line",
+    height: 65,
+    zoom: {
+      enabled: false
+    },
+    toolbar: {
+      show: false
+    },
+    sparkline: {
+      enabled: true
+    }
+    
+  },
+  dataLabels: {
+    enabled: false
+  },
+  labels: [
+    "1 Nov",
+    "2 Nov",
+    "3 Nov",
+    "4 Nov",
+    "5 Nov",
+    "6 Nov",
+    "7 Nov",
+    "8 Nov",
+    "9 Nov",
+    "10 Nov",
+    "11 Nov",
+    "12 Nov",
+    "13 Nov",
+    "14 Nov",
+    "15 Nov",
+    "16 Nov",
+    "17 Nov",
+    "20 Nov",
+    "21 Nov",
+    "22 Nov",
+    "23 Nov",
+    "24 Nov",
+    "27 Nov",
+    "28 Nov",
+    "29 Nov",
+    "30 Nov",],
+  xaxis: {
+    labels: {
+      show: false,
+    }
+  },
+  yaxis: {
+    labels: {
+      show: false,
+    },
+    min: 0,
+    max:  10000,
+  },
+  grid: {
+    show: false, 
+  },
+  stroke: {
+    show: true,
+    curve: 'smooth',
+    width: 1,
+  },
+  tooltip: {
+    enabled: false,
+    x: {
+        show: false
+    }
+  }
+};
+
+public overseaTopuplineChartOpt:BulkcashbackChartOptions = {
+  colors: ["#36d69a"],
+  series: [
+    {
+      name: "Bulk Cash Back",
+      data: [5000, 7000, 3000,	5500, 4300,4500,7400,5800,6500,5200]
+    },
+  ],
+  chart: {
+    type: "line",
+    height: 65,
+    zoom: {
+      enabled: false
+    },
+    toolbar: {
+      show: false
+    },
+    sparkline: {
+      enabled: true
+    }
+    
+  },
+  dataLabels: {
+    enabled: false
+  },
+  labels: [
+    "1 Nov",
+    "2 Nov",
+    "3 Nov",
+    "4 Nov",
+    "5 Nov",
+    "6 Nov",
+    "7 Nov",
+    "8 Nov",
+    "9 Nov",
+    "10 Nov",
+    "11 Nov",
+    "12 Nov",
+    "13 Nov",
+    "14 Nov",
+    "15 Nov",
+    "16 Nov",
+    "17 Nov",
+    "20 Nov",
+    "21 Nov",
+    "22 Nov",
+    "23 Nov",
+    "24 Nov",
+    "27 Nov",
+    "28 Nov",
+    "29 Nov",
+    "30 Nov",],
+  xaxis: {
+    labels: {
+      show: false,
+    }
+  },
+  yaxis: {
+    labels: {
+      show: false,
+    },
+    min: 0,
+    max:  10000,
+  },
+  grid: {
+    show: false, 
+  },
+  stroke: {
+    show: true,
+    curve: 'smooth',
+    width: 1,
+  },
+  tooltip: {
+    enabled: false,
+    x: {
+        show: false
+    }
+  }
+};
+
+/////////////////////////////////
+public toptentopUplineChartOpt:BulkcashbackChartOptions = {
+  colors: ["#36d69a"],
+  series: [
+    {
+      name: "Bulk Cash Back",
+      data: [5000, 5000, 6000,	7500, 6000,8000,7400,6800,8000,7300]
+    },
+  ],
+  chart: {
+    type: "line",
+    height: 510,
+    zoom: {
+      enabled: false
+    },
+    toolbar: {
+      show: false
+    },
+    
+  },
+  dataLabels: {
+    enabled: false
+  },
+  labels: [
+    "094256849263",
+    "096532952356",
+    "097958643165",
+    "097966988844",
+    "096985492531",
+    "092504896862",
+    "096998465921",
+    "097952652326",
+    "095235656963",
+    "095235656963",],
+  xaxis: {
+    labels: {
+      show: true,
+      rotate: -90,
+      rotateAlways: true,
+      minHeight: 70,
+      maxHeight: 100,
+    },
+    tooltip: {
+      enabled: false
+    },
+    tickPlacement: 'on'
+  },
+  yaxis: {
+    labels: {
+      show: true,
+      formatter: function (value) {
+        return value.toLocaleString();
+      }
+    },
+    min: 0,
+    max:  10000,
+  },
+  grid: {
+    show: true, 
+  },
+  stroke: {
+    show: true,
+    curve: 'smooth',
+    width: 2,
+  },
+  tooltip: {
+  }
+};
+
+public toptenGiftCardlineChartOpt:BulkcashbackChartOptions = {
+  colors: ["#36d69a"],
+  series: [
+    {
+      name: "Bulk Cash Back",
+      data: [6000, 3000, 5000,	7500, 8300,4500,7400,5800,8000,3200]
+    },
+  ],
+  chart: {
+    type: "line",
+    height: 510,
+    zoom: {
+      enabled: false
+    },
+    toolbar: {
+      show: false
+    },
+    
+  },
+  dataLabels: {
+    enabled: false
+  },
+  labels: [
+    "094256849263",
+    "096532952356",
+    "097958643165",
+    "097966988844",
+    "096985492531",
+    "092504896862",
+    "096998465921",
+    "097952652326",
+    "095235656963",
+    "095235656963",],
+  xaxis: {
+    labels: {
+      show: true,
+      rotate: -90,
+      rotateAlways: true,
+      minHeight: 70,
+      maxHeight: 100,
+    },
+    tooltip: {
+      enabled: false
+    },
+    tickPlacement: 'on'
+  },
+  yaxis: {
+    labels: {
+      show: true,
+      formatter: function (value) {
+        return value.toLocaleString();
+      }
+    },
+    min: 0,
+    max:  10000,
+  },
+  grid: {
+    show: true, 
+  },
+  stroke: {
+    show: true,
+    curve: 'smooth',
+    width: 2,
+  },
+  tooltip: {
+  }
+};
+
+public toptendthlineChartOpt:BulkcashbackChartOptions = {
+  colors: ["#fa6b7f"],
+  series: [
+    {
+      name: "Bulk Cash Back",
+      data: [2000, 8000, 5000,	3500, 4300,4500,8400,3800,7000,3200]
+    },
+  ],
+  chart: {
+    type: "line",
+    height: 510,
+    zoom: {
+      enabled: false
+    },
+    toolbar: {
+      show: false
+    },
+    
+  },
+  dataLabels: {
+    enabled: false
+  },
+  labels: [
+    "094256849263",
+    "096532952356",
+    "097958643165",
+    "097966988844",
+    "096985492531",
+    "092504896862",
+    "096998465921",
+    "097952652326",
+    "095235656963",
+    "095235656963",],
+  xaxis: {
+    labels: {
+      show: true,
+      rotate: -90,
+      rotateAlways: true,
+      minHeight: 70,
+      maxHeight: 100,
+    },
+    tooltip: {
+      enabled: false
+    },
+    tickPlacement: 'on'
+  },
+  yaxis: {
+    labels: {
+      show: true,
+      formatter: function (value) {
+        return value.toLocaleString();
+      }
+    },
+    min: 0,
+    max:  10000,
+  },
+  grid: {
+    show: true, 
+  },
+  stroke: {
+    show: true,
+    curve: 'smooth',
+    width: 2,
+  },
+  tooltip: {
+  }
+};
+
+public topteneleclineChartOpt:BulkcashbackChartOptions = {
+  colors: ["#36d69a"],
+  series: [
+    {
+      name: "Bulk Cash Back",
+      data: [5400, 7000, 5000,	2500, 4300,4500,8400,3800,4500,5400]
+    },
+  ],
+  chart: {
+    type: "line",
+    height: 510,
+    zoom: {
+      enabled: false
+    },
+    toolbar: {
+      show: false
+    },
+    
+  },
+  dataLabels: {
+    enabled: false
+  },
+  labels: [
+    "094256849263",
+    "096532952356",
+    "097958643165",
+    "097966988844",
+    "096985492531",
+    "092504896862",
+    "096998465921",
+    "097952652326",
+    "095235656963",
+    "095235656963",],
+  xaxis: {
+    labels: {
+      show: true,
+      rotate: -90,
+      rotateAlways: true,
+      minHeight: 70,
+      maxHeight: 100,
+    },
+    tooltip: {
+      enabled: false
+    },
+    tickPlacement: 'on'
+  },
+  yaxis: {
+    labels: {
+      show: true,
+      formatter: function (value) {
+        return value.toLocaleString();
+      }
+    },
+    min: 0,
+    max:  10000,
+  },
+  grid: {
+    show: true, 
+  },
+  stroke: {
+    show: true,
+    curve: 'smooth',
+    width: 2,
+  },
+  tooltip: {
+  }
+};
+
+public toptenpostpaidlineChartOpt:BulkcashbackChartOptions = {
+  colors: ["#fa6b7f"],
+  series: [
+    {
+      name: "Bulk Cash Back",
+      data: [2000, 5000, 6000,	4500, 4300,4100,3000,3200,5500,2400]
+    },
+  ],
+  chart: {
+    type: "line",
+    height: 510,
+    zoom: {
+      enabled: false
+    },
+    toolbar: {
+      show: false
+    },
+    
+  },
+  dataLabels: {
+    enabled: false
+  },
+  labels: [
+    "094256849263",
+    "096532952356",
+    "097958643165",
+    "097966988844",
+    "096985492531",
+    "092504896862",
+    "096998465921",
+    "097952652326",
+    "095235656963",
+    "095235656963",],
+  xaxis: {
+    labels: {
+      show: true,
+      rotate: -90,
+      rotateAlways: true,
+      minHeight: 70,
+      maxHeight: 100,
+    },
+    tooltip: {
+      enabled: false
+    },
+    tickPlacement: 'on'
+  },
+  yaxis: {
+    labels: {
+      show: true,
+      formatter: function (value) {
+        return value.toLocaleString();
+      }
+    },
+    min: 0,
+    max:  10000,
+  },
+  grid: {
+    show: true, 
+  },
+  stroke: {
+    show: true,
+    curve: 'smooth',
+    width: 2,
+  },
+  tooltip: {
+  }
+};
+
+public toptenosTopuplineChartOpt:BulkcashbackChartOptions = {
+  colors: ["#36d69a"],
+  series: [
+    {
+      name: "Bulk Cash Back",
+      data: [5000, 7000, 3000,	5500, 4300,4500,7400,5800,6500,5200]
+    },
+  ],
+  chart: {
+    type: "line",
+    height: 510,
+    zoom: {
+      enabled: false
+    },
+    toolbar: {
+      show: false
+    },
+    
+  },
+  dataLabels: {
+    enabled: false
+  },
+  labels: [
+    "094256849263",
+    "096532952356",
+    "097958643165",
+    "097966988844",
+    "096985492531",
+    "092504896862",
+    "096998465921",
+    "097952652326",
+    "095235656963",
+    "095235656963",],
+  xaxis: {
+    labels: {
+      show: true,
+      rotate: -90,
+      rotateAlways: true,
+      minHeight: 70,
+      maxHeight: 100,
+    },
+    tooltip: {
+      enabled: false
+    },
+    tickPlacement: 'on'
+  },
+  yaxis: {
+    labels: {
+      show: true,
+      formatter: function (value) {
+        return value.toLocaleString();
+      }
+    },
+    min: 0,
+    max:  10000,
+  },
+  grid: {
+    show: true, 
+  },
+  stroke: {
+    show: true,
+    curve: 'smooth',
+    width: 2,
+  },
+  tooltip: {
+  }
+};
+
+topup:boolean=true;
+giftCard:boolean=false;
+dth:boolean=false;
+elec:boolean=false;
+postPaid:boolean=false;
+overseaTopup:boolean=false;
+
+topupClick(){
+  this.topup=true;
+  this.giftCard=false;
+  this.dth=false;
+  this.elec=false;
+  this.postPaid=false;
+  this.overseaTopup=false;
+}
+
+giftCardClick(){
+  this.topup=false;
+  this.giftCard=true;
+  this.dth=false;
+  this.elec=false;
+  this.postPaid=false;
+  this.overseaTopup=false;
+}
+
+dthClick(){
+  this.topup=false;
+  this.giftCard=false;
+  this.dth=true;
+  this.elec=false;
+  this.postPaid=false;
+  this.overseaTopup=false;
+}
+
+elecClick(){
+  this.topup=false;
+  this.giftCard=false;
+  this.dth=false;
+  this.elec=true;
+  this.postPaid=false;
+  this.overseaTopup=false;
+}
+
+postPaidClick(){
+  this.topup=false;
+  this.giftCard=false;
+  this.dth=false;
+  this.elec=false;
+  this.postPaid=true;
+  this.overseaTopup=false;
+}
+
+overseasTopupClick(){
+  this.topup=false;
+  this.giftCard=false;
+  this.dth=false;
+  this.elec=false;
+  this.postPaid=false;
+  this.overseaTopup=true;
+}
 
   ngOnInit(): void {
   }
