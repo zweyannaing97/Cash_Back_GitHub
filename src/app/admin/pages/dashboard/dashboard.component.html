@@ -1,6 +1,9 @@
 <div class="px-3">
+
+
+
     <h5 class="title">Cash Back Amount & Percentage</h5>
-        
+  
     <div class="row">
       <div class="col-12 col-md-6">
         <div class="card shadow dashCard">
@@ -66,34 +69,41 @@
     <div class="row py-4">
       <div class="col-12">
         <div class="card shadow dashCard">
-          <div class="d-flex justify-content-between pt-3">
-            <div class="d-flex">
-              <div class="px-4">
+          <div class="row m-2">
+            <div class="col-12 col-md-2 mb-3" >
                 <p class="sHeader">Bulk Cash Back</p>
                 <h3 class="amountText">2,200,000</h3>
-              </div>
-              <div class="px-5">
+            </div>
+            <div class="col-12 col-md-2 mb-3">
                 <p class="sHeader">Bulk Ratio</p>
                 <div class="d-flex">
                   <h3 class="amountText">93%</h3>
                   <img src="../../../../assets/images/up-arrow.svg" class="upArrow">
                   <p class="percentageText px-1">5%</p>
                 </div>
-              </div>
-              <div class="px-5">
+            </div>
+            <div class="col-12 col-md-2 mb-3">
+                <p class="sHeader">Individual Cash Back</p>
+                <h3 class="amountText">2,000,000</h3>
+            </div>
+            <div class="col-12 col-md-2 mb-3">
                 <p class="sHeader">Individual Ratio</p>
                 <div class="d-flex">
                   <h3 class="amountText">93%</h3>
                   <img src="../../../../assets/images/up-arrow.svg" class="upArrow">
                   <p class="percentageText px-1">2%</p>
                 </div>
+            </div>
+            <div class="col-12 col-md-2 mb-3">
+            
+            </div>
+            <div class="col-12 col-md-2 mb-3">
+              <div class="px-3 dayTextBg mx-2">
+                <p class="dayText">30 days</p>
               </div>
             </div>
-            <div></div>
-            <div class="px-3 dayTextBg mx-2">
-              <p class="dayText">30 days</p>
-            </div>
           </div>
+       
           <div id="CashbackRatioChart">
             <apx-chart
               [series]="CashbackRatioChartOpt.series"
@@ -109,265 +119,273 @@
         </div>
       </div>
     </div>
-    
-    <div class="row mb-3">
-      <div class="col-md-4">
-        <div class="card shadow dashCard">
-          <div class="d-flex justify-content-between pt-3">
-            <div class="px-3">
-              <p class="sHeader">MPT</p>
-            </div>
-            <div class="px-3 dayTextBg mx-2">
-              <p class="dayText">30 days</p>
-            </div>
-          </div>
-          <div id="mptchart">
-            <apx-chart
-              [series]="mptchartOptions.series"
-              [colors]="mptchartOptions.colors"
-              [chart]="mptchartOptions.chart"
-              [labels]="mptchartOptions.labels"
-              [responsive]="mptchartOptions.responsive"
-              [dataLabels]="mptchartOptions.dataLabels"
-              [legend]="mptchartOptions.legend"
-              [plotOptions]="mptchartOptions.plotOptions"
-            ></apx-chart>
-          </div>
-          <div class="pt-3" style="display: block;">
-            <div class="row">
-              <div class="col-2 col-md-2"></div>
-              <div class="col-3 col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #f9ba0d;"></span>
-                  <h6 style="margin: 0;">Bulk</h6>
-                </div> 
-              </div>
-              <div class="col-3 col-md-3">
-                <h6>600,000</h6>
-              </div>
-              <div class="col-2 col-md-2">
-                <h6>90%</h6>
-              </div>
-              <div class="col-2 col-md-2"></div>
-            </div>
 
-            <hr style="margin: 5px 65px 5px 65px; color: azure;">
-
-            <div class="row">
-              <div class="col-2 col-md-2"></div>
-              <div class="col-3 col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #fce096;"></span>
-                  <h6 style="margin: 0;">Individual</h6>
-                </div> 
+    <section class="slide-chart m-3">
+      <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide>
+          <div class="card shadow dashCard">
+            <div class="d-flex justify-content-between pt-3">
+              <div class="px-3">
+                <p class="sHeader">MPT</p>
               </div>
-              <div class="col-3 col-md-3">
-                <h6>60,000</h6>
+              <div class="px-3 dayTextBg mx-2">
+                <p class="dayText">30 days</p>
               </div>
-              <div class="col-2 col-md-2">
-                <h6>10%</h6>
+            </div>
+            <div id="mptchart">
+              <apx-chart
+                [series]="mptchartOptions.series"
+                [colors]="mptchartOptions.colors"
+                [chart]="mptchartOptions.chart"
+                [labels]="mptchartOptions.labels"
+                [responsive]="mptchartOptions.responsive"
+                [dataLabels]="mptchartOptions.dataLabels"
+                [legend]="mptchartOptions.legend"
+                [plotOptions]="mptchartOptions.plotOptions"
+              ></apx-chart>
+            </div>
+            <div class="pt-3" style="display: block;">
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #f9ba0d;"></span>
+                    <h6 style="margin: 0;">Bulk</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>600,000</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>90%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
               </div>
-              <div class="col-2 col-md-2"></div>
+  
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+  
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #fce096;"></span>
+                    <h6 style="margin: 0;">Individual</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>60,000</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>10%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card shadow dashCard">
-          <div class="d-flex justify-content-between pt-3">
-            <div class="px-3">
-              <p class="sHeader">Telenor</p>
+        </ng-template>  
+        <ng-template carouselSlide>
+          <div class="card shadow dashCard">
+            <div class="d-flex justify-content-between pt-3">
+              <div class="px-3">
+                <p class="sHeader">Telenor</p>
+              </div>
+              <div class="px-3 dayTextBg mx-2">
+                <p class="dayText">30 days</p>
+              </div>
             </div>
-            <div class="px-3 dayTextBg mx-2">
-              <p class="dayText">30 days</p>
+            <div id="telenorChart">
+              <apx-chart
+                [series]="TelenorChartOpt.series"
+                [colors]="TelenorChartOpt.colors"
+                [chart]="TelenorChartOpt.chart"
+                [labels]="TelenorChartOpt.labels"
+                [responsive]="TelenorChartOpt.responsive"
+                [dataLabels]="TelenorChartOpt.dataLabels"
+                [legend]="TelenorChartOpt.legend"
+                [plotOptions]="TelenorChartOpt.plotOptions"
+              ></apx-chart>
             </div>
-          </div>
-          <div id="telenorChart">
-            <apx-chart
-              [series]="TelenorChartOpt.series"
-              [colors]="TelenorChartOpt.colors"
-              [chart]="TelenorChartOpt.chart"
-              [labels]="TelenorChartOpt.labels"
-              [responsive]="TelenorChartOpt.responsive"
-              [dataLabels]="TelenorChartOpt.dataLabels"
-              [legend]="TelenorChartOpt.legend"
-              [plotOptions]="TelenorChartOpt.plotOptions"
-            ></apx-chart>
-          </div>
-          <div class="pt-3" style="display: block;">
-            <div class="row">
-              <div class="col-2 col-md-2"></div>
-              <div class="col-3 col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #07b7e6;"></span>
-                  <h6 style="margin: 0;">Bulk</h6>
-                </div> 
+            <div class="pt-3" style="display: block;">
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #07b7e6;"></span>
+                    <h6 style="margin: 0;">Bulk</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>400,000</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>85%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
               </div>
-              <div class="col-3 col-md-3">
-                <h6>400,000</h6>
+  
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+  
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #93dced;"></span>
+                    <h6 style="margin: 0;">Individual</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>80,000</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>15%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
               </div>
-              <div class="col-2 col-md-2">
-                <h6>85%</h6>
-              </div>
-              <div class="col-2 col-md-2"></div>
-            </div>
-
-            <hr style="margin: 5px 65px 5px 65px; color: azure;">
-
-            <div class="row">
-              <div class="col-2 col-md-2"></div>
-              <div class="col-3 col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #93dced;"></span>
-                  <h6 style="margin: 0;">Individual</h6>
-                </div> 
-              </div>
-              <div class="col-3 col-md-3">
-                <h6>80,000</h6>
-              </div>
-              <div class="col-2 col-md-2">
-                <h6>15%</h6>
-              </div>
-              <div class="col-2 col-md-2"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card shadow dashCard">
-          <div class="d-flex justify-content-between pt-3">
-            <div class="px-3">
-              <p class="sHeader">Ooredoo</p>
-            </div>
-            <div class="px-3 dayTextBg mx-2">
-              <p class="dayText">30 days</p>
             </div>
           </div>
-          <div id="OoredooChart">
-            <apx-chart
-              [series]="OoredooChartOpt.series"
-              [colors]="OoredooChartOpt.colors"
-              [chart]="OoredooChartOpt.chart"
-              [labels]="OoredooChartOpt.labels"
-              [responsive]="OoredooChartOpt.responsive"
-              [dataLabels]="OoredooChartOpt.dataLabels"
-              [legend]="OoredooChartOpt.legend"
-              [plotOptions]="OoredooChartOpt.plotOptions"
-            ></apx-chart>
-          </div>
-          <div class="pt-3" style="display: block;">
-            <div class="row">
-              <div class="col-2 col-md-2"></div>
-              <div class="col-3 col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #ec1a23;"></span>
-                  <h6 style="margin: 0;">Bulk</h6>
-                </div> 
+        </ng-template>  
+        <ng-template carouselSlide>
+          <div class="card shadow dashCard">
+            <div class="d-flex justify-content-between pt-3">
+              <div class="px-3">
+                <p class="sHeader">Ooredoo</p>
               </div>
-              <div class="col-3 col-md-3">
-                <h6>600,000</h6>
+              <div class="px-3 dayTextBg mx-2">
+                <p class="dayText">30 days</p>
               </div>
-              <div class="col-2 col-md-2">
-                <h6>93%</h6>
-              </div>
-              <div class="col-2 col-md-2"></div>
             </div>
-
-            <hr style="margin: 5px 65px 5px 65px; color: azure;">
-
-            <div class="row">
-              <div class="col-2 col-md-2"></div>
-              <div class="col-3 col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #f69da1;"></span>
-                  <h6 style="margin: 0;">Individual</h6>
-                </div> 
-              </div>
-              <div class="col-3 col-md-3">
-                <h6>20,000</h6>
-              </div>
-              <div class="col-2 col-md-2">
-                <h6>7%</h6>
-              </div>
-              <div class="col-2 col-md-2"></div>
+            <div id="OoredooChart">
+              <apx-chart
+                [series]="OoredooChartOpt.series"
+                [colors]="OoredooChartOpt.colors"
+                [chart]="OoredooChartOpt.chart"
+                [labels]="OoredooChartOpt.labels"
+                [responsive]="OoredooChartOpt.responsive"
+                [dataLabels]="OoredooChartOpt.dataLabels"
+                [legend]="OoredooChartOpt.legend"
+                [plotOptions]="OoredooChartOpt.plotOptions"
+              ></apx-chart>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card shadow dashCard">
-          <div class="d-flex justify-content-between pt-3">
-            <div class="px-3">
-              <p class="sHeader">Mytel</p>
-            </div>
-            <div class="px-3 dayTextBg mx-2">
-              <p class="dayText">30 days</p>
-            </div>
-          </div>
-          <div id="MytelChart">
-            <apx-chart
-              [series]="MytelChartOpt.series"
-              [colors]="MytelChartOpt.colors"
-              [chart]="MytelChartOpt.chart"
-              [labels]="MytelChartOpt.labels"
-              [responsive]="MytelChartOpt.responsive"
-              [dataLabels]="MytelChartOpt.dataLabels"
-              [legend]="MytelChartOpt.legend"
-              [plotOptions]="MytelChartOpt.plotOptions"
-            ></apx-chart>
-          </div>
-          <div class="pt-3" style="display: block;">
-            <div class="row">
-              <div class="col-2 col-md-2"></div>
-              <div class="col-3 col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #ec1a23;"></span>
-                  <h6 style="margin: 0;">Bulk</h6>
-                </div> 
+            <div class="pt-3" style="display: block;">
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #ec1a23;"></span>
+                    <h6 style="margin: 0;">Bulk</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>600,000</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>93%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
               </div>
-              <div class="col-3 col-md-3">
-                <h6>600,000</h6>
+  
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+  
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #f69da1;"></span>
+                    <h6 style="margin: 0;">Individual</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>20,000</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>7%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
               </div>
-              <div class="col-2 col-md-2">
-                <h6>93%</h6>
-              </div>
-              <div class="col-2 col-md-2"></div>
-            </div>
-
-            <hr style="margin: 5px 65px 5px 65px; color: azure;">
-
-            <div class="row">
-              <div class="col-2 col-md-2"></div>
-              <div class="col-3 col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #f69da1;"></span>
-                  <h6 style="margin: 0;">Individual</h6>
-                </div> 
-              </div>
-              <div class="col-3 col-md-3">
-                <h6>20,000</h6>
-              </div>
-              <div class="col-2 col-md-2">
-                <h6>7%</h6>
-              </div>
-              <div class="col-2 col-md-2"></div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+      
+        </ng-template>  
+        <ng-template carouselSlide>
+          <div class="card shadow dashCard">
+            <div class="d-flex justify-content-between pt-3">
+              <div class="px-3">
+                <p class="sHeader">Mytel</p>
+              </div>
+              <div class="px-3 dayTextBg mx-2">
+                <p class="dayText">30 days</p>
+              </div>
+            </div>
+            <div id="MytelChart">
+              <apx-chart
+                [series]="MytelChartOpt.series"
+                [colors]="MytelChartOpt.colors"
+                [chart]="MytelChartOpt.chart"
+                [labels]="MytelChartOpt.labels"
+                [responsive]="MytelChartOpt.responsive"
+                [dataLabels]="MytelChartOpt.dataLabels"
+                [legend]="MytelChartOpt.legend"
+                [plotOptions]="MytelChartOpt.plotOptions"
+              ></apx-chart>
+            </div>
+            <div class="pt-3" style="display: block;">
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #ec1a23;"></span>
+                    <h6 style="margin: 0;">Bulk</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>600,000</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>93%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
+              </div>
+  
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+  
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #f69da1;"></span>
+                    <h6 style="margin: 0;">Individual</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>20,000</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>7%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
+              </div>
+            </div>
+          </div>
+        </ng-template>  
+      </owl-carousel-o>
+    </section>   
+  
+  
 
     <h5 class="title mt-5">Service Category Type Monthly</h5>
-
     <div class="row py-4">
       <div class="col-12">
         <div class="card shadow dashCard">
-          <div class="d-flex justify-content-between pt-3">
-              <div class="px-3">
+
+          <div class="row m-2">
+            <div class="col-12 col-md-2">
+              <div class="">
                 <p class="sHeader2">Total Amount</p>
                 <h6 class="amountText">2,200,000</h6>
               </div>
-              <div class="px-3">
+            </div>
+            <div class="col-12 col-md-2">
+              <div class="">
                 <p class="sHeader2">Top Up Ratio</p>
                 <div class="d-flex">
                   <h6 class="amountText">20%</h6>
@@ -375,7 +393,9 @@
                   <p class="percentageText2 px-1">3%</p>
                 </div>
               </div>
-              <div class="px-3">
+            </div>
+            <div class="col-12 col-md-1">
+              <div class="">
                 <p class="sHeader2">Gift Cards Ratio</p>
                 <div class="d-flex">
                   <h6 class="amountText">15%</h6>
@@ -383,7 +403,9 @@
                   <p class="percentageText2 px-1">5%</p>
                 </div>
               </div>
-              <div class="px-3">
+            </div>
+            <div class="col-12 col-md-1">
+              <div class="">
                 <p class="sHeader2">DTH Ratio</p>
                 <div class="d-flex">
                   <h6 class="amountText">12%</h6>
@@ -391,7 +413,9 @@
                   <p class="percentageText2 px-1">2%</p>
                 </div>
               </div>
-              <div class="px-3">
+            </div>
+            <div class="col-12 col-md-1">
+              <div class="">
                 <p class="sHeader2">Electricity Ratio</p>
                 <div class="d-flex">
                   <h6 class="amountText">26%</h6>
@@ -399,7 +423,9 @@
                   <p class="percentageText2 px-1">9%</p>
                 </div>
               </div>
-              <div class="px-3">
+            </div>
+            <div class="col-12 col-md-1">
+              <div class="">
                 <p class="sHeader2">Post Paid Ratio</p>
                 <div class="d-flex">
                   <h6 class="amountText">13%</h6>
@@ -407,7 +433,9 @@
                   <p class="percentageText2 px-1">7%</p>
                 </div>
               </div>
-              <div class="px-3">
+            </div>
+            <div class="col-12 col-md-2">
+              <div class="">
                 <p class="sHeader2">Overseas Top Up</p>
                 <div class="d-flex">
                   <h6 class="amountText">14%</h6>
@@ -415,11 +443,17 @@
                   <p class="percentageText2 px-1">4%</p>
                 </div>
               </div>  
-            <div></div>
-            <div class="px-3 dayTextBg mx-2">
-              <p class="dayText">30 days</p>
             </div>
+            <div class="col-12 col-md-2">
+              <div class="px-3 dayTextBg mx-2">
+                <p class="dayText">30 days</p>
+              </div>
+            </div>
+         
+         
+         
           </div>
+        
          
           <div id="ServiceChart">
             <apx-chart
@@ -436,717 +470,727 @@
         </div>
       </div>
     </div>
+    
 
-    <div class="row mb-3">
-      <div class="col-md-4">
-        <div class="card shadow dashCard">
-          <div class="d-flex justify-content-between pt-3">
-            <div class="px-3">
-              <p class="sHeader">Top Up</p>
+    <section class="slide-chart m-3">
+      <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide>
+            
+          <div class="card shadow dashCard">
+            <div class="d-flex justify-content-between pt-3">
+              <div class="px-3">
+                <p class="sHeader">Top Up</p>
+              </div>
+              <div class="px-3 dayTextBg mx-2">
+                <p class="dayText">30 days</p>
+              </div>
             </div>
-            <div class="px-3 dayTextBg mx-2">
-              <p class="dayText">30 days</p>
+            <div id="TopupChart">
+              <apx-chart
+                [series]="TopupChartOpt.series"
+                [colors]="TopupChartOpt.colors"
+                [chart]="TopupChartOpt.chart"
+                [labels]="TopupChartOpt.labels"
+                [responsive]="TopupChartOpt.responsive"
+                [dataLabels]="TopupChartOpt.dataLabels"
+                [legend]="TopupChartOpt.legend"
+                [plotOptions]="TopupChartOpt.plotOptions"
+              ></apx-chart>
             </div>
-          </div>
-          <div id="TopupChart">
-            <apx-chart
-              [series]="TopupChartOpt.series"
-              [colors]="TopupChartOpt.colors"
-              [chart]="TopupChartOpt.chart"
-              [labels]="TopupChartOpt.labels"
-              [responsive]="TopupChartOpt.responsive"
-              [dataLabels]="TopupChartOpt.dataLabels"
-              [legend]="TopupChartOpt.legend"
-              [plotOptions]="TopupChartOpt.plotOptions"
-            ></apx-chart>
-          </div>
-          <div class="pt-3 d-block">
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #ed1b24;"></span>
-                  <h6 style="margin: 0;">Ooredoo</h6>
-                </div> 
+            <div class="pt-3 d-block">
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #ed1b24;"></span>
+                    <h6 style="margin: 0;">Ooredoo</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>15,600</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>30%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
               </div>
-              <div class="col-md-3">
-                <h6>15,600</h6>
+  
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+  
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #f9bb0e;"></span>
+                    <h6 style="margin: 0;">MPT</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>15,600</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>30%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
               </div>
-              <div class="col-md-2">
-                <h6>30%</h6>
+  
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+  
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #05b8e3;"></span>
+                    <h6 style="margin: 0;">Telenor</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>10,400</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>20%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
               </div>
-              <div class="col-md-2"></div>
-            </div>
-
-            <hr style="margin: 5px 65px 5px 65px; color: azure;">
-
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #f9bb0e;"></span>
-                  <h6 style="margin: 0;">MPT</h6>
-                </div> 
+  
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+  
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #ee6c20;"></span>
+                    <h6 style="margin: 0;">Mytel</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>10,400</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>20%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
               </div>
-              <div class="col-md-3">
-                <h6>15,600</h6>
+  
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+  
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #3a7eed;"></span>
+                    <h6 style="margin: 0;">MEC</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>5,200</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>10%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
               </div>
-              <div class="col-md-2">
-                <h6>30%</h6>
-              </div>
-              <div class="col-md-2"></div>
-            </div>
-
-            <hr style="margin: 5px 65px 5px 65px; color: azure;">
-
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #05b8e3;"></span>
-                  <h6 style="margin: 0;">Telenor</h6>
-                </div> 
-              </div>
-              <div class="col-md-3">
-                <h6>10,400</h6>
-              </div>
-              <div class="col-md-2">
-                <h6>20%</h6>
-              </div>
-              <div class="col-md-2"></div>
-            </div>
-
-            <hr style="margin: 5px 65px 5px 65px; color: azure;">
-
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #ee6c20;"></span>
-                  <h6 style="margin: 0;">Mytel</h6>
-                </div> 
-              </div>
-              <div class="col-md-3">
-                <h6>10,400</h6>
-              </div>
-              <div class="col-md-2">
-                <h6>20%</h6>
-              </div>
-              <div class="col-md-2"></div>
-            </div>
-
-            <hr style="margin: 5px 65px 5px 65px; color: azure;">
-
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #3a7eed;"></span>
-                  <h6 style="margin: 0;">MEC</h6>
-                </div> 
-              </div>
-              <div class="col-md-3">
-                <h6>5,200</h6>
-              </div>
-              <div class="col-md-2">
-                <h6>10%</h6>
-              </div>
-              <div class="col-md-2"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card shadow dashCard">
-          <div class="d-flex justify-content-between pt-3">
-            <div class="px-3">
-              <p class="sHeader">Gift Cards</p>
-            </div>
-            <div class="px-3 dayTextBg mx-2">
-              <p class="dayText">30 days</p>
             </div>
           </div>
-          <div id="GiftCardChart">
-            <apx-chart
-              [series]="GiftCardChartOpt.series"
-              [colors]="GiftCardChartOpt.colors"
-              [chart]="GiftCardChartOpt.chart"
-              [labels]="GiftCardChartOpt.labels"
-              [responsive]="GiftCardChartOpt.responsive"
-              [dataLabels]="GiftCardChartOpt.dataLabels"
-              [legend]="GiftCardChartOpt.legend"
-              [plotOptions]="GiftCardChartOpt.plotOptions"
-            ></apx-chart>
-          </div>
-          <div class="pt-3 d-block">
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #ed1b24;"></span>
-                  <h6 style="margin: 0;">Ooredoo</h6>
-                </div> 
+        </ng-template>  
+        <ng-template carouselSlide>
+          <div class="card shadow dashCard">
+            <div class="d-flex justify-content-between pt-3">
+              <div class="px-3">
+                <p class="sHeader">Gift Cards</p>
               </div>
-              <div class="col-md-3">
-                <h6>15,600</h6>
+              <div class="px-3 dayTextBg mx-2">
+                <p class="dayText">30 days</p>
               </div>
-              <div class="col-md-2">
-                <h6>30%</h6>
-              </div>
-              <div class="col-md-2"></div>
             </div>
-
-            <hr style="margin: 5px 65px 5px 65px; color: azure;">
-
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #f9bb0e;"></span>
-                  <h6 style="margin: 0;">MPT</h6>
-                </div> 
-              </div>
-              <div class="col-md-3">
-                <h6>15,600</h6>
-              </div>
-              <div class="col-md-2">
-                <h6>30%</h6>
-              </div>
-              <div class="col-md-2"></div>
+            <div id="GiftCardChart">
+              <apx-chart
+                [series]="GiftCardChartOpt.series"
+                [colors]="GiftCardChartOpt.colors"
+                [chart]="GiftCardChartOpt.chart"
+                [labels]="GiftCardChartOpt.labels"
+                [responsive]="GiftCardChartOpt.responsive"
+                [dataLabels]="GiftCardChartOpt.dataLabels"
+                [legend]="GiftCardChartOpt.legend"
+                [plotOptions]="GiftCardChartOpt.plotOptions"
+              ></apx-chart>
             </div>
-
-            <hr style="margin: 5px 65px 5px 65px; color: azure;">
-
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #05b8e3;"></span>
-                  <h6 style="margin: 0;">Telenor</h6>
-                </div> 
+            <div class="pt-3 d-block">
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #ed1b24;"></span>
+                    <h6 style="margin: 0;">Ooredoo</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>15,600</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>30%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
               </div>
-              <div class="col-md-3">
-                <h6>10,400</h6>
+  
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+  
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #f9bb0e;"></span>
+                    <h6 style="margin: 0;">MPT</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>15,600</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>30%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
               </div>
-              <div class="col-md-2">
-                <h6>20%</h6>
+  
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+  
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #05b8e3;"></span>
+                    <h6 style="margin: 0;">Telenor</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>10,400</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>20%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
               </div>
-              <div class="col-md-2"></div>
-            </div>
-
-            <hr style="margin: 5px 65px 5px 65px; color: azure;">
-
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #ee6c20;"></span>
-                  <h6 style="margin: 0;">Mytel</h6>
-                </div> 
+  
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+  
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #ee6c20;"></span>
+                    <h6 style="margin: 0;">Mytel</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>10,400</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>20%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
               </div>
-              <div class="col-md-3">
-                <h6>10,400</h6>
+  
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+  
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #3a7eed;"></span>
+                    <h6 style="margin: 0;">MEC</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>5,200</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>10%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
               </div>
-              <div class="col-md-2">
-                <h6>20%</h6>
-              </div>
-              <div class="col-md-2"></div>
-            </div>
-
-            <hr style="margin: 5px 65px 5px 65px; color: azure;">
-
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #3a7eed;"></span>
-                  <h6 style="margin: 0;">MEC</h6>
-                </div> 
-              </div>
-              <div class="col-md-3">
-                <h6>5,200</h6>
-              </div>
-              <div class="col-md-2">
-                <h6>10%</h6>
-              </div>
-              <div class="col-md-2"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card shadow dashCard">
-          <div class="d-flex justify-content-between pt-3">
-            <div class="px-3">
-              <p class="sHeader">DTH</p>
-            </div>
-            <div class="px-3 dayTextBg mx-2">
-              <p class="dayText">30 days</p>
-            </div>
-          </div>
-          <div id="DTHChart">
-            <apx-chart
-              [series]="DTHChartOpt.series"
-              [colors]="DTHChartOpt.colors"
-              [chart]="DTHChartOpt.chart"
-              [labels]="DTHChartOpt.labels"
-              [responsive]="DTHChartOpt.responsive"
-              [dataLabels]="DTHChartOpt.dataLabels"
-              [legend]="DTHChartOpt.legend"
-              [plotOptions]="DTHChartOpt.plotOptions"
-            ></apx-chart>
-          </div>
-          <div class="pt-3 d-block">
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #ed1b24;"></span>
-                  <h6 style="margin: 0;">Ooredoo</h6>
-                </div> 
-              </div>
-              <div class="col-md-3">
-                <h6>15,600</h6>
-              </div>
-              <div class="col-md-2">
-                <h6>30%</h6>
-              </div>
-              <div class="col-md-2"></div>
-            </div>
-
-            <hr style="margin: 5px 65px 5px 65px; color: azure;">
-
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #f9bb0e;"></span>
-                  <h6 style="margin: 0;">MPT</h6>
-                </div> 
-              </div>
-              <div class="col-md-3">
-                <h6>15,600</h6>
-              </div>
-              <div class="col-md-2">
-                <h6>30%</h6>
-              </div>
-              <div class="col-md-2"></div>
-            </div>
-
-            <hr style="margin: 5px 65px 5px 65px; color: azure;">
-
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #05b8e3;"></span>
-                  <h6 style="margin: 0;">Telenor</h6>
-                </div> 
-              </div>
-              <div class="col-md-3">
-                <h6>10,400</h6>
-              </div>
-              <div class="col-md-2">
-                <h6>20%</h6>
-              </div>
-              <div class="col-md-2"></div>
-            </div>
-
-            <hr style="margin: 5px 65px 5px 65px; color: azure;">
-
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #ee6c20;"></span>
-                  <h6 style="margin: 0;">Mytel</h6>
-                </div> 
-              </div>
-              <div class="col-md-3">
-                <h6>10,400</h6>
-              </div>
-              <div class="col-md-2">
-                <h6>20%</h6>
-              </div>
-              <div class="col-md-2"></div>
-            </div>
-
-            <hr style="margin: 5px 65px 5px 65px; color: azure;">
-
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #3a7eed;"></span>
-                  <h6 style="margin: 0;">MEC</h6>
-                </div> 
-              </div>
-              <div class="col-md-3">
-                <h6>5,200</h6>
-              </div>
-              <div class="col-md-2">
-                <h6>10%</h6>
-              </div>
-              <div class="col-md-2"></div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card shadow dashCard">
-          <div class="d-flex justify-content-between pt-3">
-            <div class="px-3">
-              <p class="sHeader">Electricity</p>
+        </ng-template>  
+        <ng-template carouselSlide>
+       
+          <div class="card shadow dashCard">
+            <div class="d-flex justify-content-between pt-3">
+              <div class="px-3">
+                <p class="sHeader">DTH</p>
+              </div>
+              <div class="px-3 dayTextBg mx-2">
+                <p class="dayText">30 days</p>
+              </div>
             </div>
-            <div class="px-3 dayTextBg mx-2">
-              <p class="dayText">30 days</p>
+            <div id="DTHChart">
+              <apx-chart
+                [series]="DTHChartOpt.series"
+                [colors]="DTHChartOpt.colors"
+                [chart]="DTHChartOpt.chart"
+                [labels]="DTHChartOpt.labels"
+                [responsive]="DTHChartOpt.responsive"
+                [dataLabels]="DTHChartOpt.dataLabels"
+                [legend]="DTHChartOpt.legend"
+                [plotOptions]="DTHChartOpt.plotOptions"
+              ></apx-chart>
             </div>
-          </div>
-          <div id="ElecChart">
-            <apx-chart
-              [series]="ElecChartOpt.series"
-              [colors]="ElecChartOpt.colors"
-              [chart]="ElecChartOpt.chart"
-              [labels]="ElecChartOpt.labels"
-              [responsive]="ElecChartOpt.responsive"
-              [dataLabels]="ElecChartOpt.dataLabels"
-              [legend]="ElecChartOpt.legend"
-              [plotOptions]="ElecChartOpt.plotOptions"
-            ></apx-chart>
-          </div>
-          <div class="pt-3 d-block">
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #ed1b24;"></span>
-                  <h6 style="margin: 0;">Ooredoo</h6>
-                </div> 
+            <div class="pt-3 d-block">
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #ed1b24;"></span>
+                    <h6 style="margin: 0;">Ooredoo</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>15,600</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>30%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
               </div>
-              <div class="col-md-3">
-                <h6>15,600</h6>
+  
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+  
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #f9bb0e;"></span>
+                    <h6 style="margin: 0;">MPT</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>15,600</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>30%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
               </div>
-              <div class="col-md-2">
-                <h6>30%</h6>
+  
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+  
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #05b8e3;"></span>
+                    <h6 style="margin: 0;">Telenor</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>10,400</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>20%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
               </div>
-              <div class="col-md-2"></div>
-            </div>
-
-            <hr style="margin: 5px 65px 5px 65px; color: azure;">
-
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #f9bb0e;"></span>
-                  <h6 style="margin: 0;">MPT</h6>
-                </div> 
+  
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+  
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #ee6c20;"></span>
+                    <h6 style="margin: 0;">Mytel</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>10,400</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>20%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
               </div>
-              <div class="col-md-3">
-                <h6>15,600</h6>
+  
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+  
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #3a7eed;"></span>
+                    <h6 style="margin: 0;">MEC</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>5,200</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>10%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
               </div>
-              <div class="col-md-2">
-                <h6>30%</h6>
-              </div>
-              <div class="col-md-2"></div>
-            </div>
-
-            <hr style="margin: 5px 65px 5px 65px; color: azure;">
-
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #05b8e3;"></span>
-                  <h6 style="margin: 0;">Telenor</h6>
-                </div> 
-              </div>
-              <div class="col-md-3">
-                <h6>10,400</h6>
-              </div>
-              <div class="col-md-2">
-                <h6>20%</h6>
-              </div>
-              <div class="col-md-2"></div>
-            </div>
-
-            <hr style="margin: 5px 65px 5px 65px; color: azure;">
-
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #ee6c20;"></span>
-                  <h6 style="margin: 0;">Mytel</h6>
-                </div> 
-              </div>
-              <div class="col-md-3">
-                <h6>10,400</h6>
-              </div>
-              <div class="col-md-2">
-                <h6>20%</h6>
-              </div>
-              <div class="col-md-2"></div>
-            </div>
-
-            <hr style="margin: 5px 65px 5px 65px; color: azure;">
-
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #3a7eed;"></span>
-                  <h6 style="margin: 0;">MEC</h6>
-                </div> 
-              </div>
-              <div class="col-md-3">
-                <h6>5,200</h6>
-              </div>
-              <div class="col-md-2">
-                <h6>10%</h6>
-              </div>
-              <div class="col-md-2"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card shadow dashCard">
-          <div class="d-flex justify-content-between pt-3">
-            <div class="px-3">
-              <p class="sHeader">Post Paid</p>
-            </div>
-            <div class="px-3 dayTextBg mx-2">
-              <p class="dayText">30 days</p>
             </div>
           </div>
-          <div id="PostpaidChart">
-            <apx-chart
-              [series]="PostpaidChartOpt.series"
-              [colors]="PostpaidChartOpt.colors"
-              [chart]="PostpaidChartOpt.chart"
-              [labels]="PostpaidChartOpt.labels"
-              [responsive]="PostpaidChartOpt.responsive"
-              [dataLabels]="PostpaidChartOpt.dataLabels"
-              [legend]="PostpaidChartOpt.legend"
-              [plotOptions]="PostpaidChartOpt.plotOptions"
-            ></apx-chart>
-          </div>
-          <div class="pt-3 d-block">
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #ed1b24;"></span>
-                  <h6 style="margin: 0;">Ooredoo</h6>
-                </div> 
+          
+        </ng-template>  
+        <ng-template carouselSlide>
+          <div class="card shadow dashCard">
+            <div class="d-flex justify-content-between pt-3">
+              <div class="px-3">
+                <p class="sHeader">Electricity</p>
               </div>
-              <div class="col-md-3">
-                <h6>15,600</h6>
+              <div class="px-3 dayTextBg mx-2">
+                <p class="dayText">30 days</p>
               </div>
-              <div class="col-md-2">
-                <h6>30%</h6>
-              </div>
-              <div class="col-md-2"></div>
             </div>
-
-            <hr style="margin: 5px 65px 5px 65px; color: azure;">
-
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #f9bb0e;"></span>
-                  <h6 style="margin: 0;">MPT</h6>
-                </div> 
-              </div>
-              <div class="col-md-3">
-                <h6>15,600</h6>
-              </div>
-              <div class="col-md-2">
-                <h6>30%</h6>
-              </div>
-              <div class="col-md-2"></div>
+            <div id="ElecChart">
+              <apx-chart
+                [series]="ElecChartOpt.series"
+                [colors]="ElecChartOpt.colors"
+                [chart]="ElecChartOpt.chart"
+                [labels]="ElecChartOpt.labels"
+                [responsive]="ElecChartOpt.responsive"
+                [dataLabels]="ElecChartOpt.dataLabels"
+                [legend]="ElecChartOpt.legend"
+                [plotOptions]="ElecChartOpt.plotOptions"
+              ></apx-chart>
             </div>
-
-            <hr style="margin: 5px 65px 5px 65px; color: azure;">
-
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #05b8e3;"></span>
-                  <h6 style="margin: 0;">Telenor</h6>
-                </div> 
+            <div class="pt-3 d-block">
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #ed1b24;"></span>
+                    <h6 style="margin: 0;">Ooredoo</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>15,600</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>30%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
               </div>
-              <div class="col-md-3">
-                <h6>10,400</h6>
+  
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+  
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #f9bb0e;"></span>
+                    <h6 style="margin: 0;">MPT</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>15,600</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>30%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
               </div>
-              <div class="col-md-2">
-                <h6>20%</h6>
+  
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+  
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #05b8e3;"></span>
+                    <h6 style="margin: 0;">Telenor</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>10,400</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>20%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
               </div>
-              <div class="col-md-2"></div>
-            </div>
-
-            <hr style="margin: 5px 65px 5px 65px; color: azure;">
-
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #ee6c20;"></span>
-                  <h6 style="margin: 0;">Mytel</h6>
-                </div> 
+  
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+  
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #ee6c20;"></span>
+                    <h6 style="margin: 0;">Mytel</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>10,400</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>20%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
               </div>
-              <div class="col-md-3">
-                <h6>10,400</h6>
+  
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+  
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #3a7eed;"></span>
+                    <h6 style="margin: 0;">MEC</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>5,200</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>10%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
               </div>
-              <div class="col-md-2">
-                <h6>20%</h6>
-              </div>
-              <div class="col-md-2"></div>
-            </div>
-
-            <hr style="margin: 5px 65px 5px 65px; color: azure;">
-
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #3a7eed;"></span>
-                  <h6 style="margin: 0;">MEC</h6>
-                </div> 
-              </div>
-              <div class="col-md-3">
-                <h6>5,200</h6>
-              </div>
-              <div class="col-md-2">
-                <h6>10%</h6>
-              </div>
-              <div class="col-md-2"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card shadow dashCard">
-          <div class="d-flex justify-content-between pt-3">
-            <div class="px-3">
-              <p class="sHeader">Overseas Top Up</p>
-            </div>
-            <div class="px-3 dayTextBg mx-2">
-              <p class="dayText">30 days</p>
-            </div>
-          </div>
-          <div id="OvTopupChart">
-            <apx-chart
-              [series]="OvTopupChartOpt.series"
-              [colors]="OvTopupChartOpt.colors"
-              [chart]="OvTopupChartOpt.chart"
-              [labels]="OvTopupChartOpt.labels"
-              [responsive]="OvTopupChartOpt.responsive"
-              [dataLabels]="OvTopupChartOpt.dataLabels"
-              [legend]="OvTopupChartOpt.legend"
-              [plotOptions]="OvTopupChartOpt.plotOptions"
-            ></apx-chart>
-          </div>
-          <div class="pt-3 d-block">
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #ed1b24;"></span>
-                  <h6 style="margin: 0;">Ooredoo</h6>
-                </div> 
-              </div>
-              <div class="col-md-3">
-                <h6>15,600</h6>
-              </div>
-              <div class="col-md-2">
-                <h6>30%</h6>
-              </div>
-              <div class="col-md-2"></div>
-            </div>
-
-            <hr style="margin: 5px 65px 5px 65px; color: azure;">
-
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #f9bb0e;"></span>
-                  <h6 style="margin: 0;">MPT</h6>
-                </div> 
-              </div>
-              <div class="col-md-3">
-                <h6>15,600</h6>
-              </div>
-              <div class="col-md-2">
-                <h6>30%</h6>
-              </div>
-              <div class="col-md-2"></div>
-            </div>
-
-            <hr style="margin: 5px 65px 5px 65px; color: azure;">
-
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #05b8e3;"></span>
-                  <h6 style="margin: 0;">Telenor</h6>
-                </div> 
-              </div>
-              <div class="col-md-3">
-                <h6>10,400</h6>
-              </div>
-              <div class="col-md-2">
-                <h6>20%</h6>
-              </div>
-              <div class="col-md-2"></div>
-            </div>
-
-            <hr style="margin: 5px 65px 5px 65px; color: azure;">
-
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #ee6c20;"></span>
-                  <h6 style="margin: 0;">Mytel</h6>
-                </div> 
-              </div>
-              <div class="col-md-3">
-                <h6>10,400</h6>
-              </div>
-              <div class="col-md-2">
-                <h6>20%</h6>
-              </div>
-              <div class="col-md-2"></div>
-            </div>
-
-            <hr style="margin: 5px 65px 5px 65px; color: azure;">
-
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
-                <div class="d-flex">
-                  <span class="dot" style="background-color: #3a7eed;"></span>
-                  <h6 style="margin: 0;">MEC</h6>
-                </div> 
-              </div>
-              <div class="col-md-3">
-                <h6>5,200</h6>
-              </div>
-              <div class="col-md-2">
-                <h6>10%</h6>
-              </div>
-              <div class="col-md-2"></div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+          
+        </ng-template>  
+
+        <ng-template carouselSlide>
+          <div class="card shadow dashCard">
+            <div class="d-flex justify-content-between pt-3">
+              <div class="px-3">
+                <p class="sHeader">Post Paid</p>
+              </div>
+              <div class="px-3 dayTextBg mx-2">
+                <p class="dayText">30 days</p>
+              </div>
+            </div>
+            <div id="PostpaidChart">
+              <apx-chart
+                [series]="PostpaidChartOpt.series"
+                [colors]="PostpaidChartOpt.colors"
+                [chart]="PostpaidChartOpt.chart"
+                [labels]="PostpaidChartOpt.labels"
+                [responsive]="PostpaidChartOpt.responsive"
+                [dataLabels]="PostpaidChartOpt.dataLabels"
+                [legend]="PostpaidChartOpt.legend"
+                [plotOptions]="PostpaidChartOpt.plotOptions"
+              ></apx-chart>
+            </div>
+            <div class="pt-3 d-block">
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #ed1b24;"></span>
+                    <h6 style="margin: 0;">Ooredoo</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>15,600</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>30%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
+              </div>
+  
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+  
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #f9bb0e;"></span>
+                    <h6 style="margin: 0;">MPT</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>15,600</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>30%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
+              </div>
+  
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+  
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #05b8e3;"></span>
+                    <h6 style="margin: 0;">Telenor</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>10,400</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>20%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
+              </div>
+  
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+  
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #ee6c20;"></span>
+                    <h6 style="margin: 0;">Mytel</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>10,400</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>20%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
+              </div>
+  
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+  
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #3a7eed;"></span>
+                    <h6 style="margin: 0;">MEC</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>5,200</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>10%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
+              </div>
+            </div>
+          </div>
+        </ng-template>  
+
+        <ng-template carouselSlide>
+          <div class="card shadow dashCard">
+            <div class="d-flex justify-content-between pt-3">
+              <div class="px-3">
+                <p class="sHeader">Overseas Top Up</p>
+              </div>
+              <div class="px-3 dayTextBg mx-2">
+                <p class="dayText">30 days</p>
+              </div>
+            </div>
+            <div id="OvTopupChart">
+              <apx-chart
+                [series]="OvTopupChartOpt.series"
+                [colors]="OvTopupChartOpt.colors"
+                [chart]="OvTopupChartOpt.chart"
+                [labels]="OvTopupChartOpt.labels"
+                [responsive]="OvTopupChartOpt.responsive"
+                [dataLabels]="OvTopupChartOpt.dataLabels"
+                [legend]="OvTopupChartOpt.legend"
+                [plotOptions]="OvTopupChartOpt.plotOptions"
+              ></apx-chart>
+            </div>
+            <div class="pt-3 d-block">
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #ed1b24;"></span>
+                    <h6 style="margin: 0;">Ooredoo</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>15,600</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>30%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
+              </div>
+  
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+  
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #f9bb0e;"></span>
+                    <h6 style="margin: 0;">MPT</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>15,600</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>30%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
+              </div>
+  
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+  
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #05b8e3;"></span>
+                    <h6 style="margin: 0;">Telenor</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>10,400</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>20%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
+              </div>
+  
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+  
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #ee6c20;"></span>
+                    <h6 style="margin: 0;">Mytel</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>10,400</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>20%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
+              </div>
+  
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+  
+              <div class="row">
+                <div class="col-2 col-md-2"></div>
+                <div class="col-3 col-md-3">
+                  <div class="d-flex">
+                    <span class="dot" style="background-color: #3a7eed;"></span>
+                    <h6 style="margin: 0;">MEC</h6>
+                  </div> 
+                </div>
+                <div class="col-3 col-md-3">
+                  <h6>5,200</h6>
+                </div>
+                <div class="col-2 col-md-2">
+                  <h6>10%</h6>
+                </div>
+                <div class="col-2 col-md-2"></div>
+              </div>
+            </div>
+          </div>
+        </ng-template>  
+
+      </owl-carousel-o>
+    </section>   
 
     <h5 class="title mt-5">Cash Back Amount State / Division Wise</h5>
 
@@ -1185,9 +1229,13 @@
         </div>
       </div>
     </div>
+   
+ 
 
-    <div class="row mb-3">
-      <div class="col-md-4">
+ 
+  <section class="slide-chart m-3">
+    <owl-carousel-o [options]="customOptions">
+      <ng-template carouselSlide>
         <div class="card shadow dashCard">
           <div class="d-flex justify-content-between pt-3">
             <div class="px-3">
@@ -1211,101 +1259,101 @@
           </div>
           <div class="pt-3 d-block">
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #ed1b24;"></span>
                   <h6 style="margin: 0;">Ooredoo</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>15,600</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>30%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #f9bb0e;"></span>
                   <h6 style="margin: 0;">MPT</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>15,600</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>30%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #05b8e3;"></span>
                   <h6 style="margin: 0;">Telenor</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>10,400</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>20%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #ee6c20;"></span>
                   <h6 style="margin: 0;">Mytel</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>10,400</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>20%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 ol-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #3a7eed;"></span>
                   <h6 style="margin: 0;">MEC</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>5,200</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>10%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
+      </ng-template>  
+      <ng-template carouselSlide>
         <div class="card shadow dashCard">
           <div class="d-flex justify-content-between pt-3">
             <div class="px-3">
@@ -1329,58 +1377,58 @@
           </div>
           <div class="pt-3 d-block">
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #ed1b24;"></span>
                   <h6 style="margin: 0;">Ooredoo</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>15,600</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>30%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #f9bb0e;"></span>
                   <h6 style="margin: 0;">MPT</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>15,600</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>30%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #05b8e3;"></span>
                   <h6 style="margin: 0;">Telenor</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>10,400</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>20%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
@@ -1393,37 +1441,37 @@
                   <h6 style="margin: 0;">Mytel</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>10,400</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>20%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #3a7eed;"></span>
                   <h6 style="margin: 0;">MEC</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>5,200</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>10%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
+      </ng-template>  
+      <ng-template carouselSlide>
         <div class="card shadow dashCard">
           <div class="d-flex justify-content-between pt-3">
             <div class="px-3">
@@ -1447,101 +1495,102 @@
           </div>
           <div class="pt-3 d-block">
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #ed1b24;"></span>
                   <h6 style="margin: 0;">Ooredoo</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>15,600</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>30%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #f9bb0e;"></span>
                   <h6 style="margin: 0;">MPT</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>15,600</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>30%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #05b8e3;"></span>
                   <h6 style="margin: 0;">Telenor</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>10,400</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>20%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #ee6c20;"></span>
                   <h6 style="margin: 0;">Mytel</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>10,400</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>20%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #3a7eed;"></span>
                   <h6 style="margin: 0;">MEC</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>5,200</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>10%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
+    
+      </ng-template>  
+      <ng-template carouselSlide>
         <div class="card shadow dashCard">
           <div class="d-flex justify-content-between pt-3">
             <div class="px-3">
@@ -1565,101 +1614,101 @@
           </div>
           <div class="pt-3 d-block">
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #ed1b24;"></span>
                   <h6 style="margin: 0;">Ooredoo</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>15,600</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>30%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #f9bb0e;"></span>
                   <h6 style="margin: 0;">MPT</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>15,600</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>30%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #05b8e3;"></span>
                   <h6 style="margin: 0;">Telenor</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>10,400</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>20%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #ee6c20;"></span>
                   <h6 style="margin: 0;">Mytel</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>10,400</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>20%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #3a7eed;"></span>
                   <h6 style="margin: 0;">MEC</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>5,200</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>10%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
+      </ng-template>  
+      <ng-template carouselSlide>
         <div class="card shadow dashCard">
           <div class="d-flex justify-content-between pt-3">
             <div class="px-3">
@@ -1683,101 +1732,101 @@
           </div>
           <div class="pt-3 d-block">
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #ed1b24;"></span>
                   <h6 style="margin: 0;">Ooredoo</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>15,600</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>30%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #f9bb0e;"></span>
                   <h6 style="margin: 0;">MPT</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>15,600</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>30%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #05b8e3;"></span>
                   <h6 style="margin: 0;">Telenor</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>10,400</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>20%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #ee6c20;"></span>
                   <h6 style="margin: 0;">Mytel</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>10,400</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-3 col-md-2">
                 <h6>20%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #3a7eed;"></span>
                   <h6 style="margin: 0;">MEC</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>5,200</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>10%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
+      </ng-template> 
+      <ng-template carouselSlide>
         <div class="card shadow dashCard">
           <div class="d-flex justify-content-between pt-3">
             <div class="px-3">
@@ -1801,101 +1850,101 @@
           </div>
           <div class="pt-3 d-block">
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="co-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #ed1b24;"></span>
                   <h6 style="margin: 0;">Ooredoo</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>15,600</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>30%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #f9bb0e;"></span>
                   <h6 style="margin: 0;">MPT</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>15,600</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>30%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #05b8e3;"></span>
                   <h6 style="margin: 0;">Telenor</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>10,400</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>20%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #ee6c20;"></span>
                   <h6 style="margin: 0;">Mytel</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>10,400</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>20%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #3a7eed;"></span>
                   <h6 style="margin: 0;">MEC</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>5,200</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>10%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
+      </ng-template>  
+      <ng-template carouselSlide>
         <div class="card shadow dashCard">
           <div class="d-flex justify-content-between pt-3">
             <div class="px-3">
@@ -1919,101 +1968,101 @@
           </div>
           <div class="pt-3 d-block">
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #ed1b24;"></span>
                   <h6 style="margin: 0;">Ooredoo</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>15,600</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>30%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #f9bb0e;"></span>
                   <h6 style="margin: 0;">MPT</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>15,600</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>30%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #05b8e3;"></span>
                   <h6 style="margin: 0;">Telenor</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>10,400</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>20%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #ee6c20;"></span>
                   <h6 style="margin: 0;">Mytel</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>10,400</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>20%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #3a7eed;"></span>
                   <h6 style="margin: 0;">MEC</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>5,200</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>10%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
+      </ng-template>  
+      <ng-template carouselSlide>
         <div class="card shadow dashCard">
           <div class="d-flex justify-content-between pt-3">
             <div class="px-3">
@@ -2037,101 +2086,103 @@
           </div>
           <div class="pt-3 d-block">
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #ed1b24;"></span>
                   <h6 style="margin: 0;">Ooredoo</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>15,600</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>30%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #f9bb0e;"></span>
                   <h6 style="margin: 0;">MPT</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>15,600</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>30%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #05b8e3;"></span>
                   <h6 style="margin: 0;">Telenor</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>10,400</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>20%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #ee6c20;"></span>
                   <h6 style="margin: 0;">Mytel</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>10,400</h6>
               </div>
-              <div class="col-md-2">
+              <div class=" col-2 col-md-2">
                 <h6>20%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #3a7eed;"></span>
                   <h6 style="margin: 0;">MEC</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>5,200</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>10%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
+    
+      </ng-template>  
+      <ng-template carouselSlide>
+
         <div class="card shadow dashCard">
           <div class="d-flex justify-content-between pt-3">
             <div class="px-3">
@@ -2155,77 +2206,77 @@
           </div>
           <div class="pt-3 d-block">
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #ed1b24;"></span>
                   <h6 style="margin: 0;">Ooredoo</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>15,600</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>30%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #f9bb0e;"></span>
                   <h6 style="margin: 0;">MPT</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>15,600</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>30%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #05b8e3;"></span>
                   <h6 style="margin: 0;">Telenor</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>10,400</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>20%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-2 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #ee6c20;"></span>
                   <h6 style="margin: 0;">Mytel</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>10,400</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>20%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
@@ -2248,8 +2299,9 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
+      
+      </ng-template>  
+      <ng-template carouselSlide>
         <div class="card shadow dashCard">
           <div class="d-flex justify-content-between pt-3">
             <div class="px-3">
@@ -2273,101 +2325,102 @@
           </div>
           <div class="pt-3 d-block">
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #ed1b24;"></span>
                   <h6 style="margin: 0;">Ooredoo</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>15,600</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>30%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #f9bb0e;"></span>
                   <h6 style="margin: 0;">MPT</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>15,600</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>30%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #05b8e3;"></span>
                   <h6 style="margin: 0;">Telenor</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>10,400</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>20%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #ee6c20;"></span>
                   <h6 style="margin: 0;">Mytel</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>10,400</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>20%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #3a7eed;"></span>
                   <h6 style="margin: 0;">MEC</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>5,200</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>10%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
+      </ng-template> 
+
+      <ng-template carouselSlide>
         <div class="card shadow dashCard">
           <div class="d-flex justify-content-between pt-3">
             <div class="px-3">
@@ -2391,101 +2444,101 @@
           </div>
           <div class="pt-3 d-block">
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #ed1b24;"></span>
                   <h6 style="margin: 0;">Ooredoo</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>15,600</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>30%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #f9bb0e;"></span>
                   <h6 style="margin: 0;">MPT</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>15,600</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>30%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #05b8e3;"></span>
                   <h6 style="margin: 0;">Telenor</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>10,400</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>20%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #ee6c20;"></span>
                   <h6 style="margin: 0;">Mytel</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>10,400</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>20%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #3a7eed;"></span>
                   <h6 style="margin: 0;">MEC</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>5,200</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>10%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
+      </ng-template>  
+      <ng-template carouselSlide>
         <div class="card shadow dashCard">
           <div class="d-flex justify-content-between pt-3">
             <div class="px-3">
@@ -2509,101 +2562,102 @@
           </div>
           <div class="pt-3 d-block">
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #ed1b24;"></span>
                   <h6 style="margin: 0;">Ooredoo</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>15,600</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>30%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #f9bb0e;"></span>
                   <h6 style="margin: 0;">MPT</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>15,600</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>30%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #05b8e3;"></span>
                   <h6 style="margin: 0;">Telenor</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>10,400</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>20%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #ee6c20;"></span>
                   <h6 style="margin: 0;">Mytel</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>10,400</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>20%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #3a7eed;"></span>
                   <h6 style="margin: 0;">MEC</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>5,200</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>10%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
+      </ng-template>  
+      <ng-template carouselSlide>
+      
         <div class="card shadow dashCard">
           <div class="d-flex justify-content-between pt-3">
             <div class="px-3">
@@ -2627,101 +2681,101 @@
           </div>
           <div class="pt-3 d-block">
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #ed1b24;"></span>
                   <h6 style="margin: 0;">Ooredoo</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>15,600</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>30%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #f9bb0e;"></span>
                   <h6 style="margin: 0;">MPT</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>15,600</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>30%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #05b8e3;"></span>
                   <h6 style="margin: 0;">Telenor</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>10,400</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>20%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #ee6c20;"></span>
                   <h6 style="margin: 0;">Mytel</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>10,400</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>20%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #3a7eed;"></span>
                   <h6 style="margin: 0;">MEC</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>5,200</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>10%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
+      </ng-template>  
+      <ng-template carouselSlide>
         <div class="card shadow dashCard">
           <div class="d-flex justify-content-between pt-3">
             <div class="px-3">
@@ -2838,8 +2892,8 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
+      </ng-template>  
+      <ng-template carouselSlide>
         <div class="card shadow dashCard">
           <div class="d-flex justify-content-between pt-3">
             <div class="px-3">
@@ -2863,100 +2917,101 @@
           </div>
           <div class="pt-3 d-block">
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #ed1b24;"></span>
                   <h6 style="margin: 0;">Ooredoo</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>15,600</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>30%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #f9bb0e;"></span>
                   <h6 style="margin: 0;">MPT</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>15,600</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>30%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #05b8e3;"></span>
                   <h6 style="margin: 0;">Telenor</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>10,400</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>20%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #ee6c20;"></span>
                   <h6 style="margin: 0;">Mytel</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>10,400</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-3 col-md-2">
                 <h6>20%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
 
             <hr style="margin: 5px 65px 5px 65px; color: azure;">
 
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">
+              <div class="col-2 col-md-2"></div>
+              <div class="col-3 col-md-3">
                 <div class="d-flex">
                   <span class="dot" style="background-color: #3a7eed;"></span>
                   <h6 style="margin: 0;">MEC</h6>
                 </div> 
               </div>
-              <div class="col-md-3">
+              <div class="col-3 col-md-3">
                 <h6>5,200</h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-2 col-md-2">
                 <h6>10%</h6>
               </div>
-              <div class="col-md-2"></div>
+              <div class="col-2 col-md-2"></div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </ng-template> 
+    </owl-carousel-o>
+  </section>   
 </div>
   

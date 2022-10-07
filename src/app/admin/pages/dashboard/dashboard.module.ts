@@ -6,19 +6,26 @@ import { DashboardComponent } from './dashboard.component';
 import { SwiperModule } from 'swiper/angular';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { NextDirective } from './next.directive';
+import { PrevDirective } from './prev.directive';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    DashboardComponent,
+    NextDirective,
+    PrevDirective,
+
   ],
   imports: [
+
     CommonModule,
     DashboardRoutingModule,
     SwiperModule,
     NgApexchartsModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    CarouselModule
   ]
 })
 export class DashboardModule { }

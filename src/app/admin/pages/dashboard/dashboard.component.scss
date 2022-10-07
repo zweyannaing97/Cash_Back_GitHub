@@ -6,6 +6,7 @@
   
   .dashCard {
     border-radius: 1rem;
+    margin: 5px 10px;
   }
   
   .sHeader {
@@ -69,4 +70,67 @@
     bottom: 12px;
   }
   // carousel 
+  .product{
+    padding: 20px 0;
+  }
+  .slider-wrap{
+    position: relative;
+    overflow: hidden;
+    height: calc(88vh - 110px);
+  }
+  .slider-main{
+    position: absolute;
+    width: 200%;
+  }
+  
+  .item{
+    display: inline-block;
+    width: 345px;
+    height: 250px;
+    position: relative;
+    margin: 0 12px;
+  }
+  .text{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-30%,-30%);
+    font-size: 24px;
+    font-weight: bold;
+    width: 300px;
+  }
+  .prev{
+    position: absolute;
+    left: 33px;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .next{
+    position: absolute;
+    right: -5px;
+    top : 50%;
+    transform: translate(-50%,-50%);
+
+  }
+
+
+ 
+
+  @media (max-width: 940px) {
+
+    .slider-wrap{
+      position: relative;
+      overflow: hidden;
+      height: calc(88vh - 110px);
+    }
+    
+    .item{
+      display: inline-block;
+      width: 386px;
+      height: 250px;
+      position: relative;
+      margin: 12px  12px;
+    }
+  }
   

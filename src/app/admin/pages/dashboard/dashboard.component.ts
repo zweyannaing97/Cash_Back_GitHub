@@ -2,6 +2,8 @@
 import { Component, OnInit,ViewChild,AfterViewInit } from '@angular/core';
 import { Chart } from 'chart.js';
 import { SwiperComponent } from "swiper/angular";
+import { OwlOptions } from 'ngx-owl-carousel-o';
+
 import {
   ChartComponent,
   ApexAxisChartSeries,
@@ -20,6 +22,9 @@ import {
   ApexPlotOptions,
   ApexMarkers
 } from "ng-apexcharts";
+
+
+
 
 export type BulkcashbackChartOptions = {
   series: ApexAxisChartSeries;
@@ -75,6 +80,31 @@ export type CashbackTotalAmount = {
 
 
 export class DashboardComponent implements OnInit {
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag:true,
+    touchDrag:true,
+    pullDrag:true,
+    dots: false,
+    navSpeed: 700,
+    navText: [ '<i class="fa fa-caret-left" aria-hidden="true"></i>','<i class="fa fa-caret-right" aria-hidden="true"></i>'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 1
+      },
+      740: {
+        items: 1
+      },
+      940: {
+        items: 3
+      }
+    },
+    nav: true
+  }
+
   @ViewChild("individualcashbackChart") individualcashbackChart: ChartComponent | undefined;
   @ViewChild("mptchart") mptchart: ChartComponent | undefined;
   @ViewChild("telenorChart") telenorChart: ChartComponent | undefined;
@@ -83,6 +113,8 @@ export class DashboardComponent implements OnInit {
   @ViewChild("TopupChart") TopupChart: ChartComponent | undefined;
   @ViewChild("GiftCardChart") GiftCardChart: ChartComponent | undefined;
   @ViewChild("blukcashbackChart") blukcashbackChart: ChartComponent | undefined;
+
+
 
 // Bulk Cashback / Individual Cashback charts start here
   public chartOptions:BulkcashbackChartOptions = {

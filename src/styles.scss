@@ -493,3 +493,35 @@ input#file
   height: 100% !important;
   object-fit: cover !important;
 }
+
+.slide-chart .owl-next, .slide-chart .owl-prev{
+  background-color: rgb(158 158 158 / 28%)!important;
+  color: #222 !important;
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 50% !important;
+  position: absolute;
+  top: 50%;
+}
+
+.slide-chart .owl-next{
+  right: -68px;
+  transform: translate(-50% ,-50%);
+}
+
+.slide-chart .owl-prev{
+  left: -8px;
+  transform: translate(-50% ,-50%);
+}
+
+
+
+.slide-chart .owl-next i, .slide-chart .owl-prev i{
+  font-size: 24px;
+  top: 50%;
+  left: 50%;
+}
+
+.slide-chart .dashCard p h6{
+font-size: 12px !important;
+}
