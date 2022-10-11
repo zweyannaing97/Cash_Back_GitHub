@@ -37,6 +37,7 @@ export type BulkcashbackChartOptions = {
   colors: string[];
   tooltip: ApexTooltip;
   stroke: ApexStroke;
+  responsive: ApexResponsive[];
 };
 
 export type IndividualcashbackChartOptions = {
@@ -49,6 +50,8 @@ export type IndividualcashbackChartOptions = {
   grid: ApexGrid;
   fill: ApexFill;
   colors: string[];
+  responsive: ApexResponsive[];
+
 };
 
 export type ChartOptions2 = {
@@ -73,6 +76,7 @@ export type CashbackTotalAmount = {
   colors: any[];
   tooltip: ApexTooltip;
   markers: ApexMarkers;
+  responsive: ApexResponsive[];
 };
 
 @Component({
@@ -192,7 +196,9 @@ export class DashboardComponent implements OnInit {
       show: false,
     },
     tooltip: {
-    }
+    },
+    responsive: [
+    ],  
   };
 
   public individualchart: IndividualcashbackChartOptions= {
@@ -266,7 +272,10 @@ export class DashboardComponent implements OnInit {
     fill: {
       type: 'gradient' ,
       colors: ['#d9f7ed', '#d9f7ed']
-    }
+    },
+    responsive: [
+
+    ],  
   };
 
 // Cashback Ratio charts start here
@@ -274,11 +283,11 @@ public CashbackRatioChartOpt:BulkcashbackChartOptions = {
   colors: ["#65758c","#91a1b8"],
   series: [
     {
-      name: "series 1",
+      name: "Bulk Cash Back ",
       data: [5000, 5000, 6000,	7500, 6000,8000,7400,6800,8000,7300,6500,7400]
     },
     {
-      name: "series 2",
+      name: "Individual Cash Back",
       data: [3000, 4000, 5000,	4500, 3500,4000,4400,4800,3000,3300,2500,5400]
     }
   ],
@@ -345,7 +354,9 @@ public CashbackRatioChartOpt:BulkcashbackChartOptions = {
     show: false,
   },
   tooltip: {
-  }
+  },
+  responsive: [
+  ],  
 };
   
 // operator charts start here
@@ -362,7 +373,7 @@ public CashbackRatioChartOpt:BulkcashbackChartOptions = {
           breakpoint: 480,
           options: {
             chart: {
-              width: 200,
+              width: 300,
             },
             legend: {
               position: "bottom"
@@ -405,7 +416,7 @@ public CashbackRatioChartOpt:BulkcashbackChartOptions = {
           breakpoint: 480,
           options: {
             chart: {
-              width: 200,
+              width: 300,
             },
             legend: {
               position: "bottom"
@@ -449,7 +460,7 @@ public CashbackRatioChartOpt:BulkcashbackChartOptions = {
           breakpoint: 480,
           options: {
             chart: {
-              width: 200,
+              width: 300,
             },
             legend: {
               position: "bottom"
@@ -493,7 +504,7 @@ public CashbackRatioChartOpt:BulkcashbackChartOptions = {
           breakpoint: 480,
           options: {
             chart: {
-              width: 200,
+              width: 300,
             },
             legend: {
               position: "bottom"
@@ -534,6 +545,7 @@ public ServiceChartOpt:BulkcashbackChartOptions = {
   ],
   chart: {
     type: "area",
+    width: '100%',
     height: 350,
     zoom: {
       enabled: false
@@ -553,7 +565,7 @@ public ServiceChartOpt:BulkcashbackChartOptions = {
   xaxis: {
     labels: {
       show: false,
-    }
+    },
   },
   yaxis: {
     labels: {
@@ -572,7 +584,17 @@ public ServiceChartOpt:BulkcashbackChartOptions = {
     show: false,
   },
   tooltip: {
-  }
+    x:{
+      show: false,
+    },
+    y: {
+      formatter: function(value, { series, seriesIndex, dataPointIndex, w }) {
+        return w.globals.categoryLabels[dataPointIndex]+ ': ' +value.toLocaleString();
+      },
+    }
+  },
+  responsive: [
+  ],  
 };
 
 // service type category (topup, gift cards,.....) charts start here
@@ -597,7 +619,7 @@ public TopupChartOpt:ChartOptions2 = {
         breakpoint: 480,
         options: {
           chart: {
-            width: 200,
+            width: 300,
           },
           legend: {
             position: "bottom"
@@ -648,7 +670,7 @@ public GiftCardChartOpt:ChartOptions2 = {
         breakpoint: 480,
         options: {
           chart: {
-            width: 200,
+            width: 300,
           },
           legend: {
             position: "bottom"
@@ -699,7 +721,7 @@ public DTHChartOpt:ChartOptions2 = {
         breakpoint: 480,
         options: {
           chart: {
-            width: 200,
+            width: 300,
           },
           legend: {
             position: "bottom"
@@ -750,7 +772,7 @@ public ElecChartOpt:ChartOptions2 = {
         breakpoint: 480,
         options: {
           chart: {
-            width: 200,
+            width: 300,
           },
           legend: {
             position: "bottom"
@@ -801,7 +823,7 @@ public PostpaidChartOpt:ChartOptions2 = {
         breakpoint: 480,
         options: {
           chart: {
-            width: 200,
+            width: 300,
           },
           legend: {
             position: "bottom"
@@ -852,7 +874,7 @@ public OvTopupChartOpt:ChartOptions2 = {
         breakpoint: 480,
         options: {
           chart: {
-            width: 200,
+            width: 300,
           },
           legend: {
             position: "bottom"
@@ -894,29 +916,29 @@ public CashbackTotalAmountOpt:CashbackTotalAmount = {
     }else if (labels === "Chin"){
       return '#6671db'
     }else if (labels === "Kayah"){
-      return '#8067dc'
+      return '#a366db'
     }else if (labels === "Kachin"){
       return '#8067dc'
     }else if (labels === "Kayin"){
-      return '#a366db'
-    }else if (labels === "Magway"){
       return '#c867db'
-    }else if (labels === "Mandalay"){
+    }else if (labels === "Magway"){
       return '#dc67cf'
-    }else if (labels === "Mon"){
+    }else if (labels === "Mandalay"){
       return '#dc67ab'
-    }else if (labels === "Rakhine"){
+    }else if (labels === "Mon"){
       return '#dd6789'
-    }else if (labels === "Shan"){
+    }else if (labels === "Rakhine"){
       return '#dc6868'
-    }else if (labels === "Sagaing"){
+    }else if (labels === "Shan"){
       return '#df8b66'
-    }else if (labels === "Taninthayi"){
+    }else if (labels === "Sagaing"){
       return '#e0b163'
-    }else if (labels === "Yangon"){
+    }else if (labels === "Taninthayi"){
       return '#e0c763'
-    }else if (labels === "Naypyidaw"){
+    }else if (labels === "Yangon"){
       return '#d4d88b'
+    }else if (labels === "Naypyidaw"){
+      return '#aec670'
     }else {
       return '#000000'
     }
@@ -925,6 +947,7 @@ public CashbackTotalAmountOpt:CashbackTotalAmount = {
   series: [
     {
       type: "column",
+      name: "",
       data: [70000, 45000,60000,30000,40000,63000,60000,50000,43000,62000,66000,24000,55000,61000,35000]
     },
   ],
@@ -949,6 +972,9 @@ public CashbackTotalAmountOpt:CashbackTotalAmount = {
     tooltip: {
       enabled: false     
     },
+    crosshairs: {
+      show: false
+    }
   },
   yaxis: {
     labels: {
@@ -958,7 +984,20 @@ public CashbackTotalAmountOpt:CashbackTotalAmount = {
     },
   },
   tooltip: {
-    
+    custom: function({ series, seriesIndex, dataPointIndex, w }) {
+      let labels = w.globals.categoryLabels[dataPointIndex];
+      
+      return (
+        
+        `<div class=${labels}_bgColor>` +
+        "<span>" +
+        w.globals.categoryLabels[dataPointIndex] +
+        " : " +
+        series[seriesIndex][dataPointIndex].toLocaleString() +
+        "</span>" +
+        "</div>"
+      );
+    }
   },
   markers: {
     size: 6,
@@ -966,7 +1005,8 @@ public CashbackTotalAmountOpt:CashbackTotalAmount = {
       size: 10
     }
   },
-  
+  responsive: [
+  ],  
 };
 
 // Each Divison and Stae chart start here ...............
@@ -991,7 +1031,7 @@ public AyeyarwaddyChartOpt:ChartOptions2 = {
         breakpoint: 480,
         options: {
           chart: {
-            width: 200,
+            width: 300,
           },
           legend: {
             position: "bottom"
@@ -1042,7 +1082,7 @@ public BagoChartOpt:ChartOptions2 = {
         breakpoint: 480,
         options: {
           chart: {
-            width: 200,
+            width: 300,
           },
           legend: {
             position: "bottom"
@@ -1093,7 +1133,7 @@ public ChinChartOpt:ChartOptions2 = {
         breakpoint: 480,
         options: {
           chart: {
-            width: 200,
+            width: 300,
           },
           legend: {
             position: "bottom"
@@ -1144,7 +1184,7 @@ public KachinOpt:ChartOptions2 = {
         breakpoint: 480,
         options: {
           chart: {
-            width: 200,
+            width: 300,
           },
           legend: {
             position: "bottom"
@@ -1195,7 +1235,7 @@ public KayahChartOpt:ChartOptions2 = {
         breakpoint: 480,
         options: {
           chart: {
-            width: 200,
+            width: 300,
           },
           legend: {
             position: "bottom"
@@ -1246,7 +1286,7 @@ public KayinChartOpt:ChartOptions2 = {
         breakpoint: 480,
         options: {
           chart: {
-            width: 200,
+            width: 300,
           },
           legend: {
             position: "bottom"
@@ -1297,7 +1337,7 @@ public MagwayChartOpt:ChartOptions2 = {
         breakpoint: 480,
         options: {
           chart: {
-            width: 200,
+            width: 300,
           },
           legend: {
             position: "bottom"
@@ -1348,7 +1388,7 @@ public MandalayChartOpt:ChartOptions2 = {
         breakpoint: 480,
         options: {
           chart: {
-            width: 200,
+            width: 300,
           },
           legend: {
             position: "bottom"
@@ -1399,7 +1439,7 @@ public MonChartOpt:ChartOptions2 = {
         breakpoint: 480,
         options: {
           chart: {
-            width: 200,
+            width: 300,
           },
           legend: {
             position: "bottom"
@@ -1450,7 +1490,7 @@ public RakhineChartOpt:ChartOptions2 = {
         breakpoint: 480,
         options: {
           chart: {
-            width: 200,
+            width: 300,
           },
           legend: {
             position: "bottom"
@@ -1501,7 +1541,7 @@ public ShanChartOpt:ChartOptions2 = {
         breakpoint: 480,
         options: {
           chart: {
-            width: 200,
+            width: 300,
           },
           legend: {
             position: "bottom"
@@ -1552,7 +1592,7 @@ public SagaingChartOpt:ChartOptions2 = {
         breakpoint: 480,
         options: {
           chart: {
-            width: 200,
+            width: 300,
           },
           legend: {
             position: "bottom"
@@ -1603,7 +1643,7 @@ public TaninthayiChartOpt:ChartOptions2 = {
         breakpoint: 480,
         options: {
           chart: {
-            width: 200,
+            width: 300,
           },
           legend: {
             position: "bottom"
@@ -1654,7 +1694,7 @@ public YangonChartOpt:ChartOptions2 = {
         breakpoint: 480,
         options: {
           chart: {
-            width: 200,
+            width: 300,
           },
           legend: {
             position: "bottom"
@@ -1705,7 +1745,7 @@ public NaypyidawChartOpt:ChartOptions2 = {
         breakpoint: 480,
         options: {
           chart: {
-            width: 200,
+            width: 300,
           },
           legend: {
             position: "bottom"
@@ -1813,7 +1853,8 @@ public topUplineChartOpt:BulkcashbackChartOptions = {
     x: {
         show: false
     }
-  }
+  },
+  responsive: []
 };
 
 public giftCardlineChartOpt:BulkcashbackChartOptions = {
@@ -1893,7 +1934,9 @@ public giftCardlineChartOpt:BulkcashbackChartOptions = {
     x: {
         show: false
     }
-  }
+  },
+  responsive: []
+
 };
 
 public dthlineChartOpt:BulkcashbackChartOptions = {
@@ -1973,7 +2016,9 @@ public dthlineChartOpt:BulkcashbackChartOptions = {
     x: {
         show: false
     }
-  }
+  },
+  responsive: []
+
 }; 
 
 public eleclineChartOpt:BulkcashbackChartOptions = {
@@ -2053,7 +2098,9 @@ public eleclineChartOpt:BulkcashbackChartOptions = {
     x: {
         show: false
     }
-  }
+  },
+  responsive: []
+
 };
 
 public postpaidlineChartOpt:BulkcashbackChartOptions = {
@@ -2133,7 +2180,9 @@ public postpaidlineChartOpt:BulkcashbackChartOptions = {
     x: {
         show: false
     }
-  }
+  },
+  responsive: []
+
 };
 
 public overseaTopuplineChartOpt:BulkcashbackChartOptions = {
@@ -2213,7 +2262,9 @@ public overseaTopuplineChartOpt:BulkcashbackChartOptions = {
     x: {
         show: false
     }
-  }
+  },
+  responsive: []
+
 };
 
 /////////////////////////////////
@@ -2282,7 +2333,9 @@ public toptentopUplineChartOpt:BulkcashbackChartOptions = {
     width: 2,
   },
   tooltip: {
-  }
+  },
+  responsive: [
+  ],  
 };
 
 public toptenGiftCardlineChartOpt:BulkcashbackChartOptions = {
@@ -2350,7 +2403,9 @@ public toptenGiftCardlineChartOpt:BulkcashbackChartOptions = {
     width: 2,
   },
   tooltip: {
-  }
+  },
+  responsive: [
+  ],  
 };
 
 public toptendthlineChartOpt:BulkcashbackChartOptions = {
@@ -2418,7 +2473,9 @@ public toptendthlineChartOpt:BulkcashbackChartOptions = {
     width: 2,
   },
   tooltip: {
-  }
+  },
+  responsive: [
+  ],  
 };
 
 public topteneleclineChartOpt:BulkcashbackChartOptions = {
@@ -2486,7 +2543,9 @@ public topteneleclineChartOpt:BulkcashbackChartOptions = {
     width: 2,
   },
   tooltip: {
-  }
+  },
+  responsive: [
+  ],  
 };
 
 public toptenpostpaidlineChartOpt:BulkcashbackChartOptions = {
@@ -2554,7 +2613,9 @@ public toptenpostpaidlineChartOpt:BulkcashbackChartOptions = {
     width: 2,
   },
   tooltip: {
-  }
+  },
+  responsive: [
+  ],  
 };
 
 public toptenosTopuplineChartOpt:BulkcashbackChartOptions = {
@@ -2622,7 +2683,9 @@ public toptenosTopuplineChartOpt:BulkcashbackChartOptions = {
     width: 2,
   },
   tooltip: {
-  }
+  },
+  responsive: [
+  ],  
 };
 
 topup:boolean=true;

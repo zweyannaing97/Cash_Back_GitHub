@@ -494,6 +494,7 @@ input#file
   object-fit: cover !important;
 }
 
+
 .slide-chart .owl-next, .slide-chart .owl-prev{
   background-color: rgb(158 158 158 / 28%)!important;
   color: #222 !important;
@@ -524,4 +525,58 @@ input#file
 
 .slide-chart .dashCard p h6{
 font-size: 12px !important;
+}
+
+#CashbackTotalAmount .apexcharts-tooltip span {
+  padding: 5px 10px;
+  display: block;
+  color: #fff;
+}
+.apexcharts-canvas {
+  width: 100% !important;
+}
+.Ayeyarwaddy_bgColor{
+  background-color: #67b7dc;
+}
+.Bago_bgColor{
+  background-color: #6894dd;
+}
+.Chin_bgColor{
+  background-color: #6671db;
+}
+.Kayah_bgColor{
+  background-color: #a366db;
+}
+.Kachin_bgColor{
+  background-color: #8067dc;
+}
+.Kayin_bgColor{
+  background-color: #c867db;
+}
+.Magway_bgColor{
+  background-color: #dc67cf;
+}
+.Mandalay_bgColor{
+  background-color: #dc67ab;
+}
+.Mon_bgColor{
+  background-color: #dd6789;
+}
+.Shan_bgColor{
+  background-color: #df8b66;
+}
+.Sagaing_bgColor{
+  background-color: #e0b163;
+}
+.Taninthayi_bgColor{
+  background-color: #e0c763;
+}
+.Yangon_bgColor{
+  background-color: #d4d88b;
+}
+.Naypyidaw_bgColor{
+  background-color: #aec670;
+}
+.Rakhine_bgColor{
+  background-color: #dc6868;
 }
