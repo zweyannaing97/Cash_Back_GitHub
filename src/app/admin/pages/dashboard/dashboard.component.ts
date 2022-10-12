@@ -24,8 +24,6 @@ import {
 } from "ng-apexcharts";
 
 
-
-
 export type BulkcashbackChartOptions = {
   series: ApexAxisChartSeries;
   chart: ApexChart;
@@ -86,31 +84,10 @@ export type CashbackTotalAmount = {
 })
 
 
+
 export class DashboardComponent implements OnInit {
-  customOptions: OwlOptions = {
-    loop: true,
-    mouseDrag:true,
-    touchDrag:true,
-    pullDrag:true,
-    dots: false,
-    navSpeed: 700,
-    navText: [ '<i class="fa fa-caret-left" aria-hidden="true"></i>','<i class="fa fa-caret-right" aria-hidden="true"></i>'],
-    responsive: {
-      0: {
-        items: 1
-      },
-      400: {
-        items: 1
-      },
-      740: {
-        items: 1
-      },
-      940: {
-        items: 3
-      }
-    },
-    nav: true
-  }
+  public customOptions;
+
 
   @ViewChild("individualcashbackChart") individualcashbackChart: ChartComponent | undefined;
   @ViewChild("mptchart") mptchart: ChartComponent | undefined;
@@ -2750,6 +2727,32 @@ overseasTopupClick(){
 }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.customOptions = {
+        loop: true,
+        mouseDrag:true,
+        touchDrag:true,
+        pullDrag:true,
+        dots: false,
+        navSpeed: 700,
+        navText: [ '<i class="fa fa-caret-left" aria-hidden="true"></i>','<i class="fa fa-caret-right" aria-hidden="true"></i>'],
+        responsive: {
+          0: {
+            items: 1
+          },
+          400: {
+            items: 1
+          },
+          740: {
+            items: 1
+          },
+          940: {
+            items: 3
+          }
+        },
+        nav: true
+      }
+    }, 1000);
   }
 
 }

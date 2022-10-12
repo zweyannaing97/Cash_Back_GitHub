@@ -132,7 +132,7 @@
     </div>
   </div>
 
-  <section class="slide-chart m-3">
+  <section class="slide-chart m-3" *ngIf="customOptions">
     <owl-carousel-o [options]="customOptions">
       <ng-template carouselSlide>
         <div class="card shadow dashCard">
@@ -504,7 +504,7 @@
     </div>
   </div>
 
-  <section class="slide-chart m-3">
+  <section class="slide-chart m-3" *ngIf="customOptions">
     <owl-carousel-o [options]="customOptions">
       <ng-template carouselSlide>
           
@@ -1246,7 +1246,7 @@
       </ng-template>  
 
     </owl-carousel-o>
-  </section>   
+  </section>
 
   <!-- ....... Cash Back Amount State / Division Wise Section Start Here.............. -->
 
@@ -1292,7 +1292,7 @@
     </div>
   </div>
 
-  <section class="slide-chart m-3">
+  <section class="slide-chart m-3" *ngIf="customOptions">
     <owl-carousel-o [options]="customOptions">
       <ng-template carouselSlide>
         <div class="card shadow dashCard">
