@@ -1,0 +1,66 @@
+
+<div>
+    <div class="title_outer">
+        <h3>Filter
+            <i class="fa fa-close close" aria-hidden="true" (click)="onDismiss()"></i>
+            <img src="assets.images/close_white.png" alt="">
+        </h3>
+    </div>
+    <div class="content_outer">
+        <div class="row">
+            <div class="col-md-6">
+                <div>
+                    <label for="">Select Period Date</label>
+                  <input readonly type="text" placeholder="From Date - To Date" class="form-control datepicker" bsDaterangepicker
+                         [bsConfig]="{ isAnimated: true, rangeInputFormat : 'ddd,DD-MMM-YYYY', dateInputFormat: 'ddd,DD-MMM-YYYY',showPreviousMonth: true ,showWeekNumbers: false}"
+                         [maxDate]="maxDate">
+                  <mat-icon class="smallCalendar" style="right: 20px;">date_range</mat-icon>
+                </div>
+            </div>
+
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div>
+                    <label for="">Select State & Divison</label>
+                </div>
+                <div>
+                    <mat-select class="selectt" multiple placeholder="Select">
+                        <mat-option value=1>All</mat-option>
+                        <mat-option value=2>Cash Back</mat-option>
+                        <mat-option value=3>Individual</mat-option>
+                    </mat-select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div>
+                    <label for="">Select Operator Type</label>
+                </div>
+                <div>
+                    <mat-select class="selectt" multiple placeholder="Select">
+                        <mat-option value=1>All</mat-option>
+                        <mat-option value=2>Ayeyarwaddy</mat-option>
+                        <mat-option value=3>Bago</mat-option>
+                        <mat-option value=4>Chin</mat-option>
+                        <mat-option value=5>Kachin</mat-option>
+                        <mat-option value=5>Kayah</mat-option>
+                        <mat-option value=5>Kayin</mat-option>
+                        <mat-option value=5>Magway</mat-option>
+                        <mat-option value=5>Mandalay</mat-option>
+                        <mat-option value=5>Mon</mat-option>
+                        <mat-option value=5>Rakhine</mat-option>
+                        <mat-option value=5>Shan</mat-option>
+                        <mat-option value=5>Sagaing</mat-option>
+                        <mat-option value=5>Taininthayi</mat-option>
+                        <mat-option value=5>Yangon</mat-option>
+                        <mat-option value=5>Naypyidaw</mat-option>
+                    </mat-select>
+                </div>
+            </div>
+        </div>
+        <div class="button_group">
+            <button>CLEAR</button>
+            <button> APPLY</button>
+        </div>
+    </div>
+</div>

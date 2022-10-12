@@ -54,6 +54,8 @@
     background-color: #ebebeb;
     border-radius: 40px;
     height: 25px;
+    min-width: 74px;
+    max-width: 74px;
   }
   .chartStyle {
     border-radius: 1rem;
@@ -67,7 +69,6 @@
     margin-right: 5px;
     position: absolute;
     left: 0px;
-    bottom: 12px;
   }
   .pointer{
     cursor: pointer;

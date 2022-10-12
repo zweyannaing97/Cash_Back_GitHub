@@ -1,8 +1,7 @@
 
 import { Component, OnInit,ViewChild,AfterViewInit, ElementRef } from '@angular/core';
-import { Chart } from 'chart.js';
-import { SwiperComponent } from "swiper/angular";
-import { OwlOptions } from 'ngx-owl-carousel-o';
+import { MatDialog } from '@angular/material/dialog';
+import { ToptenCashbackDashboardFilterComponent } from '../../modals/topten-cashback-dashboard-filter/topten-cashback-dashboard-filter.component';
 
 import {
   ChartComponent,
@@ -22,7 +21,9 @@ import {
   ApexPlotOptions,
   ApexMarkers
 } from "ng-apexcharts";
-
+import { CashbackAmountPercentageDashboardFilterComponent } from '../../modals/cashback-amount-percentage-dashboard-filter/cashback-amount-percentage-dashboard-filter.component';
+import { ServiceCategoryDashboardFilterComponent } from '../../modals/service-category-dashboard-filter/service-category-dashboard-filter.component';
+import { CashbackStateDivisonDashboardFilterComponent } from '../../modals/cashback-state-divison-dashboard-filter/cashback-state-divison-dashboard-filter.component';
 
 export type BulkcashbackChartOptions = {
   series: ApexAxisChartSeries;
@@ -83,11 +84,8 @@ export type CashbackTotalAmount = {
   styleUrls: ['./dashboard.component.scss']
 })
 
-
-
 export class DashboardComponent implements OnInit {
   public customOptions;
-
 
   @ViewChild("individualcashbackChart") individualcashbackChart: ChartComponent | undefined;
   @ViewChild("mptchart") mptchart: ChartComponent | undefined;
@@ -2752,7 +2750,52 @@ overseasTopupClick(){
         },
         nav: true
       }
-    }, 1000);
+    }, 1);
   }
 
+  constructor(public dialog: MatDialog) { }
+
+  toptenCashbackFilter(){
+    const dialogRef = this.dialog.open(ToptenCashbackDashboardFilterComponent, {
+      width: '950px',
+      data: {}
+      });
+
+      dialogRef.afterClosed().subscribe(result => {
+        if(result){}
+    });
+  }
+
+  cashbackAmtPerFilter(){
+    const dialogRef = this.dialog.open(CashbackAmountPercentageDashboardFilterComponent, {
+      width: '950px',
+      data: {}
+      });
+
+      dialogRef.afterClosed().subscribe(result => {
+        if(result){}
+    });
+  }
+
+  serviceCategoryFilter(){
+    const dialogRef = this.dialog.open(ServiceCategoryDashboardFilterComponent, {
+      width: '950px',
+      data: {}
+      });
+
+      dialogRef.afterClosed().subscribe(result => {
+        if(result){}
+    });
+  }
+
+  cashbackStateDivisionFilter(){
+    const dialogRef = this.dialog.open(CashbackStateDivisonDashboardFilterComponent, {
+      width: '950px',
+      data: {}
+      });
+
+      dialogRef.afterClosed().subscribe(result => {
+        if(result){}
+    });
+  }
 }

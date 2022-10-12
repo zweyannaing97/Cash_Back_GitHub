@@ -44,6 +44,11 @@ import { MenuListItemComponent } from './components/menu-list-item/menu-list-ite
 import { FileAlreadyExistComponent } from './modals/file-already-exist/file-already-exist.component';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import { UserRolePermissionFilterComponent } from './modals/user-role-permission-filter/user-role-permission-filter.component';
+import { ToptenCashbackDashboardFilterComponent } from './modals/topten-cashback-dashboard-filter/topten-cashback-dashboard-filter.component';
+import { CashbackAmountPercentageDashboardFilterComponent } from './modals/cashback-amount-percentage-dashboard-filter/cashback-amount-percentage-dashboard-filter.component';
+import { ServiceCategoryDashboardFilterComponent } from './modals/service-category-dashboard-filter/service-category-dashboard-filter.component';
+import { CashbackStateDivisonDashboardFilterComponent } from './modals/cashback-state-divison-dashboard-filter/cashback-state-divison-dashboard-filter.component';
+
 
 @NgModule({
   declarations: [
@@ -65,7 +70,11 @@ import { UserRolePermissionFilterComponent } from './modals/user-role-permission
     InitiateOkAccountSummaryFilterComponent,
     MenuListItemComponent,
     FileAlreadyExistComponent,
-    UserRolePermissionFilterComponent
+    UserRolePermissionFilterComponent,
+    ToptenCashbackDashboardFilterComponent,
+    CashbackAmountPercentageDashboardFilterComponent,
+    ServiceCategoryDashboardFilterComponent,
+    CashbackStateDivisonDashboardFilterComponent,
   ],
   imports: [
     CommonModule,
