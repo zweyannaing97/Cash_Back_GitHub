@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { FailCashbackReportFilterComponent } from 'src/app/admin/modals/fail-cashback-report-filter/fail-cashback-report-filter.component';
 
 @Component({
   selector: 'app-fail-report-cashback-report-layout',
@@ -304,12 +306,21 @@ export class FailReportCashbackReportLayoutComponent implements OnInit {
 
 
   showFileTable: boolean = false;
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
+  
+  filterTable(){
+    const dialogRef = this.dialog.open(FailCashbackReportFilterComponent, {
+      width: '50vw',
+      data: {}
+      });
 
-  filterTable(){ }
+      dialogRef.afterClosed().subscribe(result => {
+        if(result){}
+    });
+  }
 
   actionEvent(event: any){
     if (event.type == "view") {

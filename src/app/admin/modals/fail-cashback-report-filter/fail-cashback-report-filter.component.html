@@ -34,17 +34,17 @@
             </div>
             <div class="col-md-6">
                 <div>
-                    <label for="">Division/State</label>
+                    <label for="">Branch </label>
                 </div>
                 <div>
                     <mat-select class="selectt" multiple placeholder="Select">
                         <mat-option value=1>All</mat-option>
-                        <mat-option value=2>Yangon</mat-option>
-                        <mat-option value=3>Ayeyawaddy</mat-option>
-                        <mat-option value=4>Mon</mat-option>
-                        <mat-option value=5>Bago</mat-option>
+                        <mat-option value=2>Botahtaung</mat-option>
+                        <mat-option value=3>Latha</mat-option>
+                        <mat-option value=4>Bahan</mat-option>
+                        <mat-option value=5>Kamaryut</mat-option>
                         </mat-select>
-                    </div>
+                </div>
             </div>
 
         </div>
@@ -63,24 +63,37 @@
               </mat-select>
             </div>
           </div>
-
-          <div class="col-md-6">
-            <div>
-              <label for="">OK$ Account Type</label>
+            <div class="col-md-6">
+                <div>
+                    <label for="">Division/State</label>
+                </div>
+                <div>
+                    <mat-select class="selectt" multiple placeholder="Select">
+                        <mat-option value=1>All</mat-option>
+                        <mat-option value=2>Yangon</mat-option>
+                        <mat-option value=3>Ayeyawaddy</mat-option>
+                        <mat-option value=4>Mon</mat-option>
+                        <mat-option value=5>Bago</mat-option>
+                        </mat-select>
+                </div>
             </div>
-            <div>
-              <mat-select class="selectt" multiple placeholder="Select">
-                <mat-option value=1>All</mat-option>
-                <mat-option value=2>Personal</mat-option>
-                <mat-option value=3>Merchant</mat-option>
-                <mat-option value=4>Advance Merchant</mat-option>
-                <mat-option value=5>+95 746573894788</mat-option>
-              </mat-select>
-            </div>
-          </div>
+          
         </div>
         <div class="row">
-
+            <div class="col-md-6">
+                <div>
+                  <label for="">OK$ Account Type</label>
+                </div>
+                <div>
+                  <mat-select class="selectt" multiple placeholder="Select">
+                    <mat-option value=1>All</mat-option>
+                    <mat-option value=2>Personal</mat-option>
+                    <mat-option value=3>Merchant</mat-option>
+                    <mat-option value=4>Advance Merchant</mat-option>
+                    <mat-option value=5>+95 746573894788</mat-option>
+                  </mat-select>
+                </div>
+              </div>
             <div class="col-md-6">
             <div>
                 <label for="">OK$ Account Number</label>
@@ -95,39 +108,42 @@
                 </mat-select>
             </div>
             </div>
+        </div>
+        <div class="row">
             <div class="col-md-6">
-            <div>
-                <label for="">Cash Back Credit OK$ Account</label>
+                <div>
+                    <label for="">Cash Back Credit OK$ Account</label>
+                </div>
+                <div>
+                    <mat-select class="selectt" multiple placeholder="Select">
+                    <mat-option value=1>All</mat-option>
+                    <mat-option value=2>+95 746573894788</mat-option>
+                    <mat-option value=3>+95 746573894788</mat-option>
+                    <mat-option value=4>+95 746573894788</mat-option>
+                    <mat-option value=5>+95 746573894788</mat-option>
+                    </mat-select>
+                </div>
             </div>
-            <div>
-                <mat-select class="selectt" multiple placeholder="Select">
-                <mat-option value=1>All</mat-option>
-                <mat-option value=2>+95 746573894788</mat-option>
-                <mat-option value=3>+95 746573894788</mat-option>
-                <mat-option value=4>+95 746573894788</mat-option>
-                <mat-option value=5>+95 746573894788</mat-option>
-                </mat-select>
-            </div>
+            <div class="col-md-6">
+                <div>
+                    <label for="">Service Category Type</label>
+                </div>
+                <div>
+                    <mat-select class="selectt" multiple  placeholder="Select" (selectionChange)="serviceCtegorySelected($event.value)">
+                    <mat-option value=1>All</mat-option>
+                    <mat-option value=2>Top Up</mat-option>
+                    <mat-option value=3>Gift Cards</mat-option>
+                    <mat-option value=4>DTH</mat-option>
+                    <mat-option value=5>Electricity</mat-option>
+                    <mat-option value=6>Post Paid</mat-option>
+                    <mat-option value=7>Over Seas Top Up</mat-option>
+                    </mat-select>
+                </div>
             </div>
         </div>
         <div class="row">
 
-            <div class="col-md-6">
-            <div>
-                <label for="">Service Category Type</label>
-            </div>
-            <div>
-                <mat-select class="selectt" multiple  placeholder="Select" (selectionChange)="serviceCtegorySelected($event.value)">
-                <mat-option value=1>All</mat-option>
-                <mat-option value=2>Top Up</mat-option>
-                <mat-option value=3>Gift Cards</mat-option>
-                <mat-option value=4>DTH</mat-option>
-                <mat-option value=5>Electricity</mat-option>
-                <mat-option value=6>Post Paid</mat-option>
-                <mat-option value=7>Over Seas Top Up</mat-option>
-                </mat-select>
-            </div>
-            </div>
+            
             <div class="col-md-6"  *ngIf="selectedCategory.includes('1') || selectedCategory.includes('2')">
                 <div>
                     <label for="">Cash Back Credit MPT Number</label>
@@ -275,4 +291,5 @@
         <button> APPLY</button>
     </div>
 </div>
+
 

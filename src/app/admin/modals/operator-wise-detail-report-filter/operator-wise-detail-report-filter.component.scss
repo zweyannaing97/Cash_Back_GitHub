@@ -1,5 +1,8 @@
 @import "../../../../variable.scss";
 @import "../../../../styles.scss";
+.mat-dialog-container {
+    padding: 0 !important;
+}
 
 .title_outer{
     background-color: $primary-color;
@@ -17,8 +20,8 @@
 }
 .content_outer{
   overflow-y: scroll;
-  height: 80vh;
-  padding: 15px 40px 0px;
+  height: calc(65vh - 120px);
+  padding: 30px;
 }
 ::ng-deep .mat-dialog-container{
     padding: 0;
@@ -32,9 +35,6 @@
     padding: 15px 15px;
     box-shadow: $secondary-color 3px 3px 3px 0px;
     background-color: white;
-}
-.content_outer{
-    padding: 15px 40px 0px;
 }
 label{
     margin-top: 15px;

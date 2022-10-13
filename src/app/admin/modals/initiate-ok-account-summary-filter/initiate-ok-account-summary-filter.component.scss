@@ -1,6 +1,8 @@
 @import "../../../../variable.scss";
 @import "../../../../styles.scss";
-
+.mat-dialog-container {
+    padding: 0 !important;
+}
 .title_outer{
     background-color: $primary-color;
     color: white;
@@ -29,7 +31,7 @@
     background-color: white;
 }
 .content_outer{
-    padding: 15px 40px 40px;
+    padding: 30px;
 }
 label{
     margin-top: 15px;

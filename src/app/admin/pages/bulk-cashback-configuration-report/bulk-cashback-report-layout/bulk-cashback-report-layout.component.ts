@@ -1,5 +1,7 @@
 import { style } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { BulkCashbackReportFilterComponent } from 'src/app/admin/modals/bulk-cashback-report-filter/bulk-cashback-report-filter.component';
 
 @Component({
   selector: 'app-bulk-cashback-report-layout',
@@ -303,12 +305,22 @@ export class BulkCashbackReportLayoutComponent implements OnInit {
   ];
 
   showFileTable: boolean = false;
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
+
 
   ngOnInit(): void {
   }
 
-  filterTable(){ }
+  filterTable(){
+    const dialogRef = this.dialog.open(BulkCashbackReportFilterComponent, {
+      width: '50vw',
+      data: {}
+      });
+
+      dialogRef.afterClosed().subscribe(result => {
+        if(result){}
+    });
+  }
 
   actionEvent(event: any){
     if (event.type == "view") {

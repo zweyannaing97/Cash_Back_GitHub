@@ -48,6 +48,8 @@ import { ToptenCashbackDashboardFilterComponent } from './modals/topten-cashback
 import { CashbackAmountPercentageDashboardFilterComponent } from './modals/cashback-amount-percentage-dashboard-filter/cashback-amount-percentage-dashboard-filter.component';
 import { ServiceCategoryDashboardFilterComponent } from './modals/service-category-dashboard-filter/service-category-dashboard-filter.component';
 import { CashbackStateDivisonDashboardFilterComponent } from './modals/cashback-state-divison-dashboard-filter/cashback-state-divison-dashboard-filter.component';
+import { BulkCashbackReportFilterComponent } from './modals/bulk-cashback-report-filter/bulk-cashback-report-filter.component';
+import { FailCashbackReportFilterComponent } from './modals/fail-cashback-report-filter/fail-cashback-report-filter.component';
 
 
 @NgModule({
@@ -75,6 +77,8 @@ import { CashbackStateDivisonDashboardFilterComponent } from './modals/cashback-
     CashbackAmountPercentageDashboardFilterComponent,
     ServiceCategoryDashboardFilterComponent,
     CashbackStateDivisonDashboardFilterComponent,
+    BulkCashbackReportFilterComponent,
+    FailCashbackReportFilterComponent,
   ],
   imports: [
     CommonModule,
