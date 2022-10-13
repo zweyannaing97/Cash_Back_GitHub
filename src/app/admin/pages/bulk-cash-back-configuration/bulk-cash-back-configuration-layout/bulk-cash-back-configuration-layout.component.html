@@ -17,9 +17,9 @@
 
     <div class="bulk_upload" *ngIf="companySelected">
       <input type="file" id="LogoFile" class="UploadFile_hash" (change)="fileUpload($event)" #inputFile name="fileUpload" accept=".xls,.xlsx">
-      <label for="LogoFile" class="UploadFilelabel_hash mb-0"><img src="assets/images/Bulk Upload.png" alt=""></label>
+      <label for="LogoFile" class="UploadFilelabel_hash mb-0"><img src="assets/images/Bulk Upload.svg" alt=""></label>
 
-      <button><a download="UploadExcelFormat.xlsx" target="_blank" href="assets/UploadExcelFormat.xlsx" class="download_sample_btn"><img src="assets/images/Upload Format.png" alt=""></a></button>
+      <button><a download="UploadExcelFormat.xlsx" target="_blank" href="assets/UploadExcelFormat.xlsx" class="download_sample_btn"><img src="assets/images/Download Upload Format.svg" alt=""></a></button>
     </div>
 
     <div *ngIf="showTable">
@@ -49,6 +49,6 @@
 
 </div>
 <div class="button_group" *ngIf="showButtons">
-  <button matRipple (click)="showTable = false;showButtons = false">CANCEL</button>
-  <button matRipple >SAVE</button>
+  <button matRipple (click)="showTable = false;showButtons = false">Cancel</button>
+  <button matRipple >Save</button>
 </div>
