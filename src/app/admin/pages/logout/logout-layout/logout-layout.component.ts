@@ -22,8 +22,8 @@ export class LogoutLayoutComponent implements OnInit {
       width: '550px',
       data: {
         message: 'Do you sure want to logout?',
-        confirmButtonText: 'YES',
-        cancelButtonText: 'NO',
+        confirmButtonText: 'Yes',
+        cancelButtonText: 'No',
         image: 'assets/images/logout_confirm.png'
       }
       });

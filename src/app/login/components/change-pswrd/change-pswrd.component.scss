@@ -11,6 +11,10 @@
 .login_first_bg {
   width: 56%;
 }
+.input-group {
+  min-width: 380px;
+  max-width: 400px;
+}
 ::ng-deep input[type=text],input[type=password]{
   height: 50px !important;
   padding-left: 58px;
@@ -59,7 +63,7 @@ input:-webkit-autofill{
   font-size: 16px;
   height: 50px;
   margin-top: 10px;
-  width: 190px;
+  width: 170px;
   border-radius: 200px;
   margin-bottom: 10px;
   cursor: pointer;
@@ -97,7 +101,7 @@ input:-webkit-autofill{
   font-size: 16px;
   height: 50px;
   margin: auto;
-  width: 190px;
+  width: 170px;
   border-radius: 200px;
   margin-bottom: 10px;
   cursor: pointer;
