@@ -25,8 +25,23 @@
                     <label for="">Select State & Divison</label>
                 </div>
                 <div>
-                    <mat-select class="selectt" multiple placeholder="Select">
-                        <mat-option value=1>All</mat-option>
+                    <mat-select class="selectt" panelClass="normalSelect" disableOptionCentering multiple placeholder="Select">
+                        <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+                            <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                                <mat-label class="label">Filter:</mat-label>
+                                <mat-form-field class="select_search_box" appearance="standard">
+                                <input matInput placeholder="Enter Keywords">
+                                </mat-form-field>
+                            </div>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn" >
+                                <mat-icon class="secondary-text s-5">
+                                check</mat-icon>Check All
+                            </button>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn v-line" >
+                                <mat-icon class="secondary-text s-5">
+                                clear</mat-icon>Uncheck All
+                            </button>
+                        </div>
                         <mat-option value=2>Ayeyarwaddy</mat-option>
                         <mat-option value=3>Bago</mat-option>
                         <mat-option value=4>Chin</mat-option>
@@ -50,8 +65,17 @@
                     <label for="">Select Operator Name</label>
                 </div>
                 <div>
-                    <mat-select class="selectt" multiple placeholder="Select">
-                        <mat-option value=1>All</mat-option>
+                    <mat-select class="selectt" panelClass="normalSelect" disableOptionCentering multiple placeholder="Select">
+                        <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+                            <button fxLayout="row" mat-button class="check_uncheck_btn" >
+                              <mat-icon class="secondary-text s-5">
+                                check</mat-icon>Check All
+                            </button>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn v-line" style="margin-left: 10px;" >
+                              <mat-icon class="secondary-text s-5">
+                                clear</mat-icon>Uncheck All
+                            </button>
+                          </div>
                         <mat-option value=2>MPT</mat-option>
                         <mat-option value=3>Telenor</mat-option>
                         <mat-option value=4>Ooredoo</mat-option>

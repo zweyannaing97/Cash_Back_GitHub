@@ -76,3 +76,40 @@ label{
     color: rgba(80, 75, 75, 0.87);
     font-size: 14px;
 }
+.select_search_box {
+    width: 133px;
+}
+.v-line
+{
+  border-left: solid 2px #000;
+  height: 50%;
+  border-radius: unset;
+  margin: 10px;
+}
+.filter_select_header {
+    background: #eae3f3;
+    display: flex;
+}
+.filter_select_header .filter_text {
+    padding: 0 7px;
+}
+.filter_select_header .mat-form-field-infix {
+    background: #fff;
+    border-radius: 51pc;
+    padding-left: 12px;
+    border-top: 0;
+    padding-bottom: 8px;
+    padding-top: 4px;
+}
+.filter_select_header .mat-input-element {
+    font-size: 12px;
+}
+.filter_select_header .check_uncheck_btn {
+    font-size: 12px;
+    padding: 0 6px;
+}
+.filter_select_header .check_uncheck_btn .mat-icon {
+    color: #0b0b0b !important;
+    font-size: 18px;
+    font-weight: 900 !important;
+}

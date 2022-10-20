@@ -5,7 +5,7 @@
     <label for="">Select Company Name <span>*</span></label>
   </div>
   <div>
-    <mat-select value=0 class="select" >
+    <mat-select value=0 class="select" panelClass="single3Select" disableOptionCentering  >
       <mat-option value=0 hidden>Select</mat-option>
       <mat-option value=1 >CGM</mat-option>
       <mat-option value=2 >OK $</mat-option>
@@ -100,40 +100,42 @@
       <app-service-category-over-seas-top-up (newItemEvent)="formValidation($event)"></app-service-category-over-seas-top-up>
     </div>
 
-    <div class="float-right">
-      <div style="display: inline;margin-right: 57px;font-weight: 500;">Service Category Type</div>
-      <button type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
-              aria-controls="collapseExample" class="p-0">
-        <img src="assets/images/category.svg" alt="service category" style="width: 35px;">
-      </button>
-    </div>
 
-    <div class="button_group mt-0 pb-5" *ngIf="showButtons">
-      <button matRipple> Cancel</button>
-      <button matRipple (click)="individual_listing = true"> Save</button>
-    </div>
+</div>
+</div>
+<div *ngIf="account_number != '' && !individual_listing" >
+  <div class="float-right">
+    <div style="display: inline;margin-right: 57px;font-weight: 500;">Service Category Type</div>
+    <button type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
+            aria-controls="collapseExample" class="p-0">
+      <img src="assets/images/category.svg" alt="service category" style="width: 35px;">
+    </button>
+  </div>
 
-    <!-- category menu -->
-      <div class="serviceCategoryType">
-        <div class="collapse" id="collapseExample">
-          <div class="">
-            <table class="w-100" *ngFor="let item of categoryItems">
-              <tr (click)="categoryMenuClick(item.name)" class="servicecategory"
-                [attr.data-toggle]="item.name === 'Close' && 'collapse'"
-                [attr.data-target]="item.name === 'Close' && '#collapseExample'"
-                [ngClass]="{'active_category': (selectedCategory && selectedCategory === item.name),
-                'inactive_category' : (selectedCategory && selectedCategory !== item.name) }">
-                <td>{{item.name}}</td>
-                <td><img src="{{item.icon}}" alt="close" style="width: 35px;"></td>
-              </tr>
-            </table>
-          </div>
+  <div class="button_group my-2" *ngIf="showButtons">
+    <button matRipple (click)="individual_listing = true"> Cancel</button>
+    <button matRipple (click)="individual_listing = true "> Save</button>
+  </div>
+
+  <!-- category menu -->
+    <div class="serviceCategoryType">
+      <div class="collapse" id="collapseExample">
+        <div class="">
+          <table class="w-100" *ngFor="let item of categoryItems">
+            <tr (click)="categoryMenuClick(item.name)" class="servicecategory"
+              [attr.data-toggle]="item.name === 'Close' && 'collapse'"
+              [attr.data-target]="item.name === 'Close' && '#collapseExample'"
+              [ngClass]="{'active_category': (selectedCategory && selectedCategory === item.name),
+              'inactive_category' : (selectedCategory && selectedCategory !== item.name) }">
+              <td>{{item.name}}</td>
+              <td><img src="{{item.icon}}" alt="close" style="width: 35px;"></td>
+            </tr>
+          </table>
         </div>
       </div>
-    <!-- category menu -->
-  </div>
+    </div>
+  <!-- category menu -->
 </div>
-
 
 <div *ngIf="individual_listing">
   <div class="d-flex justify-content-between align-items-center">
@@ -153,12 +155,131 @@
     </div>
   </div>
 
-  <div>
-    <app-data-table
-    [data]="data"
-    [header]="header"
-    [totalDataCount]="25"
-    (fetchDataEvent)="fetchDataEvent($event)">
-    </app-data-table>
-  </div>
+    <!-- table -->
+    <div class="table-pagination">
+      <table mat-table [dataSource]="dataSource">
+  
+        <ng-container matColumnDef="companyName">
+          <th mat-header-cell *matHeaderCellDef> Company Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.companyName}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="divisionState">
+          <th mat-header-cell *matHeaderCellDef> Division/State </th>
+          <td mat-cell *matCellDef="let element"> {{element.divisionState}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="district">
+          <th mat-header-cell *matHeaderCellDef> District </th>
+          <td mat-cell *matCellDef="let element"> {{element.district}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="township">
+          <th mat-header-cell *matHeaderCellDef> Township </th>
+          <td mat-cell *matCellDef="let element"> {{element.township}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="cityTown">
+          <th mat-header-cell *matHeaderCellDef> City/Town </th>
+          <td mat-cell *matCellDef="let element"> {{element.cityTown}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="agentCode">
+          <th mat-header-cell *matHeaderCellDef> Agent Code </th>
+          <td mat-cell *matCellDef="let element"> {{element.agentCode}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="branch">
+          <th mat-header-cell *matHeaderCellDef> Branch </th>
+          <td mat-cell *matCellDef="let element"> {{element.branch}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="okAccNum">
+          <th mat-header-cell *matHeaderCellDef> OK$ Account Number </th>
+          <td mat-cell *matCellDef="let element"> {{element.okAccNum}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="cashbackOkAcc">
+          <th mat-header-cell *matHeaderCellDef> Cash Back Credit OK$ Account </th>
+          <td mat-cell *matCellDef="let element"> {{element.cashbackOkAcc}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="serviceCategory">
+          <th mat-header-cell *matHeaderCellDef> Service Category Type</th>
+          <td mat-cell *matCellDef="let element"> {{element.serviceCategory}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="okAccType">
+          <th mat-header-cell *matHeaderCellDef> OK$ Account Type </th>
+          <td mat-cell *matCellDef="let element"> {{element.okAccType}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="cashbackOpWise">
+          <th mat-header-cell *matHeaderCellDef> Cash Back Operator Wise </th>
+          <td mat-cell *matCellDef="let element"> {{element.cashbackOpWise}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="cashbackTelenorNo">
+          <th mat-header-cell *matHeaderCellDef> Cash Back Credit Telenor Number </th>
+          <td mat-cell *matCellDef="let element"> {{element.cashbackTelenorNo}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="cashbackMptNo">
+          <th mat-header-cell *matHeaderCellDef> Cash Back Credit Mpt Number </th>
+          <td mat-cell *matCellDef="let element"> {{element.cashbackMptNo}} </td>
+        </ng-container>
+        <ng-container matColumnDef="cashbackOoredooNo">
+          <th mat-header-cell *matHeaderCellDef> Cash Back Credit Ooredoo Number </th>
+          <td mat-cell *matCellDef="let element"> {{element.cashbackOoredooNo}} </td>
+        </ng-container>
+        <ng-container matColumnDef="cashbackMytelNo">
+          <th mat-header-cell *matHeaderCellDef> Cash Back Credit Mytel Number </th>
+          <td mat-cell *matCellDef="let element"> {{element.cashbackMytelNo}} </td>
+        </ng-container>
+        <ng-container matColumnDef="cashbackMectelNo">
+          <th mat-header-cell *matHeaderCellDef> Cash Back Credit Mectel Number </th>
+          <td mat-cell *matCellDef="let element"> {{element.cashbackMectelNo}} </td>
+        </ng-container>
+        <ng-container matColumnDef="cashbackGiftCardsNo">
+          <th mat-header-cell *matHeaderCellDef> Cash Back Credit Gift Cards Number </th>
+          <td mat-cell *matCellDef="let element"> {{element.cashbackGiftCardsNo}} </td>
+        </ng-container>
+        <ng-container matColumnDef="cashbackDTHNo">
+          <th mat-header-cell *matHeaderCellDef> Cash Back Credit DTH Number</th>
+          <td mat-cell *matCellDef="let element"> {{element.cashbackDTHNo}} </td>
+        </ng-container>
+        <ng-container matColumnDef="cashbackElecNo">
+          <th mat-header-cell *matHeaderCellDef> Cash Back Credit Electricity Number </th>
+          <td mat-cell *matCellDef="let element"> {{element.cashbackElecNo}} </td>
+        </ng-container>
+        <ng-container matColumnDef="cashbackPostPaidNo">
+          <th mat-header-cell *matHeaderCellDef> Cash Back Credit Post Paid Number </th>
+          <td mat-cell *matCellDef="let element"> {{element.cashbackPostPaidNo}} </td>
+        </ng-container>
+        <ng-container matColumnDef="country">
+          <th mat-header-cell *matHeaderCellDef> Country </th>
+          <td mat-cell *matCellDef="let element"> {{element.country}} </td>
+        </ng-container>
+        <ng-container matColumnDef="cashbackOvSeasNo">
+          <th mat-header-cell *matHeaderCellDef> Cash Back Credit Over Seas Top Up Number </th>
+          <td mat-cell *matCellDef="let element"> {{element.cashbackOvSeasNo}} </td>
+        </ng-container>
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef> Status </th>
+          <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+        </ng-container>
+
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+  
+  
+    </div>
+  
+    <mat-toolbar>
+      <mat-paginator [pageSizeOptions]="[10,20, 25, 50, 100]" showFirstLastButtons
+        aria-label="Select page of periodic elements">
+      </mat-paginator>
+    </mat-toolbar>
 </div>

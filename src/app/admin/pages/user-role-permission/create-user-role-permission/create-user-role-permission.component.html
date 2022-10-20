@@ -10,7 +10,7 @@
             </div>
             <div class="mobile_field">
 
-                <input type="text" class="input userRolePermissionFormField" placeholder="username001">
+                <input type="text" class="input userRolePermissionFormField" placeholder="Enter User Name">
             </div>
           </div>
           <div class="col-md-4">
@@ -19,16 +19,24 @@
                 <label for="">Password <span>*</span></label>
             </div>
             <div class="mobile_field">
-                <input type="text" class="input userRolePermissionFormField" placeholder="username001">
+                <input type="text" class="input userRolePermissionFormField" placeholder="Enter Password">
             </div>
           </div>
           <div class="col-md-4">
             <br>
             <div>
-                <label for="">Department Name <span>*</span></label>
+                <label for="">Select Department Name <span>*</span></label>
             </div>
             <div>
-              <mat-select class="selectt" multiple placeholder="Select">
+              <mat-select class="selectt" panelClass="singleSelect" disableOptionCentering placeholder="Select">
+                <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+                  <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                    <mat-label class="label">Filter:</mat-label>
+                    <mat-form-field class="select_search_box" appearance="standard">
+                    <input matInput placeholder="Enter Keywords">
+                    </mat-form-field>
+                  </div>
+                </div>
                 <mat-option value=0 hidden>Select</mat-option>
                 <mat-option value=1>Admin Department</mat-option>
                 <mat-option value=2>Account Department</mat-option>
@@ -41,12 +49,27 @@
         <div class="col-md-4">
           <br>
           <div>
-              <label for="">Designation <span>*</span></label>
+              <label for="">Select Designation <span>*</span></label>
           </div>
           <div>
-            <mat-select class="selectt" multiple placeholder="Select">
+            <mat-select class="selectt" panelClass="normalSelect" disableOptionCentering multiple placeholder="Select">
+              <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+                <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                    <mat-label class="label">Filter:</mat-label>
+                    <mat-form-field class="select_search_box" appearance="standard">
+                    <input matInput placeholder="Enter Keywords">
+                    </mat-form-field>
+                </div>
+                <button fxLayout="row" mat-button class="check_uncheck_btn" >
+                    <mat-icon class="secondary-text s-5">
+                    check</mat-icon>Check All
+                </button>
+                <button fxLayout="row" mat-button class="check_uncheck_btn v-line" >
+                    <mat-icon class="secondary-text s-5">
+                    clear</mat-icon>Uncheck All
+                </button>
+              </div>
               <mat-option value=0 hidden>Select</mat-option>
-              <mat-option value=1>All</mat-option>
               <mat-option value=2>Admin</mat-option>
               <mat-option value=3>Accountant</mat-option>
               <mat-option value=4>Branch Manager</mat-option>
@@ -72,7 +95,7 @@
               <label for="">Select User Type <span>*</span></label>
           </div>
           <div>
-            <mat-select class="selectt" placeholder="Select">
+            <mat-select class="selectt" placeholder="Select" disableOptionCentering panelClass="singleSelect">
               <mat-option hidden>Select</mat-option>
               <mat-option value=1>Admin</mat-option>
               <mat-option value=2>User</mat-option>
@@ -87,10 +110,27 @@
               <label for="">Select Transaction <span>*</span></label>
           </div>
           <div>
-            <mat-select class="selectt" multiple placeholder="Select">
+            <mat-select class="selectt" multiple placeholder="Select" panelClass="normalSelect" disableOptionCentering>
+              
+            <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+              <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                  <mat-label class="label">Filter:</mat-label>
+                  <mat-form-field class="select_search_box" appearance="standard">
+                  <input matInput placeholder="Enter Keywords">
+                  </mat-form-field>
+              </div>
+              <button fxLayout="row" mat-button class="check_uncheck_btn" >
+                  <mat-icon class="secondary-text s-5">
+                  check</mat-icon>Check All
+              </button>
+              <button fxLayout="row" mat-button class="check_uncheck_btn v-line" >
+                  <mat-icon class="secondary-text s-5">
+                  clear</mat-icon>Uncheck All
+              </button>
+            </div>
               <mat-option value=0 hidden>Select</mat-option>
-              <mat-option value=1>All</mat-option>
               <mat-option value=2>Dashboard</mat-option>
+              <mat-option value=2>User Role Master</mat-option>
               <mat-option value=3>User Role Permission</mat-option>
               <mat-option value=4>Company Configuration</mat-option>
               <mat-option value=5>Cash Back Configuration</mat-option>
@@ -106,13 +146,72 @@
               <label for="">Select Role Permission <span>*</span></label>
           </div>
           <div >
-            <mat-select class="selectt" multiple placeholder="Select">
+            <mat-select class="selectt" multiple placeholder="Select"  panelClass="normalSelect" disableOptionCentering>
+              <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+                <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                    <mat-label class="label">Filter:</mat-label>
+                    <mat-form-field class="select_search_box" appearance="standard">
+                    <input matInput placeholder="Enter Keywords">
+                    </mat-form-field>
+                </div>
+                <button fxLayout="row" mat-button class="check_uncheck_btn" >
+                    <mat-icon class="secondary-text s-5">
+                    check</mat-icon>Check All
+                </button>
+                <button fxLayout="row" mat-button class="check_uncheck_btn v-line" >
+                    <mat-icon class="secondary-text s-5">
+                    clear</mat-icon>Uncheck All
+                </button>
+              </div>
               <mat-option value=0 hidden>Select</mat-option>
-              <mat-option value=1>All</mat-option>
-              <mat-option value=2>View</mat-option>
-              <mat-option value=3>View & Download</mat-option>
-              <mat-option value=4>Create & Upload</mat-option>
-              <mat-option value=5>Updated</mat-option>
+              <mat-optgroup label="Dashboard">
+                <mat-option value=2>View</mat-option>
+                <mat-option value=3>View & Download</mat-option>
+                <mat-option value=4>Create & Upload</mat-option>
+                <mat-option value=5>Updated</mat-option>
+              </mat-optgroup>
+              <mat-optgroup label="User Role Master">
+                <mat-option value=2>View</mat-option>
+                <mat-option value=3>View & Download</mat-option>
+                <mat-option value=4>Create & Upload</mat-option>
+                <mat-option value=5>Updated</mat-option>
+              </mat-optgroup>
+              <mat-optgroup label="User Role Permission">
+                <mat-option value=2>View</mat-option>
+                <mat-option value=3>View & Download</mat-option>
+                <mat-option value=4>Create & Upload</mat-option>
+                <mat-option value=5>Updated</mat-option>
+              </mat-optgroup>
+              <mat-optgroup label="Company Configuration">
+                <mat-option value=2>View</mat-option>
+                <mat-option value=3>View & Download</mat-option>
+                <mat-option value=4>Create & Upload</mat-option>
+                <mat-option value=5>Updated</mat-option>
+              </mat-optgroup>
+              <mat-optgroup label="Cashback Configuration">
+                <mat-option value=2>View</mat-option>
+                <mat-option value=3>View & Download</mat-option>
+                <mat-option value=4>Create & Upload</mat-option>
+                <mat-option value=5>Updated</mat-option>
+              </mat-optgroup>
+              <mat-optgroup label="Remove Cash Back">
+                <mat-option value=2>View</mat-option>
+                <mat-option value=3>View & Download</mat-option>
+                <mat-option value=4>Create & Upload</mat-option>
+                <mat-option value=5>Updated</mat-option>
+              </mat-optgroup>
+              <mat-optgroup label="Report">
+                <mat-option value=2>View</mat-option>
+                <mat-option value=3>View & Download</mat-option>
+                <mat-option value=4>Create & Upload</mat-option>
+                <mat-option value=5>Updated</mat-option>
+              </mat-optgroup>
+              <mat-optgroup label="Change Password">
+                <mat-option value=2>View</mat-option>
+                <mat-option value=3>View & Download</mat-option>
+                <mat-option value=4>Create & Upload</mat-option>
+                <mat-option value=5>Updated</mat-option>
+              </mat-optgroup>
             </mat-select>
 
           </div>

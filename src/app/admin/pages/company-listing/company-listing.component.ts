@@ -34,55 +34,55 @@ export interface PeriodicElement {
 
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Account Department', isActive:'Yes',action:'assets/images/edit.png'},
+  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Account Department', isActive:'Yes',action:'assets/images/edit.svg'},
 
-  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Admin Department', isActive:'Yes',action:'assets/images/edit.png'},
+  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Admin Department', isActive:'Yes',action:'assets/images/edit.svg'},
 
-  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Sales Department', isActive:'Yes', action:'assets/images/edit.png'},
+  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Sales Department', isActive:'Yes', action:'assets/images/edit.svg'},
 
-  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Sales Department', isActive:'Yes',action:'assets/images/edit.png'},
+  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Sales Department', isActive:'Yes',action:'assets/images/edit.svg'},
 
-  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Sales Department', isActive:'No', action:'assets/images/edit.png'},
+  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Sales Department', isActive:'No', action:'assets/images/edit.svg'},
 
-  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Account Department', isActive:'Yes', action:'assets/images/edit.png'},
+  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Account Department', isActive:'Yes', action:'assets/images/edit.svg'},
 
-  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Admin Department', isActive:'Yes',action:'assets/images/edit.png'},
+  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Admin Department', isActive:'Yes',action:'assets/images/edit.svg'},
 
-  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Sales Department', isActive:'Yes', action:'assets/images/edit.png'},
+  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Sales Department', isActive:'Yes', action:'assets/images/edit.svg'},
 
-  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Sales Department', isActive:'Yes',action:'assets/images/edit.png'},
+  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Sales Department', isActive:'Yes',action:'assets/images/edit.svg'},
 
-  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Sales Department', isActive:'No', action:'assets/images/edit.png'},
+  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Sales Department', isActive:'No', action:'assets/images/edit.svg'},
 
-  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Account Department', isActive:'Yes', action:'assets/images/edit.png'},
+  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Account Department', isActive:'Yes', action:'assets/images/edit.svg'},
 
-  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Admin Department', isActive:'Yes',action:'assets/images/edit.png'},
+  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Admin Department', isActive:'Yes',action:'assets/images/edit.svg'},
 
-  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Sales Department', isActive:'Yes', action:'assets/images/edit.png'},
+  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Sales Department', isActive:'Yes', action:'assets/images/edit.svg'},
 
-  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Sales Department', isActive:'Yes',action:'assets/images/edit.png'},
+  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Sales Department', isActive:'Yes',action:'assets/images/edit.svg'},
 
-  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Sales Department', isActive:'No', action:'assets/images/edit.png'},
+  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Sales Department', isActive:'No', action:'assets/images/edit.svg'},
 
-  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Account Department', isActive:'Yes', action:'assets/images/edit.png'},
+  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Account Department', isActive:'Yes', action:'assets/images/edit.svg'},
 
-  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Admin Department', isActive:'Yes',action:'assets/images/edit.png'},
+  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Admin Department', isActive:'Yes',action:'assets/images/edit.svg'},
 
-  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Sales Department', isActive:'Yes', action:'assets/images/edit.png'},
+  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Sales Department', isActive:'Yes', action:'assets/images/edit.svg'},
 
-  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Sales Department', isActive:'Yes',action:'assets/images/edit.png'},
+  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Sales Department', isActive:'Yes',action:'assets/images/edit.svg'},
 
-  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Sales Department', isActive:'No', action:'assets/images/edit.png'},
+  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Sales Department', isActive:'No', action:'assets/images/edit.svg'},
 
-  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Account Department', isActive:'Yes', action:'assets/images/edit.png'},
+  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Account Department', isActive:'Yes', action:'assets/images/edit.svg'},
 
-  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Admin Department', isActive:'Yes',action:'assets/images/edit.png'},
+  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Admin Department', isActive:'Yes',action:'assets/images/edit.svg'},
 
-  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Sales Department', isActive:'Yes', action:'assets/images/edit.png'},
+  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Sales Department', isActive:'Yes', action:'assets/images/edit.svg'},
 
-  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Sales Department', isActive:'Yes',action:'assets/images/edit.png'},
+  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Sales Department', isActive:'Yes',action:'assets/images/edit.svg'},
 
-  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Sales Department', isActive:'No', action:'assets/images/edit.png'},
+  {companyName: 'Consumer Goods Myanmar Limited', remark: 'Sales Department', isActive:'No', action:'assets/images/edit.svg'},
 
 ];
 

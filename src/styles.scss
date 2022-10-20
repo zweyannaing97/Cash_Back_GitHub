@@ -586,3 +586,63 @@ font-size: 12px !important;
 .Rakhine_bgColor{
   background-color: #dc6868;
 }
+
+// multi select and single select css
+.normalSelect{
+  margin-top: 40px;
+  margin-left: 25px;
+  min-width: calc(100% + 32px) !important;
+}
+.singleSelect{
+  margin-top: 40px;
+  min-width: calc(100% + 32px) !important;
+}
+.filter_select_header {
+  background: #eae3f3;
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.filter_select_header .filter_text {
+  padding: 0 7px;
+}
+.filter_select_header .mat-form-field-infix {
+  background: #fff;
+  border-radius: 51pc;
+  padding-left: 12px;
+  border-top: 0;
+  padding-bottom: 8px;
+  padding-top: 4px;
+}
+.filter_select_header .mat-input-element {
+  font-size: 12px;
+}
+.filter_select_header .check_uncheck_btn {
+  font-size: 12px;
+  padding: 0 6px;
+}
+.filter_select_header .check_uncheck_btn .mat-icon {
+  color: #0b0b0b !important;
+  font-size: 18px;
+  font-weight: 900 !important;
+}
+.select_search_box {
+  width: 133px;
+}
+.v-line{
+border-left: solid 2px #000;
+height: 50%;
+border-radius: unset;
+margin: 10px;
+}
+.single2Select{
+  margin-top: 56px;
+  min-width: calc(100% + 4px) !important;
+  margin-left: 15px;
+}
+.single3Select{
+  margin-top: 56px;
+  min-width: calc(100% + 4px) !important;
+  margin-left: 41px;
+}

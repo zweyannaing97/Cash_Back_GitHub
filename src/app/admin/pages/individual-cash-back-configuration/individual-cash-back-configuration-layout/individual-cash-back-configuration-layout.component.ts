@@ -1,5 +1,7 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 import { IndividualCashbackConfigListingFilterComponent } from 'src/app/admin/modals/individual-cashback-config-listing-filter/individual-cashback-config-listing-filter.component';
 import { categoryItems } from 'src/app/utils/constants';
 export interface TableData {
@@ -8,11 +10,6 @@ export interface TableData {
   city: string;
   branch: string;
 }
-
-const ELEMENT_DATA: TableData[] = [
-  {division: 'Yangon Division', township: 'Ahlone', city: 'Dala', branch: 'Kwin Yaoung Street(Ahlone)'},
-];
-
 @Component({
   selector: 'app-individual-cash-back-configuration-layout',
   templateUrl: './individual-cash-back-configuration-layout.component.html',
@@ -32,7 +29,7 @@ export class IndividualCashBackConfigurationLayoutComponent implements OnInit {
     },
     {
       title: 'District',
-      key: 'type'
+      key: 'agentCode'
     },
     {
       title: 'Operator Name',
@@ -48,7 +45,7 @@ export class IndividualCashBackConfigurationLayoutComponent implements OnInit {
     },
     {
       title: 'Agent Code ',
-      key: 'type'
+      key: 'agentCode'
     },
     {
       title: 'Branch',
@@ -63,11 +60,11 @@ export class IndividualCashBackConfigurationLayoutComponent implements OnInit {
       key: 'account'
     },
     {
-      title: ' Service Category Type ',
-      key: 'type'
+      title: ' Service Category agentCode ',
+      key: 'agentCode'
     },
     {
-      title: 'OK$ Account Type',
+      title: 'OK$ Account agentCode',
       key: 'operator'
     },
     {
@@ -80,7 +77,7 @@ export class IndividualCashBackConfigurationLayoutComponent implements OnInit {
     },
     {
       title: ' Cash Back Credit MPT No. ',
-      key: 'type'
+      key: 'agentCode'
     },
     {
       title: 'Cash Back Credit Ooredoo Number',
@@ -96,7 +93,7 @@ export class IndividualCashBackConfigurationLayoutComponent implements OnInit {
     },
     {
       title: 'Cash Back Credit Gift Cards Number ',
-      key: 'type'
+      key: 'agentCode'
     },
     {
       title: 'Cash Back Credit DTH Number',
@@ -112,7 +109,7 @@ export class IndividualCashBackConfigurationLayoutComponent implements OnInit {
     },
     {
       title: 'Country',
-      key: 'type'
+      key: 'agentCode'
     },
     {
       title: 'Cash Back Credit Over Seas Top Up Number',
@@ -120,7 +117,7 @@ export class IndividualCashBackConfigurationLayoutComponent implements OnInit {
     },
     {
       title: 'Status',
-      key: 'type'
+      key: 'agentCode'
     },
 
   ];
@@ -128,110 +125,110 @@ export class IndividualCashBackConfigurationLayoutComponent implements OnInit {
   {
     name: 'CGM',
     account: '765745454',
-    type: 'Merchant',
+    agentCode: 'Merchant',
     operator: 'MPT'
   },
   {
     name: 'OK $',
     account: '7657454454454',
-    type: 'Personal',
+    agentCode: 'Personal',
     operator: 'Telenor'
   },
   {
     name: 'GAT',
     account: '765745454656',
-    type: 'Advance Merchant',
+    agentCode: 'Advance Merchant',
     operator: 'MPT'
   },
   {
     name: 'One Stop Supermarket',
     account: '765745435454',
-    type: 'Merchant',
+    agentCode: 'Merchant',
     operator: 'MPT'
   },
   {
     name: 'OK $ Taxi',
     account: '765435745454',
-    type: 'Merchant',
+    agentCode: 'Merchant',
     operator: 'Telenor'
   },
   {
     name: 'CGM',
     account: '765745454',
-    type: 'Merchant',
+    agentCode: 'Merchant',
     operator: 'MPT'
   },
   {
     name: 'OK $',
     account: '7657454454454',
-    type: 'Personal',
+    agentCode: 'Personal',
     operator: 'Telenor'
   },
   {
     name: 'GAT',
     account: '765745454656',
-    type: 'Advance Merchant',
+    agentCode: 'Advance Merchant',
     operator: 'MPT'
   },
   {
     name: 'One Stop Supermarket',
     account: '765745435454',
-    type: 'Merchant',
+    agentCode: 'Merchant',
     operator: 'MPT'
   },
   {
     name: 'OK $ Taxi',
     account: '765435745454',
-    type: 'Merchant',
+    agentCode: 'Merchant',
     operator: 'Telenor'
   },
   {
     name: 'GAT',
     account: '765745454656',
-    type: 'Advance Merchant',
+    agentCode: 'Advance Merchant',
     operator: 'MPT'
   },
   {
     name: 'One Stop Supermarket',
     account: '765745435454',
-    type: 'Merchant',
+    agentCode: 'Merchant',
     operator: 'MPT'
   },
   {
     name: 'OK $ Taxi',
     account: '765435745454',
-    type: 'Merchant',
+    agentCode: 'Merchant',
     operator: 'Telenor'
   },
   {
     name: 'OK $',
     account: '7657454454454',
-    type: 'Personal',
+    agentCode: 'Personal',
     operator: 'Telenor'
   },
   {
     name: 'GAT',
     account: '765745454656',
-    type: 'Advance Merchant',
+    agentCode: 'Advance Merchant',
     operator: 'MPT'
   },
   {
     name: 'One Stop Supermarket',
     account: '765745435454',
-    type: 'Merchant',
+    agentCode: 'Merchant',
     operator: 'MPT'
   },
   {
     name: 'OK $ Taxi',
     account: '765435745454',
-    type: 'Merchant',
+    agentCode: 'Merchant',
     operator: 'Telenor'
   },
   ];
 
   categoryItems: any = categoryItems;
   selectedCategory: any;
-  individual_listing: boolean = false;
+  individual_listing: boolean = true;
   showButtons:boolean = true;
   account_number: string = '';
   constructor(
@@ -244,17 +241,12 @@ export class IndividualCashBackConfigurationLayoutComponent implements OnInit {
   convertedJson! : string
 
 
-  displayedColumns: string[] = ['division', 'township', 'city', 'branch'];
-  displayedColumnss: string[] = ['name', 'division', 'district', 'township', 'city', 'agent_code', 'branch', 'account_number', 'cashBackCreditAccount', 'serviceCtegoryType', 'accountType', 'operatorWise', 'telenorNumber','mptNumber', 'ooredooNumber', 'mytelNumber', 'mectelNumber', 'giftCardsNumber', 'dthNumber', 'electricityNumber', 'postPaidNumber', 'country', 'overSeasTopUp', 'status'];
-
-  dataSource = ELEMENT_DATA;
-
-  fetchDataEvent(event: any){}
-
-
   categoryMenuClick(category_name: any){
     this.showButtons = false;
     this.selectedCategory = category_name;
+    if (category_name === 'Close'){
+      this.showButtons = true;
+    }
   }
 
 
@@ -276,4 +268,49 @@ export class IndividualCashBackConfigurationLayoutComponent implements OnInit {
   addData(){
     this.individual_listing = false;
   }
+
+  displayedColumns: string[] = ['companyName', 'divisionState', 'district', 'township', 'cityTown', 'agentCode', 'branch', 'okAccNum', 'cashbackOkAcc', 'serviceCategory', 'okAccType', 'cashbackOpWise','cashbackTelenorNo','cashbackMptNo','cashbackOoredooNo','cashbackMytelNo','cashbackMectelNo','cashbackGiftCardsNo','cashbackDTHNo','cashbackElecNo','cashbackPostPaidNo','country','cashbackOvSeasNo','status'];
+  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+  }
 }
+
+
+export interface PeriodicElement {
+  companyName: string;
+  divisionState: string;
+  district: string;
+  township: string;
+  cityTown: string;
+  agentCode: string;
+  branch: string;
+  okAccNum: string;
+  cashbackOkAcc: string;
+  serviceCategory: string;
+  okAccType: string;
+  cashbackOpWise: string;
+  cashbackTelenorNo: string;
+  cashbackMptNo: string;
+  cashbackOoredooNo: string;
+  cashbackMytelNo: string;
+  cashbackMectelNo: string;
+  cashbackGiftCardsNo: string;
+  cashbackDTHNo: string;
+  cashbackElecNo: string;
+  cashbackPostPaidNo: string;
+  country: string;
+  cashbackOvSeasNo: string;
+  status: string;
+
+}
+
+
+const ELEMENT_DATA: PeriodicElement[] = [
+  {companyName: 'assets/images/profile.png', divisionState: 'Aye Aye', district: 'Account Department', township: 'Accoutant', cityTown: '+95 09421056929', agentCode:'Admin', branch:'2', okAccNum:'5', cashbackOkAcc:'Aye Aye', serviceCategory:'Yes', okAccType:'Mon, 08-Jan-2021 09:10:20',cashbackOpWise:'All', cashbackTelenorNo:'097958654942',cashbackMptNo:'097958654942',cashbackOoredooNo:'097958654942', cashbackMytelNo:'097958654942',cashbackMectelNo:'097958654942',cashbackGiftCardsNo:'097958654942', cashbackDTHNo:'097958654942',cashbackElecNo:'097958654942',cashbackPostPaidNo:'097958654942',country:'097958654942',cashbackOvSeasNo:'097958654942',status:'097958654942'},
+
+
+];

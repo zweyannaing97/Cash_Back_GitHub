@@ -84,11 +84,6 @@ label{
 ::placeholder{
     font-size: 14px;
 }
-
-.table_filter{
-    margin-top: -20px;
-}
-
 ::placeholder{
     color: rgba(80, 75, 75, 0.87);
     font-size: 14px;
@@ -117,13 +112,94 @@ label{
 
 }
 
-.table_filter img:first-child {
-  margin-right: 0px !important;
-}
 .simg{
   margin-bottom: 0 !important;
-  margin-top: -7px;
 }
 ::ng-deep .dataTable{
   height: calc( 90vh - 100px);
+}
+
+.table-pagination table th {
+  background: #d6c7ec;
+  color: black;
+  font-size: 14px;
+  padding-right: 24px;
+  white-space: nowrap;
+}
+
+table {
+  width: 100%;
+  white-space: nowrap;
+
+}
+
+.mat-paginator{
+  width: 100%;
+}
+
+.mat-toolbar-row, .mat-toolbar-single-row
+{
+  padding: 0px;
+}
+
+.table-pagination{
+  height: calc(85vh - 120px);
+  overflow: auto;
+}
+
+.table-pagination td{
+background: #eae3f3;
+padding-right: 15px !important;
+border-top: solid 10px #f6f6f6;
+}
+
+.profileImageList
+{
+  width: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+
+}
+.actionImage
+{
+  width:25px;
+}
+.table_filter button
+{
+  background: none !important;
+
+}
+.table_filter img
+{
+  width: 25px;
+}
+
+.table_filter button img
+{
+  width: 25px !important;
+}
+.mat-toolbar-row, .mat-toolbar-single-row
+{
+  padding: 0 !important;
+}
+::ng-deep .mat-paginator-container {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+.tableSpacing{
+  padding-left: 20px !important;
+}
+::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+  background-color: #a67ce5;
+}
+::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+  background-color: #592f95;
+}
+
+::ng-deep .mat-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }

@@ -1,151 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmAlertComponent } from 'src/app/admin/modals/confirm-alert/confirm-alert.component';
 import { UpdateCompanyConfigurationComponent } from 'src/app/admin/modals/update-company-configuration/update-company-configuration.component';
+import { MatPaginator } from '@angular/material/paginator';
 
+import {MatTableDataSource} from '@angular/material/table';
 @Component({
   selector: 'app-company-configuration',
   templateUrl: './company-configuration.component.html',
   styleUrls: ['./company-configuration.component.scss']
 })
 export class CompanyConfigurationComponent implements OnInit {
-  header = [
-    {
-      title: 'Company  Name',
-      key: 'name'
-    },
-    {
-      title: 'Cash Back Credit OK$  Account',
-      key: 'account'
-    },
-    {
-      title: 'OK$  Account Type',
-      key: 'type'
-    },
-    {
-      title: 'Operator Name',
-      key: 'operator'
-    }
-  ];
-  data = [
-    {
-      name: 'CGM',
-      account: '765745454',
-      type: 'Merchant',
-      operator: 'MPT'
-    },
-    {
-      name: 'OK $',
-      account: '7657454454454',
-      type: 'Personal',
-      operator: 'Telenor'
-    },
-    {
-      name: 'GAT',
-      account: '765745454656',
-      type: 'Advance Merchant',
-      operator: 'MPT'
-    },
-    {
-      name: 'One Stop Supermarket',
-      account: '765745435454',
-      type: 'Merchant',
-      operator: 'MPT'
-    },
-    {
-      name: 'OK $ Taxi',
-      account: '765435745454',
-      type: 'Merchant',
-      operator: 'Telenor'
-    },
-    {
-      name: 'CGM',
-      account: '765745454',
-      type: 'Merchant',
-      operator: 'MPT'
-    },
-    {
-      name: 'OK $',
-      account: '7657454454454',
-      type: 'Personal',
-      operator: 'Telenor'
-    },
-    {
-      name: 'GAT',
-      account: '765745454656',
-      type: 'Advance Merchant',
-      operator: 'MPT'
-    },
-    {
-      name: 'One Stop Supermarket',
-      account: '765745435454',
-      type: 'Merchant',
-      operator: 'MPT'
-    },
-    {
-      name: 'OK $ Taxi',
-      account: '765435745454',
-      type: 'Merchant',
-      operator: 'Telenor'
-    },
-    {
-      name: 'GAT',
-      account: '765745454656',
-      type: 'Advance Merchant',
-      operator: 'MPT'
-    },
-    {
-      name: 'One Stop Supermarket',
-      account: '765745435454',
-      type: 'Merchant',
-      operator: 'MPT'
-    },
-    {
-      name: 'OK $ Taxi',
-      account: '765435745454',
-      type: 'Merchant',
-      operator: 'Telenor'
-    },
-    {
-      name: 'OK $',
-      account: '7657454454454',
-      type: 'Personal',
-      operator: 'Telenor'
-    },
-    {
-      name: 'GAT',
-      account: '765745454656',
-      type: 'Advance Merchant',
-      operator: 'MPT'
-    },
-    {
-      name: 'One Stop Supermarket',
-      account: '765745435454',
-      type: 'Merchant',
-      operator: 'MPT'
-    },
-    {
-      name: 'OK $ Taxi',
-      account: '765435745454',
-      type: 'Merchant',
-      operator: 'Telenor'
-    },
-  ];
-  actions = [
-    {
-      type: 'view',
-      icon: 'assets/images/view.png'
-    },
-    {
-      type: 'edit',
-      icon: 'assets/images/edit.png'
-    },
-    {
-      type: 'delete',
-      icon: 'assets/images/delete.png'
-    }
-  ];
+ 
 
   mobileNumberFields = [
     {
@@ -154,7 +21,7 @@ export class CompanyConfigurationComponent implements OnInit {
   ]
 
   constructor(public dialog: MatDialog,private _formBuilder: FormBuilder) { }
-  configuration_listingg: boolean = false;
+  configuration_listingg: boolean = true;
   showMobileInfo: boolean = false;
   show_buttons: boolean = false;
   company_name:any;
@@ -229,4 +96,39 @@ export class CompanyConfigurationComponent implements OnInit {
       this.show_buttons = true;
     }
   }
+
+  displayedColumns: string[] = ['companyName','cashbackAcc','okAccType','opName','action'];
+  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+  } 
 }
+
+export interface PeriodicElement {
+  companyName: string;
+  cashbackAcc: string;
+  okAccType: string;
+  opName: string;
+  action: object;
+}
+const ELEMENT_DATA: PeriodicElement[] = [
+  { companyName: 'CGM',cashbackAcc:'09765745454', okAccType: 'Merchant', opName: 'MPT', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'OK$',cashbackAcc:'09765745454', okAccType: 'Personal', opName: 'Telenor', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'GAT',cashbackAcc:'09765745454', okAccType: 'Advance Merchant', opName: 'Ooredoo', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'One Stop Supermarket',cashbackAcc:'09765745454', okAccType: 'Advance Merchant', opName: 'Mytel', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'CGM',cashbackAcc:'09765745454', okAccType: 'Merchant', opName: 'MPT', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'OK$',cashbackAcc:'09765745454', okAccType: 'Personal', opName: 'Telenor', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'GAT',cashbackAcc:'09765745454', okAccType: 'Advance Merchant', opName: 'Ooredoo', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'One Stop Supermarket',cashbackAcc:'09765745454', okAccType: 'Advance Merchant', opName: 'Mytel', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'CGM',cashbackAcc:'09765745454', okAccType: 'Merchant', opName: 'MPT', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'OK$',cashbackAcc:'09765745454', okAccType: 'Personal', opName: 'Telenor', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'GAT',cashbackAcc:'09765745454', okAccType: 'Advance Merchant', opName: 'Ooredoo', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'One Stop Supermarket',cashbackAcc:'09765745454', okAccType: 'Advance Merchant', opName: 'Mytel', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'CGM',cashbackAcc:'09765745454', okAccType: 'Merchant', opName: 'MPT', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'OK$',cashbackAcc:'09765745454', okAccType: 'Personal', opName: 'Telenor', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'GAT',cashbackAcc:'09765745454', okAccType: 'Advance Merchant', opName: 'Ooredoo', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'One Stop Supermarket',cashbackAcc:'09765745454', okAccType: 'Advance Merchant', opName: 'Mytel', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+];

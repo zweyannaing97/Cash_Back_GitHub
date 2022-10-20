@@ -34,7 +34,15 @@
 {
   min-width: calc(100% + 94px) !important;
 }
-
+.normalSelect{
+  margin-top: 40px;
+  margin-left: 25px;
+  min-width: calc(100% + 32px) !important;
+}
+.singleSelect{
+  margin-top: 40px;
+  min-width: calc(100% + 32px) !important;
+}
 ::ng-deep .mat-dialog-container{
     padding: 0;
 }

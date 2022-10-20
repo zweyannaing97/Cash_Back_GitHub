@@ -17,6 +17,8 @@ import { ServiceCategoryElectricityComponent } from './components/service-catego
 import { ServiceCategoryPostPaidComponent } from './components/service-category-post-paid/service-category-post-paid.component';
 import { ServiceCategoryOverSeasTopUpComponent } from './components/service-category-over-seas-top-up/service-category-over-seas-top-up.component';
 import { MatRippleModule } from '@angular/material/core';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatToolbarModule } from '@angular/material/toolbar';
 @NgModule({
   declarations: [
     IndividualCashBackConfigurationLayoutComponent,
@@ -38,6 +40,8 @@ import { MatRippleModule } from '@angular/material/core';
     MatFormFieldModule,
     CustomDataTableModule,
     MatRippleModule,
+    MatPaginatorModule,
+    MatToolbarModule,
   ]
 })
 export class IndividualCashBackConfigurationModule { }

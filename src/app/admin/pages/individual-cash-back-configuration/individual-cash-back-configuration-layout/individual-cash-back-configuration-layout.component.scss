@@ -1,9 +1,16 @@
 @import "../../../../../variable.scss";
 @import "../../../../../styles.scss";
 .title{
-    margin: 0 0 20px -10px;
+    margin: 0 0 20px 3px;
 }
-
+.main-content {
+    height: calc(92vh - 120px);
+    overflow: auto;
+    overflow-x: hidden;
+}
+.mat-drawer-content{
+    overflow: hidden;
+}
 .bulk_upload{
     text-align: end;margin-top: -21px;
     img{
@@ -56,10 +63,10 @@ table.data_table {
 .serviceCategoryType{
     float: right;
     text-align: end;
-    right: 60px;
+    right: 19px;
     background-color: rgba(246, 246, 246, 0.9);
     position: fixed;
-    bottom: 35px;
+    bottom: calc(14vw - 120px);
     button{
         background: transparent;
         border: none;
@@ -125,14 +132,11 @@ table.individualListing_table {
     }
     .mat-cell,
     .mat-header-cell {
-        word-wrap: initial;
-        display: table-cell;
-        padding: 0px 25px;
-        line-break: unset;
-        width: auto;
+        background: #d6c7ec;
+        color: black;
+        font-size: 14px;
+        padding-right: 24px;
         white-space: nowrap;
-        overflow: hidden;
-        vertical-align: middle;
     }
   }
 
@@ -142,7 +146,7 @@ table.individualListing_table {
   .inactive_category{
       opacity: 0.3;
   }
-::ng-deep .select .mat-select-trigger{
+.select .mat-select-trigger{
     height: 50px;
     outline: none;
     border-radius: 5px;
@@ -156,3 +160,78 @@ table.individualListing_table {
 .dataTable{
   height: calc(90vh - 100px) !important;
 }
+
+
+.table-pagination table th {
+    background: #d6c7ec;
+    color: black;
+    font-size: 14px;
+    padding-right: 24px;
+    white-space: nowrap;
+  }
+  
+  
+  table {
+    width: 100%;
+    white-space: nowrap;
+  
+  }
+  
+  .mat-paginator{
+    width: 100%;
+  }
+  
+  .mat-toolbar-row, .mat-toolbar-single-row
+  {
+    padding: 0px;
+  }
+  
+  .table-pagination{
+    height: calc(85vh - 120px);
+    overflow: auto;
+  }
+  
+  .table-pagination td{
+  background: #eae3f3;
+  padding-right: 15px !important;
+  border-top: solid 10px #f6f6f6;
+  }
+  
+  .profileImageList
+  {
+    width: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+  
+  }
+  .actionImage
+  {
+    width:25px;
+  }
+  .table_filter button
+  {
+    background: none !important;
+  
+  }
+  .table_filter img
+  {
+    width: 25px;
+  }
+  
+  .table_filter button img
+  {
+    width: 25px !important;
+  }
+  .mat-toolbar-row, .mat-toolbar-single-row
+  {
+    padding: 0 !important;
+  }
+  .mat-paginator-container {
+    display: flex !important;
+    justify-content: space-between !important;
+  }
+  .tableSpacing{
+    padding-left: 20px !important;
+  }

@@ -35,7 +35,7 @@ export class UserRolePermissionComponent implements AfterViewInit {
   //   });
   // }
 
-  displayedColumns: string[] = ['profile', 'name', 'department', 'designation', 'mobile', 'type', 'transaction', 'rolePermission', 'description', 'isActive', 'dateTime', 'action'];
+  displayedColumns: string[] = ['profile', 'name', 'department', 'designation', 'mobile', 'type', 'transaction', 'rolePermission', 'description', 'isActive', 'createDateTime', 'updateDateTime','action'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -73,22 +73,23 @@ export interface PeriodicElement {
   rolePermission: string;
   description: string;
   isActive: string;
-  dateTime: string;
+  createDateTime: string;
+  updateDateTime: string;
   action: string;
 
 }
 
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {profile: 'assets/images/profile.png', name: 'Aye Aye', department: 'Account Department', designation: 'Accoutant', mobile: '+95 09421056929', type:'Admin', transaction:'2', rolePermission:'5', description:'Aye Aye', isActive:'Yes', dateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.png'},
+  {profile: 'assets/images/profile.png', name: 'Aye Aye', department: 'Account Department', designation: 'Accoutant', mobile: '+95 09421056929', type:'Admin', transaction:'2', rolePermission:'5', description:'Aye Aye', isActive:'Yes', createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.svg'},
 
-  {profile: 'assets/images/profile.png', name: 'Hla Hla', department: 'Admin Department', designation: 'Branch Manager', mobile: '+95 09251576586', type:'Admin', transaction:'3', rolePermission:'1', description:'Hla Hla', isActive:'Yes', dateTime:'Tue, 09-Jan-2021 10:11:25', action:'assets/images/edit.png'},
+  {profile: 'assets/images/profile.png', name: 'Hla Hla', department: 'Admin Department', designation: 'Branch Manager', mobile: '+95 09251576586', type:'Admin', transaction:'3', rolePermission:'1', description:'Hla Hla', isActive:'Yes', createDateTime:'Tue, 09-Jan-2021 10:11:25', updateDateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.svg'},
 
-  {profile: 'assets/images/profile.png', name: 'Aung Aung', department: 'Sales Department', designation: 'Sales Person', mobile: '+95 09798845585', type:'User', transaction:'4', rolePermission:'2', description:'Aung Aung', isActive:'Yes', dateTime:'Wed, 10-Jan-2021 09:14:18', action:'assets/images/edit.png'},
+  {profile: 'assets/images/profile.png', name: 'Aung Aung', department: 'Sales Department', designation: 'Sales Person', mobile: '+95 09798845585', type:'User', transaction:'4', rolePermission:'2', description:'Aung Aung', isActive:'Yes', createDateTime:'Wed, 10-Jan-2021 09:14:18', updateDateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.svg'},
 
-  {profile: 'assets/images/profile.png', name: 'Mya Mya', department: 'Sales Department', designation: 'Sales Person', mobile: '+95 09915765555', type:'User', transaction:'5', rolePermission:'3', description:'Mya Mya', isActive:'Yes', dateTime:'Thur, 11-Jan-2021 11:15:28', action:'assets/images/edit.png'},
+  {profile: 'assets/images/profile.png', name: 'Mya Mya', department: 'Sales Department', designation: 'Sales Person', mobile: '+95 09915765555', type:'User', transaction:'5', rolePermission:'3', description:'Mya Mya', isActive:'Yes', createDateTime:'Thur, 11-Jan-2021 11:15:28', updateDateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.svg'},
 
-  {profile: 'assets/images/profile.png', name: 'Maung Maung', department: 'Sales Department', designation: 'Branch Manager', mobile: '+95 09251576586', type:'Admin', transaction:'1', rolePermission:'2', description:'Maung Maung', isActive:'No', dateTime:'Fri, 12-Jan-2021 10:18:24', action:'assets/images/edit.png'},
+  {profile: 'assets/images/profile.png', name: 'Maung Maung', department: 'Sales Department', designation: 'Branch Manager', mobile: '+95 09251576586', type:'Admin', transaction:'1', rolePermission:'2', description:'Maung Maung', isActive:'No', createDateTime:'Fri, 12-Jan-2021 10:18:24', updateDateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.svg'},
 
 ];
 

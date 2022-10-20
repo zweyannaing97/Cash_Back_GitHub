@@ -10,6 +10,9 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import {MatToolbarModule} from '@angular/material/toolbar';
         FormsModule,
         ReactiveFormsModule.withConfig({warnOnNgModelWithFormControl: 'never'}),
         NgMultiSelectDropDownModule.forRoot(),
-        MatToolbarModule
+        MatToolbarModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatSlideToggleModule
     ]
 })
 export class CompanyConfigurationModule { }
