@@ -6,7 +6,80 @@
 .title{
     margin: 0 0 20px -10px;
 }
-.dataTable{
+tr.mat-row {
+  height: 60px !important;
+}
+
+.table-pagination table th {
+  background: #d6c7ec;
+  color: black;
+  font-size: 14px;
+  padding-right: 24px;
+  white-space: nowrap;
+}
+
+
+table {
+  width: 100%;
+  white-space: nowrap;
+
+}
+
+.mat-paginator{
+  width: 100%;
+}
+
+.mat-toolbar-row, .mat-toolbar-single-row
+{
+  padding: 0px;
+}
+
+.table-pagination{
   height: calc(85vh - 120px);
   overflow: auto;
+}
+
+.table-pagination td{
+background: #eae3f3;
+padding-right: 15px !important;
+border-top: solid 10px #f6f6f6;
+}
+
+.profileImageList
+{
+  width: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+
+}
+.actionImage
+{
+  width:25px;
+}
+.table_filter button
+{
+  background: none !important;
+
+}
+.table_filter img
+{
+  width: 25px;
+}
+
+.table_filter button img
+{
+  width: 25px !important;
+}
+.mat-toolbar-row, .mat-toolbar-single-row
+{
+  padding: 0 !important;
+}
+.mat-paginator-container {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+.tableSpacing{
+  padding-left: 20px !important;
 }

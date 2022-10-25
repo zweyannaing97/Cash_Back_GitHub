@@ -84,3 +84,9 @@ label{
 ::ng-deep .multiselect-dropdown .dropdown-btn .dropdown-multiselect--active .dropdown-multiselect__caret {
   transform: rotateZ(0deg) !important;
 }
+
+.smallCalendar {
+    position: absolute;
+    top: 94px;
+    right: -25px;
+}

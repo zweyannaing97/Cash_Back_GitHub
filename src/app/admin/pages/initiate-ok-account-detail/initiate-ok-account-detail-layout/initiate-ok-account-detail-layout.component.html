@@ -15,11 +15,436 @@
       </div>
     </div>
     <div >
-        <app-data-table
-        [data]="data"
-        [header]="header"
-        [totalDataCount]="25"
-        (fetchDataEvent)="fetchDataEvent($event)">
-        </app-data-table>
+         <!-- table -->
+     <div class="table-pagination mt-2">
+      <table mat-table [dataSource]="dataSource">
+
+        <ng-container matColumnDef="companyName">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Company Name </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.companyName}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="divisionState">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Division/State </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.divisionState}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="district">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> District </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.district}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="township">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Township </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.township}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="cityTown">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> City/Town </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.cityTown}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="agentCode">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Agent Code </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.agentCode}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="branch">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Branch </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.branch}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="address">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Address </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.address}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="postalCode">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Postal Code </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.postalCode}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="okAccNum">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> OK$ Account Number </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.okAccNum}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="okAccType">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> OK$ Account Type </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.okAccType}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="totalPaidAmt">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Total Paid Amount </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.totalPaidAmt}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="totalGeneAmt">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Total Generated Cash Back Amount </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.totalGeneAmt}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="cashbackOkAccNo">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Cash Back Credit OK$ Account Number </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.cashbackOkAccNo}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="cashbackTelenorNo">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> cashbackTelenorNo </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.cashbackTelenorNo}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="telenorPaidAmt">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> telenorPaidAmt </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.telenorPaidAmt}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="telenorCashback">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> telenorCashBack </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.telenorCashback}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="cashbackMPTNo">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> cashbackMPTNo </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.cashbackMPTNo}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="mptPaidAmt">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> mptPaidAmt </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.mptPaidAmt}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="mptCashback">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> mptCashback </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.mptCashback}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="cashbackOoredooNo">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> cashbackOoredooNo </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.cashbackOoredooNo}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="ooredooPaidAmt">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> ooredooPaidAmt </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.ooredooPaidAmt}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="ooredooCashback">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> ooredooCashback </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.ooredooCashback}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="cashbackMytelNo">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> cashbackMytelNo </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.cashbackMytelNo}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="mytelPaidAmt">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> mytelPaidAmt </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.mytelPaidAmt}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="mytelCashback">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> mytelCashback </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.mytelCashback}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="cashbackMectelNo">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> cashbackMectelNo </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.cashbackMectelNo}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="mectelPaidAmt">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> mectelPaidAmt </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.mectelPaidAmt}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="mectelCashback">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> mectelCashback </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.mectelCashback}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="cashbackGiftCardNo">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> cashbackGiftCardNo </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.cashbackGiftCardNo}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="giftcardPaidAmt">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing">  giftcardPaidAmt </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.giftcardPaidAmt}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="giftcardCashback">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> giftcardCashback </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.giftcardCashback}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="cashbackDTHNo">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> cashbackDTHNo </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.cashbackDTHNo}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="dthPaidAmt">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> dthPaidAmt </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.dthPaidAmt}}
+              
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="dthCashback">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> dthCashback </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.dthCashback}}
+              
+          </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="cashbackElecNo">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> cashbackElecNo </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.cashbackElecNo}}
+              
+          </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="elecPaidAmt">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> elecPaidAmt </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.elecPaidAmt}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="elecCashback">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> elecCashback </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.elecCashback}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="cashbackOvseasNo">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> cashbackOvseasNo </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.cashbackOvseasNo}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="ovseasPaidAmt">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> ovseasPaidAmt </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.ovseasPaidAmt}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="ovseasCashback">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> ovseasCashback </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.ovseasCashback}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="sumTotalCashbackRecAmt">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> sumTotalCashbackRecAmt </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.sumTotalCashbackRecAmt}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="transactionDateTime">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> transactionDateTime </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.transactionDateTime}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="latitude">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> latitude </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.latitude}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="longitude">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> longitude </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.longitude}}
+              
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Status </th>
+          <td mat-cell *matCellDef="let element" class="tableSpacing">
+            
+              {{element.status}}
+              
+          </td>
+        </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true;"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+
+    </div>
+
+    <mat-toolbar>
+      <mat-paginator [pageSizeOptions]="[10,20, 25, 50, 100]" showFirstLastButtons
+        aria-label="Select page of periodic elements"  >
+      </mat-paginator>
+    </mat-toolbar>
     </div>
 </div>

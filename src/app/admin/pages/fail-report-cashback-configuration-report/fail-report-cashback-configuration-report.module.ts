@@ -5,17 +5,25 @@ import { FailReportCashbackConfigurationReportRoutingModule } from './fail-repor
 import { FailReportCashbackReportLayoutComponent } from './fail-report-cashback-report-layout/fail-report-cashback-report-layout.component';
 import { CustomFileDataTableModule } from '../../components/custom-file-data-table/custom-file-data-table.module';
 import { CustomDataTableModule } from '../../components/custom-data-table/custom-data-table.module';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { ViewFailReportCashbackReportComponent } from './view-fail-report-cashback-report/view-fail-report-cashback-report.component';
 
 
 @NgModule({
   declarations: [
-    FailReportCashbackReportLayoutComponent
+    FailReportCashbackReportLayoutComponent,
+    ViewFailReportCashbackReportComponent
   ],
   imports: [
     CommonModule,
     FailReportCashbackConfigurationReportRoutingModule,
     CustomDataTableModule,
-    CustomFileDataTableModule
+    CustomFileDataTableModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatToolbarModule,
   ]
 })
 export class FailReportCashbackConfigurationReportModule { }

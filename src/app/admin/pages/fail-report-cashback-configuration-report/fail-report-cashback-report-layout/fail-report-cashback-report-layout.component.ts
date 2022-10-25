@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 import { FailCashbackReportFilterComponent } from 'src/app/admin/modals/fail-cashback-report-filter/fail-cashback-report-filter.component';
 
 @Component({
@@ -336,4 +338,53 @@ export class FailReportCashbackReportLayoutComponent implements OnInit {
   fetchDataEvent(event: any){}
   fileFetchDataEvent(event: any){}
 
+  displayedColumns: string[] = ['fileName', 'refNo', 'confType', 'createdDateTime', 'action'];
+  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+  }
+  
 }
+
+export interface PeriodicElement {
+  fileName: string;
+  refNo: string;
+  confType: string;
+  createdDateTime: string;
+  action: string;
+}
+
+const ELEMENT_DATA: PeriodicElement[] = [
+  {fileName: 'File Name 1', refNo: '000219834', confType: 'Bulk', createdDateTime: 'Fri,08-Jun-2021 12:10:20', action: 'assets/images/view_table.png'},
+
+  {fileName: 'File Name 2', refNo: '000219834', confType: 'Bulk', createdDateTime: 'Fri,08-Jun-2021 12:10:20', action: 'assets/images/view_table.png'},
+
+  {fileName: 'File Name 3', refNo: '000219834', confType: 'Bulk', createdDateTime: 'Fri,08-Jun-2021 12:10:20', action: 'assets/images/view_table.png'},
+
+  {fileName: 'File Name 4', refNo: '000219834', confType: 'Bulk', createdDateTime: 'Fri,08-Jun-2021 12:10:20', action: 'assets/images/view_table.png'},
+
+  {fileName: 'File Name 5', refNo: '000219834', confType: 'Bulk', createdDateTime: 'Fri,08-Jun-2021 12:10:20', action: 'assets/images/view_table.png'},
+
+
+  {fileName: 'File Name 6', refNo: '000219834', confType: 'Bulk', createdDateTime: 'Fri,08-Jun-2021 12:10:20', action: 'assets/images/view_table.png'},
+
+  {fileName: 'File Name 7', refNo: '000219834', confType: 'Bulk', createdDateTime: 'Fri,08-Jun-2021 12:10:20', action: 'assets/images/view_table.png'},
+
+  {fileName: 'File Name 8', refNo: '000219834', confType: 'Bulk', createdDateTime: 'Fri,08-Jun-2021 12:10:20', action: 'assets/images/view_table.png'},
+
+  {fileName: 'File Name 9', refNo: '000219834', confType: 'Bulk', createdDateTime: 'Fri,08-Jun-2021 12:10:20', action: 'assets/images/view_table.png'},
+
+  {fileName: 'File Name 10', refNo: '000219834', confType: 'Bulk', createdDateTime: 'Fri,08-Jun-2021 12:10:20', action: 'assets/images/view_table.png'},
+
+  {fileName: 'File Name 11', refNo: '000219834', confType: 'Bulk', createdDateTime: 'Fri,08-Jun-2021 12:10:20', action: 'assets/images/view_table.png'},
+
+  {fileName: 'File Name 12', refNo: '000219834', confType: 'Bulk', createdDateTime: 'Fri,08-Jun-2021 12:10:20', action: 'assets/images/view_table.png'},
+
+  {fileName: 'File Name 13', refNo: '000219834', confType: 'Bulk', createdDateTime: 'Fri,08-Jun-2021 12:10:20', action: 'assets/images/view_table.png'},
+
+  {fileName: 'File Name 14', refNo: '000219834', confType: 'Bulk', createdDateTime: 'Fri,08-Jun-2021 12:10:20', action: 'assets/images/view_table.png'},
+
+];

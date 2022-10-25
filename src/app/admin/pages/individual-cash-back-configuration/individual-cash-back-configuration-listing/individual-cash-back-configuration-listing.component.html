@@ -1,0 +1,146 @@
+<div >
+    <div class="d-flex justify-content-between align-items-center">
+      <h5 class="title">Individual Listing</h5>
+      <div class="table_filter">
+        <div class="search-container">
+          <form method="get">
+            <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
+            <label class="button searchbutton" for="searchright">
+              <img class="simg " src="assets/images/search.png" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Search" >
+            </label>
+          </form>
+        </div>
+        <img src="assets/images/filter.svg" class="mr-3" alt="" (click)="filterTable()">
+        <a download="UploadExcelFormat.xlsx" target="_blank" href="assets/UploadExcelFormat.xlsx" class="download_sample_btn"><img src="assets/images/excel-download.svg" alt="" style="margin-right: 16px;"></a>
+        <img src="assets/images/add-pattern.svg" alt="add"   [routerLink]="'./create-individual-cashback-configuration'" matRipple>
+      </div>
+    </div>
+  
+      <!-- table -->
+      <div class="table-pagination">
+        <table mat-table [dataSource]="dataSource">
+    
+          <ng-container matColumnDef="companyName">
+            <th mat-header-cell *matHeaderCellDef> Company Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.companyName}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="divisionState">
+            <th mat-header-cell *matHeaderCellDef> Division/State </th>
+            <td mat-cell *matCellDef="let element"> {{element.divisionState}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="district">
+            <th mat-header-cell *matHeaderCellDef> District </th>
+            <td mat-cell *matCellDef="let element"> {{element.district}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="township">
+            <th mat-header-cell *matHeaderCellDef> Township </th>
+            <td mat-cell *matCellDef="let element"> {{element.township}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="cityTown">
+            <th mat-header-cell *matHeaderCellDef> City/Town </th>
+            <td mat-cell *matCellDef="let element"> {{element.cityTown}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="agentCode">
+            <th mat-header-cell *matHeaderCellDef> Agent Code </th>
+            <td mat-cell *matCellDef="let element"> {{element.agentCode}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="branch">
+            <th mat-header-cell *matHeaderCellDef> Branch </th>
+            <td mat-cell *matCellDef="let element"> {{element.branch}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="okAccNum">
+            <th mat-header-cell *matHeaderCellDef> OK$ Account Number </th>
+            <td mat-cell *matCellDef="let element"> {{element.okAccNum}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="cashbackOkAcc">
+            <th mat-header-cell *matHeaderCellDef> Cash Back Credit OK$ Account </th>
+            <td mat-cell *matCellDef="let element"> {{element.cashbackOkAcc}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="serviceCategory">
+            <th mat-header-cell *matHeaderCellDef> Service Category Type</th>
+            <td mat-cell *matCellDef="let element"> {{element.serviceCategory}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="okAccType">
+            <th mat-header-cell *matHeaderCellDef> OK$ Account Type </th>
+            <td mat-cell *matCellDef="let element"> {{element.okAccType}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="cashbackOpWise">
+            <th mat-header-cell *matHeaderCellDef> Cash Back Operator Wise </th>
+            <td mat-cell *matCellDef="let element"> {{element.cashbackOpWise}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="cashbackTelenorNo">
+            <th mat-header-cell *matHeaderCellDef> Cash Back Credit Telenor Number </th>
+            <td mat-cell *matCellDef="let element"> {{element.cashbackTelenorNo}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="cashbackMptNo">
+            <th mat-header-cell *matHeaderCellDef> Cash Back Credit Mpt Number </th>
+            <td mat-cell *matCellDef="let element"> {{element.cashbackMptNo}} </td>
+          </ng-container>
+          <ng-container matColumnDef="cashbackOoredooNo">
+            <th mat-header-cell *matHeaderCellDef> Cash Back Credit Ooredoo Number </th>
+            <td mat-cell *matCellDef="let element"> {{element.cashbackOoredooNo}} </td>
+          </ng-container>
+          <ng-container matColumnDef="cashbackMytelNo">
+            <th mat-header-cell *matHeaderCellDef> Cash Back Credit Mytel Number </th>
+            <td mat-cell *matCellDef="let element"> {{element.cashbackMytelNo}} </td>
+          </ng-container>
+          <ng-container matColumnDef="cashbackMectelNo">
+            <th mat-header-cell *matHeaderCellDef> Cash Back Credit Mectel Number </th>
+            <td mat-cell *matCellDef="let element"> {{element.cashbackMectelNo}} </td>
+          </ng-container>
+          <ng-container matColumnDef="cashbackGiftCardsNo">
+            <th mat-header-cell *matHeaderCellDef> Cash Back Credit Gift Cards Number </th>
+            <td mat-cell *matCellDef="let element"> {{element.cashbackGiftCardsNo}} </td>
+          </ng-container>
+          <ng-container matColumnDef="cashbackDTHNo">
+            <th mat-header-cell *matHeaderCellDef> Cash Back Credit DTH Number</th>
+            <td mat-cell *matCellDef="let element"> {{element.cashbackDTHNo}} </td>
+          </ng-container>
+          <ng-container matColumnDef="cashbackElecNo">
+            <th mat-header-cell *matHeaderCellDef> Cash Back Credit Electricity Number </th>
+            <td mat-cell *matCellDef="let element"> {{element.cashbackElecNo}} </td>
+          </ng-container>
+          <ng-container matColumnDef="cashbackPostPaidNo">
+            <th mat-header-cell *matHeaderCellDef> Cash Back Credit Post Paid Number </th>
+            <td mat-cell *matCellDef="let element"> {{element.cashbackPostPaidNo}} </td>
+          </ng-container>
+          <ng-container matColumnDef="country">
+            <th mat-header-cell *matHeaderCellDef> Country </th>
+            <td mat-cell *matCellDef="let element"> {{element.country}} </td>
+          </ng-container>
+          <ng-container matColumnDef="cashbackOvSeasNo">
+            <th mat-header-cell *matHeaderCellDef> Cash Back Credit Over Seas Top Up Number </th>
+            <td mat-cell *matCellDef="let element"> {{element.cashbackOvSeasNo}} </td>
+          </ng-container>
+          <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef> Status </th>
+            <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+          </ng-container>
+  
+    
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    
+    
+      </div>
+    
+      <mat-toolbar>
+        <mat-paginator [pageSizeOptions]="[10,20, 25, 50, 100]" showFirstLastButtons
+          aria-label="Select page of periodic elements">
+        </mat-paginator>
+      </mat-toolbar>
+  </div>

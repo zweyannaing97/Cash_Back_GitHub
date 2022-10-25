@@ -168,6 +168,7 @@ table.individualListing_table {
     font-size: 14px;
     padding-right: 24px;
     white-space: nowrap;
+    text-align: center;
   }
   
   
@@ -187,7 +188,7 @@ table.individualListing_table {
   }
   
   .table-pagination{
-    height: calc(85vh - 120px);
+    height: calc(38vh - 120px);
     overflow: auto;
   }
   

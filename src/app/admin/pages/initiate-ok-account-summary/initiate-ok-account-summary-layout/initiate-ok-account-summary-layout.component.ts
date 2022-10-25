@@ -12,139 +12,368 @@ export class InitiateOkAccountSummaryLayoutComponent implements OnInit {
   header = [
     {
     title: 'Company Name',
-    key: 'name'
+    key: 'companyName'
     },
     {
-    title: 'Cash Back Credit OK$ Account',
-    key: 'account'
+    title: 'Division/State',
+    key: 'divisionState'
     },
     {
-    title: 'OK$ Account Type',
-    key: 'type'
+    title: 'District',
+    key: 'disctrict'
     },
     {
-    title: 'Operator Name',
-    key: 'operator'
+    title: 'Township',
+    key: 'township'
     },
     {
-      title: 'Company Name',
-      key: 'name'
-      },
-      {
-      title: 'Cash Back Credit OK$ Account',
-      key: 'account'
-      },
-      {
+      title: 'City Town',
+      key: 'cityTown'
+    },
+    {
+      title: 'Agent Code',
+      key: 'agentCode'
+    },
+    {
+      title: 'Branch',
+      key: 'branch'
+    },   
+    {
+      title: 'Address',
+      key: 'address'
+    },
+    {
+      title: 'Postal Code',
+      key: 'postalCode'
+    },
+    {
+      title: 'OK$ Account Number',
+      key: 'okAccNum'
+    },
+    {
       title: 'OK$ Account Type',
-      key: 'type'
-      },
-      {
-      title: 'Operator Name',
-      key: 'operator'
-      }
+      key: 'okAccType'
+    },
+    {
+      title: 'Total Paid Amount',
+      key: 'totalPaidAmt'
+    },
+    {
+      title: 'Total Generated Cash Back Amount',
+      key: 'totalGeneAmt'
+    },
+    {
+      title: 'Transaction Date & Time',
+      key: 'transactionDateTime'
+    },
+    
     ];
     data = [
     {
-    name: 'CGM',
-    account: '765745454',
-    type: 'Merchant',
-    operator: 'MPT'
+      companyName: 'CGM',
+      divisionState: 'Yangon',
+      disctrict: 'Eastern',
+      township: 'Botahtaung',
+      cityTown: 'Yangon',
+      agentCode: 'OK$ 000000001',
+      branch: 'Botahtaung Branch',
+      address: 'No(42), Botahtaung Tsp',
+      postalCode: '11121',
+      okAccNum: '+95 09420879313',
+      okAccType: 'Merchant',
+      totalPaidAmt: '3,000,000',
+      totalGeneAmt: '15,000',
+      transactionDateTime: 'Fri,08-Jun-2021 12:10:20',
     },
     {
-    name: 'OK $',
-    account: '7657454454454',
-    type: 'Personal',
-    operator: 'Telenor'
+      companyName: 'CGM',
+      divisionState: 'Yangon',
+      disctrict: 'Eastern',
+      township: 'Botahtaung',
+      cityTown: 'Yangon',
+      agentCode: 'OK$ 000000001',
+      branch: 'Botahtaung Branch',
+      address: 'No(42), Botahtaung Tsp',
+      postalCode: '11121',
+      okAccNum: '+95 09420879313',
+      okAccType: 'Merchant',
+      totalPaidAmt: '3,000,000',
+      totalGeneAmt: '15,000',
+      transactionDateTime: 'Fri,08-Jun-2021 12:10:20',
     },
+
     {
-    name: 'GAT',
-    account: '765745454656',
-    type: 'Advance Merchant',
-    operator: 'MPT'
+      companyName: 'CGM',
+      divisionState: 'Yangon',
+      disctrict: 'Eastern',
+      township: 'Botahtaung',
+      cityTown: 'Yangon',
+      agentCode: 'OK$ 000000001',
+      branch: 'Botahtaung Branch',
+      address: 'No(42), Botahtaung Tsp',
+      postalCode: '11121',
+      okAccNum: '+95 09420879313',
+      okAccType: 'Merchant',
+      totalPaidAmt: '3,000,000',
+      totalGeneAmt: '15,000',
+      transactionDateTime: 'Fri,08-Jun-2021 12:10:20',
     },
+
     {
-    name: 'One Stop Supermarket',
-    account: '765745435454',
-    type: 'Merchant',
-    operator: 'MPT'
+      companyName: 'CGM',
+      divisionState: 'Yangon',
+      disctrict: 'Eastern',
+      township: 'Botahtaung',
+      cityTown: 'Yangon',
+      agentCode: 'OK$ 000000001',
+      branch: 'Botahtaung Branch',
+      address: 'No(42), Botahtaung Tsp',
+      postalCode: '11121',
+      okAccNum: '+95 09420879313',
+      okAccType: 'Merchant',
+      totalPaidAmt: '3,000,000',
+      totalGeneAmt: '15,000',
+      transactionDateTime: 'Fri,08-Jun-2021 12:10:20',
     },
+
+
     {
-    name: 'OK $ Taxi',
-    account: '765435745454',
-    type: 'Merchant',
-    operator: 'Telenor'
+      companyName: 'CGM',
+      divisionState: 'Yangon',
+      disctrict: 'Eastern',
+      township: 'Botahtaung',
+      cityTown: 'Yangon',
+      agentCode: 'OK$ 000000001',
+      branch: 'Botahtaung Branch',
+      address: 'No(42), Botahtaung Tsp',
+      postalCode: '11121',
+      okAccNum: '+95 09420879313',
+      okAccType: 'Merchant',
+      totalPaidAmt: '3,000,000',
+      totalGeneAmt: '15,000',
+      transactionDateTime: 'Fri,08-Jun-2021 12:10:20',
     },
+
     {
-      name: 'CGM',
-      account: '765745454',
-      type: 'Merchant',
-      operator: 'MPT'
+      companyName: 'CGM',
+      divisionState: 'Yangon',
+      disctrict: 'Eastern',
+      township: 'Botahtaung',
+      cityTown: 'Yangon',
+      agentCode: 'OK$ 000000001',
+      branch: 'Botahtaung Branch',
+      address: 'No(42), Botahtaung Tsp',
+      postalCode: '11121',
+      okAccNum: '+95 09420879313',
+      okAccType: 'Merchant',
+      totalPaidAmt: '3,000,000',
+      totalGeneAmt: '15,000',
+      transactionDateTime: 'Fri,08-Jun-2021 12:10:20',
     },
+
+
     {
-    name: 'OK $',
-    account: '7657454454454',
-    type: 'Personal',
-    operator: 'Telenor'
+      companyName: 'CGM',
+      divisionState: 'Yangon',
+      disctrict: 'Eastern',
+      township: 'Botahtaung',
+      cityTown: 'Yangon',
+      agentCode: 'OK$ 000000001',
+      branch: 'Botahtaung Branch',
+      address: 'No(42), Botahtaung Tsp',
+      postalCode: '11121',
+      okAccNum: '+95 09420879313',
+      okAccType: 'Merchant',
+      totalPaidAmt: '3,000,000',
+      totalGeneAmt: '15,000',
+      transactionDateTime: 'Fri,08-Jun-2021 12:10:20',
     },
+
     {
-    name: 'GAT',
-    account: '765745454656',
-    type: 'Advance Merchant',
-    operator: 'MPT'
+      companyName: 'CGM',
+      divisionState: 'Yangon',
+      disctrict: 'Eastern',
+      township: 'Botahtaung',
+      cityTown: 'Yangon',
+      agentCode: 'OK$ 000000001',
+      branch: 'Botahtaung Branch',
+      address: 'No(42), Botahtaung Tsp',
+      postalCode: '11121',
+      okAccNum: '+95 09420879313',
+      okAccType: 'Merchant',
+      totalPaidAmt: '3,000,000',
+      totalGeneAmt: '15,000',
+      transactionDateTime: 'Fri,08-Jun-2021 12:10:20',
     },
+
     {
-    name: 'One Stop Supermarket',
-    account: '765745435454',
-    type: 'Merchant',
-    operator: 'MPT'
+      companyName: 'CGM',
+      divisionState: 'Yangon',
+      disctrict: 'Eastern',
+      township: 'Botahtaung',
+      cityTown: 'Yangon',
+      agentCode: 'OK$ 000000001',
+      branch: 'Botahtaung Branch',
+      address: 'No(42), Botahtaung Tsp',
+      postalCode: '11121',
+      okAccNum: '+95 09420879313',
+      okAccType: 'Merchant',
+      totalPaidAmt: '3,000,000',
+      totalGeneAmt: '15,000',
+      transactionDateTime: 'Fri,08-Jun-2021 12:10:20',
     },
+
     {
-    name: 'OK $ Taxi',
-    account: '765435745454',
-    type: 'Merchant',
-    operator: 'Telenor'
+      companyName: 'CGM',
+      divisionState: 'Yangon',
+      disctrict: 'Eastern',
+      township: 'Botahtaung',
+      cityTown: 'Yangon',
+      agentCode: 'OK$ 000000001',
+      branch: 'Botahtaung Branch',
+      address: 'No(42), Botahtaung Tsp',
+      postalCode: '11121',
+      okAccNum: '+95 09420879313',
+      okAccType: 'Merchant',
+      totalPaidAmt: '3,000,000',
+      totalGeneAmt: '15,000',
+      transactionDateTime: 'Fri,08-Jun-2021 12:10:20',
     },
+
     {
-      name: 'GAT',
-      account: '765745454656',
-      type: 'Advance Merchant',
-      operator: 'MPT'
+      companyName: 'CGM',
+      divisionState: 'Yangon',
+      disctrict: 'Eastern',
+      township: 'Botahtaung',
+      cityTown: 'Yangon',
+      agentCode: 'OK$ 000000001',
+      branch: 'Botahtaung Branch',
+      address: 'No(42), Botahtaung Tsp',
+      postalCode: '11121',
+      okAccNum: '+95 09420879313',
+      okAccType: 'Merchant',
+      totalPaidAmt: '3,000,000',
+      totalGeneAmt: '15,000',
+      transactionDateTime: 'Fri,08-Jun-2021 12:10:20',
     },
+
     {
-    name: 'One Stop Supermarket',
-    account: '765745435454',
-    type: 'Merchant',
-    operator: 'MPT'
+      companyName: 'CGM',
+      divisionState: 'Yangon',
+      disctrict: 'Eastern',
+      township: 'Botahtaung',
+      cityTown: 'Yangon',
+      agentCode: 'OK$ 000000001',
+      branch: 'Botahtaung Branch',
+      address: 'No(42), Botahtaung Tsp',
+      postalCode: '11121',
+      okAccNum: '+95 09420879313',
+      okAccType: 'Merchant',
+      totalPaidAmt: '3,000,000',
+      totalGeneAmt: '15,000',
+      transactionDateTime: 'Fri,08-Jun-2021 12:10:20',
     },
+
     {
-    name: 'OK $ Taxi',
-    account: '765435745454',
-    type: 'Merchant',
-    operator: 'Telenor'
+      companyName: 'CGM',
+      divisionState: 'Yangon',
+      disctrict: 'Eastern',
+      township: 'Botahtaung',
+      cityTown: 'Yangon',
+      agentCode: 'OK$ 000000001',
+      branch: 'Botahtaung Branch',
+      address: 'No(42), Botahtaung Tsp',
+      postalCode: '11121',
+      okAccNum: '+95 09420879313',
+      okAccType: 'Merchant',
+      totalPaidAmt: '3,000,000',
+      totalGeneAmt: '15,000',
+      transactionDateTime: 'Fri,08-Jun-2021 12:10:20',
     },
+
     {
-      name: 'OK $',
-      account: '7657454454454',
-      type: 'Personal',
-      operator: 'Telenor'
+      companyName: 'CGM',
+      divisionState: 'Yangon',
+      disctrict: 'Eastern',
+      township: 'Botahtaung',
+      cityTown: 'Yangon',
+      agentCode: 'OK$ 000000001',
+      branch: 'Botahtaung Branch',
+      address: 'No(42), Botahtaung Tsp',
+      postalCode: '11121',
+      okAccNum: '+95 09420879313',
+      okAccType: 'Merchant',
+      totalPaidAmt: '3,000,000',
+      totalGeneAmt: '15,000',
+      transactionDateTime: 'Fri,08-Jun-2021 12:10:20',
     },
+
     {
-    name: 'GAT',
-    account: '765745454656',
-    type: 'Advance Merchant',
-    operator: 'MPT'
+      companyName: 'CGM',
+      divisionState: 'Yangon',
+      disctrict: 'Eastern',
+      township: 'Botahtaung',
+      cityTown: 'Yangon',
+      agentCode: 'OK$ 000000001',
+      branch: 'Botahtaung Branch',
+      address: 'No(42), Botahtaung Tsp',
+      postalCode: '11121',
+      okAccNum: '+95 09420879313',
+      okAccType: 'Merchant',
+      totalPaidAmt: '3,000,000',
+      totalGeneAmt: '15,000',
+      transactionDateTime: 'Fri,08-Jun-2021 12:10:20',
     },
+
     {
-    name: 'One Stop Supermarket',
-    account: '765745435454',
-    type: 'Merchant',
-    operator: 'MPT'
+      companyName: 'CGM',
+      divisionState: 'Yangon',
+      disctrict: 'Eastern',
+      township: 'Botahtaung',
+      cityTown: 'Yangon',
+      agentCode: 'OK$ 000000001',
+      branch: 'Botahtaung Branch',
+      address: 'No(42), Botahtaung Tsp',
+      postalCode: '11121',
+      okAccNum: '+95 09420879313',
+      okAccType: 'Merchant',
+      totalPaidAmt: '3,000,000',
+      totalGeneAmt: '15,000',
+      transactionDateTime: 'Fri,08-Jun-2021 12:10:20',
     },
+
     {
-    name: 'OK $ Taxi',
-    account: '765435745454',
-    type: 'Merchant',
-    operator: 'Telenor'
+      companyName: 'CGM',
+      divisionState: 'Yangon',
+      disctrict: 'Eastern',
+      township: 'Botahtaung',
+      cityTown: 'Yangon',
+      agentCode: 'OK$ 000000001',
+      branch: 'Botahtaung Branch',
+      address: 'No(42), Botahtaung Tsp',
+      postalCode: '11121',
+      okAccNum: '+95 09420879313',
+      okAccType: 'Merchant',
+      totalPaidAmt: '3,000,000',
+      totalGeneAmt: '15,000',
+      transactionDateTime: 'Fri,08-Jun-2021 12:10:20',
+    },
+
+    {
+      companyName: 'CGM',
+      divisionState: 'Yangon',
+      disctrict: 'Eastern',
+      township: 'Botahtaung',
+      cityTown: 'Yangon',
+      agentCode: 'OK$ 000000001',
+      branch: 'Botahtaung Branch',
+      address: 'No(42), Botahtaung Tsp',
+      postalCode: '11121',
+      okAccNum: '+95 09420879313',
+      okAccType: 'Merchant',
+      totalPaidAmt: '3,000,000',
+      totalGeneAmt: '15,000',
+      transactionDateTime: 'Fri,08-Jun-2021 12:10:20',
     },
     ]
     actions = [

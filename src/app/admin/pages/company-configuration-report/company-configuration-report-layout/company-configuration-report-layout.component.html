@@ -14,12 +14,56 @@
         <a download="UploadExcelFormat.xlsx" target="_blank" href="assets/UploadExcelFormat.xlsx" ><img src="assets/images/excel-download.svg" alt=""></a>
       </div>
     </div>
-    <div>
-        <app-data-table
-        [data]="data"
-        [header]="header"
-        [totalDataCount]="25"
-        (fetchDataEvent)="fetchDataEvent($event)">
-        </app-data-table>
-    </div>
+      <!-- table -->
+      <div class="table-pagination">
+        <table mat-table [dataSource]="dataSource">
+
+          <ng-container matColumnDef="companyName">
+            <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Company Name </th>
+            <td mat-cell *matCellDef="let element" class="tableSpacing"> {{element.companyName}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="cashbackOkAcc">
+            <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Cash Back Credit OK$ Account </th>
+            <td mat-cell *matCellDef="let element" class="tableSpacing"> {{element.cashbackOkAcc}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="okAccType">
+            <th mat-header-cell *matHeaderCellDef class="tableSpacing"> OK$ Account Type </th>
+            <td mat-cell *matCellDef="let element" class="tableSpacing"> {{element.okAccType}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="opName">
+            <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Opeartor Name </th>
+            <td mat-cell *matCellDef="let element" class="tableSpacing"> {{element.opName}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="isActive">
+            <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Is Active </th>
+            <td mat-cell *matCellDef="let element" class="tableSpacing"> {{element.isActive}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="createdDateTime">
+            <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Created Date & Time </th>
+            <td mat-cell *matCellDef="let element" class="tableSpacing"> {{element.createdDateTime}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="updateDateTime">
+            <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Update Date & Time </th>
+            <td mat-cell *matCellDef="let element" class="tableSpacing"> {{element.updateDateTime}} </td>
+          </ng-container>
+
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+
+      </div>
+
+      <mat-toolbar>
+        <mat-paginator [pageSizeOptions]="[10,20, 25, 50, 100]" showFirstLastButtons
+          aria-label="Select page of periodic elements"  >
+      </mat-paginator>
+  </mat-toolbar>
 </div>

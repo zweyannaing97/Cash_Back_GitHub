@@ -3,6 +3,11 @@
 .mat-dialog-container {
     padding: 0 !important;
 }
+.smallCalendar{
+    position: absolute;
+    top: 53px;
+    right: 25px;
+  }
 .title_outer{
     background-color: $primary-color;
     color: white;
@@ -76,4 +81,18 @@ label{
 ::-webkit-input-placeholder{
     color: rgba(80, 75, 75, 0.87);
     font-size: 14px;
+}
+
+// select search filter
+.filter_select_header .check_uncheck_btn {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.v-line
+{
+  border-left: solid 2px #000;
+  height: 50%;
+  border-radius: unset;
+  margin: auto;
 }

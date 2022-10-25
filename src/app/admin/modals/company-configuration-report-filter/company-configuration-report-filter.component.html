@@ -8,16 +8,19 @@
     <div class="content_outer">
         <div class="row">
             <div class="col-md-6">
+                <div>
+                    <label for="">Select Period Date</label>
+                </div>
                 <div >
                   <input readonly type="text" placeholder="From Date - To Date" class="form-control datepicker" bsDaterangepicker
                          [bsConfig]="{ isAnimated: true, rangeInputFormat : 'ddd,DD-MMM-YYYY', dateInputFormat: 'ddd,DD-MMM-YYYY',showPreviousMonth: true ,showWeekNumbers: false}"
                          [maxDate]="maxDate">
-                  <mat-icon class="smallCalendar" style="margin-top:-45px;margin-right:56px;">date_range</mat-icon>
+                  <mat-icon class="smallCalendar" >date_range</mat-icon>
                 </div>
             </div>
 
         </div>
-        <div class="row mt-4">
+        <div class="row mt-4 mb-3">
             <mat-radio-group aria-label="Select an option">
               </mat-radio-group>
             <div class="col-md-4">
@@ -31,42 +34,81 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div>
-                    <label for="">Company Name</label>
+                    <label for="">Select Company Name</label>
                 </div>
                 <div>
-                    <mat-select class="selectt" multiple placeholder="Select">
-                        <mat-option value=1>All</mat-option>
-                        <mat-option value=2>CGM</mat-option>
-                        <mat-option value=3>OK$</mat-option>
-                        <mat-option value=4>GAT</mat-option>
-                        <mat-option value=5>One Stop Supermarket</mat-option>
+                    <mat-select class="selectt" multiple panelClass="normalSelect" disableOptionCentering placeholder="Select">
+                        <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+                            <button fxLayout="row" mat-button class="check_uncheck_btn" >
+                                <mat-icon class="secondary-text s-5">
+                                check</mat-icon>Check All
+                            </button>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn v-line" >
+                                <mat-icon class="secondary-text s-5">
+                                clear</mat-icon>Uncheck All
+                            </button>
+                        </div>
+                        <mat-option value=1>CGM</mat-option>
+                        <mat-option value=2>OK$</mat-option>
+                        <mat-option value=3>GAT</mat-option>
+                        <mat-option value=4>One Stop Supermarket</mat-option>
+                    </mat-select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div>
+                    <label for="">Select OK$ Account Type</label>
+                </div>
+                <div>
+                <mat-select class="selectt" multiple placeholder="Select">
+                    <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+                        <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                            <mat-label class="label">Filter:</mat-label>
+                            <mat-form-field class="select_search_box" appearance="standard">
+                            <input matInput placeholder="Enter Keywords">
+                            </mat-form-field>
+                        </div>
+                        <button fxLayout="row" mat-button class="check_uncheck_btn" >
+                            <mat-icon class="secondary-text s-5">
+                            check</mat-icon>Check All
+                        </button>
+                        <button fxLayout="row" mat-button class="check_uncheck_btn v-line" >
+                            <mat-icon class="secondary-text s-5">
+                            clear</mat-icon>Uncheck All
+                        </button>
+                    </div>
+                    <mat-option value=1>Personal</mat-option>
+                    <mat-option value=2>Merchant</mat-option>
+                    <mat-option value=3>Advance Merchant</mat-option>
                     </mat-select>
                 </div>
             </div>
         </div>
         <div class="row mt-3">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div>
-                    <label for="">OK$ Account Type</label>
+                    <label for="">Select Cash Back Credit OK$ Account</label>
                 </div>
                 <div>
                 <mat-select class="selectt" multiple placeholder="Select">
-                    <mat-option value=1>All</mat-option>
-                    <mat-option value=2>Personal</mat-option>
-                    <mat-option value=3>Merchant</mat-option>
-                    <mat-option value=4>Advance Merchant</mat-option>
-                    </mat-select>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div>
-                    <label for="">Cash Back Credit OK$ Account</label>
-                </div>
-                <div>
-                <mat-select class="selectt" multiple placeholder="Select">
-                    <mat-option value=1>All</mat-option>
+                    <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+                        <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                            <mat-label class="label">Filter:</mat-label>
+                            <mat-form-field class="select_search_box" appearance="standard">
+                            <input matInput placeholder="Enter Keywords">
+                            </mat-form-field>
+                        </div>
+                        <button fxLayout="row" mat-button class="check_uncheck_btn" >
+                            <mat-icon class="secondary-text s-5">
+                            check</mat-icon>Check All
+                        </button>
+                        <button fxLayout="row" mat-button class="check_uncheck_btn v-line" >
+                            <mat-icon class="secondary-text s-5">
+                            clear</mat-icon>Uncheck All
+                        </button>
+                    </div>
                     <mat-option value=2>+95 65435788</mat-option>
                     <mat-option value=3>+95 65435788</mat-option>
                     <mat-option value=4>+95 65435788</mat-option>
@@ -75,16 +117,23 @@
                 </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div>
-                    <label for="">Operator Name</label>
+                    <label for="">Select Operator Name</label>
                 </div>
                 <div>
                 <mat-select class="selectt" multiple placeholder="Select">
-                    <mat-option value=1>All</mat-option>
-                    <mat-option value=2>MPT</mat-option>
-                    <mat-option value=3>Telenor</mat-option>
-                    <mat-option value=4>Ooredoo</mat-option>
+                    <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+                        <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                            <mat-label class="label">Filter:</mat-label>
+                            <mat-form-field class="select_search_box" appearance="standard">
+                            <input matInput placeholder="Enter Keywords">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <mat-option value=1>MPT</mat-option>
+                    <mat-option value=2>Telenor</mat-option>
+                    <mat-option value=3>Ooredoo</mat-option>
                     </mat-select>
                 </div>
             </div>

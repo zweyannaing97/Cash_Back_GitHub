@@ -3,6 +3,12 @@
 .mat-dialog-container {
     padding: 0 !important;
 }
+.smallCalendar{
+    position: absolute;
+    top: 96px;
+    right: -25px;
+  }
+  
 .title_outer{
     background-color: $primary-color;
     color: white;

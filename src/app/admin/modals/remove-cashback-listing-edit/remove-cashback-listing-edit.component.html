@@ -1,37 +1,28 @@
-<div class="outer_div">
-    <h3>Temporary Suspense Date</h3>
-    <div class="row">
-        <div class="col-md-6 p-4">
-            <div>
-                <label for="">Suspense Start Date</label>
-            </div>
-            <div>
-                <mat-select class=" selectt" value=0>
-                    <mat-option value=0 hidden >Select</mat-option>
-                    <mat-option value=1 >Select</mat-option>
-                    <mat-option value=2 >Select</mat-option>
-                    <mat-option value=3 >Select</mat-option>
-
-                </mat-select>
-            </div>
-        </div>
-        <div class="col-md-6 p-4">
-            <div>
-                <label for="">Suspense End Date</label>
-            </div>
-            <div>
-                <mat-select class=" selectt" value=0>
-                    <mat-option value=0 hidden >Select</mat-option>
-                    <mat-option value=1 >Select</mat-option>
-                    <mat-option value=2 >Select</mat-option>
-                    <mat-option value=3 >Select</mat-option>
-                </mat-select>
-            </div>
-        </div>
+<div >
+    <div class="title_outer">
+        <h3>Temporary Suspense Date
+            <i class="fa fa-close close" aria-hidden="true" (click)="onDismiss()"></i>
+            <img src="assets.images/close_white.png" alt="">
+        </h3>
     </div>
-
-    <div class="button_group">
+      <div class="content_outer" style="height: calc( 30vh - 10px )">
+        <div>
+          <label for="">Select Suspense Period Date</label>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-12 col-md-6 ">
+            <div>
+  
+              <input readonly type="text" placeholder="From Date - To Date" class="form-control datepicker" bsDaterangepicker
+                     [bsConfig]="{ isAnimated: true, rangeInputFormat : 'ddd,DD-MMM-YYYY', dateInputFormat: 'ddd,DD-MMM-YYYY',showPreviousMonth: true ,showWeekNumbers: false}"
+                     [maxDate]="maxDate">
+              <mat-icon class="smallCalendar" style="margin-top:-45px;margin-right:56px;">date_range</mat-icon>
+            </div>
+          </div>
+        </div>    
+      </div>
+      <div class="button_group mx-0 my-2 row d-flex justify-content-center ">
         <button (click)="onDismiss()">Cancel</button>
         <button>Save</button>
-    </div>
-</div>
+      </div>
+  </div>

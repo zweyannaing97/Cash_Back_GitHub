@@ -19,6 +19,7 @@ import { ServiceCategoryOverSeasTopUpComponent } from './components/service-cate
 import { MatRippleModule } from '@angular/material/core';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { IndividualCashBackConfigurationListingComponent } from './individual-cash-back-configuration-listing/individual-cash-back-configuration-listing.component';
 @NgModule({
   declarations: [
     IndividualCashBackConfigurationLayoutComponent,
@@ -28,7 +29,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     ServiceCategoryDTHComponent,
     ServiceCategoryElectricityComponent,
     ServiceCategoryPostPaidComponent,
-    ServiceCategoryOverSeasTopUpComponent
+    ServiceCategoryOverSeasTopUpComponent,
+    IndividualCashBackConfigurationListingComponent,
   ],
   imports: [
     CommonModule,

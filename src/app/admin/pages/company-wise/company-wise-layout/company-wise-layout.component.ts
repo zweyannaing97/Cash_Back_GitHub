@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { CompanyWiseDetailReportFilterComponent } from 'src/app/admin/modals/company-wise-detail-report-filter/company-wise-detail-report-filter.component';
+
 
 @Component({
   selector: 'app-company-wise-layout',
@@ -13,150 +15,112 @@ export class CompanyWiseLayoutComponent implements OnInit {
   header = [
     {
       title: 'Company Name',
-      key: 'name'
+      key: 'companyName'
     },
     {
-      title: 'Cash Back Credit OK$ Account',
-      key: 'account'
+      title: 'Division/State',
+      key: 'divisionState'
     },
     {
-      title: 'OK$ Account Type',
-      key: 'type'
+      title: 'District',
+      key: 'district'
+    },
+
+    {
+      title: 'Township',
+      key: 'township'
+    },
+
+    {
+      title: 'City/Town',
+      key: 'cityTown'
+    },
+
+    {
+      title: 'Agent Code',
+      key: 'agentCode'
+    },
+
+    {
+      title: 'Branch',
+      key: 'branch'
+    },
+
+    {
+      title: 'Reference Number',
+      key: 'refNum'
+    },
+
+    {
+      title: 'OK$ Account Number ',
+      key: 'okAccNum'
     },
     {
-      title: 'Operator Name',
-      key: 'operator'
+      title: 'OK$ Account Type ',
+      key: 'okAccType'
     },
     {
-      title: 'Company Name',
-      key: 'name'
+      title: 'Address',
+      key: 'address'
     },
     {
-      title: 'Cash Back Credit OK$ Account',
-      key: 'account'
+      title: 'Postal Code',
+      key: 'postalCode'
     },
     {
-      title: 'OK$ Account Type',
-      key: 'type'
+      title: 'Total Paid Amount ',
+      key: 'totalPaidAmt'
     },
     {
-      title: 'Operator Name',
-      key: 'operator'
-    }
+      title: 'Total Generated Cash Back Amount ',
+      key: 'totalGeneAmt'
+    },
+    {
+      title: 'Transaction Date & Time ',
+      key: 'transDateTime'
+    },
+    {
+      title: 'Latitude ',
+      key: 'latitude'
+    },
+    {
+      title: 'Longitude ',
+      key: 'longitude'
+    },
+    {
+      title: 'Status ',
+      key: 'status'
+    },
+   
   ];
   data = [
   {
-    name: 'CGM',
-    account: '765745454',
-    type: 'Merchant',
-    operator: 'MPT'
+    companyName: 'CGM',
+    divisionState: 'Yangon',
+    district: 'Eastern',
+    township: 'Botahtaung',
+    cityTown: 'Yangon',
+    agentCode: 'OK$ 0000001',
+    branch: 'Botahtaung Branch',
+    refNum: '0000215835',
+    okAccNum: '+95 0942018321',
+    okAccType: 'Merchant',
+    address: 'No (42), Botahtaung Tsp',
+    postalCode: '11121',
+    totalPaidAmt: '3,000,000',
+    totalGeneAmt: '15,000',
+    transDateTime: 'Fri,08-Jun-2021 12:10:20',
+    latitude: '16.8991',
+    longitude: '96.1992',
+    status: 'Complete',
   },
-  {
-    name: 'OK $',
-    account: '7657454454454',
-    type: 'Personal',
-    operator: 'Telenor'
-  },
-  {
-    name: 'GAT',
-    account: '765745454656',
-    type: 'Advance Merchant',
-    operator: 'MPT'
-  },
-  {
-    name: 'One Stop Supermarket',
-    account: '765745435454',
-    type: 'Merchant',
-    operator: 'MPT'
-  },
-  {
-    name: 'OK $ Taxi',
-    account: '765435745454',
-    type: 'Merchant',
-    operator: 'Telenor'
-  },
-  {
-      name: 'CGM',
-      account: '765745454',
-      type: 'Merchant',
-      operator: 'MPT'
-  },
-  {
-    name: 'OK $',
-    account: '7657454454454',
-    type: 'Personal',
-    operator: 'Telenor'
-  },
-  {
-    name: 'GAT',
-    account: '765745454656',
-    type: 'Advance Merchant',
-    operator: 'MPT'
-  },
-  {
-    name: 'One Stop Supermarket',
-    account: '765745435454',
-    type: 'Merchant',
-    operator: 'MPT'
-  },
-  {
-    name: 'OK $ Taxi',
-    account: '765435745454',
-    type: 'Merchant',
-    operator: 'Telenor'
-  },
-  {
-      name: 'GAT',
-      account: '765745454656',
-      type: 'Advance Merchant',
-      operator: 'MPT'
-  },
-  {
-    name: 'One Stop Supermarket',
-    account: '765745435454',
-    type: 'Merchant',
-    operator: 'MPT'
-  },
-  {
-    name: 'OK $ Taxi',
-    account: '765435745454',
-    type: 'Merchant',
-    operator: 'Telenor'
-  },
-  {
-      name: 'OK $',
-      account: '7657454454454',
-      type: 'Personal',
-      operator: 'Telenor'
-  },
-  {
-    name: 'GAT',
-    account: '765745454656',
-    type: 'Advance Merchant',
-    operator: 'MPT'
-  },
-  {
-    name: 'One Stop Supermarket',
-    account: '765745435454',
-    type: 'Merchant',
-    operator: 'MPT'
-  },
-  {
-    name: 'OK $ Taxi',
-    account: '765435745454',
-    type: 'Merchant',
-    operator: 'Telenor'
-  },
+  
   ]
   actions = [
     {
-      type: 'delete',
-      icon: 'assets/images/delete.png'
-      },
-    {
-      type: 'edit',
-      icon: 'assets/images/edit.png'
-    }
+      type: 'view',
+      icon: 'assets/images/view_table.png'
+    },
   ];
 
   file_header = [
@@ -381,7 +345,7 @@ export class CompanyWiseLayoutComponent implements OnInit {
   ];
 
   showFileTable: boolean = false;
-  constructor( public dialog: MatDialog ) { }
+  constructor( public dialog: MatDialog,private router: Router ) { }
 
   ngOnInit(): void {
   }
@@ -404,13 +368,7 @@ export class CompanyWiseLayoutComponent implements OnInit {
 
   actionEvent(event: any){
     if (event.type == "view") {
-      let selected_table_row = this.data.filter(function(value) {
-          return value.name == event.row.name;
-        });
-        this.data = selected_table_row;
-        this.actions = this.actions;
-
-        this.showFileTable = true;
+      this.router.navigate(['./admin/companyWiseCashBackDetailReport/view-company-wise-report-detail'])
     }
   }
 }

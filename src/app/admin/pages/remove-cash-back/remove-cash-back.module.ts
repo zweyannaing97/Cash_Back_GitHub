@@ -5,6 +5,9 @@ import { RemoveCashBackRoutingModule } from './remove-cash-back-routing.module';
 import { RemoveCashBackComponent } from './remove-cash-back/remove-cash-back.component';
 import { CustomDataTableModule } from '../../components/custom-data-table/custom-data-table.module';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { MatPaginatorModule} from '@angular/material/paginator';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTableModule } from '@angular/material/table';
 
 
 @NgModule({
@@ -15,7 +18,10 @@ import {MatTooltipModule} from '@angular/material/tooltip';
         CommonModule,
         RemoveCashBackRoutingModule,
         CustomDataTableModule,
-        MatTooltipModule
+        MatTooltipModule,
+        MatPaginatorModule,
+        MatToolbarModule,
+        MatTableModule,
     ]
 })
 export class RemoveCashBackModule { }
