@@ -432,8 +432,8 @@ input#file
 }
 .smallCalendar{
   position: absolute;
-  right: -24px;
-  top: 50px;
+  right: -31px;
+  top: 58px;
 }
 .btnFooter {
   position: sticky;
@@ -532,7 +532,6 @@ input#file
 .slide-chart .dashCard p h6{
 font-size: 12px !important;
 }
-
 #CashbackTotalAmount .apexcharts-tooltip span {
   padding: 5px 10px;
   display: block;
@@ -591,7 +590,7 @@ font-size: 12px !important;
 .normalSelect{
   margin-top: 40px;
   margin-left: 25px;
-  min-width: calc(100% + 32px) !important;
+  min-width: calc(100% + 50px) !important;
 }
 .singleSelect{
   margin-top: 40px;
@@ -630,31 +629,40 @@ font-size: 12px !important;
 .select_search_box {
   width: 133px;
 }
-.v-line{
-border-left: solid 2px #000;
-height: 50%;
-border-radius: unset;
-margin: 10px;
+.v-line
+{
+  border-left: solid 2px #000;
+  height: 50%;
+  border-radius: unset;
+  margin: 10px;
 }
-.single2Select{
-  margin-top: 56px;
-  min-width: calc(100% + 4px) !important;
-  margin-left: 15px;
+.filter_select_header{
+  position: sticky;
+  top: 0;
+  z-index: 9999;
 }
-.single3Select{
-  margin-top: 56px;
-  min-width: calc(100% + 4px) !important;
-  margin-left: 41px;
+.mat-dialog-container{
+  padding: 0;
 }
-.filterSelect{
-  margin-top: 52px;
-  margin-left: 35px;
-  min-width: calc(100% + 14px) !important;
-}
-.filterSelect2{
-  margin-top: 43px;
-    margin-left: 23px;
-    min-width: calc(100% + 46px) !important;
-}
+// .single2Select{
+//   margin-top: 56px;
+//   min-width: calc(100% + 4px) !important;
+//   margin-left: 15px;
+// }
+// .single3Select{
+//   margin-top: 56px;
+//   min-width: calc(100% + 4px) !important;
+//   margin-left: 41px;
+// }
+// .filterSelect{
+//   margin-top: 52px;
+//   margin-left: 35px;
+//   min-width: calc(100% + 14px) !important;
+// }
+// .filterSelect2{
+//   margin-top: 43px;
+//     margin-left: 23px;
+//     min-width: calc(100% + 46px) !important;
+// }
 
 

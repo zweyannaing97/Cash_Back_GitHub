@@ -2757,7 +2757,7 @@ overseasTopupClick(){
 
   toptenCashbackFilter(){
     const dialogRef = this.dialog.open(ToptenCashbackDashboardFilterComponent, {
-      width: '950px',
+      width: '850px',
       data: {}
       });
 
@@ -2768,7 +2768,7 @@ overseasTopupClick(){
 
   cashbackAmtPerFilter(){
     const dialogRef = this.dialog.open(CashbackAmountPercentageDashboardFilterComponent, {
-      width: '950px',
+      width: '850px',
       data: {}
       });
 
@@ -2779,7 +2779,7 @@ overseasTopupClick(){
 
   serviceCategoryFilter(){
     const dialogRef = this.dialog.open(ServiceCategoryDashboardFilterComponent, {
-      width: '950px',
+      width: '850px',
       data: {}
       });
 
@@ -2790,7 +2790,7 @@ overseasTopupClick(){
 
   cashbackStateDivisionFilter(){
     const dialogRef = this.dialog.open(CashbackStateDivisonDashboardFilterComponent, {
-      width: '950px',
+      width: '850px',
       data: {}
       });
 

@@ -1,13 +1,12 @@
-@import "../../../../styles.scss";
 @import "../../../../variable.scss";
-.mat-dialog-container {
-    padding: 0 !important;
+@import "../../../../styles.scss";
+
+.mat-dialog-container
+{
+  width:950px !important;
+  background-color: #f6f6f6 !important;
 }
-.smallCalendar{
-    position: absolute;
-    top: 53px;
-    right: 25px;
-  }
+
 .title_outer{
     background-color: $primary-color;
     color: white;
@@ -22,10 +21,7 @@
         }
     }
 }
-::ng-deep .mat-dialog-container{
-    padding: 0;
-    // height: 80vh;
-}
+
 .selectt{
     height: 50px;
     outline: none;
@@ -33,42 +29,17 @@
     margin-bottom: 10px;
     width: 100%;
     padding: 15px 15px;
-    box-shadow: rgba(99, 99, 99, 0.2) 3px 3px 3px 0px;
-    background-color: white;
-}
-.mat-radio-label-content{
-    color: black !important;
+    box-shadow: $secondary-color 3px 3px 3px 0px;
+    background-color: white  !important;
 }
 .content_outer{
     padding: 30px;
+    height:calc(61vh - 120px);
+    overflow: auto;
 }
 label{
     margin-top: 15px;
     font-weight: 500;
-}
-
-.button_group{
-    text-align: center;
-    margin-top: 35px;
-    button:first-child{
-        color: white;
-        background: red;
-        font-weight: 500;
-        padding: 5px 20px;
-        border-radius: 20px;
-        width: 120px;
-        margin-right: 40px;
-        height: 40px;
-    }
-    button:last-child{
-        color: white;
-        background: rgb(50, 50, 226);
-        font-weight: 500;
-        padding: 5px 20px;
-        border-radius: 20px;
-        width: 120px;
-        height: 40px;
-    }
 }
 ::placeholder{
     color: rgba(80, 75, 75, 0.87);
@@ -83,16 +54,37 @@ label{
     font-size: 14px;
 }
 
-// select search filter
-.filter_select_header .check_uncheck_btn {
-    margin-top: 0;
-    margin-bottom: 0;
+
+.datePicker
+{
+    height: 50px;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 15px 15px;
+    box-shadow: #d6c7ec 3px 3px 3px 0px;
+    background-color: white;
+}
+.datePicker mat-icon
+{
+  vertical-align: top !important;
 }
 
-.v-line
+.mat-datepicker-content
 {
-  border-left: solid 2px #000;
-  height: 50%;
-  border-radius: unset;
-  margin: auto;
+  margin-top: 17px;
+  position: relative;
+  left: calc(15% - 100px);
 }
+.table_filter button img
+{
+  width: 35px !important;
+}
+.mat-dialog-container
+{
+  padding: 0;
+}
+.smallCalendar {
+    top: 102px;
+  }

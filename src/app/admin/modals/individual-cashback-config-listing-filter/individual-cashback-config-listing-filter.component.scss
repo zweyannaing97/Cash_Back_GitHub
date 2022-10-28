@@ -1,5 +1,11 @@
-@import "../../../../styles.scss";
 @import "../../../../variable.scss";
+@import "../../../../styles.scss";
+
+.mat-dialog-container
+{
+  width:950px !important;
+  background-color: #f6f6f6 !important;
+}
 
 .title_outer{
     background-color: $primary-color;
@@ -15,11 +21,8 @@
         }
     }
 }
-::ng-deep .mat-dialog-container{
-    padding: 0;
-    max-height: 90vh;
-}
-::ng-deep .selectt .mat-select-trigger{
+
+.selectt{
     height: 50px;
     outline: none;
     border-radius: 5px;
@@ -30,7 +33,9 @@
     background-color: white;
 }
 .content_outer{
-    padding: 15px 40px;
+    padding: 30px;
+    height:calc(61vh - 120px);
+    overflow: auto;
 }
 label{
     margin-top: 15px;
@@ -49,44 +54,37 @@ label{
     font-size: 14px;
 }
 
-::ng-deep .multiselect-dropdown {
-    background: white;
-    height: 48px;
-    box-shadow: #d6c7ec 3px 3px 3px 0px;
-    padding: 7px 0px;
+
+.datePicker
+{
+    height: 50px;
+    outline: none;
     border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 15px 15px;
+    box-shadow: #d6c7ec 3px 3px 3px 0px;
+    background-color: white;
+}
+.datePicker mat-icon
+{
+  vertical-align: top !important;
 }
 
-::ng-deep .multiselect-dropdown .dropdown-btn .dropdown-multiselect__caret:before {
-    border-width: 5px 5px 0;
-    color: #565252;
-    border-color: #897878 transparent;
+.mat-datepicker-content
+{
+  margin-top: 17px;
+  position: relative;
+  left: calc(15% - 100px);
 }
-::ng-deep .multiselect-dropdown .dropdown-btn {
-    border: none !important;
+.table_filter button img
+{
+  width: 35px !important;
 }
-
-::ng-deep .multiselect-item-checkbox input[type=checkbox] + div:before {
-    border: 2px solid $primary-color !important;
+.mat-dialog-container
+{
+  padding: 0;
 }
-::ng-deep .multiselect-item-checkbox input[type=checkbox]:checked + div:before {
-    background: $primary-color !important;
-}
-::ng-deep .multiselect-dropdown .dropdown-btn .selected-item {
-    background: $primary-color !important;
-}
-::ng-deep .multiselect-dropdown .dropdown-btn .dropdown-multiselect__caret:before {
-    color: #484141 !important;
-    top: 80% !important;
-    border-color: #7a6464 transparent !important;
-    border-width: 5px 5px 0 !important;
-}
-::ng-deep .multiselect-dropdown .dropdown-btn .dropdown-multiselect--active .dropdown-multiselect__caret {
-  transform: rotateZ(0deg) !important;
-}
-
 .smallCalendar {
-    position: absolute;
-    top: 94px;
-    right: -25px;
-}
+    top: 102px;
+  }

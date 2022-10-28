@@ -1,8 +1,12 @@
 @import "../../../../variable.scss";
 @import "../../../../styles.scss";
-.mat-dialog-container {
-    padding: 0 !important;
+
+.mat-dialog-container
+{
+  width:950px !important;
+  background-color: #f6f6f6 !important;
 }
+
 .title_outer{
     background-color: $primary-color;
     color: white;
@@ -17,9 +21,7 @@
         }
     }
 }
-::ng-deep .mat-dialog-container{
-    padding: 0;
-}
+
 .selectt{
     height: 50px;
     outline: none;
@@ -28,10 +30,12 @@
     width: 100%;
     padding: 15px 15px;
     box-shadow: $secondary-color 3px 3px 3px 0px;
-    background-color: white;
+    background-color: white  !important;
 }
 .content_outer{
     padding: 30px;
+    height:calc(61vh - 120px);
+    overflow: auto;
 }
 label{
     margin-top: 15px;
@@ -49,16 +53,38 @@ label{
     color: rgba(80, 75, 75, 0.87);
     font-size: 14px;
 }
-::ng-deep .mat-checkbox-frame{
-    border-width: unset !important;
-    border: 4px solid $primary-color;
+
+
+.datePicker
+{
+    height: 50px;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 15px 15px;
+    box-shadow: #d6c7ec 3px 3px 3px 0px;
+    background-color: white;
+}
+.datePicker mat-icon
+{
+  vertical-align: top !important;
 }
 
-::ng-deep .mat-checkbox-inner-container{
-    width: 25px !important;
-    height: 25px !important;
+.mat-datepicker-content
+{
+  margin-top: 17px;
+  position: relative;
+  left: calc(15% - 100px);
 }
-::ng-deep .mat-checkbox-label{
-    font-size: 16px;
-    font-weight: 500;
+.table_filter button img
+{
+  width: 35px !important;
 }
+.mat-dialog-container
+{
+  padding: 0;
+}
+.smallCalendar {
+    top: 102px;
+  }

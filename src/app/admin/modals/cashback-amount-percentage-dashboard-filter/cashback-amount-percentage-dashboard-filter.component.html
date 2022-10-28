@@ -10,8 +10,10 @@
         <div class="row">
             <div class="col-md-6">
                 <div>
-                    <label for="">Select Period Date</label>
-                  <input readonly type="text" placeholder="From Date - To Date" class="form-control datepicker" bsDaterangepicker
+                    <div>
+                        <label for="">Select Period Date</label>
+                      </div>
+                  <input readonly type="text" placeholder="From Date - To Date" class="form-control datepicker selectt" bsDaterangepicker
                          [bsConfig]="{ isAnimated: true, rangeInputFormat : 'ddd,DD-MMM-YYYY', dateInputFormat: 'ddd,DD-MMM-YYYY',showPreviousMonth: true ,showWeekNumbers: false}"
                          [maxDate]="maxDate">
                   <mat-icon class="smallCalendar" style="right: 20px;">date_range</mat-icon>
@@ -21,8 +23,10 @@
         </div>
         <div class="row mt-4">
             <div class="col-md-6">
-                <label for="">Select Cash Back Type</label>
-                <mat-select class="selectt filterSelect" disableOptionCentering panelClass="normalSelect"  multiple placeholder="Select">
+                <div>
+                    <label for="">Select Cash Back Type</label>
+                </div>
+                <mat-select class="selectt" disableOptionCentering panelClass="normalSelect"  multiple placeholder="Select">
                     <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
                         <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
                             <mat-label class="label">Filter:</mat-label>
@@ -40,6 +44,20 @@
                         </button>
                     </div>
                     <mat-option value=2>Cash Back</mat-option>
+                    <mat-option value=3>Individual</mat-option>
+                    <mat-option value=3>Individual</mat-option>
+                    <mat-option value=3>Individual</mat-option>
+                    <mat-option value=3>Individual</mat-option>
+                    <mat-option value=3>Individual</mat-option>
+                    <mat-option value=3>Individual</mat-option>
+                    <mat-option value=3>Individual</mat-option>
+                    <mat-option value=3>Individual</mat-option>
+                    <mat-option value=3>Individual</mat-option>
+                    <mat-option value=3>Individual</mat-option>
+                    <mat-option value=3>Individual</mat-option>
+                    <mat-option value=3>Individual</mat-option>
+                    <mat-option value=3>Individual</mat-option>
+                    <mat-option value=3>Individual</mat-option>
                     <mat-option value=3>Individual</mat-option>
                 </mat-select>
             </div>
@@ -63,9 +81,10 @@
                 </mat-select>
             </div>
         </div>
-        <div class="button_group">
-            <button>Clear</button>
-            <button>Apply</button>
-        </div>
+        
+    </div>
+    <div class="button_group my-2">
+        <button>Clear</button>
+        <button>Apply</button>
     </div>
 </div>

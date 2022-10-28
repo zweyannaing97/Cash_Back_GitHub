@@ -6,7 +6,9 @@ import { CompanyWiseLayoutComponent } from './company-wise-layout/company-wise-l
 import { CustomDataTableModule } from '../../components/custom-data-table/custom-data-table.module';
 import { CustomFileDataTableModule } from '../../components/custom-file-data-table/custom-file-data-table.module';
 import { ViewCompanyWiseReportDetailComponent } from './view-company-wise-report-detail/view-company-wise-report-detail.component';
-
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,10 @@ import { ViewCompanyWiseReportDetailComponent } from './view-company-wise-report
     CommonModule,
     CompanyWiseRoutingModule,
     CustomDataTableModule,
-    CustomFileDataTableModule
+    CustomFileDataTableModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatToolbarModule,
   ]
 })
 export class CompanyWiseModule { }

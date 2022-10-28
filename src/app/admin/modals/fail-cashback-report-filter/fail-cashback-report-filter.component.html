@@ -8,8 +8,11 @@
     <div class="content_outer">
         <div class="row">
             <div class="col-md-6">
+                <div>
+                    <label for="">Select Period Date</label>
+                </div>
                 <div >
-                  <input readonly type="text" placeholder="From Date - To Date" class="form-control datepicker" bsDaterangepicker
+                  <input readonly type="text" placeholder="From Date - To Date" class="form-control datepicker selectt" bsDaterangepicker
                          [bsConfig]="{ isAnimated: true, rangeInputFormat : 'ddd,DD-MMM-YYYY', dateInputFormat: 'ddd,DD-MMM-YYYY',showPreviousMonth: true ,showWeekNumbers: false}"
                          [maxDate]="maxDate">
                   <mat-icon class="smallCalendar" style="margin-top:-45px;margin-right:56px;">date_range</mat-icon>
@@ -20,11 +23,26 @@
         <div class="row">
             <div class="col-md-6">
                 <div>
-                    <label for="">Company Name</label>
+                    <label for="">Select Company Name</label>
                 </div>
                 <div>
-                <mat-select class="selectt" multiple placeholder="select">
-                    <mat-option value=1>All</mat-option>
+                <mat-select class="selectt" multiple placeholder="Select" panelClass="normalSelect" disableOptionCentering>
+                    <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+                            <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                                <mat-label class="label">Filter:</mat-label>
+                                <mat-form-field class="select_search_box" appearance="standard">
+                                <input matInput placeholder="Enter Keywords">
+                                </mat-form-field>
+                            </div>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn" >
+                                <mat-icon class="secondary-text s-5">
+                                check</mat-icon>Check All
+                            </button>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn v-line" >
+                                <mat-icon class="secondary-text s-5">
+                                clear</mat-icon>Uncheck All
+                            </button>
+                        </div>
                     <mat-option value=2>CGM</mat-option>
                     <mat-option value=3>OK$</mat-option>
                     <mat-option value=4>GAT</mat-option>
@@ -34,11 +52,26 @@
             </div>
             <div class="col-md-6">
                 <div>
-                    <label for="">Branch </label>
+                    <label for="">Select Branch </label>
                 </div>
                 <div>
-                    <mat-select class="selectt" multiple placeholder="Select">
-                        <mat-option value=1>All</mat-option>
+                    <mat-select class="selectt" multiple placeholder="Select" panelClass="normalSelect" disableOptionCentering>
+                        <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+                            <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                                <mat-label class="label">Filter:</mat-label>
+                                <mat-form-field class="select_search_box" appearance="standard">
+                                <input matInput placeholder="Enter Keywords">
+                                </mat-form-field>
+                            </div>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn" >
+                                <mat-icon class="secondary-text s-5">
+                                check</mat-icon>Check All
+                            </button>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn v-line" >
+                                <mat-icon class="secondary-text s-5">
+                                clear</mat-icon>Uncheck All
+                            </button>
+                        </div>
                         <mat-option value=2>Botahtaung</mat-option>
                         <mat-option value=3>Latha</mat-option>
                         <mat-option value=4>Bahan</mat-option>
@@ -51,11 +84,26 @@
         <div class="row ">
           <div class="col-md-6">
             <div>
-              <label for="">City/Town</label>
+              <label for="">Select City/Town</label>
             </div>
             <div>
-              <mat-select class="selectt" multiple placeholder="Select">
-                <mat-option value=1>All</mat-option>
+              <mat-select class="selectt" multiple placeholder="Select" panelClass="normalSelect" disableOptionCentering>
+                <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+                            <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                                <mat-label class="label">Filter:</mat-label>
+                                <mat-form-field class="select_search_box" appearance="standard">
+                                <input matInput placeholder="Enter Keywords">
+                                </mat-form-field>
+                            </div>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn" >
+                                <mat-icon class="secondary-text s-5">
+                                check</mat-icon>Check All
+                            </button>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn v-line" >
+                                <mat-icon class="secondary-text s-5">
+                                clear</mat-icon>Uncheck All
+                            </button>
+                        </div>
                 <mat-option value=2>Yangon</mat-option>
                 <mat-option value=3>Pathein</mat-option>
                 <mat-option value=4>Mawlamyaing</mat-option>
@@ -65,11 +113,26 @@
           </div>
             <div class="col-md-6">
                 <div>
-                    <label for="">Division/State</label>
+                    <label for="">Select Division/State</label>
                 </div>
                 <div>
-                    <mat-select class="selectt" multiple placeholder="Select">
-                        <mat-option value=1>All</mat-option>
+                    <mat-select class="selectt" multiple placeholder="Select" panelClass="normalSelect" disableOptionCentering>
+                        <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+                            <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                                <mat-label class="label">Filter:</mat-label>
+                                <mat-form-field class="select_search_box" appearance="standard">
+                                <input matInput placeholder="Enter Keywords">
+                                </mat-form-field>
+                            </div>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn" >
+                                <mat-icon class="secondary-text s-5">
+                                check</mat-icon>Check All
+                            </button>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn v-line" >
+                                <mat-icon class="secondary-text s-5">
+                                clear</mat-icon>Uncheck All
+                            </button>
+                        </div>
                         <mat-option value=2>Yangon</mat-option>
                         <mat-option value=3>Ayeyawaddy</mat-option>
                         <mat-option value=4>Mon</mat-option>
@@ -82,11 +145,26 @@
         <div class="row">
             <div class="col-md-6">
                 <div>
-                  <label for="">OK$ Account Type</label>
+                  <label for="">Select OK$ Account Type</label>
                 </div>
                 <div>
-                  <mat-select class="selectt" multiple placeholder="Select">
-                    <mat-option value=1>All</mat-option>
+                  <mat-select class="selectt" multiple placeholder="Select" panelClass="normalSelect" disableOptionCentering>
+                    <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+                            <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                                <mat-label class="label">Filter:</mat-label>
+                                <mat-form-field class="select_search_box" appearance="standard">
+                                <input matInput placeholder="Enter Keywords">
+                                </mat-form-field>
+                            </div>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn" >
+                                <mat-icon class="secondary-text s-5">
+                                check</mat-icon>Check All
+                            </button>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn v-line" >
+                                <mat-icon class="secondary-text s-5">
+                                clear</mat-icon>Uncheck All
+                            </button>
+                        </div>
                     <mat-option value=2>Personal</mat-option>
                     <mat-option value=3>Merchant</mat-option>
                     <mat-option value=4>Advance Merchant</mat-option>
@@ -96,11 +174,26 @@
               </div>
             <div class="col-md-6">
             <div>
-                <label for="">OK$ Account Number</label>
+                <label for="">Select OK$ Account Number</label>
             </div>
             <div>
-                <mat-select class="selectt" multiple placeholder="Select">
-                <mat-option value=1>All</mat-option>
+                <mat-select class="selectt" multiple placeholder="Select" panelClass="normalSelect" disableOptionCentering>
+                    <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+                            <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                                <mat-label class="label">Filter:</mat-label>
+                                <mat-form-field class="select_search_box" appearance="standard">
+                                <input matInput placeholder="Enter Keywords">
+                                </mat-form-field>
+                            </div>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn" >
+                                <mat-icon class="secondary-text s-5">
+                                check</mat-icon>Check All
+                            </button>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn v-line" >
+                                <mat-icon class="secondary-text s-5">
+                                clear</mat-icon>Uncheck All
+                            </button>
+                        </div>
                 <mat-option value=2>+95 746573894788</mat-option>
                 <mat-option value=3>+95 746573894788</mat-option>
                 <mat-option value=4>+95 746573894788</mat-option>
@@ -112,11 +205,26 @@
         <div class="row">
             <div class="col-md-6">
                 <div>
-                    <label for="">Cash Back Credit OK$ Account</label>
+                    <label for="">Select Cash Back Credit OK$ Account</label>
                 </div>
                 <div>
-                    <mat-select class="selectt" multiple placeholder="Select">
-                    <mat-option value=1>All</mat-option>
+                    <mat-select class="selectt" multiple placeholder="Select" panelClass="normalSelect" disableOptionCentering>
+                        <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+                            <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                                <mat-label class="label">Filter:</mat-label>
+                                <mat-form-field class="select_search_box" appearance="standard">
+                                <input matInput placeholder="Enter Keywords">
+                                </mat-form-field>
+                            </div>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn" >
+                                <mat-icon class="secondary-text s-5">
+                                check</mat-icon>Check All
+                            </button>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn v-line" >
+                                <mat-icon class="secondary-text s-5">
+                                clear</mat-icon>Uncheck All
+                            </button>
+                        </div>
                     <mat-option value=2>+95 746573894788</mat-option>
                     <mat-option value=3>+95 746573894788</mat-option>
                     <mat-option value=4>+95 746573894788</mat-option>
@@ -126,7 +234,7 @@
             </div>
             <div class="col-md-6">
                 <div>
-                    <label for="">Service Category Type</label>
+                    <label for="">Select Service Category Type</label>
                 </div>
                 <div>
                     <mat-select class="selectt" multiple  placeholder="Select" (selectionChange)="serviceCtegorySelected($event.value)">
@@ -146,11 +254,26 @@
             
             <div class="col-md-6"  *ngIf="selectedCategory.includes('1') || selectedCategory.includes('2')">
                 <div>
-                    <label for="">Cash Back Credit MPT Number</label>
+                    <label for="">Select Cash Back Credit MPT Number</label>
                 </div>
                 <div>
-                    <mat-select class="selectt" multiple placeholder="Select">
-                        <mat-option value=1>All</mat-option>
+                    <mat-select class="selectt" multiple placeholder="Select" panelClass="normalSelect" disableOptionCentering>
+                        <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+                            <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                                <mat-label class="label">Filter:</mat-label>
+                                <mat-form-field class="select_search_box" appearance="standard">
+                                <input matInput placeholder="Enter Keywords">
+                                </mat-form-field>
+                            </div>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn" >
+                                <mat-icon class="secondary-text s-5">
+                                check</mat-icon>Check All
+                            </button>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn v-line" >
+                                <mat-icon class="secondary-text s-5">
+                                clear</mat-icon>Uncheck All
+                            </button>
+                        </div>
                         <mat-option value=2>+95 746573894788</mat-option>
                         <mat-option value=3>+95 746573894788</mat-option>
                         <mat-option value=4>+95 746573894788</mat-option>
@@ -160,11 +283,26 @@
             </div>
             <div class="col-md-6"   *ngIf="selectedCategory.includes('1') || selectedCategory.includes('2')">
                 <div>
-                    <label for="">Cash Back Credit Telenor Number</label>
+                    <label for="">Select Cash Back Credit Telenor Number</label>
                 </div>
                 <div>
-                    <mat-select class="selectt" multiple placeholder="Select">
-                        <mat-option value=1>All</mat-option>
+                    <mat-select class="selectt" multiple placeholder="Select" panelClass="normalSelect" disableOptionCentering>
+                        <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+                            <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                                <mat-label class="label">Filter:</mat-label>
+                                <mat-form-field class="select_search_box" appearance="standard">
+                                <input matInput placeholder="Enter Keywords">
+                                </mat-form-field>
+                            </div>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn" >
+                                <mat-icon class="secondary-text s-5">
+                                check</mat-icon>Check All
+                            </button>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn v-line" >
+                                <mat-icon class="secondary-text s-5">
+                                clear</mat-icon>Uncheck All
+                            </button>
+                        </div>
                         <mat-option value=2>+95 746573894788</mat-option>
                         <mat-option value=3>+95 746573894788</mat-option>
                         <mat-option value=4>+95 746573894788</mat-option>
@@ -174,11 +312,26 @@
             </div>
             <div class="col-md-6"  *ngIf="selectedCategory.includes('1') || selectedCategory.includes('2')">
                 <div>
-                    <label for="">Cash Back Credit Ooredoo Number</label>
+                    <label for="">Select Cash Back Credit Ooredoo Number</label>
                 </div>
                 <div>
-                    <mat-select class="selectt" multiple placeholder="Select">
-                        <mat-option value=1>All</mat-option>
+                    <mat-select class="selectt" multiple placeholder="Select" panelClass="normalSelect" disableOptionCentering>
+                        <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+                            <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                                <mat-label class="label">Filter:</mat-label>
+                                <mat-form-field class="select_search_box" appearance="standard">
+                                <input matInput placeholder="Enter Keywords">
+                                </mat-form-field>
+                            </div>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn" >
+                                <mat-icon class="secondary-text s-5">
+                                check</mat-icon>Check All
+                            </button>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn v-line" >
+                                <mat-icon class="secondary-text s-5">
+                                clear</mat-icon>Uncheck All
+                            </button>
+                        </div>
                         <mat-option value=2>+95 746573894788</mat-option>
                         <mat-option value=3>+95 746573894788</mat-option>
                         <mat-option value=4>+95 746573894788</mat-option>
@@ -188,11 +341,26 @@
             </div>
             <div class="col-md-6"  *ngIf="selectedCategory.includes('1') || selectedCategory.includes('2')">
                 <div>
-                    <label for="">Cash Back Credit Mytel Number</label>
+                    <label for="">Select Cash Back Credit Mytel Number</label>
                 </div>
                 <div>
-                    <mat-select class="selectt" multiple placeholder="Select">
-                        <mat-option value=1>All</mat-option>
+                    <mat-select class="selectt" multiple placeholder="Select" panelClass="normalSelect" disableOptionCentering>
+                        <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+                            <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                                <mat-label class="label">Filter:</mat-label>
+                                <mat-form-field class="select_search_box" appearance="standard">
+                                <input matInput placeholder="Enter Keywords">
+                                </mat-form-field>
+                            </div>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn" >
+                                <mat-icon class="secondary-text s-5">
+                                check</mat-icon>Check All
+                            </button>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn v-line" >
+                                <mat-icon class="secondary-text s-5">
+                                clear</mat-icon>Uncheck All
+                            </button>
+                        </div>
                         <mat-option value=2>+95 746573894788</mat-option>
                         <mat-option value=3>+95 746573894788</mat-option>
                         <mat-option value=4>+95 746573894788</mat-option>
@@ -202,11 +370,26 @@
             </div>
             <div class="col-md-6"  *ngIf="selectedCategory.includes('1') || selectedCategory.includes('2')">
                 <div>
-                    <label for="">Cash Back Credit MecTel Number</label>
+                    <label for="">Select Cash Back Credit MecTel Number</label>
                 </div>
                 <div>
-                    <mat-select class="selectt" multiple placeholder="Select">
-                        <mat-option value=1>All</mat-option>
+                    <mat-select class="selectt" multiple placeholder="Select" panelClass="normalSelect" disableOptionCentering>
+                        <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+                            <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                                <mat-label class="label">Filter:</mat-label>
+                                <mat-form-field class="select_search_box" appearance="standard">
+                                <input matInput placeholder="Enter Keywords">
+                                </mat-form-field>
+                            </div>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn" >
+                                <mat-icon class="secondary-text s-5">
+                                check</mat-icon>Check All
+                            </button>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn v-line" >
+                                <mat-icon class="secondary-text s-5">
+                                clear</mat-icon>Uncheck All
+                            </button>
+                        </div>
                         <mat-option value=2>+95 746573894788</mat-option>
                         <mat-option value=3>+95 746573894788</mat-option>
                         <mat-option value=4>+95 746573894788</mat-option>
@@ -216,11 +399,26 @@
             </div>
             <div class="col-md-6"  *ngIf="selectedCategory.includes('1') || selectedCategory.includes('3')">
                 <div>
-                    <label for="">Cash Back Credit Gift Cards Number</label>
+                    <label for="">Select Cash Back Credit Gift Cards Number</label>
                 </div>
                 <div>
-                    <mat-select class="selectt" multiple placeholder="Select">
-                        <mat-option value=1>All</mat-option>
+                    <mat-select class="selectt" multiple placeholder="Select" panelClass="normalSelect" disableOptionCentering>
+                        <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+                            <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                                <mat-label class="label">Filter:</mat-label>
+                                <mat-form-field class="select_search_box" appearance="standard">
+                                <input matInput placeholder="Enter Keywords">
+                                </mat-form-field>
+                            </div>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn" >
+                                <mat-icon class="secondary-text s-5">
+                                check</mat-icon>Check All
+                            </button>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn v-line" >
+                                <mat-icon class="secondary-text s-5">
+                                clear</mat-icon>Uncheck All
+                            </button>
+                        </div>
                         <mat-option value=2>+95 746573894788</mat-option>
                         <mat-option value=3>+95 746573894788</mat-option>
                         <mat-option value=4>+95 746573894788</mat-option>
@@ -230,11 +428,26 @@
             </div>
             <div class="col-md-6"  *ngIf="selectedCategory.includes('1') || selectedCategory.includes('4')">
                 <div>
-                    <label for="">Cash Back Credit DTH Number</label>
+                    <label for="">Select Cash Back Credit DTH Number</label>
                 </div>
                 <div>
-                    <mat-select class="selectt" multiple placeholder="Select">
-                        <mat-option value=1>All</mat-option>
+                    <mat-select class="selectt" multiple placeholder="Select" panelClass="normalSelect" disableOptionCentering>
+                        <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+                            <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                                <mat-label class="label">Filter:</mat-label>
+                                <mat-form-field class="select_search_box" appearance="standard">
+                                <input matInput placeholder="Enter Keywords">
+                                </mat-form-field>
+                            </div>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn" >
+                                <mat-icon class="secondary-text s-5">
+                                check</mat-icon>Check All
+                            </button>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn v-line" >
+                                <mat-icon class="secondary-text s-5">
+                                clear</mat-icon>Uncheck All
+                            </button>
+                        </div>
                         <mat-option value=2>+95 746573894788</mat-option>
                         <mat-option value=3>+95 746573894788</mat-option>
                         <mat-option value=4>+95 746573894788</mat-option>
@@ -244,11 +457,26 @@
             </div>
             <div class="col-md-6"  *ngIf="selectedCategory.includes('1') || selectedCategory.includes('5')">
                 <div>
-                    <label for="">Cash Back Credit Electricity Number</label>
+                    <label for="">Select Cash Back Credit Electricity Number</label>
                 </div>
                 <div>
-                    <mat-select class="selectt" multiple placeholder="Select">
-                        <mat-option value=1>All</mat-option>
+                    <mat-select class="selectt" multiple placeholder="Select" panelClass="normalSelect" disableOptionCentering>
+                        <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+                            <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                                <mat-label class="label">Filter:</mat-label>
+                                <mat-form-field class="select_search_box" appearance="standard">
+                                <input matInput placeholder="Enter Keywords">
+                                </mat-form-field>
+                            </div>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn" >
+                                <mat-icon class="secondary-text s-5">
+                                check</mat-icon>Check All
+                            </button>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn v-line" >
+                                <mat-icon class="secondary-text s-5">
+                                clear</mat-icon>Uncheck All
+                            </button>
+                        </div>
                         <mat-option value=2>+95 746573894788</mat-option>
                         <mat-option value=3>+95 746573894788</mat-option>
                         <mat-option value=4>+95 746573894788</mat-option>
@@ -258,11 +486,26 @@
             </div>
             <div class="col-md-6"  *ngIf="selectedCategory.includes('1') || selectedCategory.includes('6')">
                 <div>
-                    <label for="">Cash Back Credit Post Paid Number</label>
+                    <label for="">Select Cash Back Credit Post Paid Number</label>
                 </div>
                 <div>
-                    <mat-select class="selectt" multiple placeholder="Select">
-                        <mat-option value=1>All</mat-option>
+                    <mat-select class="selectt" multiple placeholder="Select" panelClass="normalSelect" disableOptionCentering>
+                        <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+                            <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                                <mat-label class="label">Filter:</mat-label>
+                                <mat-form-field class="select_search_box" appearance="standard">
+                                <input matInput placeholder="Enter Keywords">
+                                </mat-form-field>
+                            </div>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn" >
+                                <mat-icon class="secondary-text s-5">
+                                check</mat-icon>Check All
+                            </button>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn v-line" >
+                                <mat-icon class="secondary-text s-5">
+                                clear</mat-icon>Uncheck All
+                            </button>
+                        </div>
                         <mat-option value=2>+95 746573894788</mat-option>
                         <mat-option value=3>+95 746573894788</mat-option>
                         <mat-option value=4>+95 746573894788</mat-option>
@@ -272,11 +515,26 @@
             </div>
             <div class="col-md-6"  *ngIf="selectedCategory.includes('1') || selectedCategory.includes('7')">
                 <div>
-                    <label for="">Cash Back Credit Over Seas Top Up Number</label>
+                    <label for="">Select Cash Back Credit Over Seas Top Up Number</label>
                 </div>
                 <div>
-                    <mat-select class="selectt" multiple placeholder="Select">
-                        <mat-option value=1>All</mat-option>
+                    <mat-select class="selectt" multiple placeholder="Select" panelClass="normalSelect" disableOptionCentering>
+                        <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+                            <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                                <mat-label class="label">Filter:</mat-label>
+                                <mat-form-field class="select_search_box" appearance="standard">
+                                <input matInput placeholder="Enter Keywords">
+                                </mat-form-field>
+                            </div>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn" >
+                                <mat-icon class="secondary-text s-5">
+                                check</mat-icon>Check All
+                            </button>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn v-line" >
+                                <mat-icon class="secondary-text s-5">
+                                clear</mat-icon>Uncheck All
+                            </button>
+                        </div>
                         <mat-option value=2>+95 746573894788</mat-option>
                         <mat-option value=3>+95 746573894788</mat-option>
                         <mat-option value=4>+95 746573894788</mat-option>

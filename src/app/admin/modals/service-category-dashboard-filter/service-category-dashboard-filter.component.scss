@@ -1,8 +1,12 @@
-@import "../../../../styles.scss";
 @import "../../../../variable.scss";
-.content_outer {
-    padding: 15px 40px 40px;
+@import "../../../../styles.scss";
+
+.mat-dialog-container
+{
+  width:850px !important;
+  background-color: #f6f6f6 !important;
 }
+
 .title_outer{
     background-color: $primary-color;
     color: white;
@@ -17,10 +21,7 @@
         }
     }
 }
-::ng-deep .mat-dialog-container{
-    padding: 0;
-    // height: 80vh;
-}
+
 .selectt{
     height: 50px;
     outline: none;
@@ -28,41 +29,17 @@
     margin-bottom: 10px;
     width: 100%;
     padding: 15px 15px;
-    box-shadow: rgba(99, 99, 99, 0.2) 3px 3px 3px 0px;
-    background-color: white;
-}
-.mat-radio-label-content{
-    color: black !important;
+    box-shadow: $secondary-color 3px 3px 3px 0px;
+    background-color: white  !important;
 }
 .content_outer{
-    padding: 30px 30px 0px 30px;
+    padding: 30px;
+    height:100%;
+    overflow: auto;
 }
 label{
     margin-top: 15px;
     font-weight: 500;
-}
-.button_group{
-    text-align: center;
-    margin-top: 35px;
-    button:first-child{
-        color: white;
-        background: red;
-        font-weight: 500;
-        padding: 5px 20px;
-        border-radius: 20px;
-        width: 120px;
-        margin-right: 40px;
-        height: 40px;
-    }
-    button:last-child{
-        color: white;
-        background: rgb(50, 50, 226);
-        font-weight: 500;
-        padding: 5px 20px;
-        border-radius: 20px;
-        width: 120px;
-        height: 40px;
-    }
 }
 ::placeholder{
     color: rgba(80, 75, 75, 0.87);
@@ -76,40 +53,38 @@ label{
     color: rgba(80, 75, 75, 0.87);
     font-size: 14px;
 }
-.filter_select_header {
-    background: #eae3f3;
-    display: flex;
-}
-.filter_select_header .filter_text {
-    padding: 0 7px;
-}
-.filter_select_header .mat-form-field-infix {
-    background: #fff;
-    border-radius: 51pc;
-    padding-left: 12px;
-    border-top: 0;
-    padding-bottom: 8px;
-    padding-top: 4px;
-}
-.filter_select_header .mat-input-element {
-    font-size: 12px;
-}
-.filter_select_header .check_uncheck_btn {
-    font-size: 12px;
-    padding: 0 6px;
-}
-.filter_select_header .check_uncheck_btn .mat-icon {
-    color: #0b0b0b !important;
-    font-size: 18px;
-    font-weight: 900 !important;
-}
-.select_search_box {
-    width: 133px;
-}
-.v-line
+
+
+.datePicker
 {
-  border-left: solid 2px #000;
-  height: 50%;
-  border-radius: unset;
-  margin: 10px;
+    height: 50px;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 15px 15px;
+    box-shadow: #d6c7ec 3px 3px 3px 0px;
+    background-color: white;
 }
+.datePicker mat-icon
+{
+  vertical-align: top !important;
+}
+
+.mat-datepicker-content
+{
+  margin-top: 17px;
+  position: relative;
+  left: calc(15% - 100px);
+}
+.table_filter button img
+{
+  width: 35px !important;
+}
+.mat-dialog-container
+{
+  padding: 0;
+}
+.smallCalendar {
+    top: 102px;
+  }

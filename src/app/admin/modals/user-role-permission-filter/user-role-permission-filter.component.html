@@ -5,7 +5,7 @@
           <img src="assets.images/close_white.png" alt="">
       </h3>
   </div>
-    <div class="content_outer" style="height: calc( 60vh - 10px )">
+    <div class="content_outer">
       <div>
         <label for="">Select Period Date</label>
       </div>
@@ -13,7 +13,7 @@
         <div class="col-xs-12 col-12 col-md-6 ">
           <div>
 
-            <input readonly type="text" placeholder="From Date - To Date" class="form-control datepicker" bsDaterangepicker
+            <input readonly type="text" placeholder="From Date - To Date" class="form-control datepicker selectt" bsDaterangepicker
                    [bsConfig]="{ isAnimated: true, rangeInputFormat : 'ddd,DD-MMM-YYYY', dateInputFormat: 'ddd,DD-MMM-YYYY',showPreviousMonth: true ,showWeekNumbers: false}"
                    [maxDate]="maxDate">
             <mat-icon class="smallCalendar" style="margin-top:-45px;margin-right:56px;">date_range</mat-icon>
@@ -27,8 +27,8 @@
           <div>
             <label for="">Select User Name</label>
           </div>
-          <div fxLayout="row wrap">
-            <mat-select disableOptionCentering class="selectt filterSelect"  panelClass="normalSelect" multiple placeholder="Select">
+          <div >
+            <mat-select disableOptionCentering class="selectt"  panelClass="normalSelect" multiple placeholder="Select">
               <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
                 <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
                   <mat-label class="label">Filter:</mat-label>
@@ -49,6 +49,10 @@
               <mat-option value=2>Aye Aye</mat-option>
               <mat-option value=3>Hla Hla</mat-option>
               <mat-option value=4>Aung Aung</mat-option>
+              <mat-option value=4>Sales Department</mat-option>
+              <mat-option value=4>Sales Department</mat-option>
+              <mat-option value=4>Sales Department</mat-option>
+              <mat-option value=4>Sales Department</mat-option>
 
             </mat-select>
           </div>
@@ -57,7 +61,7 @@
           <div>
             <label for="">Select Department Name</label>
           </div>
-          <div fxLayout="row wrap">
+          <div >
             <mat-select disableOptionCentering panelClass="singleSelect" class="selectt"  placeholder="Select">
               <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
                 <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
@@ -71,6 +75,7 @@
               <mat-option value=2>Account Department</mat-option>
               <mat-option value=3>Admin Department</mat-option>
               <mat-option value=4>Sales Department</mat-option>
+              
 
             </mat-select>
           </div>
@@ -83,7 +88,7 @@
           <div>
             <label for="">Select Designation</label>
           </div>
-          <div fxLayout="row wrap">
+          <div >
             <mat-select disableOptionCentering panelClass="normalSelect" class="selectt" multiple placeholder="Select">
               <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
                 <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
@@ -113,7 +118,7 @@
           <div>
             <label for="">Select Mobile Number</label>
           </div>
-          <div fxLayout="row wrap">
+          <div >
             <mat-select disableOptionCentering panelClass="normalSelect" class="selectt" multiple placeholder="Select">
               <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
                 <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
@@ -147,7 +152,7 @@
           <div>
             <label for="">Select User Type</label>
           </div>
-          <div fxLayout="row wrap">
+          <div >
             <mat-select disableOptionCentering   panelClass="normalSelect" class="selectt" multiple placeholder="Select">
               <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
                 <button fxLayout="row" mat-button class="check_uncheck_btn" >
@@ -170,7 +175,7 @@
           <div>
             <label for="">Select Transaction</label>
           </div>
-          <div fxLayout="row wrap">
+          <div >
             <mat-select  disableOptionCentering panelClass="normalSelect" class="selectt" multiple placeholder="Select">
               <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
                 <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
@@ -204,7 +209,7 @@
           <div>
             <label for="">Select Role Permission</label>
           </div>
-          <div fxLayout="row wrap">
+          <div >
             <mat-select class="selectt" multiple  disableOptionCentering  panelClass="normalSelect" placeholder="Select">
               <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
                 <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
@@ -234,7 +239,7 @@
           <div>
             <label for="">Select Is Active</label>
           </div>
-          <div fxLayout="row wrap">
+          <div >
             <mat-select  class="selectt" disableOptionCentering panelClass="normalSelect" multiple placeholder="Select">
               <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
                 <button fxLayout="row" mat-button class="check_uncheck_btn" >

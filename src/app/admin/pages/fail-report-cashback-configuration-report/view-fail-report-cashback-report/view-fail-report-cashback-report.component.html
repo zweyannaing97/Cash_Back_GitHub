@@ -1,13 +1,13 @@
 <div >
     <div class="d-flex justify-content-between align-items-center">
-      <h5 class="titlee"><a routerLink="../"> Fail Report </a> > View File Name 1</h5>
+      <h5 class="title"><a routerLink="../"> Fail Report </a> > View File Name 1</h5>
       <div class="table_filter">
         <a download="UploadExcelFormat.xlsx" target="_blank" href="assets/UploadExcelFormat.xlsx" ><img src="assets/images/excel-download.svg" alt=""></a>
       </div>
     </div>
     
      <!-- table -->
-     <div class="table-pagination mt-2" style="height: 17vh;">
+     <div class="table-pagination " style="height: 17vh;">
       <table mat-table [dataSource]="dataSource">
 
         <ng-container matColumnDef="fileName">

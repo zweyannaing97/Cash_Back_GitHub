@@ -4,16 +4,15 @@
             <i class="fa fa-close close" aria-hidden="true" (click)="onDismiss()"></i>
         </h3>
     </div>
-    <mat-dialog-content class="mat-typography">
 
-        <div class="">
+        <div class="content_outer">
           <div class="row">
               <div class="col-md-6">
                 <div>
                     <label for="">Select Period Date</label>
                 </div>
-                <div>
-                  <input readonly type="text" placeholder="From Date - To Date" class="form-control datepicker" bsDaterangepicker
+                <div fxLayout="row wrap">
+                  <input readonly type="text" placeholder="From Date - To Date" class="form-control datepicker selectt" bsDaterangepicker
                          [bsConfig]="{ isAnimated: true, rangeInputFormat : 'ddd,DD-MMM-YYYY', dateInputFormat: 'ddd,DD-MMM-YYYY',showPreviousMonth: true ,showWeekNumbers: false}"
                          [maxDate]="maxDate">
                   <mat-icon class="smallCalendar" style="margin-top:-45px;margin-right:56px;">date_range</mat-icon>
@@ -25,18 +24,19 @@
                   <div>
                       <label for="">Select Company Name</label>
                   </div>
-                  <div>
-                  <mat-select class="selectt" panelClass="filterSelect" disableOptionCentering   multiple placeholder="Select">
-                    <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+                  <div fxLayout="row wrap">
+                  <mat-select class="selectt" panelClass="normalSelect" disableOptionCentering   multiple placeholder="Select">
+                    <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center" style="padding: 8px 0px;">
                         <button fxLayout="row" mat-button class="check_uncheck_btn" >
-                            <mat-icon class="secondary-text s-5">
+                          <mat-icon class="secondary-text s-5">
                             check</mat-icon>Check All
                         </button>
-                        <button fxLayout="row" mat-button class="check_uncheck_btn v-line" >
-                            <mat-icon class="secondary-text s-5">
+                        <button fxLayout="row" mat-button class="check_uncheck_btn v-line" style="margin-left: 10px;" >
+                          <mat-icon class="secondary-text s-5">
                             clear</mat-icon>Uncheck All
                         </button>
-                    </div>
+                      </div>
+        
                       <mat-option value=1>CGM</mat-option>
                       <mat-option value=2>OK$</mat-option>
                       <mat-option value=3>GAT</mat-option>
@@ -48,8 +48,8 @@
                   <div>
                       <label for="">Select Division/State</label>
                   </div>
-                  <div>
-                  <mat-select class="selectt" panelClass="filterSelect"  multiple placeholder="Select">
+                  <div fxLayout="row wrap" >
+                  <mat-select class="selectt" panelClass="normalSelect"  disableOptionCentering  multiple placeholder="Select">
                         <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
                             <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
                                 <mat-label class="label">Filter:</mat-label>
@@ -70,6 +70,10 @@
                       <mat-option value=3>Ayeyawaddy</mat-option>
                       <mat-option value=4>Mon</mat-option>
                       <mat-option value=5>Bago</mat-option>
+                      <mat-option value=5>Bago</mat-option>
+                      <mat-option value=5>Bago</mat-option>
+                      <mat-option value=5>Bago</mat-option>
+                      <mat-option value=5>Bago</mat-option>
                       </mat-select>
                   </div>
               </div>
@@ -79,8 +83,8 @@
               <div>
                 <label for="">Select City/Town</label>
               </div>
-              <div>
-                <mat-select class="selectt" panelClass="filterSelect" disableOptionCentering multiple  placeholder="Select">
+              <div fxLayout="row wrap">
+                <mat-select class="selectt" panelClass="normalSelect" disableOptionCentering multiple  placeholder="Select">
                     <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
                         <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
                             <mat-label class="label">Filter:</mat-label>
@@ -108,8 +112,8 @@
                   <div>
                       <label for="">Select OK$ Account Type</label>
                   </div>
-                  <div>
-                      <mat-select class="selectt" panelClass="filterSelect" disableOptionCentering multiple placeholder="Select">
+                  <div fxLayout="row wrap">
+                      <mat-select class="selectt" panelClass="normalSelect" disableOptionCentering multiple placeholder="Select">
                         <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
                             <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
                                 <mat-label class="label">Filter:</mat-label>
@@ -139,8 +143,8 @@
               <div>
                 <label for="">Select OK$ Account Number</label>
               </div>
-              <div>
-                <mat-select class="selectt" panelClass="filterSelect" disableOptionCentering multiple placeholder="Select">
+              <div fxLayout="row wrap">
+                <mat-select class="selectt" panelClass="normalSelect" disableOptionCentering multiple placeholder="Select">
                     <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
                         <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
                             <mat-label class="label">Filter:</mat-label>
@@ -168,8 +172,8 @@
               <div>
                 <label for="">Select Cash back Credit OK$ Account</label>
               </div>
-              <div>
-                <mat-select class="selectt" panelClass="filterSelect" disableOptionCentering multiple placeholder="Select">
+              <div fxLayout="row wrap">
+                <mat-select class="selectt" panelClass="normalSelect" disableOptionCentering multiple placeholder="Select">
                     <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
                         <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
                             <mat-label class="label">Filter:</mat-label>
@@ -199,8 +203,8 @@
                 <div>
                     <label for="">Select Service Category Type</label>
                 </div>
-                <div>
-                    <mat-select class="selectt" panelClass="filterSelect" disableOptionCentering multiple (selectionChange)="serviceCategorySelected($event.value)" placeholder="Select">
+                <div fxLayout="row wrap">
+                    <mat-select class="selectt" panelClass="normalSelect" disableOptionCentering multiple (selectionChange)="serviceCategorySelected($event.value)" placeholder="Select">
                         <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
                             <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
                                 <mat-label class="label">Filter:</mat-label>
@@ -231,8 +235,8 @@
                 <div>
                     <label for="">Select Cash Back Credit MPT Number</label>
                 </div>
-                <div>
-                    <mat-select class="selectt" panelClass="filterSelect" disableOptionCentering multiple (selectionChange)="serviceCategorySelected($event.value)" placeholder="Select">
+                <div fxLayout="row wrap">
+                    <mat-select class="selectt" panelClass="normalSelect" disableOptionCentering multiple (selectionChange)="serviceCategorySelected($event.value)" placeholder="Select">
                         <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
                             <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
                                 <mat-label class="label">Filter:</mat-label>
@@ -261,8 +265,8 @@
                 <div>
                     <label for="">Select Cash Back Credit Telenor Number</label>
                 </div>
-                <div>
-                    <mat-select class="selectt" panelClass="filterSelect" disableOptionCentering multiple (selectionChange)="serviceCategorySelected($event.value)" placeholder="Select">
+                <div fxLayout="row wrap">
+                    <mat-select class="selectt" panelClass="normalSelect" disableOptionCentering multiple (selectionChange)="serviceCategorySelected($event.value)" placeholder="Select">
                         <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
                             <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
                                 <mat-label class="label">Filter:</mat-label>
@@ -291,8 +295,8 @@
                 <div>
                     <label for="">Select Cash Back Credit Ooredoo Number</label>
                 </div>
-                <div>
-                    <mat-select class="selectt" panelClass="filterSelect" disableOptionCentering multiple (selectionChange)="serviceCategorySelected($event.value)" placeholder="Select">
+                <div fxLayout="row wrap">
+                    <mat-select class="selectt" panelClass="normalSelect" disableOptionCentering multiple (selectionChange)="serviceCategorySelected($event.value)" placeholder="Select">
                         <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
                             <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
                                 <mat-label class="label">Filter:</mat-label>
@@ -321,8 +325,8 @@
                 <div>
                     <label for="">Select Cash Back Credit Mytel Number</label>
                 </div>
-                <div>
-                    <mat-select class="selectt" panelClass="filterSelect" disableOptionCentering multiple (selectionChange)="serviceCategorySelected($event.value)" placeholder="Select">
+                <div fxLayout="row wrap">
+                    <mat-select class="selectt" panelClass="normalSelect" disableOptionCentering multiple (selectionChange)="serviceCategorySelected($event.value)" placeholder="Select">
                         <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
                             <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
                                 <mat-label class="label">Filter:</mat-label>
@@ -351,8 +355,8 @@
                 <div>
                     <label for="">Select Cash Back Credit MecTel Number</label>
                 </div>
-                <div>
-                    <mat-select class="selectt" panelClass="filterSelect" disableOptionCentering multiple (selectionChange)="serviceCategorySelected($event.value)" placeholder="Select">
+                <div fxLayout="row wrap">
+                    <mat-select class="selectt" panelClass="normalSelect" disableOptionCentering multiple (selectionChange)="serviceCategorySelected($event.value)" placeholder="Select">
                         <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
                             <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
                                 <mat-label class="label">Filter:</mat-label>
@@ -381,8 +385,8 @@
                 <div>
                     <label for="">Select Cash Back Credit Gift Cards Number</label>
                 </div>
-                <div>
-                    <mat-select class="selectt" panelClass="filterSelect" disableOptionCentering multiple (selectionChange)="serviceCategorySelected($event.value)" placeholder="Select">
+                <div fxLayout="row wrap">
+                    <mat-select class="selectt" panelClass="normalSelect" disableOptionCentering multiple (selectionChange)="serviceCategorySelected($event.value)" placeholder="Select">
                         <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
                             <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
                                 <mat-label class="label">Filter:</mat-label>
@@ -411,8 +415,8 @@
                 <div>
                     <label for="">Select Cash Back Credit DTH Number</label>
                 </div>
-                <div>
-                    <mat-select class="selectt" panelClass="filterSelect" disableOptionCentering multiple (selectionChange)="serviceCategorySelected($event.value)" placeholder="Select">
+                <div fxLayout="row wrap">
+                    <mat-select class="selectt" panelClass="normalSelect" disableOptionCentering multiple (selectionChange)="serviceCategorySelected($event.value)" placeholder="Select">
                         <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
                             <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
                                 <mat-label class="label">Filter:</mat-label>
@@ -441,8 +445,8 @@
                 <div>
                     <label for="">Select Cash Back Credit Electricity Number</label>
                 </div>
-                <div>
-                    <mat-select class="selectt" panelClass="filterSelect" disableOptionCentering multiple (selectionChange)="serviceCategorySelected($event.value)" placeholder="Select">
+                <div fxLayout="row wrap">
+                    <mat-select class="selectt" panelClass="normalSelect" disableOptionCentering multiple (selectionChange)="serviceCategorySelected($event.value)" placeholder="Select">
                         <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
                             <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
                                 <mat-label class="label">Filter:</mat-label>
@@ -471,8 +475,8 @@
                 <div>
                     <label for="">Select Cash Back Credit Post Paid Number</label>
                 </div>
-                <div>
-                    <mat-select class="selectt" panelClass="filterSelect" disableOptionCentering multiple (selectionChange)="serviceCategorySelected($event.value)" placeholder="Select">
+                <div fxLayout="row wrap">
+                    <mat-select class="selectt" panelClass="normalSelect" disableOptionCentering multiple (selectionChange)="serviceCategorySelected($event.value)" placeholder="Select">
                         <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
                             <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
                                 <mat-label class="label">Filter:</mat-label>
@@ -501,8 +505,8 @@
                 <div>
                     <label for="">Select Cash Back Credit Over Seas Top Up Number</label>
                 </div>
-                <div>
-                    <mat-select class="selectt" panelClass="filterSelect" disableOptionCentering multiple (selectionChange)="serviceCategorySelected($event.value)" placeholder="Select">
+                <div fxLayout="row wrap">
+                    <mat-select class="selectt" panelClass="normalSelect" disableOptionCentering multiple (selectionChange)="serviceCategorySelected($event.value)" placeholder="Select">
                         <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
                             <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
                                 <mat-label class="label">Filter:</mat-label>
@@ -531,7 +535,6 @@
               
         </div>
          
-    </mat-dialog-content>
     <div class="button_group btnFooter my-3">
         <button>Clear</button>
         <button>Apply</button>
