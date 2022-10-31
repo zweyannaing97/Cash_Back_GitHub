@@ -1,2 +1,34 @@
 @import "../../../../../../variable.scss";
 @import "../../../../../../styles.scss";
+
+label{
+    margin-top: 15px;
+    font-weight: 500;
+}
+::placeholder{
+    color: rgba(80, 75, 75, 0.87);
+    font-size: 14px;
+}
+::-moz-placeholder{
+    color: rgba(80, 75, 75, 0.87);
+    font-size: 14px;
+}
+::-webkit-input-placeholder{
+    color: rgba(80, 75, 75, 0.87);
+    font-size: 14px;
+}
+
+.mat-datepicker-content
+{
+  margin-top: 17px;
+  position: relative;
+  left: calc(15% - 100px);
+}
+.table_filter button img
+{
+  width: 35px !important;
+}
+.mat-dialog-container
+{
+  padding: 0;
+}

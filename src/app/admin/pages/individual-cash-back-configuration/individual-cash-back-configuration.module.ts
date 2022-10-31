@@ -20,6 +20,8 @@ import { MatRippleModule } from '@angular/material/core';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { IndividualCashBackConfigurationListingComponent } from './individual-cash-back-configuration-listing/individual-cash-back-configuration-listing.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
 @NgModule({
   declarations: [
     IndividualCashBackConfigurationLayoutComponent,
@@ -44,6 +46,8 @@ import { IndividualCashBackConfigurationListingComponent } from './individual-ca
     MatRippleModule,
     MatPaginatorModule,
     MatToolbarModule,
+    MatInputModule,
+    MatIconModule
   ]
 })
 export class IndividualCashBackConfigurationModule { }

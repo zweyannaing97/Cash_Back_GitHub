@@ -48,7 +48,7 @@
 
    
     <!-- table -->
-    <div class="table-pagination mt-3">
+    <div class="table-pagination accTable mt-3">
       <table mat-table [dataSource]="dataSource">
 
         <ng-container matColumnDef="divison">
@@ -79,31 +79,31 @@
     </div>
 
 
-    <div *ngIf="selectedCategory === 'All'" class="mt-5 mb-5">
+    <div *ngIf="selectedCategory === 'All'" class="mt-2 mb-5">
       <app-service-category-all (newItemEvent)="formValidation($event)" ></app-service-category-all>
     </div>
 
-    <div *ngIf="selectedCategory == 'Top Up'" class="mt-5 mb-5">
+    <div *ngIf="selectedCategory == 'Top Up'" class="mt-2 mb-5">
         <app-service-category-topup (newItemEvent)="formValidation($event)"></app-service-category-topup>
     </div>
 
-    <div *ngIf="selectedCategory === 'Gift Cards'" class="mt-5 mb-5">
+    <div *ngIf="selectedCategory === 'Gift Cards'" class="mt-2 mb-5">
       <app-service-category-gift-cards (newItemEvent)="formValidation($event)"></app-service-category-gift-cards>
     </div>
 
-    <div *ngIf="selectedCategory === 'DTH'" class="mt-5 mb-5">
+    <div *ngIf="selectedCategory === 'DTH'" class="mt-2 mb-5">
         <app-service-category-dth (newItemEvent)="formValidation($event)"></app-service-category-dth>
     </div>
 
-    <div *ngIf="selectedCategory === 'Electricity'" class="mt-5 mb-5">
+    <div *ngIf="selectedCategory === 'Electricity'" class="mt-2 mb-5">
       <app-service-category-electricity (newItemEvent)="formValidation($event)"></app-service-category-electricity>
     </div>
 
-    <div *ngIf="selectedCategory === 'Post Paid'" class="mt-5 mb-5">
+    <div *ngIf="selectedCategory === 'Post Paid'" class="mt-2 mb-5">
       <app-service-category-post-paid (newItemEvent)="formValidation($event)"></app-service-category-post-paid>
     </div>
 
-    <div *ngIf="selectedCategory === 'Over Seas Top Up'" class="mt-5 mb-5">
+    <div *ngIf="selectedCategory === 'Over Seas Top Up'" class="mt-2 mb-5">
       <app-service-category-over-seas-top-up (newItemEvent)="formValidation($event)"></app-service-category-over-seas-top-up>
     </div>
 

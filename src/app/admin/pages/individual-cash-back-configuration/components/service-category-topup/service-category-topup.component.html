@@ -1,14 +1,29 @@
-<div>
+<div class="mt-4">
   <label for="">Cash Back Operator Wise</label>
 </div>
 <div>
   <mat-select
-    class="select selectt" panelClass="single3Select" disableOptionCentering
+    class="select selectt" panelClass="select3" disableOptionCentering
     multiple
     placeholder="Select"
     (selectionChange)="OperatorWiseSelected($event.value)"
   >
-    <mat-option value="1">All</mat-option>
+    <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+      <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+          <mat-label class="label">Filter:</mat-label>
+          <mat-form-field class="select_search_box" appearance="standard">
+          <input matInput placeholder="Enter Keywords">
+          </mat-form-field>
+      </div>
+      <button fxLayout="row" mat-button class="check_uncheck_btn d-flex" style="background-color: transparent; margin-top: 10px" >
+          <mat-icon class="secondary-text s-5">
+          check</mat-icon><p style="margin: 0;">Check All</p>
+      </button>
+      <button fxLayout="row" mat-button class="check_uncheck_btn v-line d-flex"  style="background-color: transparent;">
+          <mat-icon class="secondary-text s-5">
+          clear</mat-icon><p style="margin: 0;">Uncheck All</p>
+      </button>
+    </div>
     <mat-option value="2">MPT</mat-option>
     <mat-option value="3">Telenor</mat-option>
     <mat-option value="4">Ooredoo</mat-option>

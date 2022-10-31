@@ -1,2 +1,51 @@
 @import "../../../../../../variable.scss";
 @import "../../../../../../styles.scss";
+
+label{
+    margin-top: 15px;
+    font-weight: 500;
+}
+::placeholder{
+    color: rgba(80, 75, 75, 0.87);
+    font-size: 14px;
+}
+::-moz-placeholder{
+    color: rgba(80, 75, 75, 0.87);
+    font-size: 14px;
+}
+::-webkit-input-placeholder{
+    color: rgba(80, 75, 75, 0.87);
+    font-size: 14px;
+}
+
+
+.datePicker
+{
+    height: 50px;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 15px 15px;
+    box-shadow: #d6c7ec 3px 3px 3px 0px;
+    background-color: white;
+}
+.datePicker mat-icon
+{
+  vertical-align: top !important;
+}
+
+.mat-datepicker-content
+{
+  margin-top: 17px;
+  position: relative;
+  left: calc(15% - 100px);
+}
+.table_filter button img
+{
+  width: 35px !important;
+}
+.mat-dialog-container
+{
+  padding: 0;
+}

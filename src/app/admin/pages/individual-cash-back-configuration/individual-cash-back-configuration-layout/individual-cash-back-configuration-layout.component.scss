@@ -187,8 +187,8 @@ table.individualListing_table {
     padding: 0px;
   }
   
-  .table-pagination{
-    height: calc(38vh - 120px);
+  .accTable {
+    min-height: calc(23vh - 120px);
     overflow: auto;
   }
   

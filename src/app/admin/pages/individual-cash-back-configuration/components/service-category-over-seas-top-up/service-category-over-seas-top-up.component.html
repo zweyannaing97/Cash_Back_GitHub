@@ -1,10 +1,17 @@
 <form action="" [formGroup]="operatorWise_overSeasTopUp_form">
-    <br>
     <div>
-      <label for="">Country</label>
+      <label for="">Select Country  </label>
     </div>
     <div>
-      <mat-select class="select selectt" placeholder="Select" formControlName="country">
+      <mat-select class="select selectt" panelClass="select2" disableOptionCentering placeholder="Select" formControlName="country">
+        <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+          <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+              <mat-label class="label">Filter:</mat-label>
+              <mat-form-field class="select_search_box" appearance="standard">
+              <input matInput placeholder="Enter Keywords">
+              </mat-form-field>
+          </div>
+        </div>
         <mat-option value=1>Thailand</mat-option>
         <mat-option value=2>Thailand</mat-option>
         <mat-option value=3>Thailand</mat-option>
