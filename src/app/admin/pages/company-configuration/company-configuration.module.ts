@@ -13,10 +13,12 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { CreateCompanyConfigurationComponent } from './create-company-configuration/create-company-configuration.component';
 
 @NgModule({
   declarations: [
-    CompanyConfigurationComponent
+    CompanyConfigurationComponent,
+    CreateCompanyConfigurationComponent
   ],
     imports: [
         CommonModule,

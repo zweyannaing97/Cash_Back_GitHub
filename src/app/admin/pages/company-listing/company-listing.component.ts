@@ -12,6 +12,7 @@ export class CompanyListingComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
   displayedColumns: string[] = ['companyName', 'remark', 'isActive', 'action'];
@@ -22,6 +23,7 @@ export class CompanyListingComponent implements OnInit {
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
   }
+  
 }
 export interface PeriodicElement {
   companyName: string;

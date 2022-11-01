@@ -21,7 +21,7 @@ export class ConfirmAlertComponent implements OnInit {
 
 
   backClicked() {
-    this.location.back();
+    this.dialogRef.close(true);
   }
 
   confirmtask(){

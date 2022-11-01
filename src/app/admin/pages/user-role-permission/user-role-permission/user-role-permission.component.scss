@@ -16,7 +16,9 @@ table {
   white-space: nowrap;
 
 }
-
+tr.mat-row{
+  height: 60px !important;
+}
 .mat-paginator{
   width: 100%;
 }

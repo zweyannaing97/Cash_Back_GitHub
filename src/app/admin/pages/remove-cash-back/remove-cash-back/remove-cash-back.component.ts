@@ -78,7 +78,7 @@ export class RemoveCashBackComponent implements OnInit {
   itemCustomCLickHandler (data: any) {
   }
 
-  displayedColumns: string[] = ['configType', 'companyName', 'divisionState', 'district','township','cityTown','branch','okAccNo','cashbackOkAcc','serviceType','okAccType','cashbackOpwise','cashbackTelenorNo','cashbackMPTNo','cashbackOoredooNo','cashbackMytelNo','cashbackMectelNo','cashbackGiftCardsNo','cashbackDTHNo','cashbackElecNo','cashbackPostPaidNo','country','cashbackOvSeasNo','createdDateTime','updateDateTime','suspenseStartDateTime','suspenseEndDateTime','active','action'];
+  displayedColumns: string[] = ['configType', 'companyName', 'divisionState', 'district','township','cityTown','agentCode','branch','okAccNo','cashbackOkAcc','serviceType','okAccType','cashbackOpwise','cashbackTelenorNo','cashbackMPTNo','cashbackOoredooNo','cashbackMytelNo','cashbackMectelNo','cashbackGiftCardsNo','cashbackDTHNo','cashbackElecNo','cashbackPostPaidNo','country','cashbackOvSeasNo','createdDateTime','updateDateTime','suspenseStartDateTime','suspenseEndDateTime','active','action'];
 
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 

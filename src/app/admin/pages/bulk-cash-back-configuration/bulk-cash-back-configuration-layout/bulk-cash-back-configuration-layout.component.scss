@@ -131,3 +131,7 @@ label{
   bottom: 0;
   width: 100%;
 }
+::ng-deep .mat-paginator-container {
+  display: flex !important;
+  justify-content: space-between !important;
+}

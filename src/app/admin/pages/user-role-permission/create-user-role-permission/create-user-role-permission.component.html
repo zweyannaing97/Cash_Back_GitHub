@@ -52,22 +52,14 @@
               <label for="">Select Designation <span>*</span></label>
           </div>
           <div>
-            <mat-select class="selectt" panelClass="normalSelect" disableOptionCentering multiple placeholder="Select">
+            <mat-select class="selectt" panelClass="singleSelect" disableOptionCentering placeholder="Select">
               <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
                 <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
-                    <mat-label class="label">Filter:</mat-label>
-                    <mat-form-field class="select_search_box" appearance="standard">
-                    <input matInput placeholder="Enter Keywords">
-                    </mat-form-field>
+                  <mat-label class="label">Filter:</mat-label>
+                  <mat-form-field class="select_search_box" appearance="standard">
+                  <input matInput placeholder="Enter Keywords">
+                  </mat-form-field>
                 </div>
-                <button fxLayout="row" mat-button class="check_uncheck_btn" >
-                    <mat-icon class="secondary-text s-5">
-                    check</mat-icon>Check All
-                </button>
-                <button fxLayout="row" mat-button class="check_uncheck_btn v-line" >
-                    <mat-icon class="secondary-text s-5">
-                    clear</mat-icon>Uncheck All
-                </button>
               </div>
               <mat-option value=0 hidden>Select</mat-option>
               <mat-option value=2>Admin</mat-option>
@@ -256,7 +248,7 @@
   <button><a routerLink="../" class="text-white text-decoration-none">
     Cancel
   </a></button>
-  <button> <a routerLink="../" class="text-white text-decoration-none">
+  <button class="saveBtn"> <a routerLink="../" class="text-white text-decoration-none">
     Save
   </a></button>
 </div>

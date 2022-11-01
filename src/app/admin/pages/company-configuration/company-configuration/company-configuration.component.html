@@ -17,7 +17,7 @@
           class="icon-tooltip">
           <img src="assets/images/excel-download.svg"  alt="Export To Excel Icon">
       </span>
-      <span class="material-icons icons custom-icon" matTooltip="Create New" (click)="configuration_listingg = false"
+      <span class="material-icons icons custom-icon" matTooltip="Create New" [routerLink]="['./create-company-configuration']"  
             aria-label="Button that displays a tooltip when focused or hovered over"
             class="">
           <img src="assets/images/add-pattern.svg"  alt="Create New Icon">
@@ -35,9 +35,9 @@
             <td mat-cell *matCellDef="let element"> {{element.companyName}} </td>
           </ng-container>
 
-          <ng-container matColumnDef="cashbackAcc">
-            <th mat-header-cell *matHeaderCellDef> Cashback Credit OK$ Account Type  </th>
-            <td mat-cell *matCellDef="let element"> {{element.cashbackAcc}} </td>
+          <ng-container matColumnDef="cashbackOkAcc">
+            <th mat-header-cell *matHeaderCellDef> Cash Back Credit OK$ Account </th>
+            <td mat-cell *matCellDef="let element"> {{element.cashbackOkAcc}} </td>
           </ng-container>
 
           <ng-container matColumnDef="okAccType">
@@ -50,14 +50,24 @@
             <td mat-cell *matCellDef="let element"> {{element.opName}} </td>
           </ng-container>
 
+          <ng-container matColumnDef="createdDateTime">
+            <th mat-header-cell *matHeaderCellDef> Created Date & Time </th>
+            <td mat-cell *matCellDef="let element"> {{element.createdDateTime}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="updatedDateTime">
+            <th mat-header-cell *matHeaderCellDef> Updated Date & Time </th>
+            <td mat-cell *matCellDef="let element"> {{element.updatedDateTime}} </td>
+          </ng-container>
+
           <ng-container matColumnDef="action">
-            <th mat-header-cell *matHeaderCellDef class="tableSpacing text-center"> Action </th>
-            <td mat-cell *matCellDef="let element" class="tableSpacing">
-              <mat-slide-toggle></mat-slide-toggle>
-              <a routerLink="./edit-user-role-permission" class="mx-3">
+            <th mat-header-cell *matHeaderCellDef class=" text-center"> Action </th>
+            <td mat-cell *matCellDef="let element" class=" text-center">
+              <mat-slide-toggle class="mt-2" (change)="switchActive()"></mat-slide-toggle>
+              <a (click)="editNo()" style="cursor: pointer;" class="mx-4">
                 <img class="actionImage" [src]="element.action[0]" />
               </a>
-              <a routerLink="./edit-user-role-permission">
+              <a (click)="deleteNo()" style="cursor: pointer;">
                 <img class="actionImage" [src]="element.action[1]" />
               </a>
             </td>
@@ -77,62 +87,3 @@
     </mat-paginator>
       </mat-toolbar>
 </div>
-
-<div *ngIf="!configuration_listingg" class="main-content">
-    <h5 class="title">Company Configuration</h5>
-        <div>
-            <label for="">Select Company Name <span>*</span></label>
-        </div>
-        <div>
-            <mat-select class="select" disableOptionCentering  panelClass="single2Select" [(ngModel)]="company_name" (selectionChange)="formValidation()" placeholder="Select">
-                <mat-option value=1 >CGM</mat-option>
-                <mat-option value=2 >OK$</mat-option>
-                <mat-option value=3 >GAT</mat-option>
-                <mat-option value=4 >One Stop Supermarket</mat-option>
-                <mat-option value=5 >OK $ Taxi</mat-option>
-            </mat-select>
-        </div>
-
-        <div class="add_button_div">
-            <button (click)="addMobile()"><img src="assets/images/add-pattern.svg" alt="add" >Add</button>
-            <p>*(Maximum Allow Add 5 Mobile Numbers)</p>
-        </div>
-        <div class="input_outer" *ngFor="let item of mobileNumberFields">
-            <br>
-            <div>
-                <label for="">Cash back Credit OK$ Account <span>*</span></label>
-            </div>
-            <div class="mobile_field">
-                <span>+95</span>
-                <input type="text" class="input" placeholder="Enter OK$ Account Number" [(ngModel)]="item.mobileNumberValue" (keyup)="formValidation()">
-            </div>
-
-            <div style="display: none">
-                <img src="assets/images/Close.png" alt="" style="width: 30px;">
-                <span>OK$ Account Not Found</span>
-            </div>
-
-            <div style="display: inline;" *ngIf="item.mobileNumberValue !== ''">
-                <img src="assets/images/delete%20icon.png" alt="" (click)="deleteMobile(item)"><img src="assets/images/tic.png" alt="" style="width: 20px;">
-                <span>MPT (Merchant)</span>
-            </div>
-        </div>
-   <br>
-
-    <div>
-        <label for="">Remarks</label>
-    </div>
-    <div>
-        <input type="text" class="inputt">
-    </div>
-
-
-</div>
-<mat-toolbar class="justify-content-center " *ngIf="!configuration_listingg">
-  <div class="button_group modal-footer " *ngIf="show_buttons">
-    <button> CANCEL</button>
-    <button (click)="configuration_listing()">SAVE</button>
-  </div>
-</mat-toolbar>
-
-

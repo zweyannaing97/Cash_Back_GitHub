@@ -29,35 +29,33 @@ export class CompanyConfigurationComponent implements OnInit {
   ngOnInit() {
   }
 
-  actionEvent(event: any) {
-    if (event. type == "edit") {
-      const dialogRef = this.dialog.open(UpdateCompanyConfigurationComponent, {
-        width: '950px',
-        data: { }
-        });
-
-        dialogRef.afterClosed().subscribe(result => {
-          if(result){
-
-          }
+  deleteNo(){
+    this.dialog.open(ConfirmAlertComponent, {
+      width: '550px',
+      data: {
+        message: 'Are you sure want to delete?',
+        confirmButtonText: 'YES',
+        cancelButtonText: 'NO',
+      }
       });
-    }
-    if (event.type == "delete") {
-      const dialogRef = this.dialog.open(ConfirmAlertComponent, {
-        width: '550px',
-        data: {
-          message: 'Are you sure want to delete?',
-          confirmButtonText: 'YES',
-          cancelButtonText: 'NO',
-        }
-        });
+  }
 
-        dialogRef.afterClosed().subscribe(result => {
-          if(result){
-
-          }
+  editNo(){
+    this.dialog.open(UpdateCompanyConfigurationComponent, {
+      width: '950px',
+      data: { }
       });
-    }
+  }
+
+  switchActive(){
+    this.dialog.open(ConfirmAlertComponent, {
+      width: '800px',
+      data: {
+        message: 'Are you sure you want to switch off this number?',
+        confirmButtonText: 'YES',
+        cancelButtonText: 'NO',
+      }
+      });
   }
 
   fetchDataEvent(event: any) {
@@ -97,7 +95,7 @@ export class CompanyConfigurationComponent implements OnInit {
     }
   }
 
-  displayedColumns: string[] = ['companyName','cashbackAcc','okAccType','opName','action'];
+  displayedColumns: string[] = ['companyName','cashbackOkAcc','okAccType','opName','createdDateTime','updatedDateTime','action'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -109,26 +107,28 @@ export class CompanyConfigurationComponent implements OnInit {
 
 export interface PeriodicElement {
   companyName: string;
-  cashbackAcc: string;
+  cashbackOkAcc: string;
   okAccType: string;
   opName: string;
+  createdDateTime: string;
+  updatedDateTime: string;
   action: object;
 }
 const ELEMENT_DATA: PeriodicElement[] = [
-  { companyName: 'CGM',cashbackAcc:'09765745454', okAccType: 'Merchant', opName: 'MPT', action: ['assets/images/edit.svg','assets/images/delete.svg']},
-  { companyName: 'OK$',cashbackAcc:'09765745454', okAccType: 'Personal', opName: 'Telenor', action: ['assets/images/edit.svg','assets/images/delete.svg']},
-  { companyName: 'GAT',cashbackAcc:'09765745454', okAccType: 'Advance Merchant', opName: 'Ooredoo', action: ['assets/images/edit.svg','assets/images/delete.svg']},
-  { companyName: 'One Stop Supermarket',cashbackAcc:'09765745454', okAccType: 'Advance Merchant', opName: 'Mytel', action: ['assets/images/edit.svg','assets/images/delete.svg']},
-  { companyName: 'CGM',cashbackAcc:'09765745454', okAccType: 'Merchant', opName: 'MPT', action: ['assets/images/edit.svg','assets/images/delete.svg']},
-  { companyName: 'OK$',cashbackAcc:'09765745454', okAccType: 'Personal', opName: 'Telenor', action: ['assets/images/edit.svg','assets/images/delete.svg']},
-  { companyName: 'GAT',cashbackAcc:'09765745454', okAccType: 'Advance Merchant', opName: 'Ooredoo', action: ['assets/images/edit.svg','assets/images/delete.svg']},
-  { companyName: 'One Stop Supermarket',cashbackAcc:'09765745454', okAccType: 'Advance Merchant', opName: 'Mytel', action: ['assets/images/edit.svg','assets/images/delete.svg']},
-  { companyName: 'CGM',cashbackAcc:'09765745454', okAccType: 'Merchant', opName: 'MPT', action: ['assets/images/edit.svg','assets/images/delete.svg']},
-  { companyName: 'OK$',cashbackAcc:'09765745454', okAccType: 'Personal', opName: 'Telenor', action: ['assets/images/edit.svg','assets/images/delete.svg']},
-  { companyName: 'GAT',cashbackAcc:'09765745454', okAccType: 'Advance Merchant', opName: 'Ooredoo', action: ['assets/images/edit.svg','assets/images/delete.svg']},
-  { companyName: 'One Stop Supermarket',cashbackAcc:'09765745454', okAccType: 'Advance Merchant', opName: 'Mytel', action: ['assets/images/edit.svg','assets/images/delete.svg']},
-  { companyName: 'CGM',cashbackAcc:'09765745454', okAccType: 'Merchant', opName: 'MPT', action: ['assets/images/edit.svg','assets/images/delete.svg']},
-  { companyName: 'OK$',cashbackAcc:'09765745454', okAccType: 'Personal', opName: 'Telenor', action: ['assets/images/edit.svg','assets/images/delete.svg']},
-  { companyName: 'GAT',cashbackAcc:'09765745454', okAccType: 'Advance Merchant', opName: 'Ooredoo', action: ['assets/images/edit.svg','assets/images/delete.svg']},
-  { companyName: 'One Stop Supermarket',cashbackAcc:'09765745454', okAccType: 'Advance Merchant', opName: 'Mytel', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'CGM',cashbackOkAcc:'+95 09765745454', okAccType: 'Merchant', opName: 'MPT',createdDateTime:'Mon, 08-Jan-2021 09:10:20', updatedDateTime: 'Mon, 08-Jan-2021 09:10:20', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'OK$',cashbackOkAcc:'+95 09765745454', okAccType: 'Personal', opName: 'Telenor',createdDateTime:'Mon, 08-Jan-2021 09:10:20', updatedDateTime: 'Mon, 08-Jan-2021 09:10:20', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'GAT',cashbackOkAcc:'+95 09765745454', okAccType: 'Advance Merchant', opName: 'Ooredoo',createdDateTime:'Mon, 08-Jan-2021 09:10:20', updatedDateTime: 'Mon, 08-Jan-2021 09:10:20', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'One Stop Supermarket',cashbackOkAcc:'+95 09765745454', okAccType: 'Advance Merchant', opName: 'Mytel',createdDateTime:'Mon, 08-Jan-2021 09:10:20', updatedDateTime: 'Mon, 08-Jan-2021 09:10:20', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'CGM',cashbackOkAcc:'+95 09765745454', okAccType: 'Merchant', opName: 'MPT',createdDateTime:'Mon, 08-Jan-2021 09:10:20', updatedDateTime: 'Mon, 08-Jan-2021 09:10:20', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'OK$',cashbackOkAcc:'+95 09765745454', okAccType: 'Personal', opName: 'Telenor',createdDateTime:'Mon, 08-Jan-2021 09:10:20', updatedDateTime: 'Mon, 08-Jan-2021 09:10:20', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'GAT',cashbackOkAcc:'+95 09765745454', okAccType: 'Advance Merchant', opName: 'Ooredoo',createdDateTime:'Mon, 08-Jan-2021 09:10:20', updatedDateTime: 'Mon, 08-Jan-2021 09:10:20', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'One Stop Supermarket',cashbackOkAcc:'+95 09765745454', okAccType: 'Advance Merchant', opName: 'Mytel',createdDateTime:'Mon, 08-Jan-2021 09:10:20', updatedDateTime: 'Mon, 08-Jan-2021 09:10:20', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'CGM',cashbackOkAcc:'+95 09765745454', okAccType: 'Merchant', opName: 'MPT',createdDateTime:'Mon, 08-Jan-2021 09:10:20', updatedDateTime: 'Mon, 08-Jan-2021 09:10:20', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'OK$',cashbackOkAcc:'+95 09765745454', okAccType: 'Personal', opName: 'Telenor',createdDateTime:'Mon, 08-Jan-2021 09:10:20', updatedDateTime: 'Mon, 08-Jan-2021 09:10:20', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'GAT',cashbackOkAcc:'+95 09765745454', okAccType: 'Advance Merchant', opName: 'Ooredoo',createdDateTime:'Mon, 08-Jan-2021 09:10:20', updatedDateTime: 'Mon, 08-Jan-2021 09:10:20', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'One Stop Supermarket',cashbackOkAcc:'+95 09765745454', okAccType: 'Advance Merchant', opName: 'Mytel',createdDateTime:'Mon, 08-Jan-2021 09:10:20', updatedDateTime: 'Mon, 08-Jan-2021 09:10:20', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'CGM',cashbackOkAcc:'+95 09765745454', okAccType: 'Merchant', opName: 'MPT',createdDateTime:'Mon, 08-Jan-2021 09:10:20', updatedDateTime: 'Mon, 08-Jan-2021 09:10:20', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'OK$',cashbackOkAcc:'+95 09765745454', okAccType: 'Personal', opName: 'Telenor',createdDateTime:'Mon, 08-Jan-2021 09:10:20', updatedDateTime: 'Mon, 08-Jan-2021 09:10:20', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'GAT',cashbackOkAcc:'+95 09765745454', okAccType: 'Advance Merchant', opName: 'Ooredoo',createdDateTime:'Mon, 08-Jan-2021 09:10:20', updatedDateTime: 'Mon, 08-Jan-2021 09:10:20', action: ['assets/images/edit.svg','assets/images/delete.svg']},
+  { companyName: 'One Stop Supermarket',cashbackOkAcc:'+95 09765745454', okAccType: 'Advance Merchant', opName: 'Mytel',createdDateTime:'Mon, 08-Jan-2021 09:10:20', updatedDateTime: 'Mon, 08-Jan-2021 09:10:20', action: ['assets/images/edit.svg','assets/images/delete.svg']},
 ];

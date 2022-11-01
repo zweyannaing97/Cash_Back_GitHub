@@ -1,0 +1,54 @@
+<div  class="main-content">
+    <h5 class="title">Company Configuration</h5>
+        <div>
+            <label for="">Select Company Name <span>*</span></label>
+        </div>
+        <div>
+            <mat-select class="select" disableOptionCentering  panelClass="single2Select" [(ngModel)]="company_name" (selectionChange)="formValidation()" placeholder="Select">
+                <mat-option value=1 >CGM</mat-option>
+                <mat-option value=2 >OK$</mat-option>
+                <mat-option value=3 >GAT</mat-option>
+                <mat-option value=4 >One Stop Supermarket</mat-option>
+                <mat-option value=5 >OK $ Taxi</mat-option>
+            </mat-select>
+        </div>
+
+        <div class="add_button_div">
+            <button (click)="addMobile()"><img src="assets/images/add-pattern.svg" alt="add" >Add</button>
+            <p>*(Maximum Allow Add 5 Mobile Numbers)</p>
+        </div>
+        <div class="input_outer" *ngFor="let item of mobileNumberFields">
+            <br>
+            <div>
+                <label for="">Cash back Credit OK$ Account <span>*</span></label>
+            </div>
+            <div class="mobile_field">
+                <span>+95</span>
+                <input type="text" class="input" placeholder="Enter OK$ Account Number" [(ngModel)]="item.mobileNumberValue" (keyup)="formValidation()">
+            </div>
+
+            <div style="display: none">
+                <img src="assets/images/Close.png" alt="" style="width: 30px;">
+                <span>OK$ Account Not Found</span>
+            </div>
+
+            <div style="display: inline;" *ngIf="item.mobileNumberValue !== ''">
+                <img src="assets/images/delete%20icon.png" alt="" (click)="deleteMobile(item)"><img src="assets/images/tic.png" alt="" style="width: 20px;">
+                <span>MPT (Merchant)</span>
+            </div>
+        </div>
+   <br>
+
+    <div>
+        <label for="">Remarks</label>
+    </div>
+    <div>
+        <input type="text" class="inputt">
+    </div>
+
+
+</div>
+  <div class="button_group justify-content-center" *ngIf="show_buttons">
+    <button [routerLink]="['../']" > Cancel</button>
+    <button class="saveBtn">Save</button>
+  </div>

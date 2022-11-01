@@ -192,24 +192,10 @@ border-top: solid 10px #f6f6f6;
   padding-left: 20px !important;
 }
 ::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
-  background-color: rgb(247, 117, 117) ;
+  background-color: #a67ce5;
 }
 ::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
-  background-color: red;
-}
-tr.mat-row{
-  height: 60px !important;
-}
-::ng-deep .mat-slide-toggle-bar {
-  background-color: #69df84;
-  width: 33px !important;
-  height: 17px !important;
-}
-::ng-deep .mat-slide-toggle-thumb {
-  background-color:  #28a745;
-  margin-top: 3px;
-  width: 17px !important;
-  height: 16.65px !important;
+  background-color: #592f95;
 }
 
 ::ng-deep .mat-table thead {

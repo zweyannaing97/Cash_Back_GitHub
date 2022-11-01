@@ -658,3 +658,19 @@ font-size: 12px !important;
   min-width: calc(100% + 5px) !important;
 }
 
+.saveBtn{
+  color: white;
+  background: $button-group-save-button-color !important;
+  width: 130px;
+  height: 45px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.isGreen{
+  color: green;
+}
+.isRed{
+  color: red;
+}
