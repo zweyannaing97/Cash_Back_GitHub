@@ -64,11 +64,11 @@
             <th mat-header-cell *matHeaderCellDef class=" text-center"> Action </th>
             <td mat-cell *matCellDef="let element" class=" text-center">
               <mat-slide-toggle class="mt-2" (change)="switchActive()"></mat-slide-toggle>
-              <a (click)="editNo()" style="cursor: pointer;" class="mx-4">
-                <img class="actionImage" [src]="element.action[0]" />
+              <a (click)="editNo()" style="cursor: pointer;" class="mx-4 mb-2">
+                <img class="actionImage mb-2" [src]="element.action[0]" />
               </a>
               <a (click)="deleteNo()" style="cursor: pointer;">
-                <img class="actionImage" [src]="element.action[1]" />
+                <img class="actionImage mb-2" [src]="element.action[1]" />
               </a>
             </td>
           </ng-container>
