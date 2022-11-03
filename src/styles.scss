@@ -147,7 +147,7 @@ input.inputt{
     margin-bottom: 35px;
     button:first-child{
         color: white;
-        background: red;
+        background: #b81703;
         width: 130px;
         margin-right: 40px;
         height: 45px;
@@ -673,4 +673,38 @@ font-size: 12px !important;
 }
 .isRed{
   color: red;
+}
+
+
+.floating-label-group {
+	position: relative;
+
+	.floating-label {
+		color: #cccccc;
+		position: absolute;
+		pointer-events: none;
+		top: 13px;
+		left: 58px;
+		transition: all 0.1s ease;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+	}
+
+	input:focus ~ .floating-label,
+	input:not(:focus):valid ~ .floating-label {
+		top: -22px !important;
+		bottom: 0px;
+		left: 58px !important;
+		font-weight: 500;
+    font-size: 16px;
+		opacity: 1;
+		color: #592f95;
+	}
+}
+.number_input{
+  left: 88px !important;
+}
+.number_input_label{
+  padding-left: 86px !important;
 }

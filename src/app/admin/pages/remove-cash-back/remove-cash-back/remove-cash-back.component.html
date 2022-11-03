@@ -163,10 +163,10 @@
           <ng-container matColumnDef="action">
             <th mat-header-cell *matHeaderCellDef  class="text-center pl-3" > Action </th>
             <td mat-cell *matCellDef="let element" class="text-center">
-              <a (click)="delete()" class="mx-3">
+              <a (click)="delete()" class="mx-3" style="cursor: pointer;">
                 <img class="actionImage" [src]="element.action[1]" />
               </a>  
-              <a (click)="edit()" >
+              <a (click)="edit()" style="cursor: pointer;">
                 <img class="actionImage" [src]="element.action[0]" />
               </a>
               

@@ -6,19 +6,24 @@
                 <div>
                     <h1 class="title_h1"><span class="title_color">Cash</span> Back</h1>
                     <h3 class="title_sub">Management</h3>
-                    <div class="d-flex position-relative">
-                        <input type="text" placeholder="Enter Username" autocomplete="off" cdkAutofill="off" formControlName="user_name">
+                    <div class="d-flex position-relative mt-5">
+                        <div class="floating-label-group">
+                            <input type="text" autocomplete="off" autocomplete="off" cdkAutofill="off" formControlName="user_name"  required />
+                            <label class="floating-label">Username</label>
+                        </div>
                         <div class="input_image_box">
                             <img src="assets/images/Operator Wise.png" alt="" style="width: 20px;">
                         </div>
                     </div>
-                    <div class="position-relative text-center" style="margin-top: 30px;">
+
+                    <div class="d-flex position-relative" style="margin-top: 35px;">
+                        <show-hide-password size="sm" [btnOutline]="false" class="show-hide-password floating-label-group">
+                            <input type="password" autocomplete="off" autocomplete="off" cdkAutofill="off" formControlName="password"  required style="padding-left: 60px;"/>
+                            <label class="floating-label">Password</label>
+                        </show-hide-password>
                         <div class="input_image_box">
                             <img src="assets/images/password.svg" alt="" style="width: 20px;">
                         </div>
-                        <show-hide-password size="sm" [btnOutline]="false" class="show-hide-password">
-                            <input type="password" placeholder="Enter Password" autocomplete="off" formControlName="password" style="padding-left: 60px;"/>
-                        </show-hide-password>
                     </div>
 
                     <!-- <div class="incorrect_password">

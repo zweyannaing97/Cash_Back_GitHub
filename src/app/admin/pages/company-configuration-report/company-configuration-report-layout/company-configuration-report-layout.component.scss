@@ -10,7 +10,9 @@
     padding-right: 24px;
     white-space: nowrap;
   }
-  
+tr.mat-row {
+    height: 60px !important;
+}
   
   table {
     width: 100%;

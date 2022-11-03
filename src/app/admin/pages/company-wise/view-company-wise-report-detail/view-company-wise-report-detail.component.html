@@ -47,7 +47,7 @@
       
               <ng-container matColumnDef="refNo">
                 <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Reference Number </th>
-                <td mat-cell *matCellDef="let element" class="tableSpacing"> {{element.refNo}} </td>
+                <td mat-cell *matCellDef="let element" class="tableSpacing text-primary"> {{element.refNo}} </td>
               </ng-container>
 
               <ng-container matColumnDef="okAccNo">
@@ -120,6 +120,15 @@
            <div class="table-pagination mt-3">
             <table mat-table [dataSource]="dataSource2">
       
+              <ng-container matColumnDef="refNum">
+                <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Reference Number </th>
+                <td mat-cell *matCellDef="let element" class="tableSpacing text-primary">
+                  
+                    {{element.refNum}}
+                    
+                </td>
+              </ng-container>
+
               <ng-container matColumnDef="companyName">
                 <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Company Name </th>
                 <td mat-cell *matCellDef="let element" class="tableSpacing">
@@ -183,14 +192,6 @@
                 </td>
               </ng-container>
 
-              <ng-container matColumnDef="refNum">
-                <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Reference Number </th>
-                <td mat-cell *matCellDef="let element" class="tableSpacing">
-                  
-                    {{element.refNum}}
-                    
-                </td>
-              </ng-container>
       
               <ng-container matColumnDef="okAccNum">
                 <th mat-header-cell *matHeaderCellDef class="tableSpacing"> OK$ Account Number </th>
@@ -256,7 +257,7 @@
               </ng-container>
       
               <ng-container matColumnDef="cashbackTelenorNo">
-                <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Cash Back Telenor Number </th>
+                <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Cash Back Credit Telenor Number </th>
                 <td mat-cell *matCellDef="let element" class="tableSpacing">
                   
                     {{element.cashbackTelenorNo}}
@@ -283,7 +284,7 @@
               </ng-container>
       
               <ng-container matColumnDef="cashbackMPTNo">
-                <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Cash Back MPT Number </th>
+                <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Cash Credit Back MPT Number </th>
                 <td mat-cell *matCellDef="let element" class="tableSpacing">
                   
                     {{element.cashbackMPTNo}}
@@ -310,7 +311,7 @@
               </ng-container>
       
               <ng-container matColumnDef="cashbackOoredooNo">
-                <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Cash Back Ooredoo Number </th>
+                <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Cash Credit Back Ooredoo Number </th>
                 <td mat-cell *matCellDef="let element" class="tableSpacing">
                   
                     {{element.cashbackOoredooNo}}
@@ -337,7 +338,7 @@
               </ng-container>
       
               <ng-container matColumnDef="cashbackMytelNo">
-                <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Cash Back Mytel Number </th>
+                <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Cash Credit Back Mytel Number </th>
                 <td mat-cell *matCellDef="let element" class="tableSpacing">
                   
                     {{element.cashbackMytelNo}}
@@ -364,7 +365,7 @@
               </ng-container>
       
               <ng-container matColumnDef="cashbackMectelNo">
-                <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Cash Back Mectel Number </th>
+                <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Cash Back Credit Mectel Number </th>
                 <td mat-cell *matCellDef="let element" class="tableSpacing">
                   
                     {{element.cashbackMectelNo}}
@@ -418,7 +419,7 @@
               </ng-container>
       
               <ng-container matColumnDef="cashbackDTHNo">
-                <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Cash Back DTH Number </th>
+                <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Cash Back Credit DTH Number </th>
                 <td mat-cell *matCellDef="let element" class="tableSpacing">
                   
                     {{element.cashbackDTHNo}}
@@ -445,7 +446,7 @@
       
       
               <ng-container matColumnDef="cashbackElecNo">
-                <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Cash Back Electricity Number </th>
+                <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Cash Back Credit Electricity Number </th>
                 <td mat-cell *matCellDef="let element" class="tableSpacing">
                   
                     {{element.cashbackElecNo}}
@@ -472,7 +473,7 @@
               </ng-container>
       
               <ng-container matColumnDef="cashbackOvseasNo">
-                <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Cash Back Overseas Number </th>
+                <th mat-header-cell *matHeaderCellDef class="tableSpacing"> Cash Back Credit Over Seas Top Up Number </th>
                 <td mat-cell *matCellDef="let element" class="tableSpacing">
                   
                     {{element.cashbackOvseasNo}}

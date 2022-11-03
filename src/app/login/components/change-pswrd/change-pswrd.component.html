@@ -5,22 +5,26 @@
       <form action="" >
         <div>
           <h3 class="title_sub">Change Password</h3>
-          <div class="position-relative text-center" style="margin-top: 30px;">
-            <div class="input_image_box">
-              <img src="assets/images/reload.png" alt="" style="width: 20px;">
-            </div>
-            <show-hide-password size="sm" [btnOutline]="false" class="show-hide-password">
-              <input type="password" placeholder="Enter current Password" autocomplete="off" formControlName="password" style="padding-left: 60px;"/>
+          <div class="d-flex position-relative" style="margin-top: 35px;">
+            <show-hide-password size="sm" [btnOutline]="false" class="show-hide-password floating-label-group">
+                <input type="password" autocomplete="off" autocomplete="off" cdkAutofill="off" formControlName="password"  required  style="padding-left: 60px;"/>
+                <label class="floating-label">Current Password</label>
             </show-hide-password>
-          </div>
-          <div class="position-relative text-center" style="margin-top: 30px;">
             <div class="input_image_box">
-              <img src="assets/images/login.png" alt="" style="width: 20px;">
+                <img src="assets/images/password.svg" alt="" style="width: 20px;">
             </div>
-            <show-hide-password size="sm" [btnOutline]="false" class="show-hide-password">
-              <input type="password" placeholder="Enter New Password" autocomplete="off" formControlName="password" style="padding-left: 60px;"/>
-            </show-hide-password>
           </div>
+
+          <div class="d-flex position-relative" style="margin-top: 35px;">
+            <show-hide-password size="sm" [btnOutline]="false" class="show-hide-password floating-label-group">
+                <input type="password" autocomplete="off" autocomplete="off" cdkAutofill="off" formControlName="password"  required  style="padding-left: 60px;"/>
+                <label class="floating-label">New Password</label>
+            </show-hide-password>
+            <div class="input_image_box">
+                <img src="assets/images/login.png" alt="" style="width: 20px;">
+            </div>
+          </div>
+          
           <div style="text-align: center;margin-top: 20px;">
             <button type="submit" class="login_btn" routerLink="/login/">SUBMIT</button>
           </div>

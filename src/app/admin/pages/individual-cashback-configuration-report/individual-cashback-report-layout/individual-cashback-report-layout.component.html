@@ -18,6 +18,11 @@
     <div class="table-pagination">
       <table mat-table [dataSource]="dataSource">
   
+        <ng-container matColumnDef="refNum">
+          <th mat-header-cell *matHeaderCellDef> Reference Number </th>
+          <td mat-cell *matCellDef="let element" class="text-primary"> {{element.refNum}} </td>
+        </ng-container>
+
         <ng-container matColumnDef="companyName">
           <th mat-header-cell *matHeaderCellDef> Company Name </th>
           <td mat-cell *matCellDef="let element"> {{element.companyName}} </td>
@@ -135,15 +140,9 @@
         </ng-container>
 
         <ng-container matColumnDef="updateDateTime">
-          <th mat-header-cell *matHeaderCellDef> Updated Date & Time </th>
-          <td mat-cell *matCellDef="let element"> {{element.updateDateTime}} </td>
+          <th mat-header-cell *matHeaderCellDef class="text-center"> Updated Date & Time </th>
+          <td mat-cell *matCellDef="let element" class="text-center"> {{element.updateDateTime}} </td>
         </ng-container>
-
-        <ng-container matColumnDef="refNum">
-          <th mat-header-cell *matHeaderCellDef> Reference Number </th>
-          <td mat-cell *matCellDef="let element"> {{element.refNum}} </td>
-        </ng-container>
-
 
         <ng-container matColumnDef="status">
           <th mat-header-cell *matHeaderCellDef> Status </th>

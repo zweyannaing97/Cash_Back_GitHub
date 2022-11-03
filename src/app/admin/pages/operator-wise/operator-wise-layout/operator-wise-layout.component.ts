@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 import { OperatorWiseDetailReportFilterComponent } from 'src/app/admin/modals/operator-wise-detail-report-filter/operator-wise-detail-report-filter.component';
 
 @Component({
@@ -15,7 +17,7 @@ export class OperatorWiseLayoutComponent implements OnInit {
     key: 'operator'
     },
     {
-      title: 'Cash Back Telenor Wise',
+      title: 'Cash Back Credit Telenor Wise',
       key: 'telenorNum'
     },
     {
@@ -28,7 +30,7 @@ export class OperatorWiseLayoutComponent implements OnInit {
       key: 'telenorCashback'
     },
     {
-      title: 'Cash Back MPT Wise',
+      title: 'Cash Back Credit MPT Wise',
       key: 'mptNum'
     },
     {
@@ -41,7 +43,7 @@ export class OperatorWiseLayoutComponent implements OnInit {
     },
 
     {
-      title: 'Cash Back Ooredoo Wise',
+      title: 'Cash Back Credit Ooredoo Wise',
       key: 'ooredooNum'
     },
     {
@@ -54,7 +56,7 @@ export class OperatorWiseLayoutComponent implements OnInit {
     },
 
     {
-      title: 'Cash Back Mytel Wise',
+      title: 'Cash Back Credit Mytel Wise',
       key: 'mytelNum'
     },
     {
@@ -67,7 +69,7 @@ export class OperatorWiseLayoutComponent implements OnInit {
     },
     
     {
-      title: 'Cash Back Mec Tel Wise',
+      title: 'Cash Back Credit Mec Tel Wise',
       key: 'mectelNum'
     },
     {
@@ -751,5 +753,54 @@ export class OperatorWiseLayoutComponent implements OnInit {
         if(result){}
     });
   }
+  
+  displayedColumns: string[] = ['refNum','cashbackOpWise','cashbackTelenorNo','telenorPaidAmt','telenorCashback','cashbackMPTNo','mptPaidAmt','mptCashback','cashbackOoredooNo','ooredooPaidAmt','ooredooCashback','cashbackMytelNo','mytelPaidAmt','mytelCashback','cashbackMectelNo','mectelPaidAmt','mectelCashback','companyName', 'divisionState', 'district','township','cityTown', 'agentCode', 'branch','okAccNum','cashbackOkAcc','okAccType','totalPaidAmt','totalGeneAmt','transDateTime','status','latitude','longitude'];
+  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+  }
 
 }
+
+export interface PeriodicElement {
+  refNum: string;
+  cashbackOpWise: string;
+  cashbackTelenorNo: string;
+  telenorPaidAmt: string;
+  telenorCashback: string;
+  cashbackMPTNo: string;
+  mptPaidAmt: string;
+  mptCashback: string;
+  cashbackOoredooNo: string;
+  ooredooPaidAmt: string;
+  ooredooCashback: string;
+  cashbackMytelNo: string;
+  mytelPaidAmt: string;
+  mytelCashback: string;
+  cashbackMectelNo: string;
+  mectelPaidAmt: string;
+  mectelCashback: string;
+  companyName: string;
+  divisionState: string;
+  district: string;
+  township: string;
+  cityTown: string;
+  agentCode: string;
+  branch: string;
+  okAccNum: string;
+  cashbackOkAcc: string;
+  okAccType : string;
+  totalPaidAmt : string;
+  totalGeneAmt : string;
+  transDateTime : string;
+  status : string;
+  latitude : string;
+  longitude : string;
+}
+
+const ELEMENT_DATA: PeriodicElement[] = [
+  {refNum: '0000023153',cashbackOpWise:'All',cashbackTelenorNo:'+95 099771328797',telenorPaidAmt:'50,000',telenorCashback: '250', cashbackMPTNo: '+95 094201234891', mptPaidAmt: '150,000', mptCashback: '750', cashbackOoredooNo: '+95 09972668789', ooredooPaidAmt: '30,000', ooredooCashback: '150', cashbackMytelNo: '+95 09691805523', mytelPaidAmt: '20,000', mytelCashback: '100', cashbackMectelNo: '+95 09308023238', mectelPaidAmt: '50,000', mectelCashback: '250', companyName: 'CGM', divisionState: 'Yangon', district: 'Eastern', township: 'Botahtaung', cityTown: 'Yangon', agentCode: 'OK$ 0001', branch: 'Botahtaung Branch', okAccNum: '+95 09421808798', cashbackOkAcc: '+95 09421808798', okAccType : 'Merchant', totalPaidAmt : '300,000', totalGeneAmt : '1,500', transDateTime : 'Mon, 08-Jan-2021 09:10:20', status : 'Complete', latitude : '16.8991', longitude : '96.1992',},
+];

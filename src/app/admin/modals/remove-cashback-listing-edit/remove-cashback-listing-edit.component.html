@@ -13,16 +13,16 @@
           <div class="col-xs-12 col-12 col-md-6 ">
             <div>
   
-              <input readonly type="text" placeholder="From Date - To Date" class="form-control datepicker" bsDaterangepicker
+              <input readonly type="text" placeholder="From Date - To Date" class="form-control datepicker selectt" bsDaterangepicker
                      [bsConfig]="{ isAnimated: true, rangeInputFormat : 'ddd,DD-MMM-YYYY', dateInputFormat: 'ddd,DD-MMM-YYYY',showPreviousMonth: true ,showWeekNumbers: false}"
                      [maxDate]="maxDate">
               <mat-icon class="smallCalendar" style="margin-top:-45px;margin-right:56px;">date_range</mat-icon>
             </div>
           </div>
-        </div>    
+        </div>   
       </div>
       <div class="button_group mx-0 my-2 row d-flex justify-content-center ">
         <button (click)="onDismiss()">Cancel</button>
-        <button>Save</button>
+        <button class="saveBtn">Save</button>
       </div>
   </div>
