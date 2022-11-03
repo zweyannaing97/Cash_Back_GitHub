@@ -24,7 +24,7 @@ export class CompanyConfigurationReportLayoutComponent implements OnInit {
 
   filterTable(){
     const dialogRef = this.dialog.open(CompanyConfigurationReportFilterComponent, {
-      width: '950px',
+      width: '850px',
       data: {}
       });
 

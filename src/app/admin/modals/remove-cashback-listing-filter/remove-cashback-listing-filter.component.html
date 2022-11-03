@@ -11,10 +11,10 @@
                 <div>
                     <label for="">Select Period Date</label>
                 </div>
-              <input readonly type="text" placeholder="From Date - To Date" class="form-control datepicker" bsDaterangepicker
+              <input readonly type="text" placeholder="From Date - To Date" class="form-control datepicker selectt" bsDaterangepicker
                      [bsConfig]="{ isAnimated: true, rangeInputFormat : 'ddd,DD-MMM-YYYY', dateInputFormat: 'ddd,DD-MMM-YYYY',showPreviousMonth: true ,showWeekNumbers: false}"
                      [maxDate]="maxDate">
-              <mat-icon class="smallCalendar" style="margin-top:-45px;margin-right:56px;">date_range</mat-icon>
+              <mat-icon class="smallCalendar" style="margin-top:-45px;margin-right:56px; top: 102px">date_range</mat-icon>
             </div>
 
         </div>
@@ -26,6 +26,12 @@
                 <div>
                 <mat-select class="selectt" panelClass="normalSelect" disableOptionCentering multiple placeholder="Select">
                     <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+                        <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                            <mat-label class="label">Filter:</mat-label>
+                            <mat-form-field class="select_search_box" appearance="standard">
+                            <input matInput placeholder="Enter Keywords">
+                            </mat-form-field>
+                        </div>
                         <button fxLayout="row" mat-button class="check_uncheck_btn" >
                             <mat-icon class="secondary-text s-5">
                             check</mat-icon>Check All

@@ -315,7 +315,7 @@ export class FailReportCashbackReportLayoutComponent implements OnInit {
   
   filterTable(){
     const dialogRef = this.dialog.open(FailCashbackReportFilterComponent, {
-      width: '50vw',
+      width: '850px',
       data: {}
       });
 

@@ -3,7 +3,6 @@
 
 .mat-dialog-container
 {
-  width:950px !important;
   background-color: #f6f6f6 !important;
 }
 
@@ -30,7 +29,7 @@
     width: 100%;
     padding: 15px 15px;
     box-shadow: $secondary-color 3px 3px 3px 0px;
-    background-color: white  !important;
+    background-color: white !important;
 }
 .content_outer{
     padding: 30px;
@@ -64,7 +63,7 @@ label{
     width: 100%;
     padding: 15px 15px;
     box-shadow: #d6c7ec 3px 3px 3px 0px;
-    background-color: white !important;
+    background-color: white;
 }
 .datePicker mat-icon
 {
@@ -86,6 +85,7 @@ label{
   padding: 0;
 }
 
-.smallCalendar {
-    top: 102px;
-  }
+.v-line
+{
+  margin: 5px 0 5px 0 ;
+}

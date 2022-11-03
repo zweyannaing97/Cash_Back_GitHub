@@ -1,8 +1,8 @@
 @import "../../../../variable.scss";
+@import "../../../../styles.scss";
 
 .mat-dialog-container
 {
-  width:950px !important;
   background-color: #f6f6f6 !important;
 }
 
@@ -84,6 +84,8 @@ label{
 {
   padding: 0;
 }
-.smallCalendar {
-  top: 58px;
+
+.v-line
+{
+  margin: 5px 0 5px 0 ;
 }

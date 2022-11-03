@@ -25,17 +25,23 @@
                       <label for="">Select Company Name</label>
                   </div>
                   <div fxLayout="row wrap">
-                  <mat-select class="selectt" panelClass="normalSelect" disableOptionCentering   multiple placeholder="Select">
-                    <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center" style="padding: 8px 0px;">
-                        <button fxLayout="row" mat-button class="check_uncheck_btn" >
-                          <mat-icon class="secondary-text s-5">
-                            check</mat-icon>Check All
-                        </button>
-                        <button fxLayout="row" mat-button class="check_uncheck_btn v-line" style="margin-left: 10px;" >
-                          <mat-icon class="secondary-text s-5">
-                            clear</mat-icon>Uncheck All
-                        </button>
-                      </div>
+                      <mat-select class="selectt" panelClass="normalSelect" disableOptionCentering   multiple placeholder="Select">
+                        <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+                            <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                                <mat-label class="label">Filter:</mat-label>
+                                <mat-form-field class="select_search_box" appearance="standard">
+                                <input matInput placeholder="Enter Keywords">
+                                </mat-form-field>
+                            </div>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn" >
+                                <mat-icon class="secondary-text s-5">
+                                check</mat-icon>Check All
+                            </button>
+                            <button fxLayout="row" mat-button class="check_uncheck_btn v-line" >
+                                <mat-icon class="secondary-text s-5">
+                                clear</mat-icon>Uncheck All
+                            </button>
+                        </div>
         
                       <mat-option value=1>CGM</mat-option>
                       <mat-option value=2>OK$</mat-option>
@@ -535,7 +541,7 @@
               
         </div>
          
-    <div class="button_group btnFooter my-3">
+    <div class="button_group my-3">
         <button>Clear</button>
         <button>Apply</button>
     </div>

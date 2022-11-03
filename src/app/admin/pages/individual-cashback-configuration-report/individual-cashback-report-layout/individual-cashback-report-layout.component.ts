@@ -136,7 +136,7 @@ export class IndividualCashbackReportLayoutComponent implements OnInit {
 
   filterTable(){
     const dialogRef = this.dialog.open(IndividualCashBackReportFilterComponent, {
-      width: '50vw',
+      width: '850px',
       data: {}
       });
 

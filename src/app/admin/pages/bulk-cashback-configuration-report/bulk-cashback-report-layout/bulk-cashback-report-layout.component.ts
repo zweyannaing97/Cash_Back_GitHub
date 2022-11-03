@@ -398,7 +398,7 @@ export class BulkCashbackReportLayoutComponent implements OnInit {
 
   filterTable(){
     const dialogRef = this.dialog.open(BulkCashbackReportFilterComponent, {
-      width: '50vw',
+      width: '850px',
       data: {}
       });
 

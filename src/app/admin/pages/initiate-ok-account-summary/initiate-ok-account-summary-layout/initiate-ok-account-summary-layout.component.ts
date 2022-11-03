@@ -399,7 +399,7 @@ export class InitiateOkAccountSummaryLayoutComponent implements OnInit {
 
   filterTable(){
     const dialogRef = this.dialog.open(InitiateOkAccountSummaryFilterComponent, {
-      width: '50vw',
+      width: '850px',
       data: {}
       });
 
