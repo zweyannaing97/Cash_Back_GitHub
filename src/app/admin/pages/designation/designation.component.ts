@@ -14,7 +14,7 @@ export class DesignationComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  displayedColumns: string[] = ['designName', 'remark', 'isActive', 'action'];
+  displayedColumns: string[] = ['designName', 'remark', 'isActive', 'createDateTime', 'updateDateTime', 'action'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -29,60 +29,61 @@ export interface PeriodicElement {
   remark: string;
   isActive: string;
   action: string;
-
+  createDateTime: string;
+  updateDateTime: string;
 }
 
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {designName: 'Branch Manager', remark: 'Account Department', isActive:'Yes',action:'assets/images/edit.png'},
+  {designName: 'Branch Manager', remark: 'Account Department', isActive:'Yes', createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.svg'},
 
-  {designName: 'Branch Manager', remark: 'Admin Department', isActive:'Yes',action:'assets/images/edit.png'},
+  {designName: 'Branch Manager', remark: 'Admin Department', isActive:'Yes', createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.svg'},
 
-  {designName: 'Branch Manager', remark: 'Sales Department', isActive:'Yes',action:'assets/images/edit.png'},
+  {designName: 'Branch Manager', remark: 'Sales Department', isActive:'Yes', createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.svg'},
 
-  {designName: 'Branch Manager', remark: 'Sales Department', isActive:'Yes',action:'assets/images/edit.png'},
+  {designName: 'Branch Manager', remark: 'Sales Department', isActive:'Yes', createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.svg'},
 
-  {designName: 'Branch Manager', remark: 'Sales Department', isActive:'No', action:'assets/images/edit.png'},
+  {designName: 'Branch Manager', remark: 'Sales Department', isActive:'No', createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.svg'},
 
-  {designName: 'Branch Manager', remark: 'Account Department', isActive:'Yes',action:'assets/images/edit.png'},
+  {designName: 'Branch Manager', remark: 'Account Department', isActive:'Yes', createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.svg'},
 
-  {designName: 'Branch Manager', remark: 'Admin Department', isActive:'Yes',action:'assets/images/edit.png'},
+  {designName: 'Branch Manager', remark: 'Admin Department', isActive:'Yes', createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.svg'},
 
-  {designName: 'Branch Manager', remark: 'Sales Department', isActive:'Yes', action:'assets/images/edit.png'},
+  {designName: 'Branch Manager', remark: 'Sales Department', isActive:'Yes', createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.svg'},
 
-  {designName: 'Branch Manager', remark: 'Sales Department', isActive:'Yes',action:'assets/images/edit.png'},
+  {designName: 'Branch Manager', remark: 'Sales Department', isActive:'Yes', createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.svg'},
 
-  {designName: 'Branch Manager', remark: 'Sales Department', isActive:'No',action:'assets/images/edit.png'},
+  {designName: 'Branch Manager', remark: 'Sales Department', isActive:'No', createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.svg'},
 
-  {designName: 'Branch Manager', remark: 'Account Department', isActive:'Yes',action:'assets/images/edit.png'},
+  {designName: 'Branch Manager', remark: 'Account Department', isActive:'Yes', createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.svg'},
 
-  {designName: 'Branch Manager', remark: 'Admin Department', isActive:'Yes',action:'assets/images/edit.png'},
+  {designName: 'Branch Manager', remark: 'Admin Department', isActive:'Yes', createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.svg'},
 
-  {designName: 'Branch Manager', remark: 'Sales Department', isActive:'Yes',action:'assets/images/edit.png'},
+  {designName: 'Branch Manager', remark: 'Sales Department', isActive:'Yes', createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.svg'},
 
-  {designName: 'Account Manager', remark: 'Sales Department', isActive:'Yes',action:'assets/images/edit.png'},
+  {designName: 'Account Manager', remark: 'Sales Department', isActive:'Yes', createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.svg'},
 
-  {designName: 'Branch Manager', remark: 'Sales Department', isActive:'No',  action:'assets/images/edit.png'},
+  {designName: 'Branch Manager', remark: 'Sales Department', isActive:'No',  createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.svg'},
 
-  {designName: 'Branch Manager', remark: 'Account Department', isActive:'Yes',action:'assets/images/edit.png'},
+  {designName: 'Branch Manager', remark: 'Account Department', isActive:'Yes', createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.svg'},
 
-  {designName: 'Branch Manager', remark: 'Admin Department', isActive:'Yes',action:'assets/images/edit.png'},
+  {designName: 'Branch Manager', remark: 'Admin Department', isActive:'Yes', createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.svg'},
 
-  {designName: 'Branch Manager', remark: 'Sales Department', isActive:'Yes',action:'assets/images/edit.png'},
+  {designName: 'Branch Manager', remark: 'Sales Department', isActive:'Yes', createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.svg'},
 
-  {designName: 'Branch Manager', remark: 'Sales Department', isActive:'Yes',action:'assets/images/edit.png'},
+  {designName: 'Branch Manager', remark: 'Sales Department', isActive:'Yes', createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.svg'},
 
-  {designName: 'Branch Manager', remark: 'Sales Department', isActive:'No',action:'assets/images/edit.png'},
+  {designName: 'Branch Manager', remark: 'Sales Department', isActive:'No', createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.svg'},
 
-  {designName: 'Branch Manager', remark: 'Account Department', isActive:'Yes',action:'assets/images/edit.png'},
+  {designName: 'Branch Manager', remark: 'Account Department', isActive:'Yes', createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.svg'},
 
-  {designName: 'Branch Manager', remark: 'Admin Department', isActive:'Yes',action:'assets/images/edit.png'},
+  {designName: 'Branch Manager', remark: 'Admin Department', isActive:'Yes', createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.svg'},
 
-  {designName: 'Branch Manager', remark: 'Sales Department', isActive:'Yes',action:'assets/images/edit.png'},
+  {designName: 'Branch Manager', remark: 'Sales Department', isActive:'Yes', createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.svg'},
 
-  {designName: 'Branch Manager', remark: 'Sales Department', isActive:'Yes',action:'assets/images/edit.png'},
+  {designName: 'Branch Manager', remark: 'Sales Department', isActive:'Yes', createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.svg'},
 
-  {designName: 'Branch Manager', remark: 'Sales Department', isActive:'No',action:'assets/images/edit.png'},
+  {designName: 'Branch Manager', remark: 'Sales Department', isActive:'No', createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20', action:'assets/images/edit.svg'},
 
 ];
 

@@ -27,11 +27,12 @@ export class BulkCashBackConfigurationLayoutComponent implements OnInit {
 
   fileUpload(event: any){
     this.showTable = true;
+    this.showButtons = true;
   }
 
   actionEvent(){
       this.showFileTable = !this.showFileTable;
-      this.showButtons = true;
+      this.showButtons = false;
   }
   fetchDataEvent(event: any){}
   fileFetchDataEvent(event: any){}

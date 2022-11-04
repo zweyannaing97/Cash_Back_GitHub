@@ -58,17 +58,17 @@ const ELEMENT_DATA: PeriodicElement[] = [
 
   {companyName: 'CGM', cashbackOkAcc: '+95 0942079679867', okAccType: 'Merchant', opName: 'Operator', isActive: 'Yes', createdDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20'},
 
-  {companyName: 'CGM', cashbackOkAcc: '+95 0942079679867', okAccType: 'Merchant', opName: 'Operator', isActive: 'Yes', createdDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20'},
+  {companyName: 'CGM', cashbackOkAcc: '+95 0942079679867', okAccType: 'Merchant', opName: 'Operator', isActive: 'No', createdDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20'},
 
   {companyName: 'CGM', cashbackOkAcc: '+95 0942079679867', okAccType: 'Merchant', opName: 'Operator', isActive: 'Yes', createdDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20'},
 
-  {companyName: 'CGM', cashbackOkAcc: '+95 0942079679867', okAccType: 'Merchant', opName: 'Operator', isActive: 'Yes', createdDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20'},
+  {companyName: 'CGM', cashbackOkAcc: '+95 0942079679867', okAccType: 'Merchant', opName: 'Operator', isActive: 'No', createdDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20'},
 
   {companyName: 'CGM', cashbackOkAcc: '+95 0942079679867', okAccType: 'Merchant', opName: 'Operator', isActive: 'Yes', createdDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20'},
 
-  {companyName: 'CGM', cashbackOkAcc: '+95 0942079679867', okAccType: 'Merchant', opName: 'Operator', isActive: 'Yes', createdDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20'},
+  {companyName: 'CGM', cashbackOkAcc: '+95 0942079679867', okAccType: 'Merchant', opName: 'Operator', isActive: 'No', createdDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20'},
 
-  {companyName: 'CGM', cashbackOkAcc: '+95 0942079679867', okAccType: 'Merchant', opName: 'Operator', isActive: 'Yes', createdDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20'},
+  {companyName: 'CGM', cashbackOkAcc: '+95 0942079679867', okAccType: 'Merchant', opName: 'Operator', isActive: 'No', createdDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20'},
 
   {companyName: 'CGM', cashbackOkAcc: '+95 0942079679867', okAccType: 'Merchant', opName: 'Operator', isActive: 'Yes', createdDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20'},
 

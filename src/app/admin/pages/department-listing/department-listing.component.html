@@ -1,5 +1,5 @@
-<div class=" p-3">
-  <div class="d-flex justify-content-between align-items-center pb-2">
+<div >
+  <div class="d-flex justify-content-between align-items-center ">
     <h5 class="title">Department Listing</h5>
     <div class="table_filter">
       <div class="search-container">
@@ -29,7 +29,7 @@
       <!-- Position Column -->
       <ng-container matColumnDef="deptName">
         <th mat-header-cell *matHeaderCellDef> Department Name </th>
-        <td mat-cell *matCellDef="let element" style="width: 40%;">
+        <td mat-cell *matCellDef="let element" >
           {{element.deptName}}
         </td>
       </ng-container>
@@ -40,7 +40,7 @@
       <!-- Weight Column -->
       <ng-container matColumnDef="remark">
         <th mat-header-cell *matHeaderCellDef> Remark </th>
-        <td mat-cell *matCellDef="let element" style="width: 30%;"> {{element.remark}} </td>
+        <td mat-cell *matCellDef="let element" > {{element.remark}} </td>
       </ng-container>
 
       <ng-container matColumnDef="isActive">
@@ -48,7 +48,15 @@
         <td mat-cell *matCellDef="let element" [ngClass]="element.isActive === 'Yes' ? 'isGreen' : 'isRed'"> {{element.isActive}} </td>
       </ng-container>
 
+      <ng-container matColumnDef="createDateTime">
+        <th mat-header-cell *matHeaderCellDef> Created Date & Time </th>
+        <td mat-cell *matCellDef="let element" > {{element.createDateTime}} </td>
+      </ng-container>
 
+      <ng-container matColumnDef="updateDateTime">
+        <th mat-header-cell *matHeaderCellDef> Updated Date & Time </th>
+        <td mat-cell *matCellDef="let element" > {{element.updateDateTime}} </td>
+      </ng-container>
 
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef> Action </th>

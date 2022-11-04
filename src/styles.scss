@@ -326,6 +326,7 @@ input#file
 //customize css start
 .bs-datepicker {
   left: 80px;
+  top: 4px;
 }
 .theme-green .bs-datepicker-head {
   background-color: #592f95 !important;
@@ -693,11 +694,11 @@ font-size: 12px !important;
 
 	input:focus ~ .floating-label,
 	input:not(:focus):valid ~ .floating-label {
-		top: -22px !important;
+		top: -25px !important;
 		bottom: 0px;
 		left: 58px !important;
 		font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
 		opacity: 1;
 		color: #592f95;
 	}

@@ -14,7 +14,7 @@ export class DepartmentListingComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  displayedColumns: string[] = ['deptName', 'remark', 'isActive', 'action'];
+  displayedColumns: string[] = ['deptName', 'remark', 'isActive',  'createDateTime', 'updateDateTime','action'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -29,42 +29,43 @@ export interface PeriodicElement {
   remark: string;
   isActive: string;
   action: string;
-
+  createDateTime: string;
+  updateDateTime: string;
 }
 
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes', action:'assets/images/edit.png'},
+  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes',createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20',action:'assets/images/edit.svg'},
 
-  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes', action:'assets/images/edit.png'},
+  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes',createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20',action:'assets/images/edit.svg'},
 
-  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes', action:'assets/images/edit.png'},
+  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes',createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20',action:'assets/images/edit.svg'},
 
-  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes', action:'assets/images/edit.png'},
+  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes',createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20',action:'assets/images/edit.svg'},
 
-  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes', action:'assets/images/edit.png'},
+  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes',createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20',action:'assets/images/edit.svg'},
 
-  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes', action:'assets/images/edit.png'},
+  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes',createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20',action:'assets/images/edit.svg'},
 
-  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes', action:'assets/images/edit.png'},
+  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes',createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20',action:'assets/images/edit.svg'},
 
-  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes', action:'assets/images/edit.png'},
+  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes',createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20',action:'assets/images/edit.svg'},
 
-  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes', action:'assets/images/edit.png'},
+  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes',createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20',action:'assets/images/edit.svg'},
 
-  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes', action:'assets/images/edit.png'},
+  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes',createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20',action:'assets/images/edit.svg'},
 
-  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes', action:'assets/images/edit.png'},
+  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes',createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20',action:'assets/images/edit.svg'},
 
-  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes', action:'assets/images/edit.png'},
+  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes',createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20',action:'assets/images/edit.svg'},
 
-  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes', action:'assets/images/edit.png'},
+  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes',createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20',action:'assets/images/edit.svg'},
 
-  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes', action:'assets/images/edit.png'},
+  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes',createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20',action:'assets/images/edit.svg'},
 
-  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes', action:'assets/images/edit.png'},
+  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes',createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20',action:'assets/images/edit.svg'},
 
-  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes', action:'assets/images/edit.png'},
+  {deptName: 'Account Department', remark: 'Consumer Good Myanmar', isActive:'Yes',createDateTime:'Mon, 08-Jan-2021 09:10:20', updateDateTime:'Mon, 08-Jan-2021 09:10:20',action:'assets/images/edit.svg'},
 
 
 

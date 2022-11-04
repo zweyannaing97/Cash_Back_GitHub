@@ -1,2 +1,25 @@
 @import "../../../../../../variable.scss";
 @import "../../../../../../styles.scss";
+.select .mat-select-trigger{
+    height: 50px;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100% !important;
+    padding: 15px 15px;
+    box-shadow: $secondary-color 3px 3px 3px 0px;
+    background-color: white;
+    font-weight: 500;
+}
+
+input.input {
+    height: 48px;
+    border: none;
+    box-shadow: #d6c7ec 3px 3px 3px 0px;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100% !important;
+    padding: 13px 15px;
+    font-weight: 500;
+}

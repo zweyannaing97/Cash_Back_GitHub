@@ -19,6 +19,11 @@
       <!-- table -->
       <div class="table-pagination">
         <table mat-table [dataSource]="dataSource">
+
+          <ng-container matColumnDef="refNum">
+            <th mat-header-cell *matHeaderCellDef>Reference Number </th>
+            <td mat-cell *matCellDef="let element" class="text-primary"> {{element.refNum}} </td>
+          </ng-container>
     
           <ng-container matColumnDef="companyName">
             <th mat-header-cell *matHeaderCellDef> Company Name </th>

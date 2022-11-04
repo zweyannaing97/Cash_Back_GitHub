@@ -1,4 +1,4 @@
-<div class="">
+<div class="" style="height: calc(95vh - 120px);">
     <h5 class="title">Bulk Upload</h5>
 
     <div>
@@ -105,7 +105,7 @@
               <td mat-cell *matCellDef="let element" class="text-center"> {{element.okAccNum}} </td>
             </ng-container>
             <ng-container matColumnDef="cashbackOkAcc">
-              <th mat-header-cell *matHeaderCellDef class="text-center"> Cash Back OK$ Account </th>
+              <th mat-header-cell *matHeaderCellDef class="text-center"> Cash Back Credit OK$ Account </th>
               <td mat-cell *matCellDef="let element" class="text-center"> {{element.cashbackOkAcc}} </td>
             </ng-container>
             <ng-container matColumnDef="okAccType">
@@ -113,43 +113,43 @@
               <td mat-cell *matCellDef="let element" class="text-center"> {{element.okAccType}} </td>
             </ng-container>
             <ng-container matColumnDef="cashbackTelenorNumber">
-              <th mat-header-cell *matHeaderCellDef class="text-center"> Cash Back Telenor Number </th>
+              <th mat-header-cell *matHeaderCellDef class="text-center"> Cash Back Credit Telenor Number </th>
               <td mat-cell *matCellDef="let element" class="text-center"> {{element.cashbackTelenorNumber}} </td>
             </ng-container>
             <ng-container matColumnDef="cashbackMPTNumber">
-              <th mat-header-cell *matHeaderCellDef class="text-center"> CashBack MPT Number </th>
+              <th mat-header-cell *matHeaderCellDef class="text-center"> CashBack Credit MPT Number </th>
               <td mat-cell *matCellDef="let element" class="text-center"> {{element.cashbackMPTNumber}} </td>
             </ng-container>
             <ng-container matColumnDef="cashbackOoredooNumber">
-              <th mat-header-cell *matHeaderCellDef class="text-center"> Cash Back Ooredoo Number </th>
+              <th mat-header-cell *matHeaderCellDef class="text-center"> Cash Back Credit Ooredoo Number </th>
               <td mat-cell *matCellDef="let element" class="text-center"> {{element.cashbackOoredooNumber}} </td>
             </ng-container>
             <ng-container matColumnDef="cashbackMytelNumber">
-              <th mat-header-cell *matHeaderCellDef class="text-center"> Cash Back Mytel Number </th>
+              <th mat-header-cell *matHeaderCellDef class="text-center"> Cash Back Credit Mytel Number </th>
               <td mat-cell *matCellDef="let element" class="text-center"> {{element.cashbackMytelNumber}} </td>
             </ng-container>
             <ng-container matColumnDef="cashbackMecTelNumber">
-              <th mat-header-cell *matHeaderCellDef class="text-center"> Cash Back MecTel Number </th>
+              <th mat-header-cell *matHeaderCellDef class="text-center"> Cash Back Credit MecTel Number </th>
               <td mat-cell *matCellDef="let element" class="text-center"> {{element.cashbackMecTelNumber}} </td>
             </ng-container>
             <ng-container matColumnDef="cashbackGiftCardNumber">
-              <th mat-header-cell *matHeaderCellDef class="text-center"> Cash Back GiftCard Number </th>
+              <th mat-header-cell *matHeaderCellDef class="text-center"> Cash Back Credit GiftCard Number </th>
               <td mat-cell *matCellDef="let element" class="text-center"> {{element.cashbackGiftCardNumber}} </td>
             </ng-container>
             <ng-container matColumnDef="cashbackDTHNumber">
-              <th mat-header-cell *matHeaderCellDef class="text-center"> Cash Back DTH Number </th>
+              <th mat-header-cell *matHeaderCellDef class="text-center"> Cash Back Credit DTH Number </th>
               <td mat-cell *matCellDef="let element" class="text-center"> {{element.cashbackDTHNumber}} </td>
             </ng-container>
              <ng-container matColumnDef="cashbackElecNumber">
-              <th mat-header-cell *matHeaderCellDef class="text-center"> Cash Back Electricity Number </th>
+              <th mat-header-cell *matHeaderCellDef class="text-center"> Cash Back Credit Electricity Number </th>
               <td mat-cell *matCellDef="let element" class="text-center"> {{element.cashbackElecNumber}} </td>
             </ng-container>
             <ng-container matColumnDef="cashbackPostPaidNumber">
-              <th mat-header-cell *matHeaderCellDef class="text-center"> Cash Back Post Paid Number </th>
+              <th mat-header-cell *matHeaderCellDef class="text-center"> Cash Back Credit Post Paid Number </th>
               <td mat-cell *matCellDef="let element" class="text-center"> {{element.cashbackPostPaidNumber}} </td>
             </ng-container>
             <ng-container matColumnDef="cashbackOvSeasNumber">
-              <th mat-header-cell *matHeaderCellDef class="text-center"> Cash Back Over Seas Top Up Number </th>
+              <th mat-header-cell *matHeaderCellDef class="text-center"> Cash Back Credit Over Seas Top Up Number </th>
               <td mat-cell *matCellDef="let element" class="text-center"> {{element.cashbackOvSeasNumber}} </td>
             </ng-container>
 
@@ -212,7 +212,7 @@
 
 </div>
 
-<footer class="button_group footer" style="margin: 0px;" *ngIf="showButtons">
+<footer class="button_group" style="margin: 0px;" *ngIf="showButtons" >
   <button matRipple (click)="showTable = false;showButtons = false">Cancel</button>
-  <button matRipple >Save</button>
+  <button matRipple class="saveBtn">Save</button>
 </footer>
