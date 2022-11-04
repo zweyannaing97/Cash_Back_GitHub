@@ -1,7 +1,8 @@
 <div class="" style="height: calc(95vh - 120px);">
     <h5 class="title">Bulk Upload</h5>
-
-    <div>
+  <div class="row">
+    <div class="col-md-4 col-12">
+      <div>
         <label for="">Select Company Name <span>*</span></label>
     </div>
     <div>
@@ -14,6 +15,9 @@
             <mat-option value=5 >OK $ Taxi</mat-option>
         </mat-select>
     </div>
+    </div>
+  </div>
+    
 
     <div class="bulk_upload" *ngIf="companySelected">
       <input type="file" id="LogoFile" class="UploadFile_hash" (change)="fileUpload($event)" #inputFile name="fileUpload" accept=".xls,.xlsx">

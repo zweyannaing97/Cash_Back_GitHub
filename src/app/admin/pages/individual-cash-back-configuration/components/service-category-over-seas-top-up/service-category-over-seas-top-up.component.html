@@ -1,39 +1,51 @@
 <form action="" [formGroup]="operatorWise_overSeasTopUp_form">
-    <div>
-      <label for="">Select Country  </label>
-    </div>
-    <div>
-      <mat-select class="select selectt" panelClass="select2" disableOptionCentering placeholder="Select" formControlName="country">
-        <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
-          <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
-              <mat-label class="label">Filter:</mat-label>
-              <mat-form-field class="select_search_box" appearance="standard">
-              <input matInput placeholder="Enter Keywords">
-              </mat-form-field>
+  <div class="row">
+    <div class="col-md-4 col-12">
+      <div>
+        <label for="">Select Country  </label>
+      </div>
+      <div>
+        <mat-select class="select selectt" panelClass="select2" disableOptionCentering placeholder="Select" formControlName="country">
+          <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+            <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                <mat-label class="label">Filter:</mat-label>
+                <mat-form-field class="select_search_box" appearance="standard">
+                <input matInput placeholder="Enter Keywords">
+                </mat-form-field>
+            </div>
           </div>
-        </div>
-        <mat-option value=1>Thailand</mat-option>
-        <mat-option value=2>Thailand</mat-option>
-        <mat-option value=3>Thailand</mat-option>
-        <mat-option value=4>Thailand</mat-option>
-        <mat-option value=5>Thailand</mat-option>
-        <mat-option value=5>Thailand</mat-option>
-      </mat-select>
+          <mat-option value=1>Thailand</mat-option>
+          <mat-option value=2>Thailand</mat-option>
+          <mat-option value=3>Thailand</mat-option>
+          <mat-option value=4>Thailand</mat-option>
+          <mat-option value=5>Thailand</mat-option>
+          <mat-option value=5>Thailand</mat-option>
+        </mat-select>
+      </div>
+  
+      <br>
+      <div>
+        <label for="">Cash Back Credit Over Seas Top Up Number</label>
+      </div>
+      <div>
+        <input type="text" class="input" placeholder="Enter OK$ Account Number" formControlName="overSeasTopUp_number" (keyup)="formValidation()">
+      </div>
     </div>
+    <div class="col-md-8"></div>
+  </div>
 
-    <br>
-    <div>
-      <label for="">Cash Back Credit Over Seas Top Up Number</label>
+  <div class="row">
+    <div class="col-md-12">
+      <br>
+      <div>
+        <label for="">Remarks</label>
+      </div>
+      <div>
+        <input type="text" class="inputt" placeholder="Enter Remarks" formControlName="Remarks">
+      </div>
     </div>
-    <div>
-      <input type="text" class="input" placeholder="Enter OK$ Account Number" formControlName="overSeasTopUp_number" (keyup)="formValidation()">
-    </div>
+  </div>
+    
 
-    <br>
-    <div>
-      <label for="">Remarks</label>
-    </div>
-    <div>
-      <input type="text" class="inputt" placeholder="Enter Remarks" formControlName="Remarks">
-    </div>
+    
   </form>

@@ -58,7 +58,7 @@
   </div>
   
    <!-- table -->
-   <div class="table-pagination accTable mt-3">
+   <div class="table-pagination accTable mt-3" style="height: calc(33vh - 120px); overflow: auto;">
     <table mat-table [dataSource]="dataSource">
 
       <ng-container matColumnDef="divison">
@@ -81,15 +81,13 @@
         <td mat-cell *matCellDef="let element"> {{element.branch}} </td>
       </ng-container>
 
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns;" style="z-index: auto;"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" ></tr>
     </table>
 
 
   </div>
 
-  <div class="row">
-   <div class="col-md-4">
     <div *ngIf="selectedCategory === 'All'" class="mt-2 mb-5">
       <app-service-category-all (newItemEvent)="formValidation($event)" ></app-service-category-all>
     </div>
@@ -117,33 +115,10 @@
     <div *ngIf="selectedCategory === 'Over Seas Top Up'" class="mt-2 mb-5">
       <app-service-category-over-seas-top-up (newItemEvent)="formValidation($event)"></app-service-category-over-seas-top-up>
     </div>
-   </div>  
-  </div>
+
 </div>
 
   
-
-
-<div class="row">
-  <div class="col-md-4">
-    
-  </div>
-</div>
-
-
-<div class="row">
-  <div class="col-md-4">
-    
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-4">
-    
-  </div>
-</div>
- 
-
   
   <br>
   

@@ -1,16 +1,26 @@
 <form action="" [formGroup]="operatorWise_postPaid_form">
-    <div class="mt-4">
-      <label for="">Cash Back Credit Post Paid Number</label>
+  <div class="row">
+    <div class="col-md-4 col-12">
+      <div class="mt-4">
+        <label for="">Cash Back Credit Post Paid Number</label>
+      </div>
+      <div>
+        <input type="text" class="input" placeholder="Enter OK$ Account Number" formControlName="postPaid_number" (keyup)="formValidation()">
+      </div>
     </div>
-    <div>
-      <input type="text" class="input" placeholder="Enter OK$ Account Number" formControlName="postPaid_number" (keyup)="formValidation()">
-    </div>
+    <div class="col-md-8"></div>
+  </div>
 
-    <br>
+  <div class="row">
+    <div class="col-md-12">
+      <br>
     <div>
       <label for="">Remarks</label>
     </div>
     <div>
       <input type="text" class="inputt" placeholder="Enter Remarks" formControlName="Remarks">
     </div>
-  </form>
+    </div>
+  </div>
+
+</form>

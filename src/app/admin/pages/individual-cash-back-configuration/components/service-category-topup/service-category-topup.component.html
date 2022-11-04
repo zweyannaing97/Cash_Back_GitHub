@@ -1,84 +1,91 @@
-<div class="mt-4">
-  <label for="">Cash Back Operator Wise</label>
-</div>
-<div>
-  <mat-select
-    class="select selectt" panelClass="select3" disableOptionCentering
-    multiple
-    placeholder="Select"
-    (selectionChange)="OperatorWiseSelected($event.value)"
-  >
-    <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
-      <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
-          <mat-label class="label">Filter:</mat-label>
-          <mat-form-field class="select_search_box" appearance="standard">
-          <input matInput placeholder="Enter Keywords">
-          </mat-form-field>
-      </div>
-      <button fxLayout="row" mat-button class="check_uncheck_btn d-flex" style="background-color: transparent; margin-top: 10px" >
-          <mat-icon class="secondary-text s-5">
-          check</mat-icon><p style="margin: 0;">Check All</p>
-      </button>
-      <button fxLayout="row" mat-button class="check_uncheck_btn v-line d-flex"  style="background-color: transparent;">
-          <mat-icon class="secondary-text s-5">
-          clear</mat-icon><p style="margin: 0;">Uncheck All</p>
-      </button>
+<div class="row">
+  <div class="col-md-4 col-12">
+    <div class="mt-4">
+      <label for="">Cash Back Operator Wise</label>
     </div>
-    <mat-option value="2">MPT</mat-option>
-    <mat-option value="3">Telenor</mat-option>
-    <mat-option value="4">Ooredoo</mat-option>
-    <mat-option value="5">Mytel</mat-option>
-    <mat-option value="6">Mec Tel</mat-option>
-  </mat-select>
+    <div>
+      <mat-select
+        class="select selectt" panelClass="select3" disableOptionCentering
+        multiple
+        placeholder="Select"
+        (selectionChange)="OperatorWiseSelected($event.value)"
+      >
+        <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign.xs="start start" class="filter_select_header" fxLayoutAlign="space-between center">
+          <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+              <mat-label class="label">Filter:</mat-label>
+              <mat-form-field class="select_search_box" appearance="standard">
+              <input matInput placeholder="Enter Keywords">
+              </mat-form-field>
+          </div>
+          <button fxLayout="row" mat-button class="check_uncheck_btn d-flex" style="background-color: transparent; margin-top: 10px" >
+              <mat-icon class="secondary-text s-5">
+              check</mat-icon><p style="margin: 0;">Check All</p>
+          </button>
+          <button fxLayout="row" mat-button class="check_uncheck_btn v-line d-flex"  style="background-color: transparent;">
+              <mat-icon class="secondary-text s-5">
+              clear</mat-icon><p style="margin: 0;">Uncheck All</p>
+          </button>
+        </div>
+        <mat-option value="2">MPT</mat-option>
+        <mat-option value="3">Telenor</mat-option>
+        <mat-option value="4">Ooredoo</mat-option>
+        <mat-option value="5">Mytel</mat-option>
+        <mat-option value="6">Mec Tel</mat-option>
+      </mat-select>
+    </div>
+    
+    <div *ngIf="cashBackOperatorWise.includes('2') || cashBackOperatorWise.includes('1')">
+      <div class="mt-3">
+        <label for="">Cash Back Credit MPT Number</label>
+      </div>
+      <div>
+        <input type="text" class="input" placeholder="Enter OK$ Account Number" (keyup)="formValidation()" [(ngModel)]="mpt_number">
+      </div>
+    </div>
+    
+    <div *ngIf="cashBackOperatorWise.includes('3') || cashBackOperatorWise.includes('1')">
+      <div class="mt-3">
+        <label for="">Cash Back Credit Telenor Number </label>
+      </div>
+      <div>
+        <input type="text" class="input" placeholder="Enter OK$ Account Number" (keyup)="formValidation()" [(ngModel)]="telenor_number">
+      </div>
+    </div>
+    
+    
+    <div *ngIf="cashBackOperatorWise.includes('4') || cashBackOperatorWise.includes('1')">
+      <div class="mt-3">
+        <label for="">Cash Back Credit Ooredoo Number </label>
+      </div>
+      <div>
+        <input type="text" class="input" placeholder="Enter OK$ Account Number" (keyup)="formValidation()" [(ngModel)]="ooredoo_number">
+      </div>
+    </div>
+    
+    <div *ngIf="cashBackOperatorWise.includes('5') || cashBackOperatorWise.includes('1')">
+      <div class="mt-3">
+        <label for="">Cash Back Credit Mytel Number </label>
+      </div>
+      <div>
+        <input type="text" class="input" placeholder="Enter OK$ Account Number" (keyup)="formValidation()" [(ngModel)]="mytel_number">
+      </div>
+    </div>
+    
+    <div *ngIf="cashBackOperatorWise.includes('6') || cashBackOperatorWise.includes('1')">
+      <div class="mt-3">
+        <label for="">Cash Back Credit MecTel Number </label>
+      </div>
+      <div>
+        <input type="text" class="input" placeholder="Enter OK$ Account Number" (keyup)="formValidation()" [(ngModel)]="mectel_number">
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8"></div>
 </div>
 
-<div *ngIf="cashBackOperatorWise.includes('2') || cashBackOperatorWise.includes('1')">
-  <div class="mt-3">
-    <label for="">Cash Back Credit MPT Number</label>
-  </div>
-  <div>
-    <input type="text" class="input" placeholder="Enter OK$ Account Number" (keyup)="formValidation()" [(ngModel)]="mpt_number">
-  </div>
-</div>
-
-<div *ngIf="cashBackOperatorWise.includes('3') || cashBackOperatorWise.includes('1')">
-  <div class="mt-3">
-    <label for="">Cash Back Credit Telenor Number </label>
-  </div>
-  <div>
-    <input type="text" class="input" placeholder="Enter OK$ Account Number" (keyup)="formValidation()" [(ngModel)]="telenor_number">
-  </div>
-</div>
-
-
-<div *ngIf="cashBackOperatorWise.includes('4') || cashBackOperatorWise.includes('1')">
-  <div class="mt-3">
-    <label for="">Cash Back Credit Ooredoo Number </label>
-  </div>
-  <div>
-    <input type="text" class="input" placeholder="Enter OK$ Account Number" (keyup)="formValidation()" [(ngModel)]="ooredoo_number">
-  </div>
-</div>
-
-<div *ngIf="cashBackOperatorWise.includes('5') || cashBackOperatorWise.includes('1')">
-  <div class="mt-3">
-    <label for="">Cash Back Credit Mytel Number </label>
-  </div>
-  <div>
-    <input type="text" class="input" placeholder="Enter OK$ Account Number" (keyup)="formValidation()" [(ngModel)]="mytel_number">
-  </div>
-</div>
-
-<div *ngIf="cashBackOperatorWise.includes('6') || cashBackOperatorWise.includes('1')">
-  <div class="mt-3">
-    <label for="">Cash Back Credit MecTel Number </label>
-  </div>
-  <div>
-    <input type="text" class="input" placeholder="Enter OK$ Account Number" (keyup)="formValidation()" [(ngModel)]="mectel_number">
-  </div>
-</div>
-
-<br />
+<div class="row">
+  <div class="col-md-12">
+    <br />
     <div>
       <label for="">Remarks</label>
     </div>
@@ -88,4 +95,8 @@
         class="inputt"
         placeholder="Enter Remarks"
       />
+    </div>
+  </div>
 </div>
+
+

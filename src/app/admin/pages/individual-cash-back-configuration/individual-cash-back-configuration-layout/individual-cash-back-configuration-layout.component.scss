@@ -4,7 +4,7 @@
     margin: 0 0 20px 3px;
 }
 .main-content {
-    height: calc(92vh - 120px);
+    height: calc(96vh - 120px);
     overflow: auto;
     overflow-x: hidden;
 }
@@ -187,9 +187,8 @@ table.individualListing_table {
     padding: 0px;
   }
   
-  .accTable {
-    min-height: calc(23vh - 120px);
-    overflow: auto;
+  .table-pagination{
+
   }
   
   .table-pagination td{
