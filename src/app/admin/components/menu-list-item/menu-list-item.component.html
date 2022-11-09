@@ -1,4 +1,4 @@
-<a mat-list-item [ngStyle]="{'padding-left': (depth * 20) + 'px'}" (click)="onItemSelected(item)"
+<a mat-list-item [ngStyle]="{'padding-left': (depth * 20) + 'px'}" (click)="onItemSelected(item)" [routerLink]="item.route ? '../{item.route}' : null"
    [ngClass]="{'active': item.route ? router.isActive(item.route, true): false, 'expanded': expanded}"
    class="menu-list-item text-decoration-none">
   <div>

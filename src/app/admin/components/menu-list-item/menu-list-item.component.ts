@@ -29,6 +29,8 @@ export class MenuListItemComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log();
+    
   }
 
   onItemSelected(item: any) {    
