@@ -1,7 +1,7 @@
 export const menuItems = [
     {
       displayName: 'Dashboard',
-      route: 'admin/dashboard',
+      route: '/admin/dashboard',
       iconName: 'assets/images/Dashboard.svg',
       children: []
     },
@@ -12,7 +12,7 @@ export const menuItems = [
     children: [
       {
         displayName: 'Company',
-        route: 'admin/CompanyListing',
+        route: '/admin/CompanyListing',
         iconName: '../../../../assets/images/B Company.svg',
         children: [
 
@@ -20,13 +20,13 @@ export const menuItems = [
       },
       {
         displayName: 'Department',
-        route: 'admin/DepartmentListing',
+        route: '/admin/DepartmentListing',
         iconName: '../../../../assets/images/B Department.svg',
         children: []
       },
       {
         displayName: 'Designation',
-        route: 'admin/DesignationListing',
+        route: '/admin/DesignationListing',
         iconName: '../../../../assets/images/B Designation.svg',
         children: []
       },
@@ -34,13 +34,13 @@ export const menuItems = [
   },
     {
       displayName: 'User Role Permission',
-      route: 'admin/UserRolePermission',
+      route: '/admin/UserRolePermission',
       iconName: 'assets/images/user-role-permission.svg',
       children: []
     },
     {
       displayName: 'Company Configuration',
-      route: 'admin/companyConfiguration',
+      route: '/admin/companyConfiguration',
       iconName: 'assets/images/company-configuration.svg',
       children: []
     },
@@ -51,13 +51,13 @@ export const menuItems = [
       children: [
         {
           displayName: 'Bulk',
-          route: 'admin/bulkCashBackConfiguration',
+          route: '/admin/bulkCashBackConfiguration',
           iconName: 'assets/images/cash-back-bulk.svg',
           children: []
         },
         {
           displayName: 'Individual',
-          route: 'admin/individualCashBackConfiguration',
+          route: '/admin/individualCashBackConfiguration',
           iconName: 'assets/images/cash-back-individual.svg',
           children: []
         },
@@ -66,7 +66,7 @@ export const menuItems = [
 
     {
       displayName: 'Remove Cash Back',
-      route: 'admin/removeCashBack',
+      route: '/admin/removeCashBack',
       iconName: 'assets/images/remove-cash-back.svg',
       children: []
     },
@@ -77,7 +77,7 @@ export const menuItems = [
       children: [
         {
           displayName: 'Company Configuration Report',
-          route: 'admin/companyConfigurationReport',
+          route: '/admin/companyConfigurationReport',
           iconName: 'assets/images/company-configuration-report.svg',
           children: []
         },
@@ -88,19 +88,19 @@ export const menuItems = [
           children: [
             {
               displayName: 'Bulk',
-              route: 'admin/bulkCashbackConfigurationReport',
+              route: '/admin/bulkCashbackConfigurationReport',
               iconName: 'assets/images/cash-back-configuration-bulk.svg',
               children: []
             },
             {
               displayName: 'Individual',
-              route: 'admin/individualCashbackConfigurationReport',
+              route: '/admin/individualCashbackConfigurationReport',
               iconName: 'assets/images/cash-back-configuration-individual.svg',
               children: []
             },
             {
               displayName: 'Fail Report',
-              route: 'admin/failReportCashbackConfigurationReport',
+              route: '/admin/failReportCashbackConfigurationReport',
               iconName: 'assets/images/cash-back-configuration-fail-report.svg',
               children: []
             },
@@ -114,25 +114,25 @@ export const menuItems = [
           children: [
             {
               displayName: 'Initiate OK$ Account No. Detail',
-              route: 'admin/initiateOkAccountNumberDetail',
+              route: '/admin/initiateOkAccountNumberDetail',
               iconName: 'assets/images/initiate-OK$-account-no-detail.svg',
               children: []
             },
             {
               displayName: 'Initiate OK$ Account No. Summary',
-              route: 'admin/initiateOkAccountSummaryDetail',
+              route: '/admin/initiateOkAccountSummaryDetail',
               iconName: 'assets/images/initiate-OK$-account-no-summary.svg',
               children: []
             },
             {
               displayName: 'Company Wise',
-              route: 'admin/companyWiseCashBackDetailReport',
+              route: '/admin/companyWiseCashBackDetailReport',
               iconName: 'assets/images/company-wise.svg',
               children: []
             },
             {
               displayName: 'Operator Wise',
-              route: 'admin/operatorWiseCashBackDetailReport',
+              route: '/admin/operatorWiseCashBackDetailReport',
               iconName: 'assets/images/operator-wise.svg',
               children: []
             },
@@ -143,13 +143,13 @@ export const menuItems = [
     },
     {
       displayName: 'Change Password',
-      route: 'admin/changePassword',
+      route: '/admin/changePassword',
       iconName: 'assets/images/change-password.svg',
       children: []
     },
     {
       displayName: 'Logout',
-      route: 'admin/logout',
+      route: 'logout',
       iconName: 'assets/images/logout.svg',
       children: []
     },

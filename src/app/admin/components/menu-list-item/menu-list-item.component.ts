@@ -29,13 +29,14 @@ export class MenuListItemComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log();
+   
     
   }
 
   onItemSelected(item: any) {    
     if (!item.children || !item.children.length) {
       this.router.navigate([item.route]);
+      console.log(item);
     }
     if (item.children && item.children.length) {
       this.expanded = !this.expanded;
